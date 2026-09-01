@@ -13,6 +13,8 @@
 - Phase F status: **COMPLETE AND HUMAN-REVIEWED**; H-036 `DONE BY HUMAN`
 - Phase G status: **TOOLCHAIN/PREPARATION COMPLETE; ONE HUMAN-APPROVED PILOT EXECUTED AND FAILED BEFORE HTTP**
 - Phase G implementation commit: `d9291f7` (`test: pin k6 and prepare 2-VU pilot`)
+- Phase G toolchain/audit commit: `41c6fec` (`docs: record Phase G toolchain validation`)
+- Controlled Pilot evidence commit: `11c0a7f` (`test: record failed 2-VU pilot evidence`)
 - H-037: **DONE BY HUMAN** for the completed failed Pilot
 - Current gate: **H-038 — PILOT RESULTS/CORRECTION REVIEW**
 
@@ -223,8 +225,9 @@ checkpoint, the workload proposal, or the AI Audit.
   analysis, AI misinterpretation review, optimization review, issues, video,
   critique, report, README, validator, self-assessed grade, and ZIP remain later
   work.
-- Five truthful local baseline commits exist and Phase G local commits are to be
-  finalized; no push has occurred.
+- Five truthful local baseline commits and three truthful Phase G/Pilot commits
+  exist; no push has occurred. The three giant raw Pilot files remain untracked
+  and checksummed pending H-038 review.
 
 ## Authoritative continuation files
 

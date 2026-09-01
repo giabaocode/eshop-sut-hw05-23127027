@@ -1083,6 +1083,7 @@ push, or publication occurred.
 | Artifact ID | `20260901T212619+0700` |
 | Source/tool | Commit `41c6fecf826148e73a4ce3c651791d90650e595c`; k6 v2.2.0 darwin/arm64 |
 | Result | **FAILED RUNTIME VALIDATION BEFORE HTTP — NOT OFFICIAL** |
+| Local evidence commit | `11c0a7f` — `test: record failed 2-VU pilot evidence` |
 | Current human gate | H-038 Pilot results/correction review |
 
 ### Preflight and setup evidence
@@ -1153,4 +1154,6 @@ replacements; custom `context.traffic`; deterministic abort on unexpected
 runtime/script exception; reliable exit and full wall-clock enforcement;
 corrected-Pilot output scope; and archival/cleanup of 21.6 GiB local failure
 evidence. Four deferred numeric abort rules and all final performance thresholds
-remain deferred. No official scenario or push occurred.
+remain deferred. The small evidence/documentation set was truthfully committed
+locally as `11c0a7f`; credentials and the three giant raw files were excluded.
+No official scenario or push occurred.

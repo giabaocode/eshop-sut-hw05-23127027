@@ -427,5 +427,9 @@ custom traffic-tag correction, whole-test abort on unexpected script/runtime
 exceptions, reliable exit/wall-clock runner behavior, corrected-Pilot output
 scope, and eventual 21.6 GiB artifact handling.
 
+The genuine small Pilot evidence and documentation were committed locally as
+`11c0a7f` (`test: record failed 2-VU pilot evidence`). Private credentials and
+the three multi-gigabyte raw files were not committed. No push occurred.
+
 No official scenario, threshold, push, publication, or performance conclusion
 was created.

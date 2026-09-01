@@ -62,4 +62,16 @@ commit is backdated and no local commit has been pushed.
 | G | Pinned k6 2.2.0 capability record, compatibility adjustments, isolated 2-VU Pilot entry/runbook, and unexecuted guarded provisioning helper | `d9291f7` | `test: pin k6 and prepare 2-VU pilot` |
 
 This hash was recorded only after the real commit existed. A separate audit/
-checkpoint commit records the validation narrative. Neither commit is pushed.
+checkpoint commit (`41c6fec`) records the validation narrative. Neither commit
+was pushed.
+
+## 6. Controlled Pilot evidence commit
+
+| Phase activity | Actual content | Commit hash | Commit message |
+|---|---|---|---|
+| Human-approved controlled 2-VU Pilot | Small genuine failure evidence, results analysis, human/audit/checkpoint records, and H-038 correction gate; excludes credentials and the three multi-gigabyte raw files | `11c0a7f` | `test: record failed 2-VU pilot evidence` |
+
+The hash above was recorded only after the truthful local commit existed. The
+three large genuine raw files remain untracked and checksummed locally pending
+human review; they were not hidden by `.gitignore`, deleted, renamed, or
+misrepresented. No commit in this recovery sequence has been pushed.

@@ -1274,8 +1274,8 @@ Pilot is authorized after every setup gate passes.
   secret. Full artifact scan found no password/JWT/Authorization/private email.
 
 These are measured Pilot/runtime-validation observations, not official
-performance results, thresholds, capacity, or Load conclusions. H-040 review is
-required before official-plan finalization. No push occurred.
+performance results, thresholds, capacity, or Load conclusions. At that point,
+H-040 review was required before official-plan finalization. No push occurred.
 
 The genuine fresh Pilot artifact/evidence/documentation set was committed
 locally as `e23caf4` (`test: record successful corrected 2-VU pilot`). Private
@@ -1330,3 +1330,6 @@ push occurred.
   existing localhost guard rejected all three entries. The corrected explicit
   `-e` invocation passed exact configs with `thresholds=null`. The temporary
   mode-0600 synthetic 20-row file was removed and port 3000 remained free.
+- After staged path/secret/disposable/raw/official-filename checks, the truthful
+  local Phase I preparation commit was created as `b914c3c`
+  (`test: prepare reviewed official performance plans`). It was not pushed.

@@ -1,4 +1,4 @@
-// DRAFT — PINNED k6 INIT-VERIFIED; NO SUT TRAFFIC YET.
+// RUNTIME-VALIDATED BY 2-VU PILOT; OFFICIAL PERFORMANCE EXECUTION NOT YET PERFORMED.
 // Metric objects are intentionally module-global; correlation values are not.
 
 import { Counter, Rate, Trend } from 'k6/metrics';

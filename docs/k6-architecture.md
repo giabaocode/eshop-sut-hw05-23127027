@@ -1,15 +1,16 @@
 # Shared k6 Architecture and Static Implementation Review
 
-Status: **PHASE F HUMAN-APPROVED — PINNED INIT VERIFIED; PILOT FAILED BEFORE HTTP**
+Status: **SHARED WF-03 RUNTIME-VALIDATED BY 2-VU PILOT; OFFICIAL EXECUTION PENDING**
 
 Prepared: 2026-09-01 (Asia/Ho_Chi_Minh)
 Workflow: WF-03 — Purchase followed by customer cancellation
 
 During Phase F, no k6 binary was installed or executed. Phase G subsequently
-installed pinned k6 2.2.0 and validated init/import/options/output interfaces
-without SUT HTTP. The SUT was not started, no account was provisioned, and no
-performance result was generated. JavaScript files remain draft until the
-separately approved pilot verifies the SUT workflow.
+installed pinned k6 2.2.0 and validated init/import/options/output interfaces.
+The corrected 2-VU Pilot later executed the full shared workflow successfully:
+81/81 lifecycles and all checks passed. That evidence promotes the shared
+implementation to runtime-validated status but is not an official performance
+scenario or threshold/capacity result.
 
 ### Phase F human-review result
 
@@ -18,9 +19,10 @@ checks/metrics/outcome/failure implementation, dedicated VU mapping, immutable
 input versus iteration-local correlation boundary, and current immediate safety
 model. The four numeric error-abort proposals remain deferred and final
 performance thresholds remain undefined. H-036 is `DONE BY HUMAN` only after
-these decisions were applied. Pinned-runtime initialization compatibility is
-now proven as recorded in `k6-toolchain.md`; business HTTP compatibility remains
-unproven until the pilot.
+these decisions were applied. Pinned-runtime initialization compatibility and
+the shared two-VU business HTTP chain are proven as recorded in
+`k6-toolchain.md` and `k6-pilot-results.md`. Official five-/20-VU workload
+execution remains unproven.
 
 ## 1. Design invariants
 
@@ -321,27 +323,30 @@ Pilot traffic uses `scenario=pilot,traffic=pilot`; official entries retain
 `traffic=measured`. At the Phase G preparation checkpoint the provisioning
 helper had not run; it later ran once under H-037 and passed setup validation.
 
-### Pilot execution finding
+### Pilot execution finding and correction history
 
-H-037 later authorized one controlled Pilot. Provisioning passed, but k6 failed
-before HTTP because all seven group labels contain the reserved `::` separator.
-The generic catch then tight-looped runtime exceptions. No source fix or rerun
-has occurred. The Pilot also proved custom metrics currently hard-code
-`traffic=measured` rather than using `context.traffic`. Both fixes, deterministic
-runtime-exception abort behavior, reliable exit/wall-clock capture, and output
-scope require H-038 review. See `k6-pilot-results.md`.
+H-037 authorized one controlled Pilot. It failed before HTTP because the AI
+draft used the reserved `::` separator in seven group labels, and its generic
+catch tight-looped exceptions into roughly 21.6 GiB of output. H-038 approved
+k6-safe names, context-derived traffic tags, test-level abort for unexpected
+harness exceptions, exact-PID wall-clock enforcement, and bounded Pilot output.
+The next fresh attempt stopped before provisioning because the helper was
+invoked from the clone; H-039 approved invoking the unchanged helper from the
+actual original worktree against a new clone.
 
-Static findings plus pinned init probes now prove imports, option parsing, and
-the listed local APIs/outputs. They do not verify HTTP contracts, credential
-mapping against real accounts, output overhead under WF-03, or SUT behavior.
+Fresh corrected Pilot `20260901T223944+0700` then validated real dedicated
+accounts, JWT/product/price/order correlation, seven request groups, all checks,
+one outcome per attempt, custom tags/metrics, and raw JSON writing. It completed
+81/81 workflows with 0 failed HTTP requests. H-040 human-approved that runtime
+validation for Phase I. This history remains evidence of harness corrections;
+it does not validate official Load/Stress/Spike workload behavior.
 
-## 11. Human checkpoint and proposed next phase
+## 11. Phase I execution-preparation boundary
 
-H-036 is `DONE BY HUMAN`. The approval covers target restriction, active account
-counts, exact checks, failure classification, system-tag selection, stage arrays,
-and the unimplemented external runner boundary without claiming runtime proof.
-
-After H-036, propose **Phase G — Pinned k6 Toolchain and Disposable 2-VU Pilot
-Preparation**. Installation, account provisioning, SUT startup, and the actual
-pilot must each remain separately authorized; no official Load/Stress/Spike run
-should occur in that phase without a later explicit execution checkpoint.
+H-036 and H-040 are `DONE BY HUMAN`. The shared code carries the precise status
+“runtime-validated by 2-VU Pilot; official performance execution not yet
+performed.” Thin official entries still contain only config/data initialization
+and the same `executeWf03()` call. `tools/run-official.sh` is a prepared,
+unexecuted scenario-neutral exact-PID runner; it requires a human-created
+official filename and new output root. No official scenario, final performance
+threshold, or report has been generated.

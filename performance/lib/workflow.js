@@ -1,4 +1,4 @@
-// DRAFT — PINNED k6 INIT-VERIFIED; NO SUT TRAFFIC YET.
+// RUNTIME-VALIDATED BY 2-VU PILOT; OFFICIAL PERFORMANCE EXECUTION NOT YET PERFORMED.
 // This is the single authoritative executable WF-03 business implementation.
 
 import http from 'k6/http';

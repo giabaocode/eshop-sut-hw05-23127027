@@ -1,6 +1,6 @@
 # k6 2-VU Pilot Results
 
-Status: **FAILED PILOT PRESERVED; CORRECTED ATTEMPT BLOCKED BEFORE PROVISIONING — NOT OFFICIAL**
+Status: **FRESH CORRECTED PILOT APPROVED BY HUMAN — NOT OFFICIAL**
 
 Pilot artifact ID: `20260901T212619+0700`
 
@@ -345,8 +345,8 @@ Postflight stopped exact backend PID 23201, freed port 3000, retained valid
 disposable/original SQLite integrity, and reconfirmed the original DB hash.
 Artifact scanning found no credential, password, JWT, Authorization header, or
 private email. Raw JSON/summary/stdout/stderr and all setup/runtime evidence are
-preserved under the new timestamped directory. H-040 human review is required
-before official test-plan finalization.
+preserved under the new timestamped directory. H-040 was approved by the human
+on 2026-09-01, authorizing Phase I planning but no official execution.
 
 The genuine artifact/evidence/documentation set was committed locally as
 `e23caf4` (`test: record successful corrected 2-VU pilot`). It excludes private

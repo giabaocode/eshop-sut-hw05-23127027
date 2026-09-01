@@ -1,6 +1,6 @@
 # 2-VU k6 Pilot Runbook
 
-Status: **FRESH CORRECTED PILOT COMPLETED — H-040 REVIEW REQUIRED**
+Status: **FRESH CORRECTED PILOT APPROVED BY HUMAN — NOT AN OFFICIAL RESULT**
 
 Pinned tool: k6 `v2.2.0` at `/opt/homebrew/bin/k6`
 
@@ -23,7 +23,7 @@ Execution result: fresh attempt `20260901T223944+0700` used the approved
 original-worktree invocation, provisioned/validated exactly two accounts, and
 completed 81/81 full WF-03 lifecycles with all checks passing. k6 exited 0,
 watchdog did not fire, and postflight integrity passed. This is Pilot runtime
-validation only; H-040 blocks official-plan work.
+validation only; H-040 was approved by the human before Phase I began.
 
 ## 1. Source-derived startup constraint
 

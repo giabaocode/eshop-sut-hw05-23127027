@@ -45,9 +45,11 @@ previous iteration.
 
 ## Current boundary
 
-No account has been provisioned and no real credential file exists. Phase F has
-created clearly labeled **DRAFT — NOT RUNTIME VERIFIED** k6 source for static
-human review; it has not been installed or executed. See
+Two disposable Pilot-only accounts were provisioned and destroyed outside Git
+for the successful 2-VU runtime validation. No real credential file exists in
+this repository, and no 20-account official pool has been provisioned. The
+shared data/correlation implementation is **RUNTIME-VALIDATED BY 2-VU PILOT**;
+official Load/Stress/Spike execution has not been performed. See
 [`../../docs/test-data-strategy.md`](../../docs/test-data-strategy.md),
 [`../../docs/correlation-strategy.md`](../../docs/correlation-strategy.md), and
 [`../../docs/k6-architecture.md`](../../docs/k6-architecture.md).

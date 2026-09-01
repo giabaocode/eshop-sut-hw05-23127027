@@ -389,4 +389,25 @@ Pilot completed 81/81 exact WF-03 lifecycles with 3,078/3,078 checks, 0/567
 failed HTTP requests, and 81/81 created orders canceled. k6 exited 0 after 246
 seconds; watchdog did not fire. Original DB integrity/hash remained unchanged.
 These are AI execution observations, not a new human decision or official
-performance conclusion; H-040 review remains required.
+performance conclusion. HD-013 below records the later H-040 human review.
+
+## HD-013 — Successful corrected-Pilot approval and Phase I boundary
+
+| Field | Human decision |
+|---|---|
+| Recorded | 2026-09-01 23:03:50 +07 (Asia/Ho_Chi_Minh) |
+| Decision owner | Phạm Ngọc Gia Bảo — HUMAN |
+| Pilot verdict | Successful corrected 2-VU Pilot validates the shared WF-03 implementation; it is not an official Load/Stress/Spike result |
+| H-040 | `DONE BY HUMAN` after this decision and Phase I records are applied |
+| Measurement boundary | Pilot latency/RPS/error values cannot become final thresholds, capacity, endurance, or official scenario conclusions |
+| Historical defects | Preserve invalid `::` names, tight exception loop/21.6-GiB output, human harness corrections, clone-local helper invocation failure, human invocation correction, and final 81/81 pass |
+| Shared workflow | Preserve all four approved think-time ranges and the exact login/search/detail/checkout/pending/cancel/final flow for every official scenario |
+| Official workloads | Preserve exact approved Load, 12m30s Stress, and 6m5s Spike configs; do not set final performance thresholds |
+| Filename boundary | AI must create only a blank checklist; the human creates/renames the three attributable filenames and selects the actual appropriate date |
+| Setup boundary | Fresh one-start disposable runtime and 20 validated accounts for each scenario; Load activates 01..05, Stress/Spike 01..20 |
+| Output decision | Native JSON for all; Load aggregate, Stress CSV analysis, Spike dashboard; real per-scenario report dirs only from real data; no JTL fabrication |
+| Human evidence | Real resource/hardware screenshots and hostname compatibility remain human tasks |
+| Authorization limit | Phase I documentation/static preparation only; no official execution, endurance, push, or official filename creation |
+
+The human's actual Phase I instruction and the resulting artifacts are recorded
+in [`../ai-audit/interactions/019-successful-pilot-review-phase-i.md`](../ai-audit/interactions/019-successful-pilot-review-phase-i.md).

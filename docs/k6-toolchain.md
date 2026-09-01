@@ -1,6 +1,6 @@
 # Pinned k6 Toolchain and Compatibility Record
 
-Status: **PINNED VERSION INIT/OUTPUT-CAPABILITY VERIFIED — PILOT FAILED BEFORE HTTP**
+Status: **PINNED VERSION + SHARED WF-03 RUNTIME-VALIDATED BY 2-VU PILOT**
 
 Recorded: 2026-09-01 (Asia/Ho_Chi_Minh)
 
@@ -122,15 +122,20 @@ never be represented as measured SUT data.
 
 ## 5. Compatibility boundary
 
-The shared scripts are now **pinned-k6 init verified**, not end-to-end runtime
-verified. The failed Pilot did not exercise login, search, detail, checkout,
-order probe, cancellation, or response-owned correlation. Those checks now
-require a separately human-approved corrected disposable 2-VU Pilot.
+The first Pilot exposed a runtime-only incompatibility not exercised by
+`inspect`: k6 2.2.0 rejects `::` in group/check names. That failed run sent zero
+HTTP bytes and remains preserved. After the human-approved minimum harness and
+invocation corrections, fresh Pilot `20260901T223944+0700` exercised the shared
+implementation end to end: real login/JWT, dedicated VU identities, exact
+product/dynamic price, checkout/new order ID, same-order pending/cancel/final
+checks, custom metrics, and native JSON. It completed 81/81 workflows with
+3,078/3,078 checks and k6 exit 0.
 
-The subsequently approved Pilot confirmed that init/data provisioning worked
-but exposed a runtime-only incompatibility not exercised by `inspect`: k6 2.2.0
-rejects `::` in group/check names. The Pilot therefore sent zero HTTP bytes and
-does not satisfy the end-to-end verification gate. See `k6-pilot-results.md`.
+Accordingly, the shared implementation is **RUNTIME-VALIDATED BY 2-VU PILOT;
+OFFICIAL PERFORMANCE EXECUTION NOT YET PERFORMED**. The Pilot measurements are
+not Load/Stress/Spike evidence and do not define thresholds or capacity. The
+20-account provisioning path, official workload shapes, and Load/Stress
+real-data HTML renderers remain unexecuted.
 
 No final p95/RPS/error/capacity threshold or any of the four deferred numeric
 abort proposals was introduced. No official Load/Stress/Spike filename or

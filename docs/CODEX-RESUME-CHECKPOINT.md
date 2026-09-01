@@ -5,7 +5,7 @@
 - Created: 2026-09-01 13:37:42 +07 (Asia/Ho_Chi_Minh)
 - Repository: `/Users/phamngocgiabao/eshop-sut-hw05-23127027`
 - Source commit: `85af3ba875c88283615e22cb108f13e2fccaf0e9`
-- Current completed activity: **Fresh corrected 2-VU Pilot runtime validation passed; human review pending**
+- Current completed activity: **Fresh corrected 2-VU Pilot approved; Phase I official execution preparation in progress**
 - Phase B correction review: **RESOLVED BY HUMAN** on 2026-09-01 15:58:08 +07
 - Phase C status: **COMPLETE AND HUMAN-REVIEWED**; H-033 `DONE BY HUMAN`
 - Phase D status: **COMPLETE AND HUMAN-REVIEWED WITH AUTHENTICATION CORRECTION**; H-034 `DONE BY HUMAN`
@@ -24,7 +24,8 @@
 - Invocation-approval/source commit: `34bb80e` (`docs: approve original-worktree Pilot provisioning`)
 - Fresh corrected Pilot `20260901T223944+0700`: **81/81 WF-03 SUCCESS; NOT OFFICIAL**
 - Fresh Pilot evidence commit: `e23caf4` (`test: record successful corrected 2-VU pilot`)
-- Current gate: **H-040 — FRESH CORRECTED-PILOT REVIEW**
+- H-040: **DONE BY HUMAN**; 81/81 Pilot accepted as runtime validation only
+- Current gate: **H-010 — HUMAN OFFICIAL TEST-PLAN FILENAMES**
 
 ## Selected workflow
 
@@ -206,8 +207,9 @@ checkpoint, the workload proposal, or the AI Audit.
 
 ## Important unresolved items
 
-- Phase F architecture/source is human-approved and k6 2.2.0 init-verified, but
-  the real SUT workflow remains pilot-unverified.
+- Phase F architecture/source is human-approved and the shared WF-03 is
+  runtime-validated by the corrected 2-VU Pilot; official workloads remain
+  unexecuted.
 - Pinned k6 is v2.2.0 at `/opt/homebrew/bin/k6`; no version change is authorized
   without later review.
 - The provisioning helper ran once for the first approved Pilot and successfully
@@ -220,7 +222,8 @@ checkpoint, the workload proposal, or the AI Audit.
   9,699,772 failed attempts and produced approximately 21.6 GiB JSON/CSV/stderr.
 - H-038 approved the minimum group/tag/abort/runner/output corrections and exact
   cleanup; fix commit `c75b514` exists and about 21.62 GiB was reclaimed.
-- No final official Load/Stress/Spike execution script/filename exists.
+- A prepared scenario-neutral official runner exists but has not executed; no
+  human-created official Load/Stress/Spike filename exists.
 - Final numeric performance thresholds remain unset until real-result analysis.
 - Exact Load/Stress/Spike plan filenames/dates require human approval.
 - Load/Stress HTML renderer implementation remains pending real data and review;
@@ -228,7 +231,7 @@ checkpoint, the workload proposal, or the AI Audit.
 - Relationship between performance demo and Agent Skill demo remains unresolved.
 - The distinct report/output interpretation is human-final; real Load/Stress
   renderers and all measured artifacts remain unimplemented.
-- Preflight, account-lockout procedure review, real execution approvals,
+- Official filename creation, account-lockout procedure review, real execution approvals,
   screenshots/resource monitoring, hardware evidence, endurance run, result
   analysis, AI misinterpretation review, optimization review, issues, video,
   critique, report, README, validator, self-assessed grade, and ZIP remain later
@@ -316,9 +319,10 @@ See `MANUAL-TODO.md` for exact IDs and remaining responsibilities.
 
 ## Resume instruction
 
-Do not redo completed discovery or Phases C–G. Await H-039 review of the
-clone-local helper preflight failure and proposed same-commit original-worktree
-invocation. Do not start the SUT, provision accounts, rerun the Pilot, or
-official traffic, implement deferred numeric aborts/final performance
-thresholds, create official execution filenames, or push without explicit
-approval.
+Do not redo completed discovery or Phases C–G. The corrected Pilot and H-040
+review are complete. Phase I prepares but does not execute official scenarios.
+Await the human's H-010 manual creation/approval of all three attributable plan
+filenames. Do not create those filenames, start/provision an official runtime,
+run Load/Stress/Spike/endurance, implement deferred numeric aborts/final
+performance thresholds, generate screenshots/reports, or push without the next
+explicit approval.

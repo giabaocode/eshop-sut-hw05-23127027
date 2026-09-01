@@ -1,4 +1,4 @@
-// DRAFT — PINNED k6 INIT-VERIFIED; NO SUT TRAFFIC YET.
+// RUNTIME-VALIDATED BY 2-VU PILOT; OFFICIAL PERFORMANCE EXECUTION NOT YET PERFORMED.
 // Runtime values are read in k6 init context and contain no committed secrets.
 
 const APPROVED_LOCAL_TARGETS = Object.freeze([

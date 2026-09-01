@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /*
- * DRAFT / NOT YET EXECUTED.
+ * RUNTIME-VALIDATED FOR THE 2-ACCOUNT PILOT.
+ * Official 20-account preconditioning has not been executed.
  * Provision WF-03 customers only through the real SUT registration API in a
  * preflighted disposable runtime. Never use this during a measured scenario.
  */
@@ -239,7 +240,7 @@ async function main() {
 
   writeRedactedEvidence(paths.evidence, {
     status: 'PASS',
-    helper_status: 'DRAFT_NOT_YET_HUMAN_APPROVED_FOR_EXECUTION',
+    helper_status: 'RUNTIME_VALIDATED_2_ACCOUNT_PILOT_OFFICIAL_NOT_EXECUTED',
     account_count: count,
     account_keys: accountKeys,
     registration_api: 'POST /api/register',
@@ -266,7 +267,7 @@ main().catch((error) => {
     try {
       writeRedactedEvidence(redactedEvidencePath, {
         status: 'FAIL',
-        helper_status: 'DRAFT_NOT_YET_HUMAN_APPROVED_FOR_EXECUTION',
+        helper_status: 'RUNTIME_VALIDATED_2_ACCOUNT_PILOT_OFFICIAL_NOT_EXECUTED',
         failure_code: code,
         attempted_account_keys: attemptedAccountKeys,
         secrets_in_evidence: false,

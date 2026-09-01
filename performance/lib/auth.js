@@ -1,4 +1,4 @@
-// DRAFT — PINNED k6 INIT-VERIFIED; NO SUT TRAFFIC YET.
+// RUNTIME-VALIDATED BY 2-VU PILOT; OFFICIAL PERFORMANCE EXECUTION NOT YET PERFORMED.
 // Authentication request/validation is isolated; JWT ownership remains iteration-local.
 
 import http from 'k6/http';

@@ -47,24 +47,20 @@ CLARIFICATION`, `RESOLVED BY HUMAN DECISION`, `DONE BY HUMAN`, `NOT APPLICABLE`.
 | H-037 | Approve execution of the prepared disposable-runtime 2-VU pilot, including the source-required one-start backend ordering and provisioning exactly two pilot accounts. | DONE BY HUMAN | Explicit approval in HD-010; one Pilot executed and failed before HTTP; no official result |
 | H-038 | Review the failed Pilot evidence and approve/correct the proposed group-name, custom traffic-tag, runtime-exception abort, exit/wall-clock runner, rerun-output, and 21.6 GiB artifact-handling decisions. | DONE BY HUMAN | HD-011: test-harness classification and minimum corrections, exact bulk cleanup, and one fresh corrected Pilot explicitly approved on 2026-09-01 |
 | H-039 | Review the corrected-Pilot preflight failure and approve/reject invoking the unchanged helper from the actual original worktree against a new disposable clone. | DONE BY HUMAN | HD-012 explicitly approved the original-worktree invocation boundary and one new fresh corrected Pilot on 2026-09-01 |
-| H-040 | Review the fresh corrected 2-VU Pilot evidence and decide whether official test-plan finalization may begin. | WAITING FOR HUMAN | Actual fresh Pilot result/integrity/metrics or any new stopped failure must be reviewed; no official execution implied |
+| H-040 | Review the fresh corrected 2-VU Pilot evidence and decide whether official test-plan finalization may begin. | DONE BY HUMAN | Human explicitly approved the 81/81 corrected Pilot as shared-workflow runtime validation only and authorized Phase I planning on 2026-09-01; HD-013 |
 
 ## Current checkpoint
 
-Phase B is complete and corrected. Phase C is human-approved after quantity was
-removed and safe artifacts were validated. Phase D is human-approved with the
-isolated-auth-failure correction recorded in HD-007, and H-034 is explicitly
-`DONE BY HUMAN`. Phase E is human-approved with four numeric error-based aborts
-deferred pending pilot evidence; H-035 is `DONE BY HUMAN`. The report proposal
-is human-resolved under the PDF's explicit k6-equivalent-output rule; no TA
-contact is required. Phase F is human-approved and H-036 is `DONE BY HUMAN`.
-Phase G installed/pinned k6 2.2.0 and H-037 authorized one controlled Pilot.
-Preflight/provisioning passed, but the Pilot failed before HTTP on invalid `::`
-group names and generated approximately 21.6 GiB of local failure artifacts.
-The backend is stopped, port 3000 is free, and the original DB is unchanged.
-H-038 is complete under HD-011 and fix commit `c75b514` exists. The authorized
-bulk cleanup completed. Fresh corrected setup stopped before registration/k6
-because the clone-local helper rejected its own clone. H-039 is complete under
-HD-012. Fresh corrected Pilot `20260901T223944+0700` passed setup and completed
-81/81 full WF-03 lifecycles; this is Pilot runtime evidence only. H-040 blocks
-official-plan finalization and every official execution.
+Phases B–F are human-reviewed. The failed Pilot and blocked-helper histories
+remain preserved. Fresh corrected Pilot `20260901T223944+0700` completed 81/81
+full WF-03 lifecycles, and H-040 is `DONE BY HUMAN` under HD-013. This promotes
+the shared code to 2-VU Pilot runtime-validated status only; it creates no
+official result, threshold, or capacity claim.
+
+Phase I has prepared the final review, workload/output/preconditioning plans,
+lockout/evidence/hardware procedures, an unexecuted exact-PID official runner,
+and blank official-filename checklist. H-010 is the current checkpoint: the
+human must create and approve the three attributable plan filenames using the
+actual appropriate date. H-009, H-012, H-013, H-022, per-run H-011 approvals,
+Load/Stress real-data renderer review, and every official execution remain
+open. No official filename, scenario, report, screenshot, or push exists.

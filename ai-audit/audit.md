@@ -1281,3 +1281,52 @@ The genuine fresh Pilot artifact/evidence/documentation set was committed
 locally as `e23caf4` (`test: record successful corrected 2-VU pilot`). Private
 credentials, disposable database/dependencies, and secrets were excluded. No
 push occurred.
+
+## Interaction 019 — Successful Pilot approval and Phase I preparation
+
+| Field | Actual record |
+|---|---|
+| AI tool | Codex CLI |
+| Recorded | 2026-09-01 23:03:50 +0700 |
+| Human review | Corrected 81/81 Pilot approved as shared-workflow runtime validation only; H-040 `DONE BY HUMAN` |
+| Detailed interaction | [`interactions/019-successful-pilot-review-phase-i.md`](interactions/019-successful-pilot-review-phase-i.md) |
+| Authorized work | Phase I final test-plan review and static official-execution preparation |
+| Prohibited work | No official filenames, Load/Stress/Spike/endurance traffic, final thresholds, screenshots, fake JTL/reports, or push |
+| Current gate | H-010 human creation/approval of the three official attributable filenames |
+
+### Preserved Pilot correction history
+
+1. The original AI draft used invalid `::` k6 group names.
+2. The first Pilot exposed a tight unexpected-exception loop and pathological
+   approximately 21.6-GiB output; it sent no HTTP and was not SUT evidence.
+3. Human review corrected naming, context traffic tagging, unexpected-exception
+   test abort, exact-PID wall-clock/exit capture, and bounded Pilot outputs.
+4. The next fresh attempt exposed a clone-local provisioning-helper invocation
+   boundary and stopped before account creation or k6.
+5. Human review retained the guard and corrected invocation to the unchanged
+   original-worktree helper targeting a new disposable clone.
+6. Fresh corrected Pilot `20260901T223944+0700` passed 81/81 exact WF-03
+   workflows. The human approved that runtime result without converting it into
+   official performance evidence.
+
+### Actual Phase I actions and boundaries
+
+- Promoted only Pilot-exercised shared code/data/helper paths to accurate
+  runtime-validated status; official entries remain explicitly unexecuted.
+- Reverified the exact Load, Stress, and Spike stage arrays and 30-second
+  graceful settings against repository evidence. No stage or threshold changed.
+- Created the final historical human-review table, blank official filename
+  checklist, deterministic 20-account preconditioning and lockout procedures,
+  three official runbooks, macOS evidence-capture instructions, and genuine
+  text hardware table. No screenshot or filename was generated.
+- Prepared one scenario-neutral exact-PID official runner. It accepts only a
+  human-created attributable plan, keeps `traffic=measured`, preserves native
+  JSON for every scenario, adds Stress CSV and Spike dashboard, captures numeric
+  exit/watchdog evidence, and contains no business workflow logic.
+- Created only trackable scenario result placeholders saying no official result
+  exists. No report content, JTL, raw result, credential, disposable runtime,
+  account, backend process, or k6 traffic was generated.
+- The first no-HTTP `k6 inspect` loop omitted k6's explicit `-e` flags; the
+  existing localhost guard rejected all three entries. The corrected explicit
+  `-e` invocation passed exact configs with `thresholds=null`. The temporary
+  mode-0600 synthetic 20-row file was removed and port 3000 remained free.

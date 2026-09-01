@@ -6,8 +6,10 @@ Scope: WF-03 Load, Stress, and Spike official runs
 Prepared: 2026-09-01 (Asia/Ho_Chi_Minh)
 
 The Phase E proposal itself installed or generated nothing. Phase G later
-installed pinned k6 2.2.0 and created only ephemeral no-HTTP capability-probe
-files outside Git. No SUT result or homework report has been generated.
+installed pinned k6 2.2.0 and verified output capabilities. A bounded Pilot
+subsequently wrote genuine Pilot JSON/summary output, kept separately from the
+official result tree. No official Load/Stress/Spike result or report has been
+generated.
 
 ### Phase E human decision
 
@@ -156,7 +158,9 @@ Before official execution, record:
 - whether report generation is performed live or after the run;
 - evidence-retention and checksum procedure.
 
-H-002 itself is resolved and pinned-tool output capability evidence now exists.
-Real-data renderer implementation and official artifacts remain pending because
-no SUT pilot or official result exists. No file with a `.jtl` extension may be
-created merely to appear compliant.
+H-002 itself is resolved and pinned-tool/Pilot output evidence now exists.
+`performance/tools/run-official.sh` prepares native JSON for all scenarios,
+Stress CSV, and Spike dashboard export without touching business logic. The
+Load aggregate and Stress time-series HTML/equivalent renderers remain pending
+review and real official data. No file with a `.jtl` extension may be created
+merely to appear compliant.

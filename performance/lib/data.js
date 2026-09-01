@@ -1,4 +1,4 @@
-// DRAFT — PINNED k6 INIT-VERIFIED; NO REAL CREDENTIALS YET.
+// RUNTIME-VALIDATED BY 2-VU PILOT; OFFICIAL PERFORMANCE EXECUTION NOT YET PERFORMED.
 // Only immutable input rows are shared. Response-derived correlation is never stored here.
 
 import exec from 'k6/execution';

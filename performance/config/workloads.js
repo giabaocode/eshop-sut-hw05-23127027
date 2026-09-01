@@ -1,5 +1,5 @@
-// DRAFT — PINNED k6 INIT-VERIFIED; NO SUT TRAFFIC YET.
-// Static representation of human-approved planning workloads.
+// Pilot workload runtime-validated by 2-VU Pilot; official workloads not executed.
+// Static representation of human-approved planning workloads, not measurements.
 
 function scenarioOptions(name, stages) {
   return {

@@ -1,4 +1,4 @@
-// DRAFT — PINNED k6 INIT-VERIFIED; NOT EXECUTED.
+// OFFICIAL SPIKE NOT EXECUTED; shared WF-03 was runtime-validated by 2-VU Pilot.
 // Spike changes only workload configuration; business logic is shared.
 
 import { getWorkload } from '../config/workloads.js';

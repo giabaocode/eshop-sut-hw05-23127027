@@ -1,4 +1,4 @@
-// DRAFT — PINNED k6 INIT-VERIFIED; PILOT NOT EXECUTED.
+// RUNTIME-VALIDATED BY 2-VU PILOT; NOT AN OFFICIAL PERFORMANCE SCENARIO.
 // The pilot changes only workload configuration and calls the shared WF-03.
 
 import { getWorkload } from '../config/workloads.js';

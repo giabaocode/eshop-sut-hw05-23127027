@@ -1220,3 +1220,8 @@ Smallest proposal: on a new human-authorized fresh attempt, invoke the
 same-commit helper from the actual original worktree while passing the clone as
 `WF03_DISPOSABLE_ROOT`, which matches the helper's protection design. H-039 must
 review this invocation correction; it is not silently assumed.
+
+The genuine small blocked-attempt evidence and documentation were committed
+locally as `aebd717` (`test: record corrected Pilot preflight failure`). No
+credential, disposable DB/runtime, dependency tree, or nonexistent k6 result
+was included. No push occurred.

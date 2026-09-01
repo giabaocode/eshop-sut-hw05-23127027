@@ -397,3 +397,7 @@ scenario, performance threshold, or push was authorized.
 
 The proposed same-commit original-worktree helper invocation and a new fresh
 attempt require H-039 human review. No official scenario or push occurred.
+
+The blocked-attempt evidence was committed locally as `aebd717` (`test: record
+corrected Pilot preflight failure`). No private credential, disposable database,
+or fabricated corrected-Pilot output was committed.

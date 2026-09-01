@@ -19,6 +19,7 @@
 - Pilot fix commit: `c75b514` (`fix: harden corrected 2-VU pilot harness`)
 - H-038: **DONE BY HUMAN**; exact bulk cleanup completed
 - Corrected Attempt `20260901T221331+0700`: **BLOCKED BEFORE PROVISIONING/K6** on clone-local helper guard
+- Blocked-attempt evidence commit: `aebd717` (`test: record corrected Pilot preflight failure`)
 - Current gate: **H-039 — CORRECTED-PILOT PREFLIGHT/INVOCATION REVIEW**
 
 ## Selected workflow

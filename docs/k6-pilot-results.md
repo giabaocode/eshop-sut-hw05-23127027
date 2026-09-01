@@ -297,3 +297,8 @@ original worktree at the same approved commit while passing the new clone as
 previously successful provisioning pattern. Because the current attempt hit a
 preflight stop, that invocation and a new fresh runtime require human review
 before another Pilot attempt.
+
+The genuine cleanup/preflight/failure/postflight evidence and associated audit
+updates were committed locally as `aebd717` (`test: record corrected Pilot
+preflight failure`). No credential, disposable database, dependency tree, or
+fabricated k6 artifact entered that commit, and it was not pushed.

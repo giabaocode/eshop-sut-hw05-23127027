@@ -85,3 +85,11 @@ misrepresented. No commit in this recovery sequence has been pushed.
 The three bulk files were deleted only after this commit existed. A subsequent
 fresh corrected setup stopped before registration/k6 and is recorded truthfully
 as a separate blocked attempt. Nothing was pushed.
+
+| Phase activity | Actual content | Commit hash | Commit message |
+|---|---|---|---|
+| Fresh corrected-Pilot setup attempt | Human-approved cleanup completion plus genuine preflight, backend, helper-boundary failure, postflight, audit, and H-039 gate; no k6 result claimed | `aebd717` | `test: record corrected Pilot preflight failure` |
+
+This attempt commit was created only after the owned backend stopped and the
+original database integrity/hash were reverified. It contains no credentials,
+disposable database, dependencies, or private runtime files and was not pushed.

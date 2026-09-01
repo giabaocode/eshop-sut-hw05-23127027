@@ -1276,3 +1276,8 @@ Pilot is authorized after every setup gate passes.
 These are measured Pilot/runtime-validation observations, not official
 performance results, thresholds, capacity, or Load conclusions. H-040 review is
 required before official-plan finalization. No push occurred.
+
+The genuine fresh Pilot artifact/evidence/documentation set was committed
+locally as `e23caf4` (`test: record successful corrected 2-VU pilot`). Private
+credentials, disposable database/dependencies, and secrets were excluded. No
+push occurred.

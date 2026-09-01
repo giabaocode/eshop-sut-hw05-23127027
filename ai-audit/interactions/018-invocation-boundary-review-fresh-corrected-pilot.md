@@ -94,3 +94,8 @@ failures, and 81 created orders were canceled. Runtime identity, JWT, product,
 price, order, pending/cancel/final correlations all passed. Output and integrity
 evidence were preserved; scans found no secret. Backend/port stopped cleanly and
 the original DB hash remained unchanged. No official scenario or push occurred.
+
+The genuine fresh Pilot output/evidence and audit documentation were committed
+locally as `e23caf4` (`test: record successful corrected 2-VU pilot`). No private
+credential, disposable database/dependency tree, secret, or official result was
+committed.

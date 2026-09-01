@@ -347,3 +347,7 @@ Artifact scanning found no credential, password, JWT, Authorization header, or
 private email. Raw JSON/summary/stdout/stderr and all setup/runtime evidence are
 preserved under the new timestamped directory. H-040 human review is required
 before official test-plan finalization.
+
+The genuine artifact/evidence/documentation set was committed locally as
+`e23caf4` (`test: record successful corrected 2-VU pilot`). It excludes private
+credentials, disposable database/dependencies, and secrets and was not pushed.

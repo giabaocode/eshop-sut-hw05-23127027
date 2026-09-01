@@ -23,6 +23,7 @@
 - H-039: **DONE BY HUMAN**; unchanged original-worktree helper invocation approved
 - Invocation-approval/source commit: `34bb80e` (`docs: approve original-worktree Pilot provisioning`)
 - Fresh corrected Pilot `20260901T223944+0700`: **81/81 WF-03 SUCCESS; NOT OFFICIAL**
+- Fresh Pilot evidence commit: `e23caf4` (`test: record successful corrected 2-VU pilot`)
 - Current gate: **H-040 — FRESH CORRECTED-PILOT REVIEW**
 
 ## Selected workflow

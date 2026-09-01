@@ -103,3 +103,11 @@ disposable database, dependencies, or private runtime files and was not pushed.
 The fresh runtime was cloned only after this commit existed and was pinned to
 it. No helper/SUT/workflow/check/correlation/workload/metric source changed and
 nothing was pushed.
+
+| Phase activity | Actual content | Commit hash | Commit message |
+|---|---|---|---|
+| Fresh corrected 2-VU Pilot | Genuine native JSON/summary/stdout/stderr, exact commands, runner/preflight/provisioning/backend/postflight/checksum evidence, runtime analysis, human/audit/checkpoint updates | `e23caf4` | `test: record successful corrected 2-VU pilot` |
+
+This commit was created only after k6/backend shutdown, integrity/secret checks,
+and authentic artifact checksum verification. It excludes private credentials,
+disposable database/runtime dependencies, and secrets. It was not pushed.

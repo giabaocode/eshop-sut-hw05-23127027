@@ -1072,3 +1072,85 @@ No SUT start, port-3000 listener, registration, account, real credential,
 workflow HTTP, database mutation, Pilot/Load/Stress/Spike/endurance run,
 measured result, official report, official filename/date, screenshot, JTL,
 push, or publication occurred.
+
+## Interaction 016 — Phase G review and controlled 2-VU Pilot
+
+| Field | Actual record |
+|---|---|
+| AI tool | Codex CLI |
+| Human approval | One controlled 2-VU disposable Pilot with one-start backend, exactly two accounts, bounded output/evidence, no official interpretation |
+| Actual prompt | Preserved verbatim in [`interactions/016-phase-g-review-2vu-pilot-execution.md`](interactions/016-phase-g-review-2vu-pilot-execution.md) |
+| Artifact ID | `20260901T212619+0700` |
+| Source/tool | Commit `41c6fecf826148e73a4ce3c651791d90650e595c`; k6 v2.2.0 darwin/arm64 |
+| Result | **FAILED RUNTIME VALIDATION BEFORE HTTP — NOT OFFICIAL** |
+| Current human gate | H-038 Pilot results/correction review |
+
+### Preflight and setup evidence
+
+- Attempt 01 preserved a sandbox process-lifecycle failure. The sandboxed
+  backend printed startup lines but did not remain alive; no provisioning or k6
+  traffic occurred. It was not restarted.
+- Attempt 02 used a new clone pinned to `41c6fec`, distinct DB inode, exact
+  disposable marker, new evidence paths, >2 GiB free, and locked dependencies.
+- The first sandboxed `npm ci` in Attempt 01 failed registry DNS and reported an
+  npm exit-handler error. A network-permitted identical lockfile install
+  succeeded. npm reported deprecated `prebuild-install` and four audit
+  vulnerabilities; no automatic fix occurred.
+- One externally permitted backend PID 20315 started at 21:30:36 +07, owned
+  port 3000, had cwd in Attempt 02, reset/reseeded the clone DB, and remained the
+  same process through setup/Pilot.
+- Reset checks: SQLite integrity `ok`, two seed users, five exact products, zero
+  orders, valid public rows 01/02, original DB hash unchanged.
+- The reviewed helper sequentially provisioned exactly customer keys 01/02 via
+  real SUT registration, wrote mode-0600 credentials outside Git, and validated
+  both real logins/role/unlocked/zero-orders. No password/JWT was printed.
+
+### Exact Pilot execution and real failure
+
+- The exact four-minute ramping-vus command is preserved with native JSON, CSV,
+  summary JSON, dashboard HTML, stdout, and stderr paths.
+- k6 reported max 2 VUs, full 4m schedule, 0 interrupted iterations, and
+  9,699,772 iterations/attempted/failure samples at 0% workflow success.
+- HTTP bytes sent/received were both zero; no login, correlation, check,
+  checkout, order, cancellation, or endpoint latency occurred.
+- Every iteration failed at the first group boundary. A no-HTTP diagnostic
+  confirmed pinned k6's exact cause: `group and check names may not contain
+  '::'`. This is a script/k6 compatibility and runtime/safety failure, not a
+  confirmed SUT bug.
+- The generic catch hid the underlying error and allowed an immediate exception
+  loop. It generated exact sizes: 13,045,547,159-byte JSON,
+  5,984,776,809-byte CSV, and 4,161,202,188-byte stderr.
+- Custom metrics also used hard-coded `traffic=measured`, while native scenario
+  metrics correctly used `traffic=pilot`. `scenario=pilot` still distinguishes
+  them, but the evidence tag is defective.
+- The orchestration wrapper closed without returning the numeric Pilot exit
+  code; it is recorded as not captured. A diagnostic demonstrated k6 may return
+  code 0 despite per-iteration script exceptions.
+- Scenario execution ended at 4m00s; output completion was about 5m19s from the
+  documented command start, roughly 19s beyond the external cap due giant
+  output flushing. This is recorded as an output/runtime safety failure.
+
+### Shutdown, evidence, and integrity
+
+- Exact backend PID 20315 received Ctrl-C; harness exit code 1 from interrupt;
+  port 3000 then had no listener.
+- Disposable DB ended integrity `ok`, four users, two Pilot users, zero orders.
+- Original DB SHA-256 remained
+  `c63f00544180ba1fbb1427a9b9dd3f1784842698809972f33ce90482e7420ba6`
+  on original device/inode; no original tracked runtime mutation occurred.
+- Large files remain local/checksummed and are not staged because they total
+  about 21.6 GiB. They were not deleted, renamed, replaced, or called official.
+- Small artifacts passed full known-pattern scans. First/last 100 MiB of each
+  giant file passed. A complete giant-file scan was stopped after several
+  match-free minutes; complete byte-for-byte secret-scan coverage is not
+  claimed. Zero network data and static metric schemas provide additional
+  bounded evidence.
+
+### Correction/review boundary
+
+No source fix and no rerun occurred. H-038 must review: seven safe group-name
+replacements; custom `context.traffic`; deterministic abort on unexpected
+runtime/script exception; reliable exit and full wall-clock enforcement;
+corrected-Pilot output scope; and archival/cleanup of 21.6 GiB local failure
+evidence. Four deferred numeric abort rules and all final performance thresholds
+remain deferred. No official scenario or push occurred.

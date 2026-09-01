@@ -1,0 +1,12 @@
+PILOT FAILURE DIAGNOSTIC — NO HTTP — NOT AN OFFICIAL RESULT
+Timestamp: 2026-09-01 21:41:28 +0700
+Command: k6 run --no-usage-report --summary-mode=disabled /private/tmp/eshop-hw05-pilot.4B74ft/group-name-probe.js
+Diagnostic process exit code: 0
+
+The one-iteration script called only group('wf03::01_login', () => {}).
+It made no HTTP request and produced this exact underlying error:
+
+GoError: group and check names may not contain '::'
+
+This confirms the Pilot root cause and also demonstrates that k6 can return
+exit code 0 despite an uncaught per-iteration script exception.

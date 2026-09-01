@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "helper_status": "DRAFT_NOT_YET_HUMAN_APPROVED_FOR_EXECUTION",
+  "account_count": 2,
+  "account_keys": [
+    "wf03-customer-01",
+    "wf03-customer-02"
+  ],
+  "registration_api": "POST /api/register",
+  "credential_validation": "PASS",
+  "role_and_lock_validation": "PASS",
+  "zero_starting_orders": "PASS",
+  "secrets_in_evidence": false,
+  "completed_at": "2026-09-01T14:31:44.787Z"
+}

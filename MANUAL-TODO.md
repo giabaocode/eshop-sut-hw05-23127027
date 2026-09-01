@@ -44,7 +44,8 @@ CLARIFICATION`, `RESOLVED BY HUMAN DECISION`, `DONE BY HUMAN`, `NOT APPLICABLE`.
 | H-034 | Review/correct the Phase D credential binding, authentication/correlation chain, value ownership/lifetime, fail-fast rules, VU/iteration isolation, and stable metric grouping/tagging. | DONE BY HUMAN | Approved with isolated-auth-failure correction in HD-007; authoritative Phase D and audit records updated before this status was set on 2026-09-01 |
 | H-035 | Review/correct the Phase E exact checks, custom metrics, one-outcome rule, failure taxonomy, operational safety stops, and three-report/output proposal. | DONE BY HUMAN | Approved with four error-based numeric aborts deferred pending pilot evidence and report mapping conditionally approved; recorded in HD-008 on 2026-09-01 |
 | H-036 | Review the Phase F shared draft k6 architecture, one authoritative WF-03 implementation, static guards, configs, metrics/checks, output abstraction, and static-review findings. | DONE BY HUMAN | Approved explicitly with H-002 resolution and numeric-abort deferral retained; HD-009 |
-| H-037 | Approve execution of the prepared disposable-runtime 2-VU pilot, including the source-required one-start backend ordering and provisioning exactly two pilot accounts. | WAITING FOR HUMAN | Separate explicit execution approval after reviewing pinned k6 2.2.0 findings, `runbooks/k6-pilot.md`, the unexecuted helper, evidence paths, and risks |
+| H-037 | Approve execution of the prepared disposable-runtime 2-VU pilot, including the source-required one-start backend ordering and provisioning exactly two pilot accounts. | DONE BY HUMAN | Explicit approval in HD-010; one Pilot executed and failed before HTTP; no official result |
+| H-038 | Review the failed Pilot evidence and approve/correct the proposed group-name, custom traffic-tag, runtime-exception abort, exit/wall-clock runner, rerun-output, and 21.6 GiB artifact-handling decisions. | WAITING FOR HUMAN | Explicit results review and separate authorization before applying evidence-affecting fixes or running a corrected Pilot |
 
 ## Current checkpoint
 
@@ -55,8 +56,8 @@ isolated-auth-failure correction recorded in HD-007, and H-034 is explicitly
 deferred pending pilot evidence; H-035 is `DONE BY HUMAN`. The report proposal
 is human-resolved under the PDF's explicit k6-equivalent-output rule; no TA
 contact is required. Phase F is human-approved and H-036 is `DONE BY HUMAN`.
-Phase G installed and pinned k6 2.2.0 and completed no-HTTP init/output
-capability validation. The 2-VU Pilot entry/runbook/helper are prepared but not
-SUT-verified or executed. H-037 blocks pilot execution. The disposable backend
-remains stopped. No account provisioning, real credential generation, SUT
-startup, or performance traffic is authorized.
+Phase G installed/pinned k6 2.2.0 and H-037 authorized one controlled Pilot.
+Preflight/provisioning passed, but the Pilot failed before HTTP on invalid `::`
+group names and generated approximately 21.6 GiB of local failure artifacts.
+The backend is stopped, port 3000 is free, and the original DB is unchanged.
+H-038 now blocks source corrections, a corrected Pilot, and official execution.

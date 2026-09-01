@@ -1,6 +1,6 @@
 # Pinned k6 Toolchain and Compatibility Record
 
-Status: **PINNED VERSION INIT/OUTPUT-CAPABILITY VERIFIED — NO SUT TRAFFIC**
+Status: **PINNED VERSION INIT/OUTPUT-CAPABILITY VERIFIED — PILOT FAILED BEFORE HTTP**
 
 Recorded: 2026-09-01 (Asia/Ho_Chi_Minh)
 
@@ -123,9 +123,14 @@ never be represented as measured SUT data.
 ## 5. Compatibility boundary
 
 The shared scripts are now **pinned-k6 init verified**, not end-to-end runtime
-verified. No login, search, detail, checkout, order probe, cancellation, real
-account mapping, network output overhead, wall-clock runner, or SUT response was
-tested. Those checks require the separately approved disposable 2-VU pilot.
+verified. The failed Pilot did not exercise login, search, detail, checkout,
+order probe, cancellation, or response-owned correlation. Those checks now
+require a separately human-approved corrected disposable 2-VU Pilot.
+
+The subsequently approved Pilot confirmed that init/data provisioning worked
+but exposed a runtime-only incompatibility not exercised by `inspect`: k6 2.2.0
+rejects `::` in group/check names. The Pilot therefore sent zero HTTP bytes and
+does not satisfy the end-to-end verification gate. See `k6-pilot-results.md`.
 
 No final p95/RPS/error/capacity threshold or any of the four deferred numeric
 abort proposals was introduced. No official Load/Stress/Spike filename or

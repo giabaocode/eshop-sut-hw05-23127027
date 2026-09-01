@@ -1,6 +1,6 @@
 # Shared k6 Architecture and Static Implementation Review
 
-Status: **PHASE F HUMAN-APPROVED — PINNED k6 INIT VERIFIED; SUT/PILOT NOT VERIFIED**
+Status: **PHASE F HUMAN-APPROVED — PINNED INIT VERIFIED; PILOT FAILED BEFORE HTTP**
 
 Prepared: 2026-09-01 (Asia/Ho_Chi_Minh)
 Workflow: WF-03 — Purchase followed by customer cancellation
@@ -318,7 +318,18 @@ no-HTTP retry on an ephemeral local port succeeded. These are tool findings,
 not SUT or performance evidence.
 
 Pilot traffic uses `scenario=pilot,traffic=pilot`; official entries retain
-`traffic=measured`. The provisioning helper is setup-only and has not run.
+`traffic=measured`. At the Phase G preparation checkpoint the provisioning
+helper had not run; it later ran once under H-037 and passed setup validation.
+
+### Pilot execution finding
+
+H-037 later authorized one controlled Pilot. Provisioning passed, but k6 failed
+before HTTP because all seven group labels contain the reserved `::` separator.
+The generic catch then tight-looped runtime exceptions. No source fix or rerun
+has occurred. The Pilot also proved custom metrics currently hard-code
+`traffic=measured` rather than using `context.traffic`. Both fixes, deterministic
+runtime-exception abort behavior, reliable exit/wall-clock capture, and output
+scope require H-038 review. See `k6-pilot-results.md`.
 
 Static findings plus pinned init probes now prove imports, option parsing, and
 the listed local APIs/outputs. They do not verify HTTP contracts, credential

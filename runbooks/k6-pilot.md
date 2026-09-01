@@ -1,12 +1,17 @@
 # 2-VU k6 Pilot Runbook
 
-Status: **DRAFT — NOT EXECUTED — H-037 HUMAN APPROVAL REQUIRED**
+Status: **EXECUTED ONCE UNDER H-037 — FAILED BEFORE HTTP — H-038 REVIEW REQUIRED**
 
 Pinned tool: k6 `v2.2.0` at `/opt/homebrew/bin/k6`
 
 Purpose: validate the real runtime/data/correlation/check/metric/output chain
 conservatively before any official Load, Stress, or Spike execution. This pilot
 is not an official Load result and must never be reused or relabeled as one.
+
+Execution note: Pilot `20260901T212619+0700` passed preflight/provisioning but
+failed on k6-invalid `::` group names before HTTP and was not rerun. See
+[`docs/k6-pilot-results.md`](../docs/k6-pilot-results.md). Commands below remain
+the historical preparation plan; H-038 blocks correction or another execution.
 
 ## 1. Source-derived startup constraint
 

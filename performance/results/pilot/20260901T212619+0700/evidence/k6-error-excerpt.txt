@@ -1,0 +1,11 @@
+PILOT / RUNTIME VALIDATION — NOT OFFICIAL LOAD RESULT
+
+First observed at 2026-09-01T21:34:10+07:00 and repeated through
+2026-09-01T21:37:55+07:00:
+
+Error: WF03 runtime/safety error: unexpected iteration exception
+    at executeWf03 (.../performance/lib/workflow.js:322:11)
+    at runWf03Scenario (.../performance/scenarios/pilot.js:21:14)
+
+The full stderr remains local and checksummed. A separate no-HTTP diagnostic
+exposed the underlying error: group and check names may not contain `::`.

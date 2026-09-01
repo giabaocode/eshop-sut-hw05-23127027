@@ -5,15 +5,16 @@
 - Created: 2026-09-01 13:37:42 +07 (Asia/Ho_Chi_Minh)
 - Repository: `/Users/phamngocgiabao/eshop-sut-hw05-23127027`
 - Source commit: `85af3ba875c88283615e22cb108f13e2fccaf0e9`
-- Current completed phase: **Phase G — Pinned k6 Toolchain and 2-VU Pilot Preparation**
+- Current completed phase: **Controlled 2-VU Pilot attempt — failed runtime validation before HTTP**
 - Phase B correction review: **RESOLVED BY HUMAN** on 2026-09-01 15:58:08 +07
 - Phase C status: **COMPLETE AND HUMAN-REVIEWED**; H-033 `DONE BY HUMAN`
 - Phase D status: **COMPLETE AND HUMAN-REVIEWED WITH AUTHENTICATION CORRECTION**; H-034 `DONE BY HUMAN`
 - Phase E status: **COMPLETE AND HUMAN-REVIEWED WITH NUMERIC ABORT DEFERRAL**; H-035 `DONE BY HUMAN`
 - Phase F status: **COMPLETE AND HUMAN-REVIEWED**; H-036 `DONE BY HUMAN`
-- Phase G status: **PREPARATION COMPLETE; PINNED k6 INIT/OUTPUT VERIFIED; PILOT NOT EXECUTED**
+- Phase G status: **TOOLCHAIN/PREPARATION COMPLETE; ONE HUMAN-APPROVED PILOT EXECUTED AND FAILED BEFORE HTTP**
 - Phase G implementation commit: `d9291f7` (`test: pin k6 and prepare 2-VU pilot`)
-- Current gate: **H-037 — 2-VU PILOT EXECUTION APPROVAL**
+- H-037: **DONE BY HUMAN** for the completed failed Pilot
+- Current gate: **H-038 — PILOT RESULTS/CORRECTION REVIEW**
 
 ## Selected workflow
 
@@ -199,11 +200,16 @@ checkpoint, the workload proposal, or the AI Audit.
   the real SUT workflow remains pilot-unverified.
 - Pinned k6 is v2.2.0 at `/opt/homebrew/bin/k6`; no version change is authorized
   without later review.
-- The provisioning helper is a draft that has never run; every provisioning
-  execution remains separately unauthorized.
-- The source-derived one-start backend ordering in `runbooks/k6-pilot.md` needs
-  H-037 review because restarting this SUT would reset and erase provisioned
-  accounts.
+- The provisioning helper ran once for the approved Pilot and successfully
+  created/validated exactly two disposable customers. Further provisioning is
+  unauthorized.
+- The source-derived one-start ordering passed for Attempt 02; PID 20315 stayed
+  unchanged through setup/Pilot and is now stopped.
+- The Pilot failed on invalid `::` group names before HTTP, then tight-looped
+  9,699,772 failed attempts and produced approximately 21.6 GiB JSON/CSV/stderr.
+- H-038 must decide the proposed group rename, `context.traffic` custom tag,
+  runtime-exception whole-test abort, exit/wall-clock runner, corrected-Pilot
+  output scope, and large-artifact archive/cleanup.
 - No final official Load/Stress/Spike execution script/filename exists.
 - Final numeric performance thresholds remain unset until real-result analysis.
 - Exact Load/Stress/Spike plan filenames/dates require human approval.
@@ -237,13 +243,15 @@ Read these before continuing beyond the Phase F review checkpoint:
 11. [`k6-architecture.md`](k6-architecture.md) — human-approved Phase F draft/static review record.
 12. [`k6-toolchain.md`](k6-toolchain.md) — pinned install and genuine no-HTTP capability findings.
 13. [`git-recovery-plan.md`](git-recovery-plan.md) — truthful local baseline recovery and hashes.
-14. [`../runbooks/k6-pilot.md`](../runbooks/k6-pilot.md) — unexecuted H-037 pilot plan.
-15. [`../performance/data/README.md`](../performance/data/README.md) — safe data artifact contract.
-16. [`runtime-api-verification.md`](runtime-api-verification.md) — genuine functional HTTP/state evidence.
-17. [`sut-discovery.md`](sut-discovery.md) — source-backed endpoint/database/auth findings.
-18. [`../runbooks/sut-startup-macos.md`](../runbooks/sut-startup-macos.md) — approved disposable startup strategy.
-19. [`../MANUAL-TODO.md`](../MANUAL-TODO.md) — human responsibilities and statuses.
-20. [`../ai-audit/audit.md`](../ai-audit/audit.md) and
+14. [`../runbooks/k6-pilot.md`](../runbooks/k6-pilot.md) — approved source plan; one failed execution is now recorded separately.
+15. [`k6-pilot-results.md`](k6-pilot-results.md) — genuine failed Pilot results and correction proposal.
+16. [`../performance/results/pilot/20260901T212619+0700/README.md`](../performance/results/pilot/20260901T212619+0700/README.md) — local Pilot artifact inventory/boundary.
+17. [`../performance/data/README.md`](../performance/data/README.md) — safe data artifact contract.
+18. [`runtime-api-verification.md`](runtime-api-verification.md) — genuine functional HTTP/state evidence.
+19. [`sut-discovery.md`](sut-discovery.md) — source-backed endpoint/database/auth findings.
+20. [`../runbooks/sut-startup-macos.md`](../runbooks/sut-startup-macos.md) — approved disposable startup strategy.
+21. [`../MANUAL-TODO.md`](../MANUAL-TODO.md) — human responsibilities and statuses.
+22. [`../ai-audit/audit.md`](../ai-audit/audit.md) and
     [`../ai-audit/interactions/`](../ai-audit/interactions/) — AI-first evidence history.
 
 ## Human decisions already completed
@@ -297,9 +305,9 @@ See `MANUAL-TODO.md` for exact IDs and remaining responsibilities.
 
 ## Resume instruction
 
-Do not redo completed discovery or Phases C–G. Await H-037 review of the pinned
-toolchain evidence, pilot runbook, and draft helper. Do not start the SUT,
-provision accounts, execute pilot or
+Do not redo completed discovery or Phases C–G. Await H-038 review of the failed
+Pilot and proposed evidence-affecting corrections. Do not patch/re-run the
+Pilot, start the SUT, provision accounts, or
 official traffic, implement deferred numeric aborts/final performance
 thresholds, create official execution filenames, or push without explicit
 approval.

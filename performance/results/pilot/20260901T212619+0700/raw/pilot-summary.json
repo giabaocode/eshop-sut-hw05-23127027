@@ -1,0 +1,54 @@
+{
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {}
+    },
+    "metrics": {
+        "wf03_failures": {
+            "count": 9699772,
+            "rate": 40415.69022806931
+        },
+        "iteration_duration": {
+            "med": 0.017792,
+            "max": 50.406792,
+            "p(90)": 0.03825,
+            "p(95)": 0.054458,
+            "avg": 0.023972707903763674,
+            "min": 0.012875
+        },
+        "vus_max": {
+            "value": 2,
+            "min": 2,
+            "max": 2
+        },
+        "wf03_workflow_attempted": {
+            "count": 9699772,
+            "rate": 40415.69022806931
+        },
+        "wf03_workflow_success": {
+            "passes": 0,
+            "fails": 9699772,
+            "value": 0
+        },
+        "data_received": {
+            "count": 0,
+            "rate": 0
+        },
+        "iterations": {
+            "count": 9699772,
+            "rate": 40415.69022806931
+        },
+        "data_sent": {
+            "count": 0,
+            "rate": 0
+        },
+        "vus": {
+            "value": 1,
+            "min": 0,
+            "max": 2
+        }
+    }
+}

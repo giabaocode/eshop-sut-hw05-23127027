@@ -304,3 +304,32 @@ start once, finish registration preconditioning, then remain the same owned
 process for the pilot. Restarting it after registration would erase the test
 accounts. This implementation detail is recorded for H-037 review; it does not
 change or pre-approve the human's isolation/preconditioning policy.
+
+## HD-010 — Controlled 2-VU Pilot execution approval
+
+| Field | Human decision |
+|---|---|
+| Recorded | 2026-09-01 (Asia/Ho_Chi_Minh) |
+| Decision owner | Phạm Ngọc Gia Bảo — HUMAN |
+| Phase G review | **APPROVED FOR CONTROLLED 2-VU PILOT ONLY** |
+| One-start ordering | Fresh disposable backend starts once, resets/seeds, remains the same owned process through provisioning and Pilot, then exact PID stops |
+| Provisioning | Exactly accounts 01/02 via real registration, sequential secure private passwords, mode-0600 file outside Git, role/unlocked/login validation |
+| Workload | 30s ramp to 2, 3m hold, 30s ramp down, five-minute wall cap |
+| Business semantics | Use unchanged shared WF-03; never weaken checks to pass |
+| Evidence | Genuine Pilot-only command/timestamps/output/log/setup/preflight evidence; never relabel as official |
+| Failure policy | Preserve first failure, classify it, propose smallest fix, and require review for semantic/metric/evidence changes |
+| Deferred rules | Four numeric abort proposals and final performance thresholds remain deferred |
+| Git | Truthful local Pilot commit allowed; secrets/temp private files prohibited; no push |
+| H-037 authorization | Mark `DONE BY HUMAN` for this single Pilot execution approval |
+
+The actual human prompt is preserved verbatim in
+[`../ai-audit/interactions/016-phase-g-review-2vu-pilot-execution.md`](../ai-audit/interactions/016-phase-g-review-2vu-pilot-execution.md).
+
+### Execution outcome (AI evidence, not a new human decision)
+
+Preflight and two-account provisioning passed, but the Pilot failed before its
+first HTTP request because k6 rejects `::` in group names. The resulting tight
+runtime-exception loop produced 9,699,772 failed attempts and approximately
+21.6 GiB of local JSON/CSV/stderr. No corrected rerun occurred. Human review is
+now required for the proposed group/tag/safety/runner changes and artifact
+handling before any fresh Pilot.

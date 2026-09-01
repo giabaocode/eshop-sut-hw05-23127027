@@ -40,7 +40,7 @@ commit hashes are recorded below after creation.
 | 2 | Selected workflow, workload, test-data strategy, public data/templates, narrow ignore rules | `e0d2df5` | `docs: define WF-03 workload and test data strategy` |
 | 3 | Correlation, checks, metrics, safety, and resolved k6-equivalent report strategy | `3f1e869` | `docs: specify WF-03 correlation checks and reporting` |
 | 4 | Shared draft k6 architecture and static implementation | `1674905` | `test: add shared draft k6 WF-03 implementation` |
-| 5 | Human decisions, resume/manual registers, complete AI Audit, and this recovery disclosure | `PENDING` | `docs: add AI audit and human review records` |
+| 5 | Human decisions, resume/manual registers, complete AI Audit, and this recovery disclosure | `7ac1229` | `docs: add AI audit and human review records` |
 
 ## 4. Forward discipline
 
@@ -49,3 +49,17 @@ truthful local commits as appropriate after its actual work and validation.
 Commit messages describe real present changes. The AI Audit records actual
 hashes and any failures. Push remains separately authorized and must never target
 `upstream`.
+
+The five baseline commits above are complete. Phase G is the first phase using
+the recovered forward discipline: its pinned-toolchain validation, pilot
+preparation, and audit updates will be committed after actual validation. No
+commit is backdated and no local commit has been pushed.
+
+## 5. Phase G forward-discipline commit
+
+| Phase | Actual content | Commit hash | Commit message |
+|---|---|---|---|
+| G | Pinned k6 2.2.0 capability record, compatibility adjustments, isolated 2-VU Pilot entry/runbook, and unexecuted guarded provisioning helper | `d9291f7` | `test: pin k6 and prepare 2-VU pilot` |
+
+This hash was recorded only after the real commit existed. A separate audit/
+checkpoint commit records the validation narrative. Neither commit is pushed.

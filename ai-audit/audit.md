@@ -977,3 +977,98 @@ push, or publication was created/performed.
   were performed. Group 3 had real trailing-whitespace findings corrected before
   commit. Group 4's broad scan flagged the safe source reference
   `credential.password`; review confirmed no credential literal.
+- Baseline group 5 was then committed as `7ac1229` for the human/audit/manual
+  records. No baseline commit was pushed.
+
+## Interaction 015 — Phase F review, Git recovery, and Phase G toolchain/pilot preparation
+
+| Field | Record |
+|---|---|
+| AI tool | Codex CLI |
+| Human instruction received | 2026-09-01 17:01:08 +07 (Asia/Ho_Chi_Minh) |
+| Phase G record updated | 2026-09-01 17:28:20 +07 |
+| Human prompt | Approve Phase F and shared WF-03 invariants; resolve H-002 by human k6-equivalent interpretation; truthfully recover local Git commits; install/pin k6 through existing Homebrew; validate init/output capabilities without SUT HTTP; prepare but do not execute the 2-VU Pilot/helper/runbook. Full actual prompt: [`interactions/015-phase-f-review-phase-g-toolchain.md`](interactions/015-phase-f-review-phase-g-toolchain.md). |
+| Human-review status | Phase F/H-036 `DONE BY HUMAN`; H-002 `RESOLVED BY HUMAN DECISION`; Pilot H-037 `WAITING FOR HUMAN` |
+| Performance execution | **NONE** |
+| Phase G implementation commit | `d9291f7` — `test: pin k6 and prepare 2-VU pilot` |
+
+### Actual Git recovery
+
+- Before recovery, Phase 0–F artifacts existed without local procedural
+  commits. No fake/backdated commit, history rewrite, or push was made.
+- Five actual baseline commits were created after staged-file, staged-stat,
+  secret/reference, and forbidden-artifact checks:
+  `e488cf4`, `e0d2df5`, `3f1e869`, `1674905`, and `7ac1229`.
+- The assignment PDF is protected by an exact root ignore rule. No credential,
+  secret, disposable runtime, or temporary capability file entered Git.
+- Branch `main` became five commits ahead of `origin/main`; remotes and
+  `remote.pushDefault=origin` remained unchanged. Nothing was pushed.
+
+### Actual installation record
+
+- Preflight found Homebrew 6.0.20 at `/opt/homebrew/bin/brew`, no existing k6,
+  arm64, macOS 26.5.2 build 25F84, and no port-3000 listener.
+- Authorized `brew install k6` without sudo installed the 2.2.0 bottle.
+- Pinned binary: `/opt/homebrew/bin/k6`; version
+  `k6 v2.2.0 (commit/devel, go1.26.5, darwin/arm64)`; binary SHA-256
+  `621ce55919a8067249cfbcc3da4e5ad5316a5706542a9a68667a40a2ec9dbd45`.
+- A later `brew info k6` attempted an online formula refresh and failed DNS, but
+  still showed installed/linked k6 2.2.0. This failure did not alter the binary.
+
+### Genuine no-HTTP compatibility evidence
+
+- A 20-row synthetic credential file and probe scripts existed only under
+  `/private/tmp/eshop-hw05-k6-init.a5sx7d`; no value is treated as a real account.
+- All official scenario entries passed `k6 inspect --execution-requirements`:
+  Load max 5 and 7m30s including graceful stop; Stress exact 13 stages/max 20
+  and 13m including graceful stop; Spike exact stages/max 20 and 6m35s
+  including graceful stop. Thresholds were absent.
+- The prepared Pilot passed after using explicit `-e` variables: 30s to 2,
+  three-minute hold, 30s to zero, max 2, 4m30s including graceful stop.
+- `k6 deps` resolved local modules plus built-in `k6`, `k6/http`, `k6/data`,
+  `k6/execution`, and `k6/metrics`; no custom build was required.
+- A no-HTTP runtime probe verified SharedArray/open, one-based VU identity,
+  `exec.test.abort`, metric constructors/samples, scenario dispatch, system tags,
+  and summary-hook compatibility. The backend remained stopped.
+
+### Genuine output-capability evidence and corrections
+
+- An invalid output-name probe failed before traffic and listed installed output
+  types including JSON, CSV, and web dashboard; no file was produced.
+- A first one-iteration JSON/CSV probe wrote those private formats, while the
+  dashboard bind was sandbox-blocked/too short and no summary file appeared
+  because summary mode was disabled. These failures are retained.
+- A corrected two-second no-HTTP probe on an ephemeral local dashboard port
+  wrote actual private JSON, CSV, and HTML. A further summary-mode-enabled
+  no-HTTP probe wrote actual private custom-summary JSON.
+- These files prove tool syntax/capability only. They are outside Git, are not
+  SUT/performance results, and are not homework reports. No JTL was produced;
+  the installed output registry contains no native JTL option.
+- The exact 220 KiB probe directory was removed after documentation, including
+  its synthetic credential and capability outputs; no repository file was
+  removed.
+- The first staged secret-scan command failed before scanning with a genuine
+  zsh `bad pattern` quoting error. The corrected simpler scan found only
+  intended source/schema password/token references and no credential literal,
+  private key, common access-token signature, or forbidden staged path.
+
+### Phase G draft changes and execution boundary
+
+- Created `docs/k6-toolchain.md`, `runbooks/k6-pilot.md`, internal
+  `performance/scenarios/pilot.js`, and unexecuted
+  `performance/tools/provision-accounts.mjs`; updated architecture/output/
+  resume/manual/human-decision records.
+- Pilot samples are isolated as `scenario=pilot,traffic=pilot`; official
+  scenarios remain `traffic=measured` and call the same business function.
+- The helper uses real registration/login/my-orders contracts, secure random
+  passwords, private mode-0600 output outside Git, redacted evidence, and
+  disposable path/marker/database-inode guards. It has not been executed.
+- Source revealed that starting this backend resets/seeds its database.
+  Therefore the proposed pilot starts the disposable backend once, completes
+  setup-only provisioning, then runs against that same owned process; restarting
+  after setup would erase accounts. H-037 must approve this exact ordering.
+
+No SUT start, port-3000 listener, registration, account, real credential,
+workflow HTTP, database mutation, Pilot/Load/Stress/Spike/endurance run,
+measured result, official report, official filename/date, screenshot, JTL,
+push, or publication occurred.

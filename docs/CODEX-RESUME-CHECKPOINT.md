@@ -5,14 +5,15 @@
 - Created: 2026-09-01 13:37:42 +07 (Asia/Ho_Chi_Minh)
 - Repository: `/Users/phamngocgiabao/eshop-sut-hw05-23127027`
 - Source commit: `85af3ba875c88283615e22cb108f13e2fccaf0e9`
-- Current completed phase: **Phase F — Shared k6 Architecture and Static Implementation, reviewed by the human**
+- Current completed phase: **Phase G — Pinned k6 Toolchain and 2-VU Pilot Preparation**
 - Phase B correction review: **RESOLVED BY HUMAN** on 2026-09-01 15:58:08 +07
 - Phase C status: **COMPLETE AND HUMAN-REVIEWED**; H-033 `DONE BY HUMAN`
 - Phase D status: **COMPLETE AND HUMAN-REVIEWED WITH AUTHENTICATION CORRECTION**; H-034 `DONE BY HUMAN`
 - Phase E status: **COMPLETE AND HUMAN-REVIEWED WITH NUMERIC ABORT DEFERRAL**; H-035 `DONE BY HUMAN`
-- Phase F status: **COMPLETE AND HUMAN-REVIEWED — DRAFT NOT RUNTIME VERIFIED**; H-036 `DONE BY HUMAN`
-- Current phase: **Phase G — Pinned k6 Toolchain and 2-VU Pilot Preparation**
-- Phase G status: **IN PROGRESS; PILOT EXECUTION NOT AUTHORIZED**
+- Phase F status: **COMPLETE AND HUMAN-REVIEWED**; H-036 `DONE BY HUMAN`
+- Phase G status: **PREPARATION COMPLETE; PINNED k6 INIT/OUTPUT VERIFIED; PILOT NOT EXECUTED**
+- Phase G implementation commit: `d9291f7` (`test: pin k6 and prepare 2-VU pilot`)
+- Current gate: **H-037 — 2-VU PILOT EXECUTION APPROVAL**
 
 ## Selected workflow
 
@@ -194,26 +195,30 @@ checkpoint, the workload proposal, or the AI Audit.
 
 ## Important unresolved items
 
-- Phase F architecture/source is human-approved but not runtime verified.
-- Phase G pinned-k6 installation and no-HTTP init/capability validation remain
-  to be completed and recorded.
-- Actual provisioning helper design/code review and every provisioning execution
-  remain separately unauthorized.
-- k6 is not installed; installation requires later explicit approval.
-- No final k6 workflow/scenario script exists.
-- Final checks/assertion implementation and human review remain pending.
+- Phase F architecture/source is human-approved and k6 2.2.0 init-verified, but
+  the real SUT workflow remains pilot-unverified.
+- Pinned k6 is v2.2.0 at `/opt/homebrew/bin/k6`; no version change is authorized
+  without later review.
+- The provisioning helper is a draft that has never run; every provisioning
+  execution remains separately unauthorized.
+- The source-derived one-start backend ordering in `runbooks/k6-pilot.md` needs
+  H-037 review because restarting this SUT would reset and erase provisioned
+  accounts.
+- No final official Load/Stress/Spike execution script/filename exists.
 - Final numeric performance thresholds remain unset until real-result analysis.
 - Exact Load/Stress/Spike plan filenames/dates require human approval.
 - Load/Stress HTML renderer implementation remains pending real data and review;
   H-002 assignment interpretation itself is resolved by the human.
 - Relationship between performance demo and Agent Skill demo remains unresolved.
-- Three distinct report/output mappings are not finalized.
+- The distinct report/output interpretation is human-final; real Load/Stress
+  renderers and all measured artifacts remain unimplemented.
 - Preflight, account-lockout procedure review, real execution approvals,
   screenshots/resource monitoring, hardware evidence, endurance run, result
   analysis, AI misinterpretation review, optimization review, issues, video,
   critique, report, README, validator, self-assessed grade, and ZIP remain later
   work.
-- No commit or push has occurred in the documented phases.
+- Five truthful local baseline commits exist and Phase G local commits are to be
+  finalized; no push has occurred.
 
 ## Authoritative continuation files
 
@@ -230,13 +235,15 @@ Read these before continuing beyond the Phase F review checkpoint:
 9. [`report-output-mapping.md`](report-output-mapping.md) — human-resolved distinct k6 output strategy; pinned capability pending.
 10. [`ta-clarifications.md`](ta-clarifications.md) — preserved unsent question and human resolution.
 11. [`k6-architecture.md`](k6-architecture.md) — human-approved Phase F draft/static review record.
-12. [`git-recovery-plan.md`](git-recovery-plan.md) — truthful local baseline recovery and hashes.
-13. [`../performance/data/README.md`](../performance/data/README.md) — safe data artifact contract.
-14. [`runtime-api-verification.md`](runtime-api-verification.md) — genuine functional HTTP/state evidence.
-15. [`sut-discovery.md`](sut-discovery.md) — source-backed endpoint/database/auth findings.
-16. [`../runbooks/sut-startup-macos.md`](../runbooks/sut-startup-macos.md) — approved disposable startup strategy.
-17. [`../MANUAL-TODO.md`](../MANUAL-TODO.md) — human responsibilities and statuses.
-18. [`../ai-audit/audit.md`](../ai-audit/audit.md) and
+12. [`k6-toolchain.md`](k6-toolchain.md) — pinned install and genuine no-HTTP capability findings.
+13. [`git-recovery-plan.md`](git-recovery-plan.md) — truthful local baseline recovery and hashes.
+14. [`../runbooks/k6-pilot.md`](../runbooks/k6-pilot.md) — unexecuted H-037 pilot plan.
+15. [`../performance/data/README.md`](../performance/data/README.md) — safe data artifact contract.
+16. [`runtime-api-verification.md`](runtime-api-verification.md) — genuine functional HTTP/state evidence.
+17. [`sut-discovery.md`](sut-discovery.md) — source-backed endpoint/database/auth findings.
+18. [`../runbooks/sut-startup-macos.md`](../runbooks/sut-startup-macos.md) — approved disposable startup strategy.
+19. [`../MANUAL-TODO.md`](../MANUAL-TODO.md) — human responsibilities and statuses.
+20. [`../ai-audit/audit.md`](../ai-audit/audit.md) and
     [`../ai-audit/interactions/`](../ai-audit/interactions/) — AI-first evidence history.
 
 ## Human decisions already completed
@@ -278,7 +285,8 @@ See `MANUAL-TODO.md` for exact IDs and remaining responsibilities.
    `c63f00544180ba1fbb1427a9b9dd3f1784842698809972f33ce90482e7420ba6`.
 5. Use commit-pinned disposable runtimes under `/private/tmp`; preserve evidence
    before reset/reseed.
-6. Do not install or run k6 without explicit approval.
+6. k6 2.2.0 is installed and pinned. Do not run SUT/pilot/official k6 traffic
+   without the applicable explicit approval.
 7. Maintain the AI Audit and preserve actual prompts, outputs, corrections, and
    human-review state during every phase.
 8. Human checkpoints remain mandatory. Never mark `DONE BY HUMAN` without an
@@ -289,9 +297,9 @@ See `MANUAL-TODO.md` for exact IDs and remaining responsibilities.
 
 ## Resume instruction
 
-Do not redo completed discovery or Phases C–F. Phase G may install/pin k6 and
-perform no-HTTP static/init capability validation, then prepare the pilot
-runbook/helper. Do not start the SUT, provision accounts, execute pilot or
+Do not redo completed discovery or Phases C–G. Await H-037 review of the pinned
+toolchain evidence, pilot runbook, and draft helper. Do not start the SUT,
+provision accounts, execute pilot or
 official traffic, implement deferred numeric aborts/final performance
 thresholds, create official execution filenames, or push without explicit
 approval.

@@ -290,3 +290,17 @@ The complete verbatim review and Phase F instruction is preserved in
 
 The full verbatim human review and Phase G instruction is preserved in
 [`../ai-audit/interactions/015-phase-f-review-phase-g-toolchain.md`](../ai-audit/interactions/015-phase-f-review-phase-g-toolchain.md).
+
+### Phase G application result (AI execution evidence, not a new human decision)
+
+The authorized normal Homebrew installation pinned k6 v2.2.0 darwin/arm64 at
+`/opt/homebrew/bin/k6`. Real no-HTTP init/output capability probes verified the
+draft imports/options/execution APIs and native JSON/CSV/custom-summary/dashboard
+interfaces. The SUT remained stopped and no account was provisioned.
+
+Source inspection exposed an ordering constraint for the future pilot:
+starting this backend resets/seeds its database, so the disposable backend must
+start once, finish registration preconditioning, then remain the same owned
+process for the pilot. Restarting it after registration would erase the test
+accounts. This implementation detail is recorded for H-037 review; it does not
+change or pre-approve the human's isolation/preconditioning policy.

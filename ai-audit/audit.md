@@ -1333,3 +1333,37 @@ push occurred.
 - After staged path/secret/disposable/raw/official-filename checks, the truthful
   local Phase I preparation commit was created as `b914c3c`
   (`test: prepare reviewed official performance plans`). It was not pushed.
+
+## Interaction 020 — Human official filenames and blocked wrapper validation
+
+| Field | Actual record |
+|---|---|
+| AI tool | Codex CLI |
+| Recorded | 2026-09-01 23:31:14 +0700 |
+| Human action | Created the three official Load/Stress/Spike files under `performance/scenarios/official/` with date `20260901` |
+| Detailed interaction | [`interactions/020-human-official-filenames-validation.md`](interactions/020-human-official-filenames-validation.md) |
+| Filename outcome | PASS; H-010 `DONE BY HUMAN` |
+| Executable-content outcome | BLOCKED on relocated relative paths; no Load preparation followed |
+
+All basenames satisfy `^23127027_(Load|Stress|Spike)_20260901\.js$`. SHA-256
+comparison showed each official file is byte-for-byte identical to its internal
+counterpart:
+
+- Load: `6acb45e2f490e0239582f718feafa2ed3e43268cc34a5dab24d9537be9a1dc5b`;
+- Stress: `54f5d7329cdecdb45de8c894211019a1c2eeae6250e695bceea809a08ff743a8`;
+- Spike: `c3e0049824b7f4b450880fc44c56c2d86e5c0409cbd0d8d3a18701dd77897401`.
+
+The text diff is empty, but the new parent directory changes runtime semantics.
+`../config/workloads.js` now resolves to the nonexistent
+`performance/scenarios/config/workloads.js`; equivalent problems affect
+`../config/runtime.js`, all `../lib/` imports, and
+`open('../data/workflow.csv')`. Pinned k6 v2.2.0 `inspect` emitted the actual
+missing-module error for all three wrappers before loading credentials or
+sending HTTP. Port 3000 remained free.
+
+Codex did not modify, rename, stage, or commit the human-created wrappers. The
+proposed human-only correction, if retaining the `official/` directory, is to
+change config/lib/data prefixes from `../` to `../../`. Load workload/output/
+account/runtime preparation was deliberately not continued. No official
+traffic, result, report, screenshot, threshold, account, backend process, or
+push was created.

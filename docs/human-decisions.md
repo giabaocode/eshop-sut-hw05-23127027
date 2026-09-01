@@ -411,3 +411,22 @@ performance conclusion. HD-013 below records the later H-040 human review.
 
 The human's actual Phase I instruction and the resulting artifacts are recorded
 in [`../ai-audit/interactions/019-successful-pilot-review-phase-i.md`](../ai-audit/interactions/019-successful-pilot-review-phase-i.md).
+
+## HD-014 — Human official-filename creation and blocked wrapper validation
+
+| Field | Human action / validation result |
+|---|---|
+| Recorded | 2026-09-01 23:31:14 +07 (Asia/Ho_Chi_Minh) |
+| Human actor | Phạm Ngọc Gia Bảo |
+| Human-created Load file | `performance/scenarios/official/23127027_Load_20260901.js` |
+| Human-created Stress file | `performance/scenarios/official/23127027_Stress_20260901.js` |
+| Human-created Spike file | `performance/scenarios/official/23127027_Spike_20260901.js` |
+| Filename result | All three basenames pass the PDF pattern, student ID, scenario type/case, date `20260901`, and `.js` extension |
+| H-010 | `DONE BY HUMAN` for official filename creation/approval |
+| Content result | **BLOCKED**: byte-identical content moved under `official/` resolves `../config`, `../lib`, and `../data` beneath `performance/scenarios/`, where those paths do not exist |
+| k6 evidence | Pinned `k6 inspect` rejected all three on missing `../config/workloads.js`; no SUT HTTP occurred |
+| Correction authority | Codex must not edit the human-created wrappers; human correction and revalidation are required |
+| Execution boundary | No Load preparation/execution, Stress/Spike preparation, backend, provisioning, result, threshold, or push |
+
+The exact validation interaction is recorded in
+[`../ai-audit/interactions/020-human-official-filenames-validation.md`](../ai-audit/interactions/020-human-official-filenames-validation.md).

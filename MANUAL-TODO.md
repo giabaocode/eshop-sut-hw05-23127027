@@ -17,7 +17,7 @@ CLARIFICATION`, `RESOLVED BY HUMAN DECISION`, `DONE BY HUMAN`, `NOT APPLICABLE`.
 | H-007 | Review/correct load parameters, ramp-up, durations, VUs, and think time. | TODO | Explicit corrections/approval |
 | H-008 | Review/correct checks and business assertions. | TODO | Explicit corrections/approval |
 | H-009 | Review account-lockout handling and any reset procedure. | TODO | Explicit corrections/approval |
-| H-010 | Approve exact Load/Stress/Spike plan filenames after PDF validation. | TODO | Explicit filename approval |
+| H-010 | Approve exact Load/Stress/Spike plan filenames after PDF validation. | DONE BY HUMAN | Human created the three exact `23127027_{Load|Stress|Spike}_20260901.js` basenames; filename validation passed on 2026-09-01. Wrapper content remains separately blocked by relative-path resolution; HD-014 |
 | H-011 | Approve each real Load, Stress, Spike, and endurance execution before it runs. | TODO | Per-run explicit approval |
 | H-012 | Capture real performance-tool/resource-monitor screenshots for every run. | TODO | Actual screenshot files |
 | H-013 | Capture real macOS hardware/hostname screenshot evidence. | TODO | Actual screenshot file and hostname match check |
@@ -57,10 +57,14 @@ full WF-03 lifecycles, and H-040 is `DONE BY HUMAN` under HD-013. This promotes
 the shared code to 2-VU Pilot runtime-validated status only; it creates no
 official result, threshold, or capacity claim.
 
-Phase I has prepared the final review, workload/output/preconditioning plans,
-lockout/evidence/hardware procedures, an unexecuted exact-PID official runner,
-and blank official-filename checklist. H-010 is the current checkpoint: the
-human must create and approve the three attributable plan filenames using the
-actual appropriate date. H-009, H-012, H-013, H-022, per-run H-011 approvals,
-Load/Stress real-data renderer review, and every official execution remain
-open. No official filename, scenario, report, screenshot, or push exists.
+Phase I prepared the final review and execution materials. The human then
+created all three official basenames with date `20260901`; H-010 is `DONE BY
+HUMAN`. However, placing byte-identical wrappers one directory deeper made
+their `../config`, `../lib`, and `../data` paths invalid. Pinned k6 inspection
+stopped before HTTP on the missing module. The human-created files remain
+untouched and uncommitted pending a human path correction and revalidation.
+
+No Load preparation beyond this content gate, backend start, account
+provisioning, official traffic, result/report, screenshot, or push occurred.
+H-009, H-012, H-013, H-022, H-011, renderer review, and every execution remain
+open.

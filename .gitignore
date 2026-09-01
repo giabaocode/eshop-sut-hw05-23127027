@@ -1,0 +1,8 @@
+# HW05 runtime-private performance-test material only.
+/performance/data/credentials.local.csv
+/performance/data/credentials.local.json
+/performance/.env.local
+/performance/secrets/
+
+# Local assignment reference; not a required submission artifact.
+/2026.HW05.Performance Testing_En.pdf

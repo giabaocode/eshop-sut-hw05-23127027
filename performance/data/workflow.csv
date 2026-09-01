@@ -1,0 +1,21 @@
+row_id,account_key,search_term,expected_product_name,shipping_address
+wf03-row-01,wf03-customer-01,iPhone 15,iPhone 15 Pro Max,HW05 WF03 Disposable Address 01
+wf03-row-02,wf03-customer-02,Samsung Galaxy S24,Samsung Galaxy S24 Ultra,HW05 WF03 Disposable Address 02
+wf03-row-03,wf03-customer-03,MacBook Pro,MacBook Pro M3,HW05 WF03 Disposable Address 03
+wf03-row-04,wf03-customer-04,AirPods Pro,Tai nghe AirPods Pro 2,HW05 WF03 Disposable Address 04
+wf03-row-05,wf03-customer-05,Keychron Q1,Bàn phím cơ Keychron Q1,HW05 WF03 Disposable Address 05
+wf03-row-06,wf03-customer-06,iPhone 15,iPhone 15 Pro Max,HW05 WF03 Disposable Address 06
+wf03-row-07,wf03-customer-07,Samsung Galaxy S24,Samsung Galaxy S24 Ultra,HW05 WF03 Disposable Address 07
+wf03-row-08,wf03-customer-08,MacBook Pro,MacBook Pro M3,HW05 WF03 Disposable Address 08
+wf03-row-09,wf03-customer-09,AirPods Pro,Tai nghe AirPods Pro 2,HW05 WF03 Disposable Address 09
+wf03-row-10,wf03-customer-10,Keychron Q1,Bàn phím cơ Keychron Q1,HW05 WF03 Disposable Address 10
+wf03-row-11,wf03-customer-11,iPhone 15,iPhone 15 Pro Max,HW05 WF03 Disposable Address 11
+wf03-row-12,wf03-customer-12,Samsung Galaxy S24,Samsung Galaxy S24 Ultra,HW05 WF03 Disposable Address 12
+wf03-row-13,wf03-customer-13,MacBook Pro,MacBook Pro M3,HW05 WF03 Disposable Address 13
+wf03-row-14,wf03-customer-14,AirPods Pro,Tai nghe AirPods Pro 2,HW05 WF03 Disposable Address 14
+wf03-row-15,wf03-customer-15,Keychron Q1,Bàn phím cơ Keychron Q1,HW05 WF03 Disposable Address 15
+wf03-row-16,wf03-customer-16,iPhone 15,iPhone 15 Pro Max,HW05 WF03 Disposable Address 16
+wf03-row-17,wf03-customer-17,Samsung Galaxy S24,Samsung Galaxy S24 Ultra,HW05 WF03 Disposable Address 17
+wf03-row-18,wf03-customer-18,MacBook Pro,MacBook Pro M3,HW05 WF03 Disposable Address 18
+wf03-row-19,wf03-customer-19,AirPods Pro,Tai nghe AirPods Pro 2,HW05 WF03 Disposable Address 19
+wf03-row-20,wf03-customer-20,Keychron Q1,Bàn phím cơ Keychron Q1,HW05 WF03 Disposable Address 20

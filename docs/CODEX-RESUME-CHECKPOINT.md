@@ -20,7 +20,8 @@
 - H-038: **DONE BY HUMAN**; exact bulk cleanup completed
 - Corrected Attempt `20260901T221331+0700`: **BLOCKED BEFORE PROVISIONING/K6** on clone-local helper guard
 - Blocked-attempt evidence commit: `aebd717` (`test: record corrected Pilot preflight failure`)
-- Current gate: **H-039 — CORRECTED-PILOT PREFLIGHT/INVOCATION REVIEW**
+- H-039: **DONE BY HUMAN**; unchanged original-worktree helper invocation approved
+- Current gate: **H-040 — FRESH CORRECTED-PILOT REVIEW** after the authorized attempt
 
 ## Selected workflow
 

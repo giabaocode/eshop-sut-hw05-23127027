@@ -362,3 +362,21 @@ stopped before provisioning when the clone-local helper invocation triggered
 `runtime_is_original_repository`; it created no account/credential and sent no
 k6 traffic. This is AI execution evidence, not a new human decision. A changed
 helper invocation/new fresh attempt awaits human review.
+
+## HD-012 — Original-worktree helper invocation and fresh corrected Pilot
+
+| Field | Human decision |
+|---|---|
+| Recorded | 2026-09-01 22:35:38 +07 (Asia/Ho_Chi_Minh) |
+| Decision owner | Phạm Ngọc Gia Bảo — HUMAN |
+| Blocked attempt | Confirmed helper-invocation/setup defect; no account/k6 traffic; not SUT performance or confirmed SUT bug |
+| Approved invocation | Run unchanged helper from `/Users/phamngocgiabao/eshop-sut-hw05-23127027`, passing a new `/private/tmp/...` clone as `WF03_DISPOSABLE_ROOT` |
+| Mandatory boundary | Different absolute roots and DB inodes, correct marker/commit/hash/PID/port/localhost target before registration |
+| Helper semantics | Must remain unchanged; stop for review if original-worktree invocation cannot support the boundary safely |
+| Fresh setup | New clone only; one backend start; exactly customers 01/02; validate credentials/role/unlocked/zero orders |
+| Pilot | Execute the unchanged bounded 2-VU Pilot only if all setup gates pass; preserve bounded authentic outputs |
+| H-039 | `DONE BY HUMAN` after this invocation decision is committed |
+| Next gate | H-040 fresh corrected-Pilot evidence review; no official scenario implied |
+
+The actual human review is preserved in detail in
+[`../ai-audit/interactions/018-invocation-boundary-review-fresh-corrected-pilot.md`](../ai-audit/interactions/018-invocation-boundary-review-fresh-corrected-pilot.md).

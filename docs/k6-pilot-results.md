@@ -302,3 +302,14 @@ The genuine cleanup/preflight/failure/postflight evidence and associated audit
 updates were committed locally as `aebd717` (`test: record corrected Pilot
 preflight failure`). No credential, disposable database, dependency tree, or
 fabricated k6 artifact entered that commit, and it was not pushed.
+
+## 15. Human-approved invocation correction
+
+HD-012 confirms the blocked attempt as a provisioning-helper invocation/setup
+defect—not SUT performance or a confirmed SUT bug—and preserves its evidence.
+The unchanged helper must now execute from the actual original worktree while a
+new commit-pinned `/private/tmp` clone is supplied as `WF03_DISPOSABLE_ROOT`.
+Before registration, the protected/original and disposable paths, DB inodes,
+marker, commit, original hash, backend PID/port, and exact localhost target must
+all pass. No helper semantic change is approved. Exactly one new fresh corrected
+Pilot may execute if and only if both dedicated accounts pass setup validation.

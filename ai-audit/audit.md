@@ -1225,3 +1225,22 @@ The genuine small blocked-attempt evidence and documentation were committed
 locally as `aebd717` (`test: record corrected Pilot preflight failure`). No
 credential, disposable DB/runtime, dependency tree, or nonexistent k6 result
 was included. No push occurred.
+
+## Interaction 018 — Invocation-boundary review and fresh corrected Pilot
+
+| Field | Actual record |
+|---|---|
+| AI tool | Codex CLI |
+| Recorded | 2026-09-01 22:35:38 +0700 |
+| Human review | Blocked attempt confirmed as provisioning-helper invocation/setup defect; no account/k6 traffic; not SUT performance or confirmed SUT bug |
+| Detailed prompt record | [`interactions/018-invocation-boundary-review-fresh-corrected-pilot.md`](interactions/018-invocation-boundary-review-fresh-corrected-pilot.md) |
+| Invocation correction | Unchanged helper from actual original worktree; new clone passed explicitly as `WF03_DISPOSABLE_ROOT` |
+| H-039 | **DONE BY HUMAN** after this record is committed |
+| Next gate | H-040 fresh corrected-Pilot review; official execution remains prohibited |
+
+The human prohibited helper/SUT/workflow/check/correlation/workload/metric
+changes. Before registration, the original/helper root and new disposable root,
+different DB inodes, marker, approved commit relationship, original hash,
+backend PID/cwd/port, and exact localhost target must be recorded. A failed
+boundary or two-account setup stops the attempt. Only one fresh bounded 2-VU
+Pilot is authorized after every setup gate passes.

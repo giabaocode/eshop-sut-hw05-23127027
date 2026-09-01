@@ -1,6 +1,6 @@
 # 2-VU k6 Pilot Runbook
 
-Status: **FAILED PILOT PRESERVED; CORRECTED SETUP BLOCKED; H-039 REVIEW REQUIRED**
+Status: **ORIGINAL-WORKTREE HELPER INVOCATION APPROVED; ONE FRESH CORRECTED PILOT AUTHORIZED**
 
 Pinned tool: k6 `v2.2.0` at `/opt/homebrew/bin/k6`
 
@@ -16,7 +16,8 @@ minimum harness corrections and exactly one fresh corrected Pilot.
 Execution outcome: corrected Attempt `20260901T221331+0700` stopped before
 provisioning because invoking the helper from the clone makes its script-relative
 `originalRoot` equal that clone. No registration or k6 traffic occurred. Do not
-retry until the invocation boundary below is human-reviewed.
+retry from that runtime. HD-012 now approves the invocation boundary below for
+one entirely new fresh attempt.
 
 ## 1. Source-derived startup constraint
 
@@ -101,7 +102,8 @@ defines `originalRoot` relative to the helper file, so a clone-local invocation
 rejects the clone as `runtime_is_original_repository`. The smallest proposed
 invocation is the same-commit helper from the actual original worktree with the
 fresh clone supplied as `WF03_DISPOSABLE_ROOT`. This retains the original-DB
-inode guard and requires human review after the preserved blocked attempt.
+inode guard. HD-012 approves this exact invocation for the next fresh attempt;
+the helper logic itself remains unchanged.
 
 The helper must remain setup-only. It sequentially registers accounts 01 and
 02, generates cryptographically random passwords in memory, validates login,

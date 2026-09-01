@@ -46,7 +46,8 @@ CLARIFICATION`, `RESOLVED BY HUMAN DECISION`, `DONE BY HUMAN`, `NOT APPLICABLE`.
 | H-036 | Review the Phase F shared draft k6 architecture, one authoritative WF-03 implementation, static guards, configs, metrics/checks, output abstraction, and static-review findings. | DONE BY HUMAN | Approved explicitly with H-002 resolution and numeric-abort deferral retained; HD-009 |
 | H-037 | Approve execution of the prepared disposable-runtime 2-VU pilot, including the source-required one-start backend ordering and provisioning exactly two pilot accounts. | DONE BY HUMAN | Explicit approval in HD-010; one Pilot executed and failed before HTTP; no official result |
 | H-038 | Review the failed Pilot evidence and approve/correct the proposed group-name, custom traffic-tag, runtime-exception abort, exit/wall-clock runner, rerun-output, and 21.6 GiB artifact-handling decisions. | DONE BY HUMAN | HD-011: test-harness classification and minimum corrections, exact bulk cleanup, and one fresh corrected Pilot explicitly approved on 2026-09-01 |
-| H-039 | Review the corrected-Pilot preflight failure, approve/reject invoking the same-commit helper from the actual original worktree against a new disposable clone, and later review any completed corrected-Pilot evidence before official-plan finalization. | WAITING FOR HUMAN | Attempt `20260901T221331+0700` stopped before registration/k6 on clone-local helper guard; no silent retry; explicit authorization required |
+| H-039 | Review the corrected-Pilot preflight failure and approve/reject invoking the unchanged helper from the actual original worktree against a new disposable clone. | DONE BY HUMAN | HD-012 explicitly approved the original-worktree invocation boundary and one new fresh corrected Pilot on 2026-09-01 |
+| H-040 | Review the fresh corrected 2-VU Pilot evidence and decide whether official test-plan finalization may begin. | WAITING FOR HUMAN | Actual fresh Pilot result/integrity/metrics or any new stopped failure must be reviewed; no official execution implied |
 
 ## Current checkpoint
 
@@ -63,6 +64,7 @@ group names and generated approximately 21.6 GiB of local failure artifacts.
 The backend is stopped, port 3000 is free, and the original DB is unchanged.
 H-038 is complete under HD-011 and fix commit `c75b514` exists. The authorized
 bulk cleanup completed. Fresh corrected setup stopped before registration/k6
-because the clone-local helper rejected its own clone. H-039 blocks a changed
-invocation, another fresh Pilot attempt, official-plan finalization, and every
-official execution.
+because the clone-local helper rejected its own clone. H-039 is complete under
+HD-012. One fresh corrected Pilot is authorized only after the original-
+worktree-helper boundary and two-account gates pass. H-040 blocks official-plan
+finalization and every official execution.

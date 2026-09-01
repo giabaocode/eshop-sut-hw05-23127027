@@ -10,5 +10,7 @@ multi-gigabyte files. Do not interpret their rates as SUT performance.
 The native JSON, CSV, and full stderr were identified before authorized cleanup
 by exact path, size, timestamp, producer, and SHA-256 in
 `evidence/artifact-inventory.md`. The human authorized deletion of only those
-three untracked pathological files after that evidence was committed. No
-artifact is relabeled as an official result.
+three untracked pathological files after that evidence was committed. They were
+removed at 2026-09-01 22:13:05 +07 after preservation commit `c75b514`,
+reclaiming about 21.62 GiB. They are no longer retained. No artifact is
+relabeled as an official result.

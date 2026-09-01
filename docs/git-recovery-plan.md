@@ -75,3 +75,13 @@ The hash above was recorded only after the truthful local commit existed. The
 three large genuine raw files remain untracked and checksummed locally pending
 human review; they were not hidden by `.gitignore`, deleted, renamed, or
 misrepresented. No commit in this recovery sequence has been pushed.
+
+## 7. Pilot correction commit
+
+| Phase activity | Actual content | Commit hash | Commit message |
+|---|---|---|---|
+| Failed-Pilot human correction | Safe group names, context traffic tag, unexpected-exception abort, exact-PID bounded Pilot runner, human/audit review, and committed pre-deletion bulk metadata | `c75b514` | `fix: harden corrected 2-VU pilot harness` |
+
+The three bulk files were deleted only after this commit existed. A subsequent
+fresh corrected setup stopped before registration/k6 and is recorded truthfully
+as a separate blocked attempt. Nothing was pushed.

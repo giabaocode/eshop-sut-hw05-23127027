@@ -1188,3 +1188,35 @@ root error, bounded stderr/diagnostic evidence, failed summary counts, HTTP byte
 0/0, and the no-SUT-request conclusion. The deletion is authorized only after
 this record and the inventory are committed. One fresh corrected 2-VU Pilot is
 authorized; no official scenario, threshold, or push is authorized.
+
+### Actual correction, cleanup, and blocked corrected attempt
+
+- Static validation found no remaining `::` in executable k6 code. Node/shell
+  syntax checks and pinned-k6 init inspection passed with unchanged Pilot stages
+  and tags. A no-HTTP abort probe demonstrated `exec.test.abort()` returns k6
+  exit code 108 rather than continuing iterations.
+- Fix commit `c75b514` contains only the approved names, context traffic tag,
+  unexpected-exception abort, exact-PID runner, human/audit records, and
+  pre-deletion evidence. No workflow request/assertion/order/stage changed.
+- At 2026-09-01 22:13:05 +07, the three exact authorized untracked files were
+  deleted. **FAILED PILOT BULK RAW ARTIFACTS REMOVED AFTER HUMAN-APPROVED
+  EVIDENCE PRESERVATION.** Absence checks passed and filesystem free space
+  increased by 22,674,988 KiB (about 21.62 GiB).
+- Corrected Attempt `20260901T221331+0700` used a new clone pinned to `c75b514`,
+  new private/output paths, distinct DB inode, clone-only locked dependencies,
+  and one backend PID 22146. PID/cwd/port, reset/seed/product/zero-order/disk,
+  public rows, pinned k6, original hash, and readiness checks passed.
+- The first setup-helper invocation was made from the clone and failed safely
+  with exit code 1 / `runtime_is_original_repository`. Script-relative
+  `originalRoot` equaled the clone, so the guard stopped before private output,
+  registration, or account creation. Disposable state remained two seed users,
+  zero Pilot users, and zero orders.
+- The failure was not silently retried with a different invocation. Owned PID
+  22146 was stopped, port 3000 became free, both databases passed integrity,
+  and the original hash remained unchanged. No k6 process, corrected Pilot
+  traffic/result, official scenario, threshold, or push occurred.
+
+Smallest proposal: on a new human-authorized fresh attempt, invoke the
+same-commit helper from the actual original worktree while passing the clone as
+`WF03_DISPOSABLE_ROOT`, which matches the helper's protection design. H-039 must
+review this invocation correction; it is not silently assumed.

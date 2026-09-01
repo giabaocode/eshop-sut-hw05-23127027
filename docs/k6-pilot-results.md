@@ -1,6 +1,6 @@
 # k6 2-VU Pilot Results
 
-Status: **PILOT FAILED RUNTIME VALIDATION — NOT AN OFFICIAL LOAD RESULT**
+Status: **FAILED PILOT PRESERVED; CORRECTED ATTEMPT BLOCKED BEFORE PROVISIONING — NOT OFFICIAL**
 
 Pilot artifact ID: `20260901T212619+0700`
 
@@ -168,11 +168,12 @@ Genuine output files were produced:
 | Dashboard HTML | 177,248 bytes |
 | Native summary JSON | 1,224 bytes |
 
-The three very large files total approximately 21.6 GiB. Their SHA-256 values
-are preserved in `evidence/SHA256SUMS`. They remain local Pilot evidence and are
-**not staged for Git** because committing multi-gigabyte failure-loop files is
-not a viable or safe repository action. They have not been deleted, renamed as
-official evidence, or replaced by fabricated small files.
+The three very large files totaled approximately 21.6 GiB. Their SHA-256 values
+are preserved in `evidence/SHA256SUMS`; none was ever staged because committing
+multi-gigabyte failure-loop files was not viable. After human review and commit
+`c75b514` preserved exact metadata and bounded evidence, the three were deleted
+as recorded in Section 13. They were never renamed as official evidence or
+replaced by fabricated small files.
 
 The output also exposed a tagging defect: native scenario metrics use
 `traffic=pilot`, while custom WF-03 metrics use `traffic=measured` because
@@ -259,3 +260,40 @@ Do not finalize official test-plan filenames and do not run Load, Stress, Spike,
 or endurance. Execute only the newly authorized fresh corrected 2-VU Pilot after
 the minimum fix commit and static validation. Its results require a new human
 checkpoint before official-plan finalization.
+
+## 13. Human-approved cleanup result
+
+After the complete preservation record was committed as `c75b514`, the three
+exact untracked pathological files were removed at 2026-09-01 22:13:05 +07.
+All three absence checks passed. Filesystem free space increased by 22,674,988
+KiB (about 21.62 GiB). The exact historical hashes/sizes/timestamps/producers,
+root diagnostic, bounded excerpts, summary, and zero-HTTP evidence remain
+committed. The bulk raw files are no longer retained.
+
+## 14. Fresh corrected attempt `20260901T221331+0700`
+
+The attempt used a fresh clone pinned to fix commit `c75b514`, a distinct clone
+database inode, a new mode-0700 private directory, new evidence paths, pinned k6
+v2.2.0, and one owned backend PID 22146. Clone reset/seed, five products, zero
+orders, public rows 01/02, disk, original hash, PID/cwd/port, and readiness gates
+passed.
+
+The provisioning helper was invoked from the disposable clone and returned
+exit code 1 with the sanitized code `runtime_is_original_repository`. Because
+the helper defines its protected `originalRoot` relative to its own script,
+running the clone copy made the clone equal that protected root. The guard fired
+before private output creation or any registration request. Counts remained two
+seed users, zero Pilot users, and zero orders.
+
+This failure was not silently retried from another path. Per the fail-preflight
+rule, the exact backend PID was stopped and the corrected k6 Pilot did not run.
+Consequently there is no corrected k6 command, PID, exit code, metric, JSON, VU
+mapping, or correlation/check observation. This is a setup-helper invocation
+defect, not a SUT performance result or confirmed SUT bug.
+
+The smallest proposed next action is to use the reviewed helper from the actual
+original worktree at the same approved commit while passing the new clone as
+`WF03_DISPOSABLE_ROOT`, matching the guard's source-relative design and the
+previously successful provisioning pattern. Because the current attempt hit a
+preflight stop, that invocation and a new fresh runtime require human review
+before another Pilot attempt.

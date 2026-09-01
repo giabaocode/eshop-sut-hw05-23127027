@@ -353,3 +353,12 @@ handling before any fresh Pilot.
 
 The actual human review is preserved verbatim in
 [`../ai-audit/interactions/017-failed-pilot-review-corrected-pilot.md`](../ai-audit/interactions/017-failed-pilot-review-corrected-pilot.md).
+
+### HD-011 application outcome
+
+The minimum fix commit is `c75b514`. The authorized exact cleanup completed and
+reclaimed about 21.62 GiB. Fresh corrected Attempt `20260901T221331+0700`
+stopped before provisioning when the clone-local helper invocation triggered
+`runtime_is_original_repository`; it created no account/credential and sent no
+k6 traffic. This is AI execution evidence, not a new human decision. A changed
+helper invocation/new fresh attempt awaits human review.

@@ -1,0 +1,24 @@
+CORRECTED PILOT SETUP — REDACTED FAILURE EVIDENCE
+
+Attempted command role: setup-only account provisioning helper
+Target: approved localhost disposable SUT
+Requested account count: 2
+Result: FAIL BEFORE REGISTRATION
+Exit code: 1
+Sanitized exact helper output:
+WF03 provisioning failed safely: runtime_is_original_repository
+
+Cause: the helper was executed from the disposable clone. Its script-relative
+original repository path therefore resolved to that same clone, and its
+protective boundary check rejected the runtime before output-path creation or
+network registration.
+
+Accounts attempted: 0
+Accounts created: 0
+Private credential file created: no
+Registration request sent: no
+k6 Pilot traffic sent: no
+Secrets in this evidence: no
+
+Disposition: STOP. The helper was not silently invoked from a different path,
+and the corrected Pilot did not run.

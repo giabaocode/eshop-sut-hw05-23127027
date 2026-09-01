@@ -1,6 +1,6 @@
 # 2-VU k6 Pilot Runbook
 
-Status: **FAILED PILOT PRESERVED; ONE CORRECTED PILOT AUTHORIZED BY H-038**
+Status: **FAILED PILOT PRESERVED; CORRECTED SETUP BLOCKED; H-039 REVIEW REQUIRED**
 
 Pinned tool: k6 `v2.2.0` at `/opt/homebrew/bin/k6`
 
@@ -12,6 +12,11 @@ Execution note: Pilot `20260901T212619+0700` passed preflight/provisioning but
 failed on k6-invalid `::` group names before HTTP. See
 [`docs/k6-pilot-results.md`](../docs/k6-pilot-results.md). H-038 authorizes the
 minimum harness corrections and exactly one fresh corrected Pilot.
+
+Execution outcome: corrected Attempt `20260901T221331+0700` stopped before
+provisioning because invoking the helper from the clone makes its script-relative
+`originalRoot` equal that clone. No registration or k6 traffic occurred. Do not
+retry until the invocation boundary below is human-reviewed.
 
 ## 1. Source-derived startup constraint
 
@@ -90,6 +95,13 @@ provided as environment values, not pasted into a report:
 - `WF03_ACCOUNT_COUNT=2`;
 - `WF03_DISPOSABLE_ROOT=<verified clone root>`;
 - `WF03_PRIVATE_DIR=<separate private mode-0700 directory>`.
+
+Runtime finding: do not execute the clone copy of the helper. Its protection
+defines `originalRoot` relative to the helper file, so a clone-local invocation
+rejects the clone as `runtime_is_original_repository`. The smallest proposed
+invocation is the same-commit helper from the actual original worktree with the
+fresh clone supplied as `WF03_DISPOSABLE_ROOT`. This retains the original-DB
+inode guard and requires human review after the preserved blocked attempt.
 
 The helper must remain setup-only. It sequentially registers accounts 01 and
 02, generates cryptographically random passwords in memory, validates login,

@@ -377,3 +377,23 @@ compatibility defect, approved the six minimum correction areas, approved exact
 deletion of only the three untracked pathological files after committed evidence
 preservation, and authorized exactly one fresh corrected Pilot. No official
 scenario, performance threshold, or push was authorized.
+
+## Actual AI outcome
+
+- Applied and statically validated the approved minimum harness corrections;
+  committed them locally as `c75b514`.
+- After that preservation commit, removed only the three authorized untracked
+  failed-Pilot files. Exact absence checks passed; about 21.62 GiB was reclaimed.
+- Created fresh corrected Attempt `20260901T221331+0700` at `c75b514`. Source,
+  database separation, marker, disk, pinned k6, backend PID/cwd/port, reset/seed,
+  public rows, and product readiness gates passed.
+- A clone-local helper invocation failed before registration with exit code 1
+  and sanitized code `runtime_is_original_repository`, because the helper's
+  script-relative protected root became the clone itself.
+- Did not silently retry the helper from a different location. Created no Pilot
+  account or credential, ran no k6 process, and produced no corrected metric.
+  Stopped exact backend PID 22146; verified zero disposable Pilot users/orders,
+  free port, valid databases, and unchanged original DB hash.
+
+The proposed same-commit original-worktree helper invocation and a new fresh
+attempt require H-039 human review. No official scenario or push occurred.

@@ -5,18 +5,21 @@
 - Created: 2026-09-01 13:37:42 +07 (Asia/Ho_Chi_Minh)
 - Repository: `/Users/phamngocgiabao/eshop-sut-hw05-23127027`
 - Source commit: `85af3ba875c88283615e22cb108f13e2fccaf0e9`
-- Current completed phase: **Controlled 2-VU Pilot attempt — failed runtime validation before HTTP**
+- Current completed activity: **Pilot harness corrected; fresh corrected setup blocked before provisioning/k6**
 - Phase B correction review: **RESOLVED BY HUMAN** on 2026-09-01 15:58:08 +07
 - Phase C status: **COMPLETE AND HUMAN-REVIEWED**; H-033 `DONE BY HUMAN`
 - Phase D status: **COMPLETE AND HUMAN-REVIEWED WITH AUTHENTICATION CORRECTION**; H-034 `DONE BY HUMAN`
 - Phase E status: **COMPLETE AND HUMAN-REVIEWED WITH NUMERIC ABORT DEFERRAL**; H-035 `DONE BY HUMAN`
 - Phase F status: **COMPLETE AND HUMAN-REVIEWED**; H-036 `DONE BY HUMAN`
-- Phase G status: **TOOLCHAIN/PREPARATION COMPLETE; ONE HUMAN-APPROVED PILOT EXECUTED AND FAILED BEFORE HTTP**
+- Phase G/Pilot status: **TOOLCHAIN COMPLETE; FAILED PILOT PRESERVED; CORRECTED SETUP BLOCKED BEFORE PROVISIONING/K6**
 - Phase G implementation commit: `d9291f7` (`test: pin k6 and prepare 2-VU pilot`)
 - Phase G toolchain/audit commit: `41c6fec` (`docs: record Phase G toolchain validation`)
 - Controlled Pilot evidence commit: `11c0a7f` (`test: record failed 2-VU pilot evidence`)
 - H-037: **DONE BY HUMAN** for the completed failed Pilot
-- Current gate: **H-038 — PILOT RESULTS/CORRECTION REVIEW**
+- Pilot fix commit: `c75b514` (`fix: harden corrected 2-VU pilot harness`)
+- H-038: **DONE BY HUMAN**; exact bulk cleanup completed
+- Corrected Attempt `20260901T221331+0700`: **BLOCKED BEFORE PROVISIONING/K6** on clone-local helper guard
+- Current gate: **H-039 — CORRECTED-PILOT PREFLIGHT/INVOCATION REVIEW**
 
 ## Selected workflow
 
@@ -202,16 +205,16 @@ checkpoint, the workload proposal, or the AI Audit.
   the real SUT workflow remains pilot-unverified.
 - Pinned k6 is v2.2.0 at `/opt/homebrew/bin/k6`; no version change is authorized
   without later review.
-- The provisioning helper ran once for the approved Pilot and successfully
-  created/validated exactly two disposable customers. Further provisioning is
-  unauthorized.
+- The provisioning helper ran once for the first approved Pilot and successfully
+  created/validated exactly two disposable customers. The corrected attempt's
+  clone-local helper invocation failed its boundary guard before registration;
+  a different invocation/new attempt requires H-039 review.
 - The source-derived one-start ordering passed for Attempt 02; PID 20315 stayed
   unchanged through setup/Pilot and is now stopped.
 - The Pilot failed on invalid `::` group names before HTTP, then tight-looped
   9,699,772 failed attempts and produced approximately 21.6 GiB JSON/CSV/stderr.
-- H-038 must decide the proposed group rename, `context.traffic` custom tag,
-  runtime-exception whole-test abort, exit/wall-clock runner, corrected-Pilot
-  output scope, and large-artifact archive/cleanup.
+- H-038 approved the minimum group/tag/abort/runner/output corrections and exact
+  cleanup; fix commit `c75b514` exists and about 21.62 GiB was reclaimed.
 - No final official Load/Stress/Spike execution script/filename exists.
 - Final numeric performance thresholds remain unset until real-result analysis.
 - Exact Load/Stress/Spike plan filenames/dates require human approval.
@@ -225,9 +228,9 @@ checkpoint, the workload proposal, or the AI Audit.
   analysis, AI misinterpretation review, optimization review, issues, video,
   critique, report, README, validator, self-assessed grade, and ZIP remain later
   work.
-- Five truthful local baseline commits and three truthful Phase G/Pilot commits
-  exist; no push has occurred. The three giant raw Pilot files remain untracked
-  and checksummed pending H-038 review.
+- Five truthful local baseline commits and four truthful Phase G/Pilot commits
+  exist before the blocked-attempt record commit; no push has occurred. The
+  three giant raw Pilot files were removed after committed preservation.
 
 ## Authoritative continuation files
 
@@ -308,9 +311,9 @@ See `MANUAL-TODO.md` for exact IDs and remaining responsibilities.
 
 ## Resume instruction
 
-Do not redo completed discovery or Phases C–G. Await H-038 review of the failed
-Pilot and proposed evidence-affecting corrections. Do not patch/re-run the
-Pilot, start the SUT, provision accounts, or
+Do not redo completed discovery or Phases C–G. Await H-039 review of the
+clone-local helper preflight failure and proposed same-commit original-worktree
+invocation. Do not start the SUT, provision accounts, rerun the Pilot, or
 official traffic, implement deferred numeric aborts/final performance
 thresholds, create official execution filenames, or push without explicit
 approval.

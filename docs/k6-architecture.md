@@ -1,13 +1,15 @@
 # Shared k6 Architecture and Static Implementation Review
 
-Status: **PHASE F HUMAN-REVIEWED AND APPROVED — DRAFT NOT RUNTIME VERIFIED**
+Status: **PHASE F HUMAN-APPROVED — PINNED k6 INIT VERIFIED; SUT/PILOT NOT VERIFIED**
 
 Prepared: 2026-09-01 (Asia/Ho_Chi_Minh)
 Workflow: WF-03 — Purchase followed by customer cancellation
 
-No k6 binary was installed or executed, the SUT was not started, no account was
-provisioned, and no result was generated. JavaScript files are draft source for
-static review only.
+During Phase F, no k6 binary was installed or executed. Phase G subsequently
+installed pinned k6 2.2.0 and validated init/import/options/output interfaces
+without SUT HTTP. The SUT was not started, no account was provisioned, and no
+performance result was generated. JavaScript files remain draft until the
+separately approved pilot verifies the SUT workflow.
 
 ### Phase F human-review result
 
@@ -16,8 +18,9 @@ checks/metrics/outcome/failure implementation, dedicated VU mapping, immutable
 input versus iteration-local correlation boundary, and current immediate safety
 model. The four numeric error-abort proposals remain deferred and final
 performance thresholds remain undefined. H-036 is `DONE BY HUMAN` only after
-these decisions were applied. Runtime compatibility remains unproven until the
-pinned k6 validation in Phase G.
+these decisions were applied. Pinned-runtime initialization compatibility is
+now proven as recorded in `k6-toolchain.md`; business HTTP compatibility remains
+unproven until the pilot.
 
 ## 1. Design invariants
 
@@ -60,9 +63,11 @@ performance/
 ├── scenarios/
 │   ├── load.js            # thin Load entry point
 │   ├── stress.js          # thin Stress entry point
-│   └── spike.js           # thin Spike entry point
+│   ├── spike.js           # thin Spike entry point
+│   └── pilot.js           # non-official 2-VU preparation entry
 └── tools/
-    └── README.md          # future runner/output boundary; no executable yet
+    ├── README.md          # future runner/output boundary
+    └── provision-accounts.mjs # guarded setup helper; never measured traffic
 ```
 
 This is deliberately small. Authentication is isolated because it handles
@@ -137,7 +142,7 @@ terminal classification and returns without issuing later business requests.
 Post-checkout residue remains untouched evidence. The `finally` path invokes
 `emitOutcomeOnce()`; its local guard prevents duplicate final samples.
 
-The three scenario files contain no endpoint URL, check, think time, payload,
+The three official scenario files contain no endpoint URL, check, think time, payload,
 correlation rule, or lifecycle branch.
 
 ## 5. Workload configuration
@@ -295,11 +300,29 @@ without touching `executeWf03()`.
 | `open()` path/API assumptions | Init callback and environment path are designed from current docs | **Runtime verification required** |
 | `SharedArray`, `exec.test.abort`, JS feature support | Current documented APIs/design assumptions | **Pinned-version verification required** |
 | External safety runner | Not implemented, preventing false claims about PID/port/disk/wall-clock enforcement | Required after static approval |
-| Native/report outputs | Metadata only; no fake JTL; distinct real-data k6 equivalents selected | Human-approved strategy; pinned-version capability still requires Phase G verification |
+| Native/report outputs | Metadata only; no fake JTL; distinct real-data k6 equivalents selected | k6 2.2.0 JSON/CSV/summary/dashboard capability verified; real-data renderers pending |
 
-Static findings are not k6 syntax/runtime proof. Even a general JavaScript
-syntax check cannot verify imported k6 modules, executor behavior, HTTP
-contracts, output overhead, or SUT behavior.
+### Phase G pinned-version addendum
+
+k6 v2.2.0 successfully inspected all four entry files with synthetic private
+input outside Git. The Load/Stress/Spike options retained exact approved stages;
+the Pilot adds only a `0→2 / 30s`, `2 / 3m`, `2→0 / 30s` workload and calls the
+same shared function. `k6 deps` resolved only built-in k6 modules and local
+files; no custom build is required. A no-HTTP capability probe verified the
+execution API, metric constructors, summary hook, JSON, CSV, and dashboard HTML.
+
+The first Pilot inspection also showed that explicit k6 `-e` values are the
+reliable reviewed invocation form for this setup. The first dashboard probe was
+blocked from binding a sandbox-local port and was too short; a two-second
+no-HTTP retry on an ephemeral local port succeeded. These are tool findings,
+not SUT or performance evidence.
+
+Pilot traffic uses `scenario=pilot,traffic=pilot`; official entries retain
+`traffic=measured`. The provisioning helper is setup-only and has not run.
+
+Static findings plus pinned init probes now prove imports, option parsing, and
+the listed local APIs/outputs. They do not verify HTTP contracts, credential
+mapping against real accounts, output overhead under WF-03, or SUT behavior.
 
 ## 11. Human checkpoint and proposed next phase
 

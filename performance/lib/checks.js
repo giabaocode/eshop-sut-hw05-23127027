@@ -1,4 +1,4 @@
-// DRAFT — NOT RUNTIME VERIFIED.
+// DRAFT — PINNED k6 INIT-VERIFIED; NO SUT TRAFFIC YET.
 // Stable check names implement the human-approved Phase E contract.
 
 import { check } from 'k6';

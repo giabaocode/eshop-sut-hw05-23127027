@@ -1,5 +1,5 @@
-// DRAFT — NOT RUNTIME VERIFIED.
-// Static Phase F representation of human-approved planning workloads.
+// DRAFT — PINNED k6 INIT-VERIFIED; NO SUT TRAFFIC YET.
+// Static representation of human-approved planning workloads.
 
 function scenarioOptions(name, stages) {
   return {
@@ -26,7 +26,7 @@ function scenarioOptions(name, stages) {
         tags: {
           workflow: 'wf03',
           scenario: name,
-          traffic: 'measured',
+          traffic: name === 'pilot' ? 'pilot' : 'measured',
         },
       },
     },
@@ -37,6 +37,14 @@ const loadStages = [
   { duration: '1m', target: 5 },
   { duration: '5m', target: 5 },
   { duration: '1m', target: 0 },
+];
+
+// Conservative Phase B pilot retained for compatibility/correlation review.
+// This is not an official Load/Stress/Spike scenario or performance result.
+const pilotStages = [
+  { duration: '30s', target: 2 },
+  { duration: '3m', target: 2 },
+  { duration: '30s', target: 0 },
 ];
 
 const stressStages = [
@@ -66,6 +74,13 @@ const spikeStages = [
 ];
 
 export const WORKLOADS = Object.freeze({
+  pilot: Object.freeze({
+    name: 'pilot',
+    requiredActiveAccounts: 2,
+    plannedDuration: '4m',
+    wallClockSafetyCap: '5m',
+    options: scenarioOptions('pilot', pilotStages),
+  }),
   load: Object.freeze({
     name: 'load',
     requiredActiveAccounts: 5,

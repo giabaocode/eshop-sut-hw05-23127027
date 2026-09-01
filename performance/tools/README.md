@@ -1,6 +1,6 @@
 # Draft output and runner boundary
 
-Status: **DRAFT — NOT RUNTIME VERIFIED**
+Status: **DRAFT — PINNED k6 INIT-VERIFIED; NOT SUT/PILOT VERIFIED**
 
 This directory intentionally contains no executable runner yet. A later
 human-reviewed runner must perform target/PID/port/commit/database/account/disk
@@ -31,3 +31,10 @@ The scenario entry points require:
 The runner must not embed credentials in command arguments or print environment
 contents. It must not implement the four deferred error-count/window aborts
 until controlled pilot evidence and a new human decision exist.
+
+`provision-accounts.mjs` is a draft preconditioning helper, not measured k6
+traffic. It uses only the real SUT registration/login/order-list behavior,
+requires a marker-protected clone under `/private/tmp`, rejects the original
+database inode, writes credentials with mode `0600` outside both Git worktrees,
+and emits redacted evidence. It has not been executed and must not be executed
+until the human approves H-037 and the runbook's PID/port/database gates pass.

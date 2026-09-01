@@ -1,11 +1,13 @@
 # k6 Report and Output Mapping Proposal
 
-Status: **FINAL K6-EQUIVALENT STRATEGY — RESOLVED BY HUMAN DECISION; PINNED-VERSION VALIDATION PENDING**
+Status: **FINAL K6-EQUIVALENT STRATEGY — RESOLVED BY HUMAN DECISION; k6 2.2.0 CAPABILITIES VERIFIED**
 
 Scope: WF-03 Load, Stress, and Spike official runs
 Prepared: 2026-09-01 (Asia/Ho_Chi_Minh)
 
-No k6 installation or reporting dependency was added, and no output or report was generated while preparing this proposal.
+The Phase E proposal itself installed or generated nothing. Phase G later
+installed pinned k6 2.2.0 and created only ephemeral no-HTTP capability-probe
+files outside Git. No SUT result or homework report has been generated.
 
 ### Phase E human decision
 
@@ -32,19 +34,22 @@ The repository's evidence-backed extraction in `docs/assignment-requirements.md`
 
 These clauses create a k6 compliance ambiguity. Native k6 artifacts are not native JMeter `.jtl` files, while producing the same k6 dashboard report for all three scenarios may not satisfy the distinct/non-repeated-view instruction. This document does not silently choose one clause over the other.
 
-## 2. Current official k6 capabilities
+## 2. Pinned k6 capabilities
 
-The table is based on current official Grafana k6 documentation checked on 2026-09-01. The exact feature set must be rechecked after a k6 version is selected and pinned; k6 is not installed in this repository yet.
+The table combines official Grafana k6 documentation checked on 2026-09-01
+with direct validation against the installed pinned binary, k6 v2.2.0
+darwin/arm64. Exact commands and negative findings are in
+[`k6-toolchain.md`](k6-toolchain.md).
 
 | Capability | Native k6 status | Planned meaning |
 |---|---|---|
-| End-of-test console summary | Native | Aggregate metrics and thresholds printed at test end; compact/full/disabled modes are documented. |
-| Granular JSON output | Native via `--out json=<file>` | Line-oriented metric points with metric name, type, values, time, and tags; suitable as a canonical authentic raw k6 artifact. |
-| Granular CSV output | Native via `--out csv=<file>` | Time-series metric samples in CSV; a useful distinct tabular/time-series view. |
-| Multiple real-time outputs | Native | More than one `--out` destination can be active, subject to later resource-impact validation. |
-| Self-contained web-dashboard HTML export | Native current feature | `K6_WEB_DASHBOARD=true` with `K6_WEB_DASHBOARD_EXPORT=<file>` can export a self-contained HTML dashboard when the process exits. |
-| Custom end summary | Native `handleSummary()` API | Can write summary JSON/text or deliberately generated custom content; it is aggregate output, not a replacement for granular raw data. |
-| Native JMeter `.jtl` output | Not documented as a native k6 output | Based on the official output list, k6 does not natively produce JMeter JTL. Renaming JSON/CSV to `.jtl` would misrepresent its format. |
+| End-of-test console summary | Native; **PINNED-VERSION VERIFIED** | Compact/full/disabled and summary-export switches are present. Pinned-version finding: do not disable summary mode when relying on `handleSummary()`. |
+| Granular JSON output | Native via `--out json=<file>`; **PINNED-VERSION VERIFIED** | A real no-HTTP capability probe wrote JSON privately. It remains the canonical authentic raw format for future real runs. |
+| Granular CSV output | Native via `--out csv=<file>`; **PINNED-VERSION VERIFIED** | A real no-HTTP capability probe wrote CSV privately. |
+| Multiple real-time outputs | Native; **PINNED-VERSION VERIFIED** | JSON and CSV operated together with dashboard export; official-run overhead remains pilot evidence, not assumed. |
+| Self-contained web-dashboard HTML export | Native; **PINNED-VERSION VERIFIED** | `K6_WEB_DASHBOARD=true` and `K6_WEB_DASHBOARD_EXPORT=<file>` produced actual private HTML from a no-HTTP probe. |
+| Custom end summary | Native `handleSummary()`; **PINNED-VERSION VERIFIED** | A custom JSON summary was written privately with summary mode enabled. It is aggregate output, not raw data. |
+| Native JMeter `.jtl` output | **Absent from pinned installed output registry** | k6 2.2.0 listed JSON/CSV/web-dashboard and other outputs but no JTL. Renaming would misrepresent format. |
 | Arbitrary HTML layouts | Requires report code/tooling | A custom `handleSummary()` renderer or external reporting pipeline can create HTML, but it must be reviewed, pinned, and transparently disclosed. |
 
 Official references:
@@ -56,7 +61,9 @@ Official references:
 - [k6 end-of-test summary](https://grafana.com/docs/k6/latest/results-output/end-of-test/)
 - [k6 custom summary](https://grafana.com/docs/k6/latest/results-output/end-of-test/custom-summary/)
 
-The statement about lack of native JTL is an inference from the official supported-output documentation, not a claim based on an executed k6 binary. It must be verified against the future pinned k6 version.
+The historical statement about JTL began as a documentation-based inference.
+Phase G confirmed that the installed k6 2.2.0 output registry does not expose a
+native JTL output. No JTL was created.
 
 ## 3. Final three-scenario distinct-output mapping
 
@@ -64,9 +71,9 @@ The candidate below prioritizes three genuinely different primary views while pr
 
 | Scenario | Primary distinct view/output | Raw artifact | HTML/equivalent artifact | Tool/dependency | Compliance status |
 |----------|------------------------------|--------------|--------------------------|-----------------|-------------------|
-| Load | Native end-of-test aggregate/custom summary | Native granular `load-raw.json` | Aggregate HTML/summary generated transparently from real Load summary/raw data | Pinned k6 plus reviewed aggregate renderer | **HUMAN-APPROVED K6 EQUIVALENT**; renderer validation pending |
-| Stress | Native CSV time-series analysis | Native granular `stress-raw.json` plus `stress-timeseries.csv` | Time-series HTML analysis generated transparently from real Stress CSV/raw data | Pinned k6 plus reviewed time-series renderer | **HUMAN-APPROVED K6 EQUIVALENT**; renderer validation pending |
-| Spike | Native k6 web-dashboard time-series view | Native granular `spike-raw.json` | Real k6 web-dashboard HTML export | Pinned k6 web dashboard | **HUMAN-APPROVED K6 EQUIVALENT**; pinned-version validation pending |
+| Load | Native end-of-test aggregate/custom summary | Native granular `load-raw.json` | Aggregate HTML/summary generated transparently from real Load summary/raw data | Pinned k6 2.2.0 plus reviewed aggregate renderer | **HUMAN-APPROVED K6 EQUIVALENT**; real-data renderer pending |
+| Stress | Native CSV time-series analysis | Native granular `stress-raw.json` plus `stress-timeseries.csv` | Time-series HTML analysis generated transparently from real Stress CSV/raw data | Pinned k6 2.2.0 plus reviewed time-series renderer | **HUMAN-APPROVED K6 EQUIVALENT**; real-data renderer pending |
+| Spike | Native k6 web-dashboard time-series view | Native granular `spike-raw.json` | Real k6 web-dashboard HTML export | Pinned k6 2.2.0 web dashboard | **HUMAN-APPROVED K6 EQUIVALENT**; export capability verified, real run pending |
 
 The filenames above are schematic, not generated artifacts. Final names must use the reviewed submission convention and preserve scenario, student ID, and execution timestamp without secrets.
 
@@ -140,9 +147,8 @@ human resolution.
 
 ## 8. Remaining implementation gate
 
-Before reporting implementation or official execution, record:
+Before official execution, record:
 
-- pinned k6 capability evidence;
 - reviewed real-data aggregate and time-series HTML renderers;
 - exact raw file format and compression policy;
 - exact HTML/equivalent generator and pinned version;
@@ -150,6 +156,7 @@ Before reporting implementation or official execution, record:
 - whether report generation is performed live or after the run;
 - evidence-retention and checksum procedure.
 
-H-002 itself is resolved. Implementation remains pending because no real result
-or pinned-tool capability evidence exists yet. No file with a `.jtl` extension
-may be created merely to appear compliant.
+H-002 itself is resolved and pinned-tool output capability evidence now exists.
+Real-data renderer implementation and official artifacts remain pending because
+no SUT pilot or official result exists. No file with a `.jtl` extension may be
+created merely to appear compliant.

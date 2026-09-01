@@ -1,4 +1,4 @@
-// DRAFT — NOT RUNTIME VERIFIED.
+// DRAFT — PINNED k6 INIT-VERIFIED; NO REAL REPORT GENERATED.
 // This metadata deliberately does not implement or claim JTL conversion.
 
 export const OUTPUT_PROPOSALS = Object.freeze({

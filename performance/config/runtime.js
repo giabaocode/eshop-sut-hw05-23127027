@@ -1,4 +1,4 @@
-// DRAFT — NOT RUNTIME VERIFIED.
+// DRAFT — PINNED k6 INIT-VERIFIED; NO SUT TRAFFIC YET.
 // Runtime values are read in k6 init context and contain no committed secrets.
 
 const APPROVED_LOCAL_TARGETS = Object.freeze([
@@ -29,5 +29,6 @@ export function loadRuntimeConfig(expectedScenario) {
     baseUrl,
     credentialFile,
     scenario: expectedScenario,
+    traffic: expectedScenario === 'pilot' ? 'pilot' : 'measured',
   });
 }

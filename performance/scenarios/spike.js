@@ -1,4 +1,4 @@
-// DRAFT — NOT RUNTIME VERIFIED.
+// DRAFT — PINNED k6 INIT-VERIFIED; NOT EXECUTED.
 // Spike changes only workload configuration; business logic is shared.
 
 import { getWorkload } from '../config/workloads.js';

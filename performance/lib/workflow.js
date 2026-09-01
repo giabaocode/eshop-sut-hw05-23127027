@@ -1,4 +1,4 @@
-// DRAFT — NOT RUNTIME VERIFIED.
+// DRAFT — PINNED k6 INIT-VERIFIED; NO SUT TRAFFIC YET.
 // This is the single authoritative executable WF-03 business implementation.
 
 import http from 'k6/http';
@@ -56,7 +56,7 @@ function stepTags(context, step) {
     step,
     endpoint_group: metadata.endpointGroup,
     operation_role: metadata.operationRole,
-    traffic: 'measured',
+    traffic: context.traffic,
     scenario: context.scenario,
   };
 }
@@ -94,9 +94,10 @@ function fail(context, step, failureClass) {
   return false;
 }
 
-function newIterationContext(binding, scenario) {
+function newIterationContext(binding, scenario, traffic) {
   return {
     scenario,
+    traffic,
     workflowRow: binding.workflow,
     credential: binding.credential,
     jwt: null,
@@ -118,7 +119,7 @@ export function executeWf03({ dataSet, runtime }) {
     return;
   }
 
-  const context = newIterationContext(binding, runtime.scenario);
+  const context = newIterationContext(binding, runtime.scenario, runtime.traffic);
   beginWorkflowAttempt(context);
 
   try {

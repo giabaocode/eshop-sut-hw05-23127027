@@ -1,4 +1,4 @@
-// DRAFT — NOT RUNTIME VERIFIED.
+// DRAFT — PINNED k6 INIT-VERIFIED; NO SUT TRAFFIC YET.
 // Small dependency-free CSV parser for reviewed public/private schemas.
 
 export function parseCsv(csvText, label) {

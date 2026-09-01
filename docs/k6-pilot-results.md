@@ -208,10 +208,10 @@ run.
   new Pilot evidence/documentation is untracked/modified before commit.
 - No push occurred.
 
-## 11. Proposed smallest corrections — not applied
+## 11. Original AI proposal → failure → human-approved correction
 
-These changes affect metric labels, failure handling, or evidence collection
-and therefore require human review before a corrected Pilot:
+The original AI proposal was held for human review because it affected metric
+labels, failure handling, and evidence collection:
 
 1. Replace the seven invalid group names `wf03::NN_step` with stable names that
    do not contain `::`, for example `wf03_NN_step`. Business sequence, checks,
@@ -231,12 +231,31 @@ and therefore require human review before a corrected Pilot:
 6. Decide how to archive/compress or clean the preserved 21.6 GiB failure
    artifacts after human review. Do not delete them silently.
 
-No source correction and no rerun occurred in this phase.
+The human reviewed the failed Pilot and confirmed it as a test-harness/k6
+compatibility defect, not SUT performance and not a confirmed SUT bug. H-038
+approved only these minimum corrections:
+
+- safe `wf03_NN_step` group names, with all existing checks/requests/order and
+  assertion strength unchanged;
+- `context.traffic` for custom metric tags;
+- one sanitized diagnostic plus `exec.test.abort()` for unexpected harness or
+  runtime exceptions, while expected workflow failures retain one failed
+  outcome and end only the current iteration;
+- an exact-PID macOS runner that captures numeric exit/timestamps and enforces
+  the five-minute cap;
+- corrected-Pilot output limited to native JSON, summary, stdout/stderr, setup,
+  backend, and runtime metadata—no Pilot CSV/dashboard;
+- deletion of the three exact untracked 21.6-GiB files only after committed
+  path/size/time/hash/producer/root-error/summary evidence preservation.
+
+The executable change is intentionally limited to harness compatibility,
+tagging, safety abort, and Pilot evidence collection. It does not change WF-03
+business semantics, endpoint mapping, correlation, assertion strength, think
+times, workflow order, or workload stages.
 
 ## 12. Recommendation
 
 Do not finalize official test-plan filenames and do not run Load, Stress, Spike,
-or endurance. Human-review the proposed corrections and large-artifact handling,
-then authorize a fresh disposable corrected 2-VU Pilot. Only a corrected Pilot
-that completes real same-order WF-03 lifecycles should unlock official-plan
-finalization.
+or endurance. Execute only the newly authorized fresh corrected 2-VU Pilot after
+the minimum fix commit and static validation. Its results require a new human
+checkpoint before official-plan finalization.

@@ -333,3 +333,23 @@ runtime-exception loop produced 9,699,772 failed attempts and approximately
 21.6 GiB of local JSON/CSV/stderr. No corrected rerun occurred. Human review is
 now required for the proposed group/tag/safety/runner changes and artifact
 handling before any fresh Pilot.
+
+## HD-011 — Failed-Pilot review and corrected-Pilot authorization
+
+| Field | Human decision |
+|---|---|
+| Recorded | 2026-09-01 22:07:02 +07 (Asia/Ho_Chi_Minh) |
+| Decision owner | Phạm Ngọc Gia Bảo — HUMAN |
+| Failure classification | Test-harness/k6 compatibility defect; not SUT performance and not a confirmed SUT bug |
+| Group/check correction | Replace every executable `::` group/check name with stable k6-safe names; preserve workflow semantics and assertions |
+| Traffic correction | Shared custom metrics use execution-context traffic: Pilot `pilot`, official future scenarios `measured` |
+| Exception correction | Expected workflow failures end one iteration with one outcome; unexpected sanitized harness/runtime exceptions invoke test-level abort |
+| Runner correction | Capture exact k6 PID/numeric exit/start/exit/flush times and enforce a five-minute exact-PID watchdog |
+| Corrected-Pilot outputs | JSON, summary, stdout/stderr, preflight, provisioning, backend log, runtime metadata only; no Pilot CSV/dashboard |
+| Failed bulk evidence | Preserve exact metadata/root error/bounded excerpt/summary in Git, then delete only the three named untracked pathological files |
+| Rerun authorization | Exactly one fresh commit-pinned corrected 2-VU Pilot with the unchanged workload and WF-03 semantics |
+| H-038 | `DONE BY HUMAN` after this decision is applied and committed |
+| Prohibitions | No official scenario, endurance, threshold finalization, or push |
+
+The actual human review is preserved verbatim in
+[`../ai-audit/interactions/017-failed-pilot-review-corrected-pilot.md`](../ai-audit/interactions/017-failed-pilot-review-corrected-pilot.md).

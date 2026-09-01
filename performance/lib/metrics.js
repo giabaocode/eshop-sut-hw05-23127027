@@ -20,7 +20,7 @@ function baseTags(context) {
   return {
     workflow: 'wf03',
     scenario: context.scenario,
-    traffic: 'measured',
+    traffic: context.traffic,
   };
 }
 

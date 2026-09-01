@@ -1,6 +1,6 @@
 # 2-VU k6 Pilot Runbook
 
-Status: **EXECUTED ONCE UNDER H-037 — FAILED BEFORE HTTP — H-038 REVIEW REQUIRED**
+Status: **FAILED PILOT PRESERVED; ONE CORRECTED PILOT AUTHORIZED BY H-038**
 
 Pinned tool: k6 `v2.2.0` at `/opt/homebrew/bin/k6`
 
@@ -9,9 +9,9 @@ conservatively before any official Load, Stress, or Spike execution. This pilot
 is not an official Load result and must never be reused or relabeled as one.
 
 Execution note: Pilot `20260901T212619+0700` passed preflight/provisioning but
-failed on k6-invalid `::` group names before HTTP and was not rerun. See
-[`docs/k6-pilot-results.md`](../docs/k6-pilot-results.md). Commands below remain
-the historical preparation plan; H-038 blocks correction or another execution.
+failed on k6-invalid `::` group names before HTTP. See
+[`docs/k6-pilot-results.md`](../docs/k6-pilot-results.md). H-038 authorizes the
+minimum harness corrections and exactly one fresh corrected Pilot.
 
 ## 1. Source-derived startup constraint
 
@@ -126,21 +126,27 @@ scenarios and uses accounts 01..02 directly through `exec.vu.idInTest`.
 Pilot samples are tagged `scenario=pilot,traffic=pilot` so they cannot be
 mistaken for official `traffic=measured` samples.
 
-## 5. Execution and evidence plan — not authorized yet
+## 5. Corrected execution and exact-PID watchdog
 
 After all setup evidence is complete, record a boundary timestamp, then invoke
 the pinned binary with explicit k6 `-e` target and private credential-file
 values. Do not print the credential file or the full environment. Use only the
 pilot entry and an output directory whose name identifies it as non-official.
 
-Preserve genuine pilot-only artifacts:
+Invoke the reviewed `performance/tools/run-pilot.sh` with exactly the fresh
+runtime root, private mode-0600 credential file, and new corrected-Pilot output
+root. It starts only its owned k6 child, records its PID/numeric exit/start/exit/
+artifact-flush times, and terminates only that PID if the full process exceeds
+300 seconds. It uses no `sudo`, `killall`, or `pkill`.
+
+Preserve genuine corrected-Pilot-only artifacts:
 
 - native granular k6 JSON;
 - captured stdout/stderr and exit status;
 - enabled custom/end summary with real pilot metrics;
 - options/commit/tool/runtime manifest and SHA-256 checksums;
-- if explicitly enabled for the pilot, real CSV/dashboard capability and
-  overhead observations clearly labelled pilot;
+- no Pilot CSV and no Pilot dashboard; those pinned capabilities were verified
+  separately and remain required only according to later official mappings;
 - backend PID/log/resource evidence with secrets and dynamic IDs redacted;
 - preflight and postflight integrity records.
 

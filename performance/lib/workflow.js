@@ -3,6 +3,7 @@
 
 import http from 'k6/http';
 import { group, sleep } from 'k6';
+import exec from 'k6/execution';
 import { performLogin } from './auth.js';
 import { bindCurrentVu } from './data.js';
 import {
@@ -124,7 +125,7 @@ export function executeWf03({ dataSet, runtime }) {
 
   try {
     let loginResult;
-    group('wf03::01_login', () => {
+    group('wf03_01_login', () => {
       loginResult = performLogin({
         baseUrl: runtime.baseUrl,
         credential: context.credential,
@@ -148,7 +149,7 @@ export function executeWf03({ dataSet, runtime }) {
     thinkTime(0.5, 1.0);
 
     let searchResult;
-    group('wf03::02_search', () => {
+    group('wf03_02_search', () => {
       const response = http.get(
         `${runtime.baseUrl}/api/products?search=${encodeURIComponent(
           context.workflowRow.search_term,
@@ -173,7 +174,7 @@ export function executeWf03({ dataSet, runtime }) {
     thinkTime(1.0, 2.0);
 
     let detailResult;
-    group('wf03::03_detail', () => {
+    group('wf03_03_detail', () => {
       const response = http.get(
         `${runtime.baseUrl}/api/products/${context.productId}`,
         requestParams(context, 'detail'),
@@ -205,7 +206,7 @@ export function executeWf03({ dataSet, runtime }) {
 
     let checkoutResult;
     startLifecycle(context);
-    group('wf03::04_checkout', () => {
+    group('wf03_04_checkout', () => {
       const response = http.post(
         `${runtime.baseUrl}/api/checkout`,
         JSON.stringify({
@@ -245,7 +246,7 @@ export function executeWf03({ dataSet, runtime }) {
     };
 
     let pendingResult;
-    group('wf03::05_pending_probe', () => {
+    group('wf03_05_pending_probe', () => {
       const response = http.get(
         `${runtime.baseUrl}/api/orders/${context.orderId}`,
         requestParams(context, 'pending_probe'),
@@ -267,7 +268,7 @@ export function executeWf03({ dataSet, runtime }) {
     thinkTime(0.5, 1.0);
 
     let cancellationResult;
-    group('wf03::06_cancellation', () => {
+    group('wf03_06_cancellation', () => {
       const tags = stepTags(context, 'cancellation');
       const requestValid = validateCancellationRequest(context.orderId, tags);
       if (!requestValid) {
@@ -295,7 +296,7 @@ export function executeWf03({ dataSet, runtime }) {
     }
 
     let finalResult;
-    group('wf03::07_final_probe', () => {
+    group('wf03_07_final_probe', () => {
       const response = http.get(
         `${runtime.baseUrl}/api/orders/${context.orderId}`,
         requestParams(context, 'final_probe'),
@@ -319,7 +320,13 @@ export function executeWf03({ dataSet, runtime }) {
     context.succeeded = true;
   } catch (_error) {
     recordTerminalFailure(context, 'setup', 'runtime_safety');
-    throw new Error('WF03 runtime/safety error: unexpected iteration exception');
+    emitOutcomeOnce(context, false);
+    console.error(
+      'WF03 sanitized harness diagnostic: unexpected script/runtime exception; aborting test',
+    );
+    exec.test.abort(
+      'WF03 runtime/safety abort: unexpected test-harness exception',
+    );
   } finally {
     emitOutcomeOnce(context, context.succeeded);
   }

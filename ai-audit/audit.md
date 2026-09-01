@@ -1157,3 +1157,34 @@ evidence. Four deferred numeric abort rules and all final performance thresholds
 remain deferred. The small evidence/documentation set was truthfully committed
 locally as `11c0a7f`; credentials and the three giant raw files were excluded.
 No official scenario or push occurred.
+
+## Interaction 017 — Failed-Pilot review and corrected-Pilot authorization
+
+| Field | Actual record |
+|---|---|
+| AI tool | Codex CLI |
+| Recorded | 2026-09-01 22:07:02 +0700 |
+| Human review | Failed Pilot confirmed as test-harness/k6 compatibility defect, not SUT performance or a confirmed SUT bug |
+| Full prompt | [`interactions/017-failed-pilot-review-corrected-pilot.md`](interactions/017-failed-pilot-review-corrected-pilot.md) |
+| H-038 | **DONE BY HUMAN** after application/commit of the approved corrections |
+| New gate | H-039 corrected-Pilot results review; official execution remains prohibited |
+
+### Preserved historical transition
+
+- **Old AI/draft:** group names used `wf03::NN_step`, custom metrics hard-coded
+  `traffic=measured`, unexpected exceptions were rethrown generically, and no
+  exact-PID runner existed.
+- **Observed Pilot failure:** pinned k6 rejected `::`; the generic exception
+  path tight-looped 9,699,772 iterations before HTTP, generated about 21.6 GiB,
+  and failed to return a captured numeric process exit.
+- **Human-approved correction:** k6-safe group names, context-derived traffic,
+  sanitized test-level abort for unexpected harness/runtime exceptions, a
+  five-minute exact-PID runner, bounded Pilot output, and exact deletion of the
+  three untracked bulk files after committed evidence preservation.
+
+Before deletion, the committed artifact inventory preserves all three original
+paths, exact byte sizes, timestamps, SHA-256 values, producer/output type, exact
+root error, bounded stderr/diagnostic evidence, failed summary counts, HTTP bytes
+0/0, and the no-SUT-request conclusion. The deletion is authorized only after
+this record and the inventory are committed. One fresh corrected 2-VU Pilot is
+authorized; no official scenario, threshold, or push is authorized.

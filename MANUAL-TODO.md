@@ -45,7 +45,8 @@ CLARIFICATION`, `RESOLVED BY HUMAN DECISION`, `DONE BY HUMAN`, `NOT APPLICABLE`.
 | H-035 | Review/correct the Phase E exact checks, custom metrics, one-outcome rule, failure taxonomy, operational safety stops, and three-report/output proposal. | DONE BY HUMAN | Approved with four error-based numeric aborts deferred pending pilot evidence and report mapping conditionally approved; recorded in HD-008 on 2026-09-01 |
 | H-036 | Review the Phase F shared draft k6 architecture, one authoritative WF-03 implementation, static guards, configs, metrics/checks, output abstraction, and static-review findings. | DONE BY HUMAN | Approved explicitly with H-002 resolution and numeric-abort deferral retained; HD-009 |
 | H-037 | Approve execution of the prepared disposable-runtime 2-VU pilot, including the source-required one-start backend ordering and provisioning exactly two pilot accounts. | DONE BY HUMAN | Explicit approval in HD-010; one Pilot executed and failed before HTTP; no official result |
-| H-038 | Review the failed Pilot evidence and approve/correct the proposed group-name, custom traffic-tag, runtime-exception abort, exit/wall-clock runner, rerun-output, and 21.6 GiB artifact-handling decisions. | WAITING FOR HUMAN | Explicit results review and separate authorization before applying evidence-affecting fixes or running a corrected Pilot |
+| H-038 | Review the failed Pilot evidence and approve/correct the proposed group-name, custom traffic-tag, runtime-exception abort, exit/wall-clock runner, rerun-output, and 21.6 GiB artifact-handling decisions. | DONE BY HUMAN | HD-011: test-harness classification and minimum corrections, exact bulk cleanup, and one fresh corrected Pilot explicitly approved on 2026-09-01 |
+| H-039 | Review the corrected 2-VU Pilot evidence and decide whether official test-plan finalization may begin. | WAITING FOR HUMAN | Corrected Pilot results, runtime validation, integrity, and any remaining risks must be reviewed; no official execution implied |
 
 ## Current checkpoint
 
@@ -60,4 +61,6 @@ Phase G installed/pinned k6 2.2.0 and H-037 authorized one controlled Pilot.
 Preflight/provisioning passed, but the Pilot failed before HTTP on invalid `::`
 group names and generated approximately 21.6 GiB of local failure artifacts.
 The backend is stopped, port 3000 is free, and the original DB is unchanged.
-H-038 now blocks source corrections, a corrected Pilot, and official execution.
+H-038 is complete under HD-011. Exactly one corrected Pilot is authorized after
+the fix commit/static gates. H-039 blocks official-plan finalization and every
+official execution.

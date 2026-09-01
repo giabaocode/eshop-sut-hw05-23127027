@@ -79,3 +79,18 @@ dependencies, credentials, DB mutation, and secrets.
 The prior blocked attempt remains preserved. No helper, SUT, business workflow,
 check, correlation, metric, workload, or runner semantic change is authorized.
 H-040 will review the resulting fresh attempt before any official-plan work.
+
+## Actual AI outcome
+
+The invocation correction was recorded/committed as `34bb80e`, then a new clone
+at that commit passed all original/helper/runtime boundaries. Unchanged helper
+execution from the original worktree provisioned and validated exactly two
+accounts with exit 0. The same one-start backend PID 23201 then served the
+corrected bounded Pilot.
+
+k6 PID 23298 exited 0 after a runner-recorded 246 seconds; watchdog did not fire.
+All 81 attempts succeeded, all 3,078 checks passed, 567 HTTP requests had zero
+failures, and 81 created orders were canceled. Runtime identity, JWT, product,
+price, order, pending/cancel/final correlations all passed. Output and integrity
+evidence were preserved; scans found no secret. Backend/port stopped cleanly and
+the original DB hash remained unchanged. No official scenario or push occurred.

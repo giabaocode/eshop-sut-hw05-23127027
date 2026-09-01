@@ -1,0 +1,22 @@
+label=CORRECTED PILOT / RUNTIME VALIDATION — NOT OFFICIAL LOAD RESULT
+start_time=2026-09-01 22:41:52 +0700
+start_epoch=1788277312
+hard_cap_seconds=300
+k6_binary=/opt/homebrew/bin/k6
+scenario_file=/private/tmp/eshop-hw05-fresh-corrected-pilot.wyN9jR/runtime/performance/scenarios/pilot.js
+raw_output=native granular k6 JSON
+csv_output=disabled
+web_dashboard=disabled
+k6_pid=23298
+process_exit_time=2026-09-01 22:45:58 +0700
+process_exit_epoch=1788277558
+artifact_flush_completion_time=2026-09-01 22:45:58 +0700
+artifact_flush_completion_epoch=1788277558
+wall_clock_seconds=246
+k6_exit_code=0
+watchdog_fired=no
+runner_interrupted=0
+artifact_bytes=3164967 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/pilot/20260901T223944+0700/raw/pilot-raw.json
+artifact_bytes=21581 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/pilot/20260901T223944+0700/raw/pilot-summary.json
+artifact_bytes=45603 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/pilot/20260901T223944+0700/logs/k6.stdout.log
+artifact_bytes=0 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/pilot/20260901T223944+0700/logs/k6.stderr.log

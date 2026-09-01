@@ -5,13 +5,13 @@
 - Created: 2026-09-01 13:37:42 +07 (Asia/Ho_Chi_Minh)
 - Repository: `/Users/phamngocgiabao/eshop-sut-hw05-23127027`
 - Source commit: `85af3ba875c88283615e22cb108f13e2fccaf0e9`
-- Current completed activity: **Pilot harness corrected; fresh corrected setup blocked before provisioning/k6**
+- Current completed activity: **Fresh corrected 2-VU Pilot runtime validation passed; human review pending**
 - Phase B correction review: **RESOLVED BY HUMAN** on 2026-09-01 15:58:08 +07
 - Phase C status: **COMPLETE AND HUMAN-REVIEWED**; H-033 `DONE BY HUMAN`
 - Phase D status: **COMPLETE AND HUMAN-REVIEWED WITH AUTHENTICATION CORRECTION**; H-034 `DONE BY HUMAN`
 - Phase E status: **COMPLETE AND HUMAN-REVIEWED WITH NUMERIC ABORT DEFERRAL**; H-035 `DONE BY HUMAN`
 - Phase F status: **COMPLETE AND HUMAN-REVIEWED**; H-036 `DONE BY HUMAN`
-- Phase G/Pilot status: **TOOLCHAIN COMPLETE; FAILED PILOT PRESERVED; CORRECTED SETUP BLOCKED BEFORE PROVISIONING/K6**
+- Phase G/Pilot status: **TOOLCHAIN COMPLETE; FAILED/BLOCKED HISTORY PRESERVED; FRESH CORRECTED PILOT COMPLETED**
 - Phase G implementation commit: `d9291f7` (`test: pin k6 and prepare 2-VU pilot`)
 - Phase G toolchain/audit commit: `41c6fec` (`docs: record Phase G toolchain validation`)
 - Controlled Pilot evidence commit: `11c0a7f` (`test: record failed 2-VU pilot evidence`)
@@ -21,7 +21,9 @@
 - Corrected Attempt `20260901T221331+0700`: **BLOCKED BEFORE PROVISIONING/K6** on clone-local helper guard
 - Blocked-attempt evidence commit: `aebd717` (`test: record corrected Pilot preflight failure`)
 - H-039: **DONE BY HUMAN**; unchanged original-worktree helper invocation approved
-- Current gate: **H-040 — FRESH CORRECTED-PILOT REVIEW** after the authorized attempt
+- Invocation-approval/source commit: `34bb80e` (`docs: approve original-worktree Pilot provisioning`)
+- Fresh corrected Pilot `20260901T223944+0700`: **81/81 WF-03 SUCCESS; NOT OFFICIAL**
+- Current gate: **H-040 — FRESH CORRECTED-PILOT REVIEW**
 
 ## Selected workflow
 

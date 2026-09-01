@@ -313,3 +313,37 @@ Before registration, the protected/original and disposable paths, DB inodes,
 marker, commit, original hash, backend PID/port, and exact localhost target must
 all pass. No helper semantic change is approved. Exactly one new fresh corrected
 Pilot may execute if and only if both dedicated accounts pass setup validation.
+
+## 16. Fresh corrected Pilot `20260901T223944+0700`
+
+**RUNTIME VALIDATION PASS — MEASURED PILOT VALUES, NOT OFFICIAL PERFORMANCE
+RESULTS.** A new clone at `34bb80e` passed the HD-012 original/helper/runtime
+boundary. The unchanged original-worktree helper exited 0 and provisioned
+exactly customers 01/02; private mode-0600 credentials, authentication,
+role/unlocked state, and zero starting orders passed. Backend PID 23201 remained
+the same from reset through setup/Pilot.
+
+The corrected JSON-only runner started k6 PID 23298 at 22:41:52 +07 and captured
+numeric exit 0 at 22:45:58 +07. Full wall clock was 246 seconds; the 300-second
+exact-PID watchdog did not fire. There was no stderr output.
+
+Actual Pilot values: 81 attempts, 81 successes (100%), zero terminal-failure
+samples, 567 HTTP requests, zero failed requests, 3,078/3,078 checks, 81 orders
+created and 81 canceled, and zero unexpected-auth samples. Lifecycle duration
+was avg 758.33 ms, median 761 ms, p95 963 ms. Overall HTTP duration was avg
+1.783 ms, median 1.289 ms, p95 4.253 ms. These values validate runtime behavior
+only and do not define any performance threshold or capacity.
+
+All login/JWT/identity, exact search match, product ID/detail/price, checkout/new
+order ID, same-order pending, same-order cancellation, and same-order final
+canceled checks passed. Deterministic VU bindings used customer 01 and customer
+02; final DB evidence showed both actively participated with 36 and 45 canceled
+orders respectively. Exactly one successful workflow outcome was emitted per
+attempt, and all custom samples were tagged `scenario=pilot,traffic=pilot`.
+
+Postflight stopped exact backend PID 23201, freed port 3000, retained valid
+disposable/original SQLite integrity, and reconfirmed the original DB hash.
+Artifact scanning found no credential, password, JWT, Authorization header, or
+private email. Raw JSON/summary/stdout/stderr and all setup/runtime evidence are
+preserved under the new timestamped directory. H-040 human review is required
+before official test-plan finalization.

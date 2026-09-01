@@ -380,3 +380,13 @@ helper invocation/new fresh attempt awaits human review.
 
 The actual human review is preserved in detail in
 [`../ai-audit/interactions/018-invocation-boundary-review-fresh-corrected-pilot.md`](../ai-audit/interactions/018-invocation-boundary-review-fresh-corrected-pilot.md).
+
+### HD-012 application outcome
+
+Fresh attempt `20260901T223944+0700` passed the approved boundary and unchanged
+helper invocation. Exactly two accounts passed setup. The bounded corrected
+Pilot completed 81/81 exact WF-03 lifecycles with 3,078/3,078 checks, 0/567
+failed HTTP requests, and 81/81 created orders canceled. k6 exited 0 after 246
+seconds; watchdog did not fire. Original DB integrity/hash remained unchanged.
+These are AI execution observations, not a new human decision or official
+performance conclusion; H-040 review remains required.

@@ -1,6 +1,6 @@
 # 2-VU k6 Pilot Runbook
 
-Status: **ORIGINAL-WORKTREE HELPER INVOCATION APPROVED; ONE FRESH CORRECTED PILOT AUTHORIZED**
+Status: **FRESH CORRECTED PILOT COMPLETED — H-040 REVIEW REQUIRED**
 
 Pinned tool: k6 `v2.2.0` at `/opt/homebrew/bin/k6`
 
@@ -18,6 +18,12 @@ provisioning because invoking the helper from the clone makes its script-relativ
 `originalRoot` equal that clone. No registration or k6 traffic occurred. Do not
 retry from that runtime. HD-012 now approves the invocation boundary below for
 one entirely new fresh attempt.
+
+Execution result: fresh attempt `20260901T223944+0700` used the approved
+original-worktree invocation, provisioned/validated exactly two accounts, and
+completed 81/81 full WF-03 lifecycles with all checks passing. k6 exited 0,
+watchdog did not fire, and postflight integrity passed. This is Pilot runtime
+validation only; H-040 blocks official-plan work.
 
 ## 1. Source-derived startup constraint
 

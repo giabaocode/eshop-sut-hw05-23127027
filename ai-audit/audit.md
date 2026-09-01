@@ -1244,3 +1244,35 @@ different DB inodes, marker, approved commit relationship, original hash,
 backend PID/cwd/port, and exact localhost target must be recorded. A failed
 boundary or two-account setup stops the attempt. Only one fresh bounded 2-VU
 Pilot is authorized after every setup gate passes.
+
+### Fresh result
+
+- Documentation-only approval commit `34bb80e` preceded the new clone. The
+  original and fresh runtime resolved to different absolute paths and DB
+  inodes, both worktrees were at `34bb80e`, helper hashes matched, the marker was
+  exact, and the original DB hash was unchanged.
+- New clone `/private/tmp/eshop-hw05-fresh-corrected-pilot.wyN9jR/runtime`
+  started backend PID 23201 once. PID/cwd/port/reset/seed/readiness gates passed.
+- The unchanged helper ran from the actual original worktree with the clone as
+  `WF03_DISPOSABLE_ROOT`; exit 0. Exactly customers 01/02 were created through
+  real registration and passed private credential, authentication, role,
+  unlocked, and zero-order validation. No helper semantic change occurred.
+- Exact-PID runner started k6 PID 23298 and preserved native JSON, summary,
+  stdout/stderr, command, metadata, and setup/backend evidence. Numeric k6 exit
+  was 0; runner wall clock 246 seconds; watchdog did not fire; stderr was empty.
+- Actual Pilot metrics: 81 attempts/successes; 0 terminal failures; 567 HTTP
+  requests with 0 failures; 3,078 checks with 0 failures; 81 orders created and
+  canceled; 0 unexpected-auth samples; lifecycle avg/median/p95
+  758.33/761/963 ms. All custom samples had `scenario=pilot,traffic=pilot`.
+- Runtime checks validated current credential/JWT/identity, exact product match,
+  correlated product ID/detail/price, new order ID, same-order pending,
+  cancellation, and final canceled state. Account 01 ended with 36 canceled
+  orders and account 02 with 45, proving both dedicated slots participated.
+- Exact backend PID stopped; port free; disposable DB `ok` with all 81 orders
+  canceled; original DB `ok` and hash unchanged. Original worktree had no
+  runtime node_modules, credentials, `.env.local`, DB mutation, or temporary
+  secret. Full artifact scan found no password/JWT/Authorization/private email.
+
+These are measured Pilot/runtime-validation observations, not official
+performance results, thresholds, capacity, or Load conclusions. H-040 review is
+required before official-plan finalization. No push occurred.

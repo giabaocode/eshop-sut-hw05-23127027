@@ -93,3 +93,13 @@ as a separate blocked attempt. Nothing was pushed.
 This attempt commit was created only after the owned backend stopped and the
 original database integrity/hash were reverified. It contains no credentials,
 disposable database, dependencies, or private runtime files and was not pushed.
+
+## 8. Original-worktree invocation approval
+
+| Phase activity | Actual content | Commit hash | Commit message |
+|---|---|---|---|
+| H-039 invocation correction | Documentation-only human approval to invoke the unchanged helper from the actual original worktree against one new disposable clone | `34bb80e` | `docs: approve original-worktree Pilot provisioning` |
+
+The fresh runtime was cloned only after this commit existed and was pinned to
+it. No helper/SUT/workflow/check/correlation/workload/metric source changed and
+nothing was pushed.

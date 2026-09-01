@@ -65,6 +65,6 @@ The backend is stopped, port 3000 is free, and the original DB is unchanged.
 H-038 is complete under HD-011 and fix commit `c75b514` exists. The authorized
 bulk cleanup completed. Fresh corrected setup stopped before registration/k6
 because the clone-local helper rejected its own clone. H-039 is complete under
-HD-012. One fresh corrected Pilot is authorized only after the original-
-worktree-helper boundary and two-account gates pass. H-040 blocks official-plan
-finalization and every official execution.
+HD-012. Fresh corrected Pilot `20260901T223944+0700` passed setup and completed
+81/81 full WF-03 lifecycles; this is Pilot runtime evidence only. H-040 blocks
+official-plan finalization and every official execution.

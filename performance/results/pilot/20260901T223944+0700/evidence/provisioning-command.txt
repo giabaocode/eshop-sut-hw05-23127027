@@ -1,0 +1,11 @@
+FRESH CORRECTED PILOT — SETUP ONLY; NOT MEASURED K6 TRAFFIC
+
+Execution working directory:
+/Users/phamngocgiabao/eshop-sut-hw05-23127027
+
+Exact invocation (contains paths/count/localhost only; no credential value):
+
+WF03_BASE_URL=http://127.0.0.1:3000 WF03_ACCOUNT_COUNT=2 WF03_DISPOSABLE_ROOT=/private/tmp/eshop-hw05-fresh-corrected-pilot.wyN9jR/runtime WF03_PRIVATE_DIR=/private/tmp/eshop-hw05-fresh-corrected-pilot.wyN9jR/private node performance/tools/provision-accounts.mjs
+
+Exit code: 0
+Output: WF03 disposable provisioning complete: 2 accounts; credentials and redacted evidence written privately.

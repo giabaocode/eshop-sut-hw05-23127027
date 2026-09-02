@@ -1554,3 +1554,14 @@ proved the disposable DB still had zero WF-03 accounts and the protected HW05
 DB hash was unchanged. Codex did not kill the unowned PID or clean/reset the
 other DB. Detailed record:
 [`interactions/029-endurance-preflight-wrong-listener.md`](interactions/029-endurance-preflight-wrong-listener.md).
+
+## Interaction 030 — Human stop and blocker resolution
+
+The human asked Codex to check again after requesting PID `52187` be stopped.
+At 2026-09-02 14:31:38 +0700, read-only checks found the PID absent, port 3000
+free, and zero WF-03 accounts in the previously affected external SUT database;
+its integrity remained `ok`. The protected HW05 DB hash/integrity was unchanged.
+Codex performed no cleanup or reset. A first malformed AI tool invocation did
+not execute; the corrected read-only command produced the recorded evidence.
+H-041 is complete. Detailed record:
+[`interactions/030-endurance-blocker-resolution.md`](interactions/030-endurance-blocker-resolution.md).

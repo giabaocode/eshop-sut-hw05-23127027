@@ -48,7 +48,7 @@ CLARIFICATION`, `RESOLVED BY HUMAN DECISION`, `DONE BY HUMAN`, `NOT APPLICABLE`.
 | H-038 | Review the failed Pilot evidence and approve/correct the proposed group-name, custom traffic-tag, runtime-exception abort, exit/wall-clock runner, rerun-output, and 21.6 GiB artifact-handling decisions. | DONE BY HUMAN | HD-011: test-harness classification and minimum corrections, exact bulk cleanup, and one fresh corrected Pilot explicitly approved on 2026-09-01 |
 | H-039 | Review the corrected-Pilot preflight failure and approve/reject invoking the unchanged helper from the actual original worktree against a new disposable clone. | DONE BY HUMAN | HD-012 explicitly approved the original-worktree invocation boundary and one new fresh corrected Pilot on 2026-09-01 |
 | H-040 | Review the fresh corrected 2-VU Pilot evidence and decide whether official test-plan finalization may begin. | DONE BY HUMAN | Human explicitly approved the 81/81 corrected Pilot as shared-workflow runtime validation only and authorized Phase I planning on 2026-09-01; HD-013 |
-| H-041 | Resolve the unowned port-3000 process and decide handling of 20 synthetic accounts accidentally provisioned into `/Users/phamngocgiabao/eshop-sut/backend/database.sqlite`. | WAITING FOR HUMAN | Stop/retain PID `52187` through its owning application and explicitly authorize cleanup/reset or direct that the accounts remain; no k6 traffic occurred |
+| H-041 | Resolve the unowned port-3000 process and decide handling of 20 synthetic accounts accidentally provisioned into `/Users/phamngocgiabao/eshop-sut/backend/database.sqlite`. | DONE BY HUMAN | Human requested PID `52187` stop; read-only verification at 2026-09-02 14:31:38 +0700 found PID absent, port free, zero remaining WF-03 accounts, external DB integrity ok, and protected HW05 DB unchanged |
 
 ## Current checkpoint
 
@@ -110,3 +110,8 @@ PID `52187` from `/Users/phamngocgiabao/eshop-sut/backend` held port 3000, and a
 non-fail-closed AI command provisioned 20 synthetic accounts there. The
 disposable DB has none and protected HW05 integrity is unchanged. Human must
 stop/retain the unowned process and choose cleanup/retention of those accounts.
+
+H-041 is now resolved by the human stop action and read-only verification: PID
+`52187` is absent, port 3000 is free, the external DB contains zero matching
+WF-03 accounts, and protected HW05 integrity remains unchanged. A completely
+fresh endurance runtime is required; the blocked runtime will not be reused.

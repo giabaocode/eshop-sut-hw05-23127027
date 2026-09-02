@@ -1,6 +1,6 @@
 # Official Stress Runbook
 
-Status: **PREPARED — NOT EXECUTED; HUMAN OFFICIAL FILENAME REQUIRED**
+Status: **REAL PREFLIGHT PASS — RUN `20260902T101857+0700`; WAITING FOR SCREENSHOT READINESS**
 
 | Stage | Duration | Target VUs |
 |---:|---:|---:|
@@ -43,3 +43,12 @@ The runner additionally writes native CSV; it does not fabricate JTL or create
 the pending reviewed CSV-to-analysis renderer. The human should capture the
 tool and exact backend resource view during the highest valid stage, preferably
 the 20-VU hold, without hiding an earlier stop or exposing secrets.
+
+## Current authorized run
+
+Fresh runtime `/private/tmp/eshop-hw05-stress.X7FeN0/runtime` is pinned to
+`0c17457371d7b9bff75aa27ae61854c84b12ba3f`; exact backend PID is `45430`.
+Exactly 20 accounts passed setup with zero orders. Planned result root is
+`performance/results/stress/20260902T101857+0700/` and remains absent. Start the
+official runner only after the human replies `READY` at the real screenshot
+gate. This preflight makes no performance/capacity claim.

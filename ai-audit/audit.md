@@ -1458,3 +1458,20 @@ After k6 flush, Codex stopped exact backend PID 42059, verified port 3000 free,
 and verified the protected original DB SHA-256/integrity unchanged. The audit
 preserves the interrupted wait and corrected post-run process diagnosis rather
 than rewriting them away.
+
+## Interaction 024 — Official Stress preflight
+
+| Field | Actual record |
+|---|---|
+| Authority | Interaction 022 maximum safe automation |
+| Actual run ID | `20260902T101857+0700` |
+| Detailed record | [`interactions/024-official-stress-preflight.md`](interactions/024-official-stress-preflight.md) |
+| Preflight | PASS; measured traffic not started |
+
+Fresh clone `/private/tmp/eshop-hw05-stress.X7FeN0/runtime` is pinned to
+`0c17457`; exact one-start backend PID `45430` owns the clone listener. Twenty
+fresh accounts, roles/unlocked/authentication/zero orders, five products,
+public/private contracts, official wrapper, k6, disk, database boundary, and
+protected original integrity passed. The new result root remains absent. Work
+stopped only for the genuine Stress Activity Monitor/k6 screenshot-readiness
+gate.

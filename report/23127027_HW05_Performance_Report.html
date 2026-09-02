@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>HW05 Performance Report</title>
+<style>
+@page { size: A4; margin: 16mm 13mm; }
+body { color:#172033; font: 10.5pt -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height:1.45; max-width: 100%; }
+h1 { color:#143b66; border-bottom:2px solid #356a9a; padding-bottom:6px; font-size:22pt; }
+h2 { color:#194f7d; border-bottom:1px solid #c7d4df; padding-bottom:3px; font-size:16pt; break-after:avoid; }
+h3 { font-size:13pt; break-after:avoid; }
+p, li { orphans:3; widows:3; }
+table { border-collapse:collapse; width:100%; margin:8px 0 14px; font-size:8.3pt; break-inside:auto; }
+tr { break-inside:avoid; }
+th, td { border:1px solid #9aa9b5; padding:4px 5px; vertical-align:top; overflow-wrap:anywhere; }
+th { background:#eaf1f7; text-align:left; }
+code { background:#eef2f5; padding:1px 3px; border-radius:3px; font-family:ui-monospace, monospace; }
+pre { white-space:pre-wrap; overflow-wrap:anywhere; background:#f4f6f8; border:1px solid #d6dde3; padding:8px; font-size:8.5pt; }
+a { color:#145ea8; }
+</style></head><body><h1>HW05 — AI-First Performance Testing Report</h1>
+<p>Status: <strong>TECHNICALLY COMPLETE DRAFT — HUMAN-ONLY EVIDENCE/APPROVAL PENDING</strong></p>
+<p>Student: <strong>23127027 — Phạm Ngọc Gia Bảo</strong></p>
+<p>SUT: <strong>EShop REST backend</strong></p>
+<p>Tool: <strong>k6 v2.2.0 (darwin/arm64)</strong></p>
+<p>OS: <strong>macOS 26.5.2, Apple M5, 16 GB RAM</strong></p>
+<p>Repository: &lt;https://github.com/giabaocode/eshop-sut-hw05-23127027&gt;</p>
+<h2>1. General information</h2>
+<p>This report documents a source-backed, data-driven, AI-first performance test of the official EShop SUT. AI generated proposals and automation incrementally; the student reviewed workflow, workload, data, correlation, safety, metrics, reporting, and interpretation. The audit preserves both mistakes and later human corrections rather than rewriting history.</p>
+<h2>2. SUT and environment</h2>
+<p>The backend is Node.js/Express with a local SQLite database on <code>http://127.0.0.1:3000</code>. k6 was installed through Homebrew and pinned at v2.2.0. Each measured run used a fresh commit-pinned disposable clone. The protected original database SHA-256 remained <code>c63f00544180ba1fbb1427a9b9dd3f1784842698809972f33ce90482e7420ba6</code>.</p>
+<p>Text hardware evidence is in <a href="../evidence/hardware/specs.md"><code>../evidence/hardware/specs.md</code></a>. The real hardware screenshot and hostname compatibility confirmation remain: <strong>[HUMAN EVIDENCE REQUIRED]</strong>.</p>
+<h2>3. Selected workflow: WF-03</h2>
+<p>The human-selected and group-unique workflow is “Purchase followed by customer cancellation”:</p>
+<pre><code>Login → think 0.5–1.0s → Search → think 1.0–2.0s → Detail
+→ think 1.5–3.0s → Checkout/Create Order → Verify same order pending
+→ think 0.5–1.0s → Cancel same order → Verify same order canceled</code></pre>
+<p>It covers authentication (<code>POST /api/login</code>), read-heavy product search/detail, and transactional order creation/verification/cancellation. The executable contract is detailed in <a href="../docs/selected-workflow-specification.md"><code>../docs/selected-workflow-specification.md</code></a>.</p>
+<h2>4. AI-first design process</h2>
+<p>The work progressed through repository/PDF discovery, safe runtime verification, workflow selection, workload design, test-data design, dynamic correlation, checks/metrics/safety, a shared k6 implementation, pinned-tool validation, a two-VU Pilot, official scenarios, endurance, and raw-data analysis. Human decisions are in <a href="../docs/human-decisions.md"><code>../docs/human-decisions.md</code></a>, and the chronological record is in <a href="../ai-audit/audit.md"><code>../ai-audit/audit.md</code></a>.</p>
+<p>The Pilot exposed real AI-generated harness defects: invalid <code>::</code> names, a tight exception loop producing roughly 21.6 GiB without HTTP, incorrect Pilot traffic tags, and a provisioning invocation boundary. A later endurance preflight exposed a non-fail-closed wrong-listener orchestration. All failed attempts and corrections remain auditable.</p>
+<h2>5. Data-driven strategy</h2>
+<p><code>performance/data/workflow.csv</code> contains 20 deterministic non-secret rows. Private credentials are generated during disposable setup, mode-restricted, and never committed. Each VU maps deterministically to one account through <code>exec.vu.idInTest</code>; there is no modulo/account-sharing fallback. JWT, user ID, product ID, product price, checkout total, and order ID are extracted from the current iteration's responses and never stored as authoritative CSV values.</p>
+<p>All official preflights required 20 valid user accounts and zero comparable starting orders. Load activated accounts 01..05; Stress and Spike could activate 01..20.</p>
+<h2>6. Load design, execution, and results</h2>
+<p>Workload: 0→5 VUs/1m, 5 VUs/5m, 5→0/1m; seven minutes scheduled, eight-minute safety cap. Official entry: <code>performance/scenarios/official/23127027_Load_20260901.js</code>.</p>
+<table><thead><tr><th>Metric</th><th>Measured value</th></tr></thead><tbody>
+<tr><td>Workflows</td><td>345/345 successful</td></tr>
+<tr><td>HTTP requests / failed</td><td>2,415 / 0</td></tr>
+<tr><td>Checks</td><td>13,110/13,110</td></tr>
+<tr><td>Throughput</td><td>5.731666 requests/s</td></tr>
+<tr><td>HTTP mean / p95 / p99</td><td>1.821239 / 4.1019 / 4.69974 ms</td></tr>
+<tr><td>Lifecycle p95</td><td>989.8 ms</td></tr>
+<tr><td>Orders created/canceled</td><td>345/345</td></tr>
+</tbody></table>
+<p>The genuine screenshot showed backend PID 42059 at a point-in-time 1.4% CPU, 55.6 MB memory, and 11 threads. Full analysis: <a href="../analysis/load-analysis.md"><code>../analysis/load-analysis.md</code></a>.</p>
+<h2>7. Stress design, execution, and results</h2>
+<p>The exact 12m30s schedule progressed through 2, 5, 10, 15, and 20 VUs, recovered to 5, then zero; safety cap 14 minutes. Twenty VUs was an input, not capacity.</p>
+<table><thead><tr><th>Metric</th><th>Measured value</th></tr></thead><tbody>
+<tr><td>Workflows</td><td>1,281/1,281 successful</td></tr>
+<tr><td>HTTP requests / failed</td><td>8,967 / 0</td></tr>
+<tr><td>Checks</td><td>48,678/48,678</td></tr>
+<tr><td>Aggregate throughput</td><td>11.877557 requests/s</td></tr>
+<tr><td>HTTP mean / p95 / p99</td><td>1.700244 / 3.9147 / 4.45374 ms</td></tr>
+<tr><td>Full 20-VU bucket RPS</td><td>25.933333 and 26.533333</td></tr>
+<tr><td>Full 20-VU bucket p95</td><td>3.7523 and 3.71925 ms</td></tr>
+</tbody></table>
+<p>No degradation knee appeared in this bounded run. The resource screenshot showed PID 45430 at one instant (4.0% CPU, 79.9 MB, 11 threads). Full analysis: <a href="../analysis/stress-analysis.md"><code>../analysis/stress-analysis.md</code></a>.</p>
+<h2>8. Spike design, execution, and results</h2>
+<p>Workload: 0→3/30s; 3 VUs/2m; 3→20/10s; 20 VUs/45s; 20→3/10s; 3 VUs/2m; 3→0/30s. Scheduled 6m5s; safety cap seven minutes.</p>
+<table><thead><tr><th>Metric</th><th>Measured value</th></tr></thead><tbody>
+<tr><td>Workflows</td><td>377/377 successful</td></tr>
+<tr><td>HTTP requests / failed</td><td>2,639 / 0</td></tr>
+<tr><td>HTTP p95 / p99</td><td>3.9654 / 4.91164 ms</td></tr>
+<tr><td>Baseline / peak / recovery p95</td><td>4.324 / 3.5988 / 4.038 ms</td></tr>
+<tr><td>Peak throughput</td><td>26.377778 requests/s</td></tr>
+<tr><td>Orders created/canceled</td><td>377/377</td></tr>
+</tbody></table>
+<p>The tested recovery window had no failure or visible backlog, but one run does not prove repeatable recovery. The peak screenshot showed PID 48405 at 4.0% CPU, 69.0 MB, and 11 threads. Full analysis: <a href="../analysis/spike-analysis.md"><code>../analysis/spike-analysis.md</code></a>.</p>
+<h2>9. Human review and corrections</h2>
+<p>The final test-plan history is in <a href="../reviews/test-plan-review.md"><code>../reviews/test-plan-review.md</code></a>. Major human corrections included realistic cancellation think time, 20 dedicated accounts, iteration-level handling of isolated auth failures, deferral of arbitrary numeric aborts, k6-safe names, harness-exception test abort, bounded outputs, and exact provisioning/process boundaries.</p>
+<h2>10. Resource and hardware evidence</h2>
+<p>Genuine combined k6/Activity Monitor images exist for Load, Stress, Spike, and endurance under each timestamped <code>evidence/screenshots/</code> directory. They prove point-in-time process observations only; no continuous CPU/memory telemetry was collected. Hardware text evidence is genuine. Hardware screenshot: <strong>[HUMAN EVIDENCE REQUIRED]</strong>.</p>
+<h2>11. Endurance result</h2>
+<p>Evidence from clean official runs justified a conservative five-VU sustained input. The endurance workload ramped to 5 VUs over 30 seconds, held for 12 minutes, then ramped down over 30 seconds.</p>
+<p>It completed 713/713 workflows, 4,991/4,991 successful HTTP requests, 27,094/27,094 checks, and 713/713 cancellations. Aggregate p95 was 4.377 ms, p99 4.8056 ms, and throughput 6.372423 requests/s. First/second-half mean RPS was 6.6/6.636111 with zero failures. The demonstrated local endurance point is <strong>5 VUs sustained for 12 minutes</strong> for this exact machine/commit/data—not maximum capacity or a longer-duration guarantee.</p>
+<h2>12. Original AI analysis</h2>
+<p>The immutable original analysis is <a href="../analysis/ai-analysis-original.md"><code>../analysis/ai-analysis-original.md</code></a>, committed as <code>5e4b00f</code> before human verdicts. It reported no observed failure knee, highlighted relatively slower writes, and proposed candidate regression guardrails while attempting to retain uncertainty.</p>
+<h2>13. Misinterpretation hunt</h2>
+<p>The student completed <a href="../reviews/ai-analysis-review.md"><code>../reviews/ai-analysis-review.md</code></a>. Claim 3 was judged <strong>MISLEADING</strong> because checkout/cancellation were only relatively slower, not confirmed bottlenecks. Claim 8 was <strong>INSUFFICIENT EVIDENCE</strong> because the numeric guardrails lacked repeat-run/noise validation. Other claims were accepted with explicit workload, repeatability, duration, and scope limits.</p>
+<h2>14. Optimization recommendations</h2>
+<p>The final human matrix is <a href="../reviews/optimization-review.md"><code>../reviews/optimization-review.md</code></a>. Atomic owner/state-scoped cancellation was considered feasible only with semantic tests. Login-write, WAL/busy timeout, and email-index benefits lacked evidence. The normal leading-wildcard search index and generic SQLite connection pool were classified hallucinated/not applicable. No optimization or fake post-optimization benchmark was applied.</p>
+<h2>15. Genuine issues</h2>
+<p>No SUT performance issue was confirmed within tested scope, so no speculative GitHub Issue was created. Harness/setup failures are not SUT bugs. Evidence and the pending final H-017 publication disposition are in <a href="../analysis/genuine-issue-determination.md"><code>../analysis/genuine-issue-determination.md</code></a>.</p>
+<h2>16. Continuous Performance Testing</h2>
+<p><a href="../proposal/continuous-performance-testing.md"><code>../proposal/continuous-performance-testing.md</code></a> defines path-based suite selection, controlled baselines, p95 regression detection, warning-first gating, repeat/noise handling, cost, false alarms, false negatives, and artifact retention. It includes a Mermaid flowchart and an undeployed CI prototype. Numeric regression tolerances remain configurable and human-reviewed rather than falsely validated.</p>
+<h2>17. Agent Skill</h2>
+<p>The reusable Skill is under <a href="../skills/hw05-k6-performance/"><code>../skills/hw05-k6-performance/</code></a>. It covers requirement/source discovery, workflow/data design, disposable execution, authentic evidence, analysis, audit, and submission validation. It explicitly refuses to fabricate screenshots, narration, reviews, grades, or results. Skill validation evidence is recorded in the final validator output.</p>
+<h2>18. AI critique</h2>
+<p>The 278-word candidate critique and its source matrix are in <a href="../reviews/ai-critique-draft.md"><code>../reviews/ai-critique-draft.md</code></a> and <a href="../reviews/ai-critique-evidence.md"><code>../reviews/ai-critique-evidence.md</code></a>. Final substantive approval: <strong>[HUMAN REVIEW REQUIRED]</strong>.</p>
+<h2>19. Conclusion</h2>
+<p>All measured workflows completed successfully within the tested inputs, and no SUT performance defect or capacity ceiling was established. The strongest result is not a universal speed claim but a reproducible evidence chain: one shared workflow, fresh data, strict correlation/checks, authentic raw output, distinct k6 reports, explicit uncertainty, and preserved AI/human corrections.</p>
+<h2>20. References</h2>
+<ul>
+<li>Official assignment: <code>2026.HW05.Performance Testing_En.pdf</code> (kept local and</li>
+<p>excluded from submission Git history).</p>
+<li>Official SUT: &lt;https://github.com/ttbhanh/eshop-sut&gt;</li>
+<li>Student repository: &lt;https://github.com/giabaocode/eshop-sut-hw05-23127027&gt;</li>
+<li>k6 toolchain record: <a href="../docs/k6-toolchain.md"><code>../docs/k6-toolchain.md</code></a></li>
+<li>Cross-scenario analysis: <a href="../analysis/scenario-comparison.md"><code>../analysis/scenario-comparison.md</code></a></li>
+</ul>
+<h2>21. AI Audit appendix</h2>
+<p>The full mandatory Markdown audit is <a href="../ai-audit/audit.md"><code>../ai-audit/audit.md</code></a>, with detailed records under <code>ai-audit/interactions/</code>. It identifies Codex CLI, real prompts/actions, execution evidence, corrections, commits, and unresolved human-only items.</p>
+<h2>Remaining attributable fields</h2>
+<ul>
+<li>Hardware screenshot and hostname compatibility: <strong>[HUMAN REQUIRED]</strong></li>
+<li>Combined/separate video decision and real YouTube URL: <strong>[HUMAN REQUIRED]</strong></li>
+<li>Final critique approval: <strong>[HUMAN REQUIRED]</strong></li>
+<li>Self-assessed grade: <strong>[HUMAN REQUIRED]</strong></li>
+<li>Final package/Moodle approval and upload: <strong>[HUMAN REQUIRED]</strong></li>
+</ul></body></html>

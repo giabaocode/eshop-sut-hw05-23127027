@@ -135,3 +135,10 @@ combined H-014/H-015/H-016 gate for the student's final interpretation and
 optimization verdicts. The student subsequently supplied every verdict and
 explanation directly; those three gates are now complete under HD-017 and
 maximum safe automation resumes.
+
+The remaining technical deliverables now include an evidence-based issue
+determination, Continuous Performance Testing proposal/Mermaid/CI prototype,
+validated repository Agent Skill, demo runbook, 278-word critique candidate,
+main report/README drafts, PDF views, and a submission validator. These do not
+complete H-003/H-013/H-017/H-018–H-025; the next combined human packet will
+request only those attributable decisions/evidence.

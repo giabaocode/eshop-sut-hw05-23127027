@@ -1635,3 +1635,14 @@ review matrices and detailed record. `analysis/ai-analysis-original.md`
 remains unchanged at commit `5e4b00f`. H-014/H-015/H-016 are complete; maximum
 safe automation resumes. Detailed record:
 [`interactions/036-human-ai-optimization-verdicts.md`](interactions/036-human-ai-optimization-verdicts.md).
+
+## Interaction 037 — Technical deliverable automation
+
+Codex created the evidence-based no-confirmed-issue determination, Continuous
+Performance Testing proposal/Mermaid/undeployed CI prototype, validated Agent
+Skill, demo preparation, critique evidence/278-word draft, main report, README,
+PDF renderer/views, and submission validator. The official Skill validator
+passed after PyYAML was installed only in a temporary `/tmp` virtualenv. No SUT
+traffic/change, speculative issue, visual, video, URL, grade, final approval,
+or submission was fabricated. Detailed record:
+[`interactions/037-technical-deliverable-automation.md`](interactions/037-technical-deliverable-automation.md).

@@ -1,0 +1,45 @@
+# PROPOSAL / PROTOTYPE — NOT DEPLOYED
+# Copy to .github/workflows only after runner, secret, baseline, and threshold review.
+name: performance-risk-prototype
+
+on:
+  workflow_dispatch:
+    inputs:
+      suite:
+        description: "validated-pilot, load, full, or endurance"
+        required: true
+        default: "validated-pilot"
+      baseline_ref:
+        description: "Immutable accepted baseline artifact/run identifier"
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: performance-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate-inputs:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4 # Pin to a reviewed commit SHA before deployment.
+      - name: Validate repository contract
+        run: node tools/validate_submission.mjs --technical-only
+      - name: Record decision inputs
+        env:
+          SUITE: ${{ inputs.suite }}
+          BASELINE_REF: ${{ inputs.baseline_ref }}
+        run: |
+          case "$SUITE" in
+            validated-pilot|load|full|endurance) ;;
+            *) echo "Unsupported suite" >&2; exit 2 ;;
+          esac
+          test -n "$BASELINE_REF"
+
+  # A deployed job would create a fresh disposable SUT, generate private
+  # credentials at runtime, execute only the selected approved workload, upload
+  # native JSON/report artifacts, then compare p95 against BASELINE_REF.
+  # It is intentionally omitted until the runner and regression tolerance are
+  # human-reviewed. No repository credential or final threshold belongs here.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "HW05 k6 Performance"
+  short_description: "Build authentic, audited k6 HW05 evidence"
+  default_prompt: "Use $hw05-k6-performance to validate and continue this performance-testing submission from repository evidence."

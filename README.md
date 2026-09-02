@@ -1,3 +1,50 @@
+# HW05 — AI-First Performance Testing
+
+Student: **23127027 — Phạm Ngọc Gia Bảo**
+
+Repository: <https://github.com/giabaocode/eshop-sut-hw05-23127027>
+
+Tool/environment: **k6 v2.2.0, macOS, Apple M5/16 GB**
+
+## Submission summary
+
+WF-03 covers Login → Product Search → Product Detail → Checkout → pending-order
+verification → cancellation → canceled-order verification. Load, Stress, and
+Spike use one runtime-validated shared implementation and separate workloads.
+
+| Item | Genuine result/status |
+|---|---|
+| Official Load | 345/345 workflows; 2,415 HTTP requests; 0 failures; p95 4.1019 ms |
+| Official Stress | 1,281/1,281 workflows; 8,967 requests; 0 failures; tested through 20 VUs (not capacity) |
+| Official Spike | 377/377 workflows; 2,639 requests; 0 failures; measured recovery after one 20-VU spike |
+| Endurance | 713/713 workflows; 5 VUs sustained 12 minutes; local demonstrated point, not maximum capacity |
+| Endpoint groups | Authentication, read-heavy product search/detail, transactional order lifecycle |
+| Genuine SUT issues | 0 confirmed within tested scope; no speculative Issue created |
+| Demo video | **[HUMAN REQUIRED — real unlisted YouTube URL]** |
+| SelfAssessedGrade | **[HUMAN REQUIRED — 000..100]** |
+
+## Self-assessment table
+
+The student must supply the final grade; Codex does not invent it.
+
+| Rubric area | Weight | Evidence | Student assessment |
+|---|---:|---|---:|
+| Load testing | 30 | Official raw JSON, aggregate report, screenshot, analysis | **[HUMAN]** |
+| Stress testing | 20 | Official raw JSON/CSV, time-series report, screenshot, analysis | **[HUMAN]** |
+| Spike testing | 20 | Official raw JSON/dashboard, screenshot, recovery analysis | **[HUMAN]** |
+| AI analysis and human misinterpretation review | 10 | Immutable AI analysis plus completed human matrix | **[HUMAN]** |
+| Continuous Performance Testing proposal | 10 | Proposal, Mermaid flowchart, CI prototype | **[HUMAN]** |
+| Reusable Agent Skill | 10 | Skill, safety contracts, result-tree validator; video pending | **[HUMAN]** |
+| **Total** | **100** | See main report and validator | **[HUMAN: 000..100]** |
+
+Main report: [`report/23127027_HW05_Performance_Report.md`](report/23127027_HW05_Performance_Report.md)
+
+AI Audit: [`ai-audit/audit.md`](ai-audit/audit.md)
+
+Human review packet: [`reviews/HUMAN-REVIEW-PACKET.md`](reviews/HUMAN-REVIEW-PACKET.md)
+
+---
+
 # Đặc tả Yêu cầu Hệ thống (System Requirements Specification)
 
 # EShop — Phiên bản dành cho Kiểm thử Phần mềm

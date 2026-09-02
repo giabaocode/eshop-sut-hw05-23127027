@@ -115,3 +115,8 @@ H-041 is now resolved by the human stop action and read-only verification: PID
 `52187` is absent, port 3000 is free, the external DB contains zero matching
 WF-03 accounts, and protected HW05 integrity remains unchanged. A completely
 fresh endurance runtime is required; the blocked runtime will not be reused.
+
+Fresh endurance preflight `20260902T143823+0700` now passes with exact
+foreground backend PID `53376`, 20 validated disposable accounts, zero orders,
+and unchanged original integrity. Automation is paused only for the final H-012
+real endurance k6/backend-resource screenshot readiness gate.

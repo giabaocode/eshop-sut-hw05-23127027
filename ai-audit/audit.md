@@ -1574,3 +1574,15 @@ owns it, and require the listener cwd to equal the fresh disposable backend.
 The existing provisioning helper and all WF-03 semantics remain unchanged.
 Detailed record:
 [`interactions/031-fail-closed-listener-guard.md`](interactions/031-fail-closed-listener-guard.md).
+
+## Interaction 032 — Fresh endurance preflight
+
+An intermediate fresh runtime proved detached processes are reclaimed by the
+Codex execution boundary; the exact-PID verifier failed closed and prevented
+all provisioning/k6 traffic. A second fresh clone, pinned to `4bc3b68`, keeps
+backend PID `53376` in a foreground session. The atomic PID/cwd/port guard then
+passed before exactly 20 accounts were provisioned. All account, product,
+zero-order, DB, k6, workload, disk, source, and original-integrity checks pass.
+Run ID `20260902T143823+0700` is reserved, but its result root and k6 traffic do
+not exist. Detailed record:
+[`interactions/032-endurance-fresh-preflight.md`](interactions/032-endurance-fresh-preflight.md).

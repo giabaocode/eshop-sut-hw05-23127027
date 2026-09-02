@@ -1404,3 +1404,22 @@ native JSON/summary/log/metadata/report/checksum plan, and human Activity
 Monitor capture instructions. No actual run ID, result artifact, screenshot,
 backend, account, or traffic was generated. Stress/Spike execution preparation
 did not proceed.
+
+## Interaction 022 — Maximum safe automation authorization
+
+| Field | Actual record |
+|---|---|
+| AI tool | Codex CLI |
+| Recorded | 2026-09-02 09:15:49 +0700 |
+| Human instruction | Switch HW05 to maximum safe automation; execute every legitimate automatable task, stop only at explicitly defined human gates, preserve real evidence, never fabricate, and never push upstream |
+| Lockout decision | H-009 human-approved: validated credentials only, no intentional lockout, preserve genuine behavior, no credential substitution, fresh reset/reprovisioning between runs |
+| Execution decision | Human authorized official Load/Stress/Spike/endurance technical execution without further phase approval; real screenshot readiness remains an immediate pre-traffic gate |
+| Git decision | Truthful commits and eventual push to student `origin` authorized after safety/artifact scans |
+| Detailed interaction | [`interactions/022-maximum-safe-automation.md`](interactions/022-maximum-safe-automation.md) |
+
+At receipt, `HEAD` was `70c5429fe82e56e3f48f1c1682f04396e4bc39e1`,
+`origin` was the student repository, `upstream` was the official SUT, and
+`remote.pushDefault` was `origin`. No runtime had yet been started. Codex began
+the authorized official Load preflight and retained the requirement to stop
+immediately before measured traffic if genuine combined k6/backend-resource
+visual evidence required human readiness.

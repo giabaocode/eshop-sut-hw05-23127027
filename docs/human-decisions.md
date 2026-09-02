@@ -448,3 +448,21 @@ The exact validation interaction is recorded in
 The human instruction, correction, revalidation, commit, and Load-only
 preparation are recorded in
 [`../ai-audit/interactions/021-wrapper-correction-load-preparation.md`](../ai-audit/interactions/021-wrapper-correction-load-preparation.md).
+
+## HD-016 — Maximum safe automation and official execution authority
+
+| Field | Human decision |
+|---|---|
+| Recorded | 2026-09-02 09:15:49 +0700 (Asia/Ho_Chi_Minh) |
+| Decision owner | Phạm Ngọc Gia Bảo — HUMAN |
+| Operating mode | Maximum safe automation: continue every legitimate technical task without artificial phase stops |
+| Technical execution | Official Load, Stress, Spike, and evidence-based 10–15 minute endurance execution are authorized |
+| H-009 | `DONE BY HUMAN` with valid-credential/no-intentional-lockout/no-substitution/fresh-runtime rules |
+| H-011 | `DONE BY HUMAN` for technical execution, subject to genuine screenshot-readiness gates |
+| Visual gate | Stop immediately before each measured run only when real combined k6/backend-resource evidence needs human readiness |
+| Human judgments retained | Screenshots/hardware, AI-misinterpretation verdicts, optimization verdicts, video/narration/URL, critique approval, grade, final submission |
+| Git authority | Truthful commits and push to `origin main` after required scans; never push `upstream` |
+| Anti-fabrication | Real execution/evidence only; never invent measurements, visuals, issues, judgments, grade, video, URL, or submission |
+
+The detailed instruction and its application are recorded in
+[`../ai-audit/interactions/022-maximum-safe-automation.md`](../ai-audit/interactions/022-maximum-safe-automation.md).

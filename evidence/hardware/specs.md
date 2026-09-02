@@ -22,4 +22,7 @@ Sources: real local output from `hostname`, `scutil`, `sw_vers`, `uname`, and
 `system_profiler SPHardwareDataType`. Unique hardware identifiers such as the
 serial number, hardware UUID, and provisioning UDID were intentionally omitted
 from this trackable text file. This table does not replace the PDF-required
-human screenshot or the human hostname-compatibility check.
+human screenshot. On 2026-09-02 the student confirmed this is the same
+MacBook/hostname used for the previous homework deployment. A first genuine
+screenshot candidate confirmed these values but exposed a serial number and is
+therefore withheld pending a human-created safe replacement.

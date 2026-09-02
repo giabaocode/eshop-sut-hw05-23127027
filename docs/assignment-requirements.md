@@ -45,7 +45,7 @@ work is never marked complete without the student's explicit confirmation.
 | T1-15 | Run an approximately 10–15 minute sustained endurance/soak test to empirically determine the local hardware threshold with concrete numbers. | §6 Task 1, p.5 | Endurance run and threshold analysis | Partial | Yes | DONE |
 | T1-16 | Record an unlisted YouTube demo of at least six total minutes; separate scenario clips are allowed. | §6 Task 1, p.5 | Real video and URL | No | Yes | TODO |
 | T1-17 | Show the testing tool and resource monitor in the same frame and use the student's own Vietnamese narration. | §6 Task 1, p.5 | Real video evidence | No | Yes | TODO |
-| T1-18 | Report genuine bugs or performance issues on the GitHub Issues page with screenshots; performance issues are encouraged but absence is not penalized. | §6 Task 1, p.5 | Genuine issue links or documented absence | Partial | Yes | TODO |
+| T1-18 | Report genuine bugs or performance issues on the GitHub Issues page with screenshots; performance issues are encouraged but absence is not penalized. | §6 Task 1, p.5 | Genuine issue links or documented absence | Partial | Yes | NOT APPLICABLE |
 | T2-01 | After collecting real raw results, prompt AI to analyse the logs and suggest performance thresholds. | §6 Task 2, p.5 | Original AI analysis | Partial | Yes | DONE |
 | T2-02 | Human-review the AI analysis and identify actual metric misreads/misinterpretations. | §6 Task 2, p.5 | AI-analysis review | Partial | Yes | DONE |
 | T2-03 | For each actual misinterpretation, cite the correct value from the raw log and explain the error. | §6 Task 2, p.5 | Misinterpretation table | Partial | Yes | DONE |
@@ -59,8 +59,8 @@ work is never marked complete without the student's explicit confirmation.
 | TOOL-02 | Use an appropriate resource monitor, such as Activity Monitor on macOS. | §8, p.6 | Monitoring runbook and screenshots | Partial | Yes | DONE |
 | AUDIT-01 | Attach the AI Audit Report as a mandatory appendix. | §9, p.6 | AI Audit in report appendix | Partial | Yes | TODO |
 | AUDIT-02 | For every AI interaction, record AI tool name, date/time, human prompt, and AI output. | §9, pp.6–7 | AI Audit interaction entries | Partial | Yes | IN PROGRESS |
-| CRIT-01 | Write a mandatory 200–300 word critique of AI. | §10, p.7 | AI critique | Partial | Yes | TODO |
-| CRIT-02 | Address what AI got wrong/biased/incomplete, why it missed the issue, and the collaboration principle learned. | §10, p.7 | Evidence-based critique | Partial | Yes | TODO |
+| CRIT-01 | Write a mandatory 200–300 word critique of AI. | §10, p.7 | AI critique | Partial | Yes | DONE |
+| CRIT-02 | Address what AI got wrong/biased/incomplete, why it missed the issue, and the collaboration principle learned. | §10, p.7 | Evidence-based critique | Partial | Yes | DONE |
 | AC-01 | Do not fabricate or AI-generate test-plan filenames, raw execution logs, demo video/voice, or hardware evidence. | §11, p.7 | Authentic evidence chain | Partial | Yes | IN PROGRESS |
 | AC-02 | Attach full raw logs, not summaries alone. | §11, p.7 | Raw result artifacts | Yes | Yes | DONE |
 | AC-03 | Hardware evidence hostname must match the student's previous homework deployments. | §11, p.7 | Hostname evidence and human verification | Partial | Yes | TODO |

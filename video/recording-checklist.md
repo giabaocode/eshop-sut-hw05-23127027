@@ -2,7 +2,7 @@
 
 Status: **PENDING HUMAN**
 
-- [ ] Decide H-003: one combined performance/Skill video or separate videos.
+- [x] H-003: human selected one combined performance/Skill video.
 - [ ] Record at least six minutes with the student's own Vietnamese narration.
 - [ ] Show repository URL, student ID, hostname, macOS, and pinned k6 version.
 - [ ] Show the complete WF-03 endpoint group and shared implementation.

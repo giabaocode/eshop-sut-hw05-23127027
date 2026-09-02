@@ -56,18 +56,18 @@ pass('main_report_markdown', nonempty('report/23127027_HW05_Performance_Report.m
 pass('main_report_pdf', nonempty('report/23127027_HW05_Performance_Report.pdf'), 'Main report PDF exists', 'Main report PDF missing');
 pass('audit_pdf', nonempty('report/23127027_AI_Audit.pdf'), 'AI Audit PDF exists', 'AI Audit PDF missing');
 pass('critique_markdown', nonempty('reviews/ai-critique-draft.md'), '278-word candidate exists', 'Critique draft missing');
-pass('critique_pdf_draft', nonempty('report/23127027_AI_Critique_DRAFT.pdf'), 'Candidate critique PDF exists and remains labeled DRAFT', 'Candidate critique PDF missing');
+pass('critique_final', nonempty('reviews/ai-critique.md') && nonempty('report/23127027_AI_Critique.pdf'), 'Human-approved 278-word critique and final PDF exist', 'Final approved critique/PDF missing');
 pass('git_log', nonempty('git-commit-log.txt'), 'Real Git log export exists', 'Git log export missing');
 
 if (!technicalOnly) {
   const hardwareImages = filesUnder('evidence/hardware').filter((p) => /\.(png|jpe?g)$/i.test(p));
   add('hardware_screenshot', hardwareImages.length ? 'MANUAL VERIFICATION REQUIRED' : 'MANUAL VERIFICATION REQUIRED', hardwareImages.length ? `Review genuine image(s): ${hardwareImages.join(', ')}` : 'No human hardware screenshot is present');
-  add('hostname_compatibility', 'MANUAL VERIFICATION REQUIRED', 'Student must confirm compatibility with previous homework evidence');
+  pass('hostname_compatibility', read('MANUAL-TODO.md').includes('| H-022 |') && read('MANUAL-TODO.md').match(/\| H-022 \|[^\n]+\| DONE BY HUMAN \|/), 'Human confirmed the same MacBook/hostname was used previously', 'Hostname compatibility confirmation missing');
   const youtube = (read('README.md').match(/https:\/\/(?:www\.)?(?:youtube\.com|youtu\.be)\/\S+/) || [])[0];
   add('video_url', 'MANUAL VERIFICATION REQUIRED', youtube || 'No real YouTube URL supplied');
-  add('combined_video_decision', 'MANUAL VERIFICATION REQUIRED', 'H-003 is pending');
-  add('ai_critique_approval', 'MANUAL VERIFICATION REQUIRED', 'Candidate exists; H-021 approval pending');
-  add('issue_publication', 'MANUAL VERIFICATION REQUIRED', 'No SUT issue confirmed; H-017 final NOT APPLICABLE decision pending');
+  pass('combined_video_decision', read('MANUAL-TODO.md').match(/\| H-003 \|[^\n]+\| DONE BY HUMAN \|/), 'Human selected one combined performance/Skill video', 'H-003 decision missing');
+  pass('ai_critique_approval', read('MANUAL-TODO.md').match(/\| H-021 \|[^\n]+\| DONE BY HUMAN \|/), 'Human approved the 278-word critique', 'H-021 approval missing');
+  add('issue_publication', 'NOT APPLICABLE', 'Human confirmed no genuine SUT issue; no speculative Issue published');
   add('self_assessed_grade', 'MANUAL VERIFICATION REQUIRED', 'No human grade supplied');
   add('final_zip', 'MANUAL VERIFICATION REQUIRED', 'Requires grade and final human approval');
   add('moodle_submission', 'MANUAL VERIFICATION REQUIRED', 'Must be performed by the student');

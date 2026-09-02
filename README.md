@@ -20,6 +20,7 @@ Spike use one runtime-validated shared implementation and separate workloads.
 | Endurance | 713/713 workflows; 5 VUs sustained 12 minutes; local demonstrated point, not maximum capacity |
 | Endpoint groups | Authentication, read-heavy product search/detail, transactional order lifecycle |
 | Genuine SUT issues | 0 confirmed within tested scope; no speculative Issue created |
+| AI Critique | Human-approved 278-word final text |
 | Demo video | **[HUMAN REQUIRED — real unlisted YouTube URL]** |
 | SelfAssessedGrade | **[HUMAN REQUIRED — 000..100]** |
 

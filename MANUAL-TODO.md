@@ -10,7 +10,7 @@ CLARIFICATION`, `RESOLVED BY HUMAN DECISION`, `DONE BY HUMAN`, `NOT APPLICABLE`.
 |----|----------------------|--------|--------------------------------|
 | H-001 | Review Phase 0 assignment traceability, Git safety status, and initial repository findings. | DONE BY HUMAN | Approved in chat on 2026-09-01 |
 | H-002 | Resolve the k6 `.jtl`/HTML equivalence after technical options are proposed. | RESOLVED BY HUMAN DECISION | Use PDF-authorized distinct k6-equivalent outputs and genuine native JSON; do not contact TA, fabricate JTL, or mislabel k6 artifacts; HD-009 |
-| H-003 | Decide whether the performance demo and Agent Skill demo may be one combined video. | TODO | Explicit decision or instructor clarification |
+| H-003 | Decide whether the performance demo and Agent Skill demo may be one combined video. | DONE BY HUMAN | Human selected one combined video on 2026-09-02; HD-018 |
 | H-004 | Select the final E2E workflow from source-backed candidates. | DONE BY HUMAN | WF-03 explicitly selected in chat on 2026-09-01 |
 | H-005 | Check workflow candidates with group members and confirm the chosen workflow is not duplicated. | DONE BY HUMAN | Four-person-group coordination and WF-03 uniqueness explicitly confirmed in chat on 2026-09-01 |
 | H-006 | Review AI-generated performance-test design. | DONE BY HUMAN | Human reviewed Phases B–F through explicit correction/approval prompts; HD-005 through HD-009 |
@@ -20,16 +20,16 @@ CLARIFICATION`, `RESOLVED BY HUMAN DECISION`, `DONE BY HUMAN`, `NOT APPLICABLE`.
 | H-010 | Approve exact Load/Stress/Spike plan filenames after PDF validation. | DONE BY HUMAN | Human created the three exact `23127027_{Load|Stress|Spike}_20260901.js` basenames; filename validation passed on 2026-09-01. The later human-approved path-depth correction passed pinned-k6 and semantic revalidation and is committed as `90fb1ae`; HD-014 and HD-015 |
 | H-011 | Approve each real Load, Stress, Spike, and endurance execution before it runs. | DONE BY HUMAN | Master maximum-safe-automation instruction on 2026-09-02 explicitly authorizes technical execution of all four runs, subject to the real screenshot-readiness gates; HD-016 |
 | H-012 | Capture real performance-tool/resource-monitor screenshots for every run. | DONE BY HUMAN | Human-captured and visually validated combined k6/backend-resource evidence exists for genuine Load, Stress, Spike, and endurance runs; each records the exact disposable backend PID |
-| H-013 | Capture real macOS hardware/hostname screenshot evidence. | TODO | Actual screenshot file and hostname match check |
+| H-013 | Capture real macOS hardware/hostname screenshot evidence. | WAITING FOR HUMAN | First genuine JPEG showed correct hardware/hostname but exposed a device serial; replace/redact manually before commit; HD-018 |
 | H-014 | Review AI performance analysis against raw results. | DONE BY HUMAN | Human supplied nine explicit evidence-based verdicts and explanations; `reviews/ai-analysis-review.md`; HD-017 |
 | H-015 | Identify/approve actual AI metric misinterpretations and explain them. | DONE BY HUMAN | Claim 3 marked `MISLEADING`; Claim 8 marked `INSUFFICIENT EVIDENCE`, with direct human explanations; HD-017 |
 | H-016 | Classify optimization recommendations with final human verdicts. | DONE BY HUMAN | Human supplied all seven final verdicts/explanations; `reviews/optimization-review.md`; HD-017 |
-| H-017 | Decide whether genuine observed issues should be published to GitHub. | TODO | Explicit publication approval or NOT APPLICABLE decision |
+| H-017 | Decide whether genuine observed issues should be published to GitHub. | NOT APPLICABLE | Human agreed no genuine SUT issue was confirmed; no speculative Issue will be published; HD-018 |
 | H-018 | Provide Vietnamese narration and record the real demo with tool and monitor in one frame. | TODO | Real recording |
 | H-019 | Upload the real demo as unlisted YouTube content and supply its URL. | TODO | Real URL |
 | H-020 | Demonstrate the Agent Skill in the required real video evidence. | TODO | Real demonstration/video evidence |
-| H-021 | Review/edit/approve substantive claims in the 200–300 word AI critique. | TODO | Explicit approval/corrections |
-| H-022 | Confirm hardware hostname compatibility with previous homework deployments. | TODO | Explicit confirmation |
+| H-021 | Review/edit/approve substantive claims in the 200–300 word AI critique. | DONE BY HUMAN | Human approved the 278-word draft without correction on 2026-09-02; HD-018 |
+| H-022 | Confirm hardware hostname compatibility with previous homework deployments. | DONE BY HUMAN | Human confirmed the same MacBook/hostname was used for previous homework deployment; HD-018 |
 | H-023 | Choose the three-digit self-assessed grade in `[000,100]`. | TODO | Explicit grade |
 | H-024 | Perform final completeness and submission review. | TODO | Explicit submission approval |
 | H-025 | Approve final ZIP creation and Moodle submission. | TODO | Explicit packaging/submission approval |
@@ -148,3 +148,10 @@ checks. `reviews/FINAL-HUMAN-REVIEW.md` is the authoritative combined next
 action packet. No final ZIP can be truthfully named until the student supplies
 the hardware/hostname evidence, real video URL/decision, critique and issue
 disposition, grade, and final approval.
+
+The student then approved CPT, Agent Skill, AI Critique, no-issue disposition,
+one combined video, and hostname compatibility. The validator now reports 29
+PASS, 0 FAIL, 1 NOT APPLICABLE, and 5 manual checks. The first genuine hardware
+JPEG is not acceptable for Git because it exposes a serial number. After a safe
+replacement, only real YouTube URL and grade metadata remain before ZIP; Moodle
+upload always remains human-only.

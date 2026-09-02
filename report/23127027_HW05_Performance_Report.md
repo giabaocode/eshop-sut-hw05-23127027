@@ -29,8 +29,11 @@ original database SHA-256 remained
 `c63f00544180ba1fbb1427a9b9dd3f1784842698809972f33ce90482e7420ba6`.
 
 Text hardware evidence is in [`../evidence/hardware/specs.md`](../evidence/hardware/specs.md).
-The real hardware screenshot and hostname compatibility confirmation remain:
-**[HUMAN EVIDENCE REQUIRED]**.
+The student confirmed that `Phams-MacBook-Pro.local` is the same
+MacBook/hostname used for previous homework deployment. The first screenshot
+candidate was genuine but exposed a device serial and is intentionally not
+included; a safely framed/redacted replacement remains **[HUMAN EVIDENCE
+REQUIRED]**.
 
 ## 3. Selected workflow: WF-03
 
@@ -149,8 +152,8 @@ and exact provisioning/process boundaries.
 Genuine combined k6/Activity Monitor images exist for Load, Stress, Spike, and
 endurance under each timestamped `evidence/screenshots/` directory. They prove
 point-in-time process observations only; no continuous CPU/memory telemetry was
-collected. Hardware text evidence is genuine. Hardware screenshot:
-**[HUMAN EVIDENCE REQUIRED]**.
+collected. Hardware text evidence is genuine. A replacement screenshot without
+the visible device serial remains **[HUMAN EVIDENCE REQUIRED]**.
 
 ## 11. Endurance result
 
@@ -195,12 +198,13 @@ post-optimization benchmark was applied.
 ## 15. Genuine issues
 
 No SUT performance issue was confirmed within tested scope, so no speculative
-GitHub Issue was created. Harness/setup failures are not SUT bugs. Evidence and
-the pending final H-017 publication disposition are in
+GitHub Issue was created. The student approved `NOT APPLICABLE`; harness/setup
+failures are not SUT bugs. Evidence and H-017 disposition are in
 [`../analysis/genuine-issue-determination.md`](../analysis/genuine-issue-determination.md).
 
 ## 16. Continuous Performance Testing
 
+The human-approved
 [`../proposal/continuous-performance-testing.md`](../proposal/continuous-performance-testing.md)
 defines path-based suite selection, controlled baselines, p95 regression
 detection, warning-first gating, repeat/noise handling, cost, false alarms,
@@ -210,7 +214,7 @@ human-reviewed rather than falsely validated.
 
 ## 17. Agent Skill
 
-The reusable Skill is under [`../skills/hw05-k6-performance/`](../skills/hw05-k6-performance/).
+The human-approved reusable Skill is under [`../skills/hw05-k6-performance/`](../skills/hw05-k6-performance/).
 It covers requirement/source discovery, workflow/data design, disposable
 execution, authentic evidence, analysis, audit, and submission validation. It
 explicitly refuses to fabricate screenshots, narration, reviews, grades, or
@@ -218,10 +222,9 @@ results. Skill validation evidence is recorded in the final validator output.
 
 ## 18. AI critique
 
-The 278-word candidate critique and its source matrix are in
-[`../reviews/ai-critique-draft.md`](../reviews/ai-critique-draft.md) and
+The student's human-approved 278-word critique and its source matrix are in
+[`../reviews/ai-critique.md`](../reviews/ai-critique.md) and
 [`../reviews/ai-critique-evidence.md`](../reviews/ai-critique-evidence.md).
-Final substantive approval: **[HUMAN REVIEW REQUIRED]**.
 
 ## 19. Conclusion
 
@@ -249,8 +252,7 @@ execution evidence, corrections, commits, and unresolved human-only items.
 
 ## Remaining attributable fields
 
-- Hardware screenshot and hostname compatibility: **[HUMAN REQUIRED]**
+- Replacement hardware screenshot without visible serial: **[HUMAN REQUIRED]**
 - Combined/separate video decision and real YouTube URL: **[HUMAN REQUIRED]**
-- Final critique approval: **[HUMAN REQUIRED]**
 - Self-assessed grade: **[HUMAN REQUIRED]**
 - Final package/Moodle approval and upload: **[HUMAN REQUIRED]**

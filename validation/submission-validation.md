@@ -1,13 +1,13 @@
 # HW05 Submission Validation
 
-Generated: 2026-09-02T13:19:51.121Z
+Generated: 2026-09-02T14:04:14.242Z
 
 | Status | Count |
 |---|---:|
-| PASS | 26 |
+| PASS | 29 |
 | FAIL | 0 |
-| MANUAL VERIFICATION REQUIRED | 9 |
-| NOT APPLICABLE | 0 |
+| MANUAL VERIFICATION REQUIRED | 5 |
+| NOT APPLICABLE | 1 |
 
 | Check | Status | Evidence |
 |---|---|---|
@@ -35,14 +35,14 @@ Generated: 2026-09-02T13:19:51.121Z
 | main_report_pdf | PASS | Main report PDF exists |
 | audit_pdf | PASS | AI Audit PDF exists |
 | critique_markdown | PASS | 278-word candidate exists |
-| critique_pdf_draft | PASS | Candidate critique PDF exists and remains labeled DRAFT |
+| critique_final | PASS | Human-approved 278-word critique and final PDF exist |
 | git_log | PASS | Real Git log export exists |
-| hardware_screenshot | MANUAL VERIFICATION REQUIRED | No human hardware screenshot is present |
-| hostname_compatibility | MANUAL VERIFICATION REQUIRED | Student must confirm compatibility with previous homework evidence |
+| hardware_screenshot | MANUAL VERIFICATION REQUIRED | Review genuine image(s): evidence/hardware/hardware-specs-hostname.jpg |
+| hostname_compatibility | PASS | Human confirmed the same MacBook/hostname was used previously |
 | video_url | MANUAL VERIFICATION REQUIRED | No real YouTube URL supplied |
-| combined_video_decision | MANUAL VERIFICATION REQUIRED | H-003 is pending |
-| ai_critique_approval | MANUAL VERIFICATION REQUIRED | Candidate exists; H-021 approval pending |
-| issue_publication | MANUAL VERIFICATION REQUIRED | No SUT issue confirmed; H-017 final NOT APPLICABLE decision pending |
+| combined_video_decision | PASS | Human selected one combined performance/Skill video |
+| ai_critique_approval | PASS | Human approved the 278-word critique |
+| issue_publication | NOT APPLICABLE | Human confirmed no genuine SUT issue; no speculative Issue published |
 | self_assessed_grade | MANUAL VERIFICATION REQUIRED | No human grade supplied |
 | final_zip | MANUAL VERIFICATION REQUIRED | Requires grade and final human approval |
 | moodle_submission | MANUAL VERIFICATION REQUIRED | Must be performed by the student |

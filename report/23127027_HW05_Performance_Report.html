@@ -25,7 +25,7 @@ a { color:#145ea8; }
 <p>This report documents a source-backed, data-driven, AI-first performance test of the official EShop SUT. AI generated proposals and automation incrementally; the student reviewed workflow, workload, data, correlation, safety, metrics, reporting, and interpretation. The audit preserves both mistakes and later human corrections rather than rewriting history.</p>
 <h2>2. SUT and environment</h2>
 <p>The backend is Node.js/Express with a local SQLite database on <code>http://127.0.0.1:3000</code>. k6 was installed through Homebrew and pinned at v2.2.0. Each measured run used a fresh commit-pinned disposable clone. The protected original database SHA-256 remained <code>c63f00544180ba1fbb1427a9b9dd3f1784842698809972f33ce90482e7420ba6</code>.</p>
-<p>Text hardware evidence is in <a href="../evidence/hardware/specs.md"><code>../evidence/hardware/specs.md</code></a>. The real hardware screenshot and hostname compatibility confirmation remain: <strong>[HUMAN EVIDENCE REQUIRED]</strong>.</p>
+<p>Text hardware evidence is in <a href="../evidence/hardware/specs.md"><code>../evidence/hardware/specs.md</code></a>. The student confirmed that <code>Phams-MacBook-Pro.local</code> is the same MacBook/hostname used for previous homework deployment. The first screenshot candidate was genuine but exposed a device serial and is intentionally not included; a safely framed/redacted replacement remains <strong>[HUMAN EVIDENCE REQUIRED]</strong>.</p>
 <h2>3. Selected workflow: WF-03</h2>
 <p>The human-selected and group-unique workflow is “Purchase followed by customer cancellation”:</p>
 <pre><code>Login → think 0.5–1.0s → Search → think 1.0–2.0s → Detail
@@ -76,7 +76,7 @@ a { color:#145ea8; }
 <h2>9. Human review and corrections</h2>
 <p>The final test-plan history is in <a href="../reviews/test-plan-review.md"><code>../reviews/test-plan-review.md</code></a>. Major human corrections included realistic cancellation think time, 20 dedicated accounts, iteration-level handling of isolated auth failures, deferral of arbitrary numeric aborts, k6-safe names, harness-exception test abort, bounded outputs, and exact provisioning/process boundaries.</p>
 <h2>10. Resource and hardware evidence</h2>
-<p>Genuine combined k6/Activity Monitor images exist for Load, Stress, Spike, and endurance under each timestamped <code>evidence/screenshots/</code> directory. They prove point-in-time process observations only; no continuous CPU/memory telemetry was collected. Hardware text evidence is genuine. Hardware screenshot: <strong>[HUMAN EVIDENCE REQUIRED]</strong>.</p>
+<p>Genuine combined k6/Activity Monitor images exist for Load, Stress, Spike, and endurance under each timestamped <code>evidence/screenshots/</code> directory. They prove point-in-time process observations only; no continuous CPU/memory telemetry was collected. Hardware text evidence is genuine. A replacement screenshot without the visible device serial remains <strong>[HUMAN EVIDENCE REQUIRED]</strong>.</p>
 <h2>11. Endurance result</h2>
 <p>Evidence from clean official runs justified a conservative five-VU sustained input. The endurance workload ramped to 5 VUs over 30 seconds, held for 12 minutes, then ramped down over 30 seconds.</p>
 <p>It completed 713/713 workflows, 4,991/4,991 successful HTTP requests, 27,094/27,094 checks, and 713/713 cancellations. Aggregate p95 was 4.377 ms, p99 4.8056 ms, and throughput 6.372423 requests/s. First/second-half mean RPS was 6.6/6.636111 with zero failures. The demonstrated local endurance point is <strong>5 VUs sustained for 12 minutes</strong> for this exact machine/commit/data—not maximum capacity or a longer-duration guarantee.</p>
@@ -87,13 +87,13 @@ a { color:#145ea8; }
 <h2>14. Optimization recommendations</h2>
 <p>The final human matrix is <a href="../reviews/optimization-review.md"><code>../reviews/optimization-review.md</code></a>. Atomic owner/state-scoped cancellation was considered feasible only with semantic tests. Login-write, WAL/busy timeout, and email-index benefits lacked evidence. The normal leading-wildcard search index and generic SQLite connection pool were classified hallucinated/not applicable. No optimization or fake post-optimization benchmark was applied.</p>
 <h2>15. Genuine issues</h2>
-<p>No SUT performance issue was confirmed within tested scope, so no speculative GitHub Issue was created. Harness/setup failures are not SUT bugs. Evidence and the pending final H-017 publication disposition are in <a href="../analysis/genuine-issue-determination.md"><code>../analysis/genuine-issue-determination.md</code></a>.</p>
+<p>No SUT performance issue was confirmed within tested scope, so no speculative GitHub Issue was created. The student approved <code>NOT APPLICABLE</code>; harness/setup failures are not SUT bugs. Evidence and H-017 disposition are in <a href="../analysis/genuine-issue-determination.md"><code>../analysis/genuine-issue-determination.md</code></a>.</p>
 <h2>16. Continuous Performance Testing</h2>
-<p><a href="../proposal/continuous-performance-testing.md"><code>../proposal/continuous-performance-testing.md</code></a> defines path-based suite selection, controlled baselines, p95 regression detection, warning-first gating, repeat/noise handling, cost, false alarms, false negatives, and artifact retention. It includes a Mermaid flowchart and an undeployed CI prototype. Numeric regression tolerances remain configurable and human-reviewed rather than falsely validated.</p>
+<p>The human-approved <a href="../proposal/continuous-performance-testing.md"><code>../proposal/continuous-performance-testing.md</code></a> defines path-based suite selection, controlled baselines, p95 regression detection, warning-first gating, repeat/noise handling, cost, false alarms, false negatives, and artifact retention. It includes a Mermaid flowchart and an undeployed CI prototype. Numeric regression tolerances remain configurable and human-reviewed rather than falsely validated.</p>
 <h2>17. Agent Skill</h2>
-<p>The reusable Skill is under <a href="../skills/hw05-k6-performance/"><code>../skills/hw05-k6-performance/</code></a>. It covers requirement/source discovery, workflow/data design, disposable execution, authentic evidence, analysis, audit, and submission validation. It explicitly refuses to fabricate screenshots, narration, reviews, grades, or results. Skill validation evidence is recorded in the final validator output.</p>
+<p>The human-approved reusable Skill is under <a href="../skills/hw05-k6-performance/"><code>../skills/hw05-k6-performance/</code></a>. It covers requirement/source discovery, workflow/data design, disposable execution, authentic evidence, analysis, audit, and submission validation. It explicitly refuses to fabricate screenshots, narration, reviews, grades, or results. Skill validation evidence is recorded in the final validator output.</p>
 <h2>18. AI critique</h2>
-<p>The 278-word candidate critique and its source matrix are in <a href="../reviews/ai-critique-draft.md"><code>../reviews/ai-critique-draft.md</code></a> and <a href="../reviews/ai-critique-evidence.md"><code>../reviews/ai-critique-evidence.md</code></a>. Final substantive approval: <strong>[HUMAN REVIEW REQUIRED]</strong>.</p>
+<p>The student's human-approved 278-word critique and its source matrix are in <a href="../reviews/ai-critique.md"><code>../reviews/ai-critique.md</code></a> and <a href="../reviews/ai-critique-evidence.md"><code>../reviews/ai-critique-evidence.md</code></a>.</p>
 <h2>19. Conclusion</h2>
 <p>All measured workflows completed successfully within the tested inputs, and no SUT performance defect or capacity ceiling was established. The strongest result is not a universal speed claim but a reproducible evidence chain: one shared workflow, fresh data, strict correlation/checks, authentic raw output, distinct k6 reports, explicit uncertainty, and preserved AI/human corrections.</p>
 <h2>20. References</h2>
@@ -109,9 +109,8 @@ a { color:#145ea8; }
 <p>The full mandatory Markdown audit is <a href="../ai-audit/audit.md"><code>../ai-audit/audit.md</code></a>, with detailed records under <code>ai-audit/interactions/</code>. It identifies Codex CLI, real prompts/actions, execution evidence, corrections, commits, and unresolved human-only items.</p>
 <h2>Remaining attributable fields</h2>
 <ul>
-<li>Hardware screenshot and hostname compatibility: <strong>[HUMAN REQUIRED]</strong></li>
+<li>Replacement hardware screenshot without visible serial: <strong>[HUMAN REQUIRED]</strong></li>
 <li>Combined/separate video decision and real YouTube URL: <strong>[HUMAN REQUIRED]</strong></li>
-<li>Final critique approval: <strong>[HUMAN REQUIRED]</strong></li>
 <li>Self-assessed grade: <strong>[HUMAN REQUIRED]</strong></li>
 <li>Final package/Moodle approval and upload: <strong>[HUMAN REQUIRED]</strong></li>
 </ul></body></html>

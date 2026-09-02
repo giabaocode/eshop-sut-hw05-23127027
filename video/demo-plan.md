@@ -1,10 +1,9 @@
 # Combined Performance and Agent-Skill Demo Plan
 
-Status: **HUMAN RECORDING REQUIRED — NO VIDEO OR URL EXISTS**
+Status: **ONE COMBINED VIDEO APPROVED — HUMAN RECORDING/URL PENDING**
 
-Recommended duration: 8–10 minutes, satisfying the at-least-six-minute
-performance demo while also demonstrating the Agent Skill. Whether one combined
-video satisfies both PDF references remains H-003, a final human decision.
+Human-approved duration/format: one combined 8–10 minute video, satisfying the
+at-least-six-minute performance demo while also demonstrating the Agent Skill.
 
 | Time | Screen content | Demonstration goal |
 |---|---|---|

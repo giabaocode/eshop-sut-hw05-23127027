@@ -14,7 +14,9 @@ Sources and outputs:
 | `report/23127027_HW05_Performance_Report.md` | matching `.html` | matching `.pdf` |
 | `ai-audit/audit.md` | `report/23127027_AI_Audit.html` | `report/23127027_AI_Audit.pdf` |
 | `reviews/ai-critique-draft.md` | `report/23127027_AI_Critique_DRAFT.html` | matching `.pdf` |
+| `reviews/ai-critique.md` | `report/23127027_AI_Critique.html` | `report/23127027_AI_Critique.pdf` |
 
-The critique files remain explicitly `DRAFT` until human approval. The report
-and audit PDFs must be regenerated after later human fields/audit interactions
-are added. No PDF conversion changes measurements or fills missing evidence.
+The candidate files retain the pre-approval draft, while the final critique is
+generated only from the unchanged human-approved substantive text. The report
+and audit PDFs must be regenerated after later video/grade/audit metadata is
+added. No PDF conversion changes measurements or fills missing evidence.

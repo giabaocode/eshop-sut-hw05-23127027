@@ -487,3 +487,22 @@ The detailed instruction and its application are recorded in
 The student's exact verdict text is preserved in the two review matrices and
 the detailed interaction record:
 [`../ai-audit/interactions/036-human-ai-optimization-verdicts.md`](../ai-audit/interactions/036-human-ai-optimization-verdicts.md).
+
+## HD-018 — Final content approvals and remaining metadata
+
+| Field | Human decision |
+|---|---|
+| Recorded | 2026-09-02 20:55:42 +0700 (Asia/Ho_Chi_Minh) |
+| Decision owner | Phạm Ngọc Gia Bảo — HUMAN |
+| CPT proposal | Approved |
+| Agent Skill | Approved |
+| AI Critique | Approved without substantive correction; 278-word text becomes final |
+| Genuine issue | `NOT APPLICABLE`; no genuine SUT issue was confirmed and no speculative Issue is published |
+| Video format | One combined performance/Agent-Skill video |
+| YouTube URL | `PENDING`; no URL supplied or invented |
+| SelfAssessedGrade | `PENDING`; no grade supplied or invented |
+| Hostname | Compatible; same MacBook/hostname used for previous homework deployment |
+| Hardware image | First genuine image visually confirmed hardware/hostname but exposed a serial number; withhold it and require a human-created safe replacement |
+
+The detailed application and screenshot privacy finding are recorded in
+[`../ai-audit/interactions/040-final-content-approvals-hardware-review.md`](../ai-audit/interactions/040-final-content-approvals-hardware-review.md).

@@ -1,52 +1,30 @@
 # Final Human Review Packet
 
-Status: **HUMAN ACTION REQUIRED**
+Status: **THREE HUMAN INPUTS REMAIN**
 
-All authorized technical executions and automatable draft deliverables are
-complete. Supply only the attributable items below; do not re-run official
-scenarios.
+All technical executions and content reviews are complete. CPT proposal, Agent
+Skill, AI Critique, no-issue disposition, combined-video format, and hostname
+compatibility are human-approved. Supply only the three items below; do not
+re-run official scenarios.
 
-## 1. Hardware evidence and hostname
+## 1. Replace the hardware screenshot
 
-- Open **System Settings → General → About** or **System Information → Hardware**.
-- Place a Terminal window beside it showing `hostname` output.
-- Ensure the visible hostname is `Phams-MacBook-Pro.local` and hide serial/UUID
-  if present.
-- Save the genuine screenshot as:
-  `evidence/hardware/hardware-specs-hostname.png`.
-- Confirm whether this hostname matches/is compatible with the hostname used in
-  the student's previous homework deployments.
+The genuine JPEG currently at
+`evidence/hardware/hardware-specs-hostname.jpg` shows correct hardware and
+hostname but also exposes a device serial. It is intentionally untracked.
 
-Human response fields:
-
-```text
-HARDWARE_SCREENSHOT_SAVED=yes
-HOSTNAME_COMPATIBLE=yes|no + explanation
-```
-
-## 2. Human reviews and decisions
-
-Review these AI-generated artifacts:
-
-- `proposal/continuous-performance-testing.md`
-- `skills/hw05-k6-performance/SKILL.md`
-- `reviews/ai-critique-draft.md` (278 words)
-- `analysis/genuine-issue-determination.md`
-- `report/23127027_HW05_Performance_Report.md`
-
-Provide:
+- Retake it with the serial hidden, or redact only the serial manually using
+  Preview markup without generating other content.
+- Keep visible `Phams-MacBook-Pro.local` and genuine MacBook Pro/M5/16 GB/macOS
+  values.
+- Overwrite the same JPEG path and reply:
 
 ```text
-CPT_PROPOSAL=approved|corrections
-AGENT_SKILL=approved|corrections
-AI_CRITIQUE=approved|replacement text/corrections
-ISSUE_DISPOSITION=NOT_APPLICABLE if you agree no genuine SUT issue was confirmed
+HARDWARE_REPLACED
 ```
 
-## 3. Real demonstration video
+## 2. Record and upload the approved combined video
 
-- Decide whether one combined video will demonstrate performance testing and the
-  Agent Skill; the prepared plan recommends one combined 8–10 minute video.
 - Record it with the student's own Vietnamese narration.
 - Show genuine k6/results and Activity Monitor evidence in the same frame as
   required; demonstrate the submitted Skill; do not expose secrets.
@@ -58,11 +36,10 @@ Use `video/demo-plan.md`, `video/vietnamese-narration-outline.md`, and
 Human response fields:
 
 ```text
-VIDEO_DECISION=one combined video|separate videos
 YOUTUBE_URL=https://...
 ```
 
-## 4. Self-assessment
+## 3. Supply the self-assessed grade
 
 After reviewing the report and evidence, provide a three-digit grade:
 
@@ -70,7 +47,6 @@ After reviewing the report and evidence, provide a three-digit grade:
 SELF_ASSESSED_GRADE=000..100
 ```
 
-Codex will insert only the value supplied by the student, regenerate the final
-Markdown/HTML/PDF artifacts, run validation, create the correctly named ZIP,
-scan/commit/push to `origin` only, and then return the real checksum. Moodle
-upload remains a final student action.
+After these three inputs, Codex will perform only metadata substitution, final
+HTML/PDF regeneration, validator rerun, exact ZIP creation/checksum, truthful
+commit, and push to `origin`. Moodle upload remains the student's action.

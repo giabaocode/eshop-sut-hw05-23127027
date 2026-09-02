@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-02T13:19:51.121Z",
+  "generated_at": "2026-09-02T14:04:14.242Z",
   "technical_only": false,
   "counts": {
-    "PASS": 26,
+    "PASS": 29,
     "FAIL": 0,
-    "MANUAL VERIFICATION REQUIRED": 9,
-    "NOT APPLICABLE": 0
+    "MANUAL VERIFICATION REQUIRED": 5,
+    "NOT APPLICABLE": 1
   },
   "checks": [
     {
@@ -129,9 +129,9 @@
       "evidence": "278-word candidate exists"
     },
     {
-      "id": "critique_pdf_draft",
+      "id": "critique_final",
       "status": "PASS",
-      "evidence": "Candidate critique PDF exists and remains labeled DRAFT"
+      "evidence": "Human-approved 278-word critique and final PDF exist"
     },
     {
       "id": "git_log",
@@ -141,12 +141,12 @@
     {
       "id": "hardware_screenshot",
       "status": "MANUAL VERIFICATION REQUIRED",
-      "evidence": "No human hardware screenshot is present"
+      "evidence": "Review genuine image(s): evidence/hardware/hardware-specs-hostname.jpg"
     },
     {
       "id": "hostname_compatibility",
-      "status": "MANUAL VERIFICATION REQUIRED",
-      "evidence": "Student must confirm compatibility with previous homework evidence"
+      "status": "PASS",
+      "evidence": "Human confirmed the same MacBook/hostname was used previously"
     },
     {
       "id": "video_url",
@@ -155,18 +155,18 @@
     },
     {
       "id": "combined_video_decision",
-      "status": "MANUAL VERIFICATION REQUIRED",
-      "evidence": "H-003 is pending"
+      "status": "PASS",
+      "evidence": "Human selected one combined performance/Skill video"
     },
     {
       "id": "ai_critique_approval",
-      "status": "MANUAL VERIFICATION REQUIRED",
-      "evidence": "Candidate exists; H-021 approval pending"
+      "status": "PASS",
+      "evidence": "Human approved the 278-word critique"
     },
     {
       "id": "issue_publication",
-      "status": "MANUAL VERIFICATION REQUIRED",
-      "evidence": "No SUT issue confirmed; H-017 final NOT APPLICABLE decision pending"
+      "status": "NOT APPLICABLE",
+      "evidence": "Human confirmed no genuine SUT issue; no speculative Issue published"
     },
     {
       "id": "self_assessed_grade",

@@ -1664,3 +1664,15 @@ After a clean-worktree, remote, secret, and file-size review, Codex pushed
 requirements remain pending and no final package/submission was claimed.
 Detailed record:
 [`interactions/039-safe-origin-push.md`](interactions/039-safe-origin-push.md).
+
+## Interaction 040 — Final content approvals and hardware review
+
+The student approved the CPT proposal, Agent Skill, 278-word AI Critique,
+no-issue disposition, one combined-video format, and hostname compatibility.
+YouTube URL and grade remain explicitly pending. The supplied genuine hardware
+JPEG showed correct hostname/hardware but also a device serial; Codex withheld
+it from Git and requested a human-created safe replacement rather than
+generatively editing evidence. Human-approved content was promoted and the
+validator then reported 29 PASS, 0 FAIL, 1 NOT APPLICABLE, and 5 manual checks.
+Detailed record:
+[`interactions/040-final-content-approvals-hardware-review.md`](interactions/040-final-content-approvals-hardware-review.md).

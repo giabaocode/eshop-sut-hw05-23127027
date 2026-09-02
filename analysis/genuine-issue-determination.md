@@ -29,5 +29,5 @@ The invalid k6 `::` names, tight exception loop, provisioning-helper invocation
 boundary, and wrong-listener orchestration were test-harness/automation defects.
 They remain in the AI Audit and must not be reported as SUT issues.
 
-Final Issue-publication handling remains a human decision under H-017. The
-evidence-based recommendation is **NOT APPLICABLE — no genuine issue confirmed**.
+The student supplied the final H-017 disposition: **NOT APPLICABLE — no genuine
+SUT issue confirmed**. No GitHub Issue was published.

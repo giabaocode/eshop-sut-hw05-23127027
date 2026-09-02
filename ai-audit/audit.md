@@ -1688,6 +1688,8 @@ It visibly shows `Phams-MacBook-Pro.local`, MacBook Pro 14-inch, Apple M5, and
 was performed. H-013 is now `DONE BY HUMAN`; the earlier unsafe candidate and
 its rejection remain preserved in the historical audit. The validator then
 reported 30 PASS, 0 FAIL, 4 manual checks, and 1 NOT APPLICABLE; updated report
-and audit HTML/PDF views were regenerated without changing measurements.
-Detailed record:
+and audit HTML/PDF views were regenerated without changing measurements. After
+safe staging checks, commit `7d8b5db` was created and the actual push
+`36abc6b..7d8b5db main -> main` went only to the student `origin`; `upstream`
+was untouched. Detailed record:
 [`interactions/041-hardware-replacement-validation.md`](interactions/041-hardware-replacement-validation.md).

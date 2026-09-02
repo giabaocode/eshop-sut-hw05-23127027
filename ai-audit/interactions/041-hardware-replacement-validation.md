@@ -64,3 +64,11 @@ reported 30 `PASS`, 0 `FAIL`, 4 `MANUAL VERIFICATION REQUIRED`, and 1
 self-assessed grade, final ZIP, and Moodle upload. Codex regenerated the main
 report and AI Audit HTML/PDF views from their tracked Markdown sources. No
 scenario was re-run and no measured result changed.
+
+## Commit and publication
+
+After staged-file, secret-pattern, whitespace, and file-size checks, Codex
+created truthful local commit `7d8b5db` (`docs: add validated hardware
+evidence`). It then pushed only `main` to the student remote `origin`; actual
+push output was `36abc6b..7d8b5db main -> main`. The configured `upstream`
+official SUT remote was not pushed or modified.

@@ -17,7 +17,7 @@ CLARIFICATION`, `RESOLVED BY HUMAN DECISION`, `DONE BY HUMAN`, `NOT APPLICABLE`.
 | H-007 | Review/correct load parameters, ramp-up, durations, VUs, and think time. | TODO | Explicit corrections/approval |
 | H-008 | Review/correct checks and business assertions. | TODO | Explicit corrections/approval |
 | H-009 | Review account-lockout handling and any reset procedure. | TODO | Explicit corrections/approval |
-| H-010 | Approve exact Load/Stress/Spike plan filenames after PDF validation. | DONE BY HUMAN | Human created the three exact `23127027_{Load|Stress|Spike}_20260901.js` basenames; filename validation passed on 2026-09-01. Wrapper content remains separately blocked by relative-path resolution; HD-014 |
+| H-010 | Approve exact Load/Stress/Spike plan filenames after PDF validation. | DONE BY HUMAN | Human created the three exact `23127027_{Load|Stress|Spike}_20260901.js` basenames; filename validation passed on 2026-09-01. The later human-approved path-depth correction passed pinned-k6 and semantic revalidation and is committed as `90fb1ae`; HD-014 and HD-015 |
 | H-011 | Approve each real Load, Stress, Spike, and endurance execution before it runs. | TODO | Per-run explicit approval |
 | H-012 | Capture real performance-tool/resource-monitor screenshots for every run. | TODO | Actual screenshot files |
 | H-013 | Capture real macOS hardware/hostname screenshot evidence. | TODO | Actual screenshot file and hostname match check |

@@ -1602,3 +1602,14 @@ after flush and verified port/original integrity. The empirical local endurance
 point is 5 VUs sustained for 12 minutes; it is not maximum capacity or a final
 universal threshold. Detailed record:
 [`interactions/033-endurance-execution.md`](interactions/033-endurance-execution.md).
+
+## Interaction 034 — Cross-scenario and original AI analysis
+
+Codex reproduced a four-run comparison from committed per-run JSON, totaling
+2,716 successful workflows and 19,012 requests with zero failures. It then
+created the immutable original AI analysis with bounded observations, proposed
+same-machine regression guardrails, and four source-backed optimization
+hypotheses. It explicitly avoids capacity, universal-threshold, continuous-
+resource, or confirmed-bottleneck claims. Human verdicts remain pending and
+must be recorded separately. Detailed record:
+[`interactions/034-original-ai-analysis.md`](interactions/034-original-ai-analysis.md).

@@ -1565,3 +1565,12 @@ Codex performed no cleanup or reset. A first malformed AI tool invocation did
 not execute; the corrected read-only command produced the recorded evidence.
 H-041 is complete. Detailed record:
 [`interactions/030-endurance-blocker-resolution.md`](interactions/030-endurance-blocker-resolution.md).
+
+## Interaction 031 — Fail-closed disposable listener guard
+
+Codex added a separate exact-PID launcher and verifier after the wrong-listener
+defect. They require port 3000 to be free, validate that the newly started PID
+owns it, and require the listener cwd to equal the fresh disposable backend.
+The existing provisioning helper and all WF-03 semantics remain unchanged.
+Detailed record:
+[`interactions/031-fail-closed-listener-guard.md`](interactions/031-fail-closed-listener-guard.md).

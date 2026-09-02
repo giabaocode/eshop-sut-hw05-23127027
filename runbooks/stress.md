@@ -1,6 +1,6 @@
 # Official Stress Runbook
 
-Status: **REAL PREFLIGHT PASS — RUN `20260902T101857+0700`; WAITING FOR SCREENSHOT READINESS**
+Status: **OFFICIAL STRESS COMPLETED — RUN `20260902T101857+0700`**
 
 | Stage | Duration | Target VUs |
 |---:|---:|---:|
@@ -52,3 +52,13 @@ Exactly 20 accounts passed setup with zero orders. Planned result root is
 `performance/results/stress/20260902T101857+0700/` and remains absent. Start the
 official runner only after the human replies `READY` at the real screenshot
 gate. This preflight makes no performance/capacity claim.
+
+## Execution outcome
+
+Official Stress completed with exit 0 and no watchdog: 1,281/1,281 workflows,
+zero of 8,967 failed requests, 48,678/48,678 checks, and 1,281/1,281 created
+orders canceled. Genuine 20/20-VU screenshot evidence is preserved. The
+distinct CSV time-series report and raw artifacts are under
+`performance/results/stress/20260902T101857+0700/`; analysis is in
+[`../analysis/stress-analysis.md`](../analysis/stress-analysis.md). This does not
+establish measured capacity or final thresholds.

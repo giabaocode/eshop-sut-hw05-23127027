@@ -1,0 +1,22 @@
+label=OFFICIAL Stress — REAL EXECUTION REQUIRED
+scenario=stress
+start_time=2026-09-02 10:24:36 +0700
+start_epoch=1788319476
+hard_cap_seconds=840
+k6_binary=/opt/homebrew/bin/k6
+official_plan=/private/tmp/eshop-hw05-stress.X7FeN0/runtime/performance/scenarios/official/23127027_Stress_20260901.js
+k6_pid=45769
+canonical_raw=native granular k6 JSON
+process_exit_time=2026-09-02 10:37:11 +0700
+process_exit_epoch=1788320231
+artifact_flush_completion_time=2026-09-02 10:37:11 +0700
+artifact_flush_completion_epoch=1788320231
+wall_clock_seconds=755
+k6_exit_code=0
+watchdog_fired=no
+runner_interrupted=0
+artifact_bytes=49952844 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/stress/20260902T101857+0700/raw/stress-raw.json
+artifact_bytes=22624 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/stress/20260902T101857+0700/raw/stress-summary.json
+artifact_bytes=27151266 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/stress/20260902T101857+0700/raw/stress-timeseries.csv
+artifact_bytes=112273 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/stress/20260902T101857+0700/logs/k6.stdout.log
+artifact_bytes=0 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/stress/20260902T101857+0700/logs/k6.stderr.log

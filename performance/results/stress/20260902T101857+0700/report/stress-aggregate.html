@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WF-03 stress aggregate report</title>
+<style>body{font:15px system-ui,sans-serif;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#172033}h1,h2{color:#0b4f6c}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ccd6dd;padding:.5rem;text-align:right}th:first-child,td:first-child{text-align:left}.notice{padding:1rem;background:#fff6d8;border-left:4px solid #d99b00}.ok{color:#176b35;font-weight:700}code{overflow-wrap:anywhere}</style></head>
+<body><h1>WF-03 stress aggregate report</h1>
+<p class="notice">Generated reproducibly from genuine native k6 JSON. This report does not define final thresholds or measured capacity.</p>
+<h2>Outcome</h2><table><tbody>
+<tr><th>Workflow success</th><td class="ok">1281/1281 (100%)</td></tr>
+<tr><th>HTTP requests / failures</th><td>8967 / 0</td></tr>
+<tr><th>Checks passed / total</th><td>48678 / 48678</td></tr>
+<tr><th>Orders created / canceled</th><td>1281 / 1281</td></tr>
+<tr><th>Throughput</th><td>11.878 requests/s</td></tr>
+<tr><th>k6 exit / watchdog</th><td>0 / no</td></tr>
+</tbody></table>
+<h2>Endpoint latency (milliseconds)</h2><table><thead><tr><th>Step</th><th>Count</th><th>Mean</th><th>Median</th><th>p90</th><th>p95</th><th>p99</th><th>Max</th></tr></thead><tbody><tr><td>cancellation</td><td>1281</td><td>3.448</td><td>3.471</td><td>4.183</td><td>4.45</td><td>5.773</td><td>11.899</td></tr>
+<tr><td>checkout</td><td>1281</td><td>3.205</td><td>3.235</td><td>3.939</td><td>4.125</td><td>5.417</td><td>11.618</td></tr>
+<tr><td>detail</td><td>1281</td><td>1.286</td><td>1.269</td><td>1.729</td><td>1.909</td><td>2.518</td><td>4.551</td></tr>
+<tr><td>final_probe</td><td>1281</td><td>0.756</td><td>0.734</td><td>0.968</td><td>1.064</td><td>1.64</td><td>3.42</td></tr>
+<tr><td>login</td><td>1281</td><td>1.101</td><td>1.056</td><td>1.397</td><td>1.605</td><td>2.682</td><td>5.136</td></tr>
+<tr><td>pending_probe</td><td>1281</td><td>0.796</td><td>0.77</td><td>1.02</td><td>1.159</td><td>1.75</td><td>4.376</td></tr>
+<tr><td>search</td><td>1281</td><td>1.311</td><td>1.292</td><td>1.77</td><td>1.933</td><td>2.537</td><td>4.24</td></tr></tbody></table>
+<h2>Traceability</h2><p>Raw: <code>/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/stress/20260902T101857+0700/raw/stress-raw.json</code><br>Summary: <code>/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/stress/20260902T101857+0700/raw/stress-summary.json</code><br>Source artifact flush: 2026-09-02 10:37:11 +0700</p>
+</body></html>

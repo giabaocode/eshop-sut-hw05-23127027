@@ -1475,3 +1475,24 @@ public/private contracts, official wrapper, k6, disk, database boundary, and
 protected original integrity passed. The new result root remains absent. Work
 stopped only for the genuine Stress Activity Monitor/k6 screenshot-readiness
 gate.
+
+## Interaction 025 — Official Stress execution and screenshot recovery
+
+| Field | Actual record |
+|---|---|
+| Human inputs | `READY`; later asked Codex to recheck the screenshot folder |
+| Run | Official Stress `20260902T101857+0700` |
+| Detailed record | [`interactions/025-official-stress-execution.md`](interactions/025-official-stress-execution.md) |
+| Result | Exit 0, watchdog no, 1,281/1,281 workflows |
+
+The genuine run produced native JSON and CSV plus summary/log/command/metadata.
+Analysis measured 8,967 HTTP requests with zero failures, 48,678/48,678 checks,
+1,281/1,281 orders created/canceled, p95 3.9147 ms, p99 4.45374 ms, and
+11.877557 requests/s. The distinct Stress primary view is a 30-second native-
+CSV time-series HTML.
+
+The human screenshot was initially in the Load screenshot directory. Codex
+found and visually verified genuine 20/20-VU Stress/PID `45430` content, moved
+the unchanged JPEG to the correct run, and generated a real PNG conversion.
+After flush Codex stopped only PID 45430 and verified port/original integrity.
+No capacity or threshold was inferred.

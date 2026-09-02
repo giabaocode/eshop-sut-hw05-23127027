@@ -19,7 +19,7 @@ CLARIFICATION`, `RESOLVED BY HUMAN DECISION`, `DONE BY HUMAN`, `NOT APPLICABLE`.
 | H-009 | Review account-lockout handling and any reset procedure. | DONE BY HUMAN | Master automation instruction on 2026-09-02 explicitly approved valid credentials only, no intentional lockout, preservation of genuine behavior, no credential substitution, and fresh disposable reset/reprovisioning between official runs; HD-016 |
 | H-010 | Approve exact Load/Stress/Spike plan filenames after PDF validation. | DONE BY HUMAN | Human created the three exact `23127027_{Load|Stress|Spike}_20260901.js` basenames; filename validation passed on 2026-09-01. The later human-approved path-depth correction passed pinned-k6 and semantic revalidation and is committed as `90fb1ae`; HD-014 and HD-015 |
 | H-011 | Approve each real Load, Stress, Spike, and endurance execution before it runs. | DONE BY HUMAN | Master maximum-safe-automation instruction on 2026-09-02 explicitly authorizes technical execution of all four runs, subject to the real screenshot-readiness gates; HD-016 |
-| H-012 | Capture real performance-tool/resource-monitor screenshots for every run. | WAITING FOR HUMAN | Load screenshot exists; Stress run `20260902T101857+0700` is paused immediately before traffic—prepare Activity Monitor for PID `45430` and reply `READY`; Spike/endurance remain later |
+| H-012 | Capture real performance-tool/resource-monitor screenshots for every run. | WAITING FOR HUMAN | Genuine Load and 20-VU Stress screenshots exist; Spike and endurance remain required at their fresh-runtime gates |
 | H-013 | Capture real macOS hardware/hostname screenshot evidence. | TODO | Actual screenshot file and hostname match check |
 | H-014 | Review AI performance analysis against raw results. | TODO | Completed human review |
 | H-015 | Identify/approve actual AI metric misinterpretations and explain them. | TODO | Human explanations in review table |
@@ -88,3 +88,8 @@ Fresh official Stress preflight now passes with exactly 20 validated accounts,
 zero orders, and one-start backend PID `45430`. Its result root and measured
 traffic do not exist. Automation is paused only for the Stress H-012 screenshot
 readiness gate.
+
+Official Stress subsequently completed with k6 exit 0, 1,281/1,281 workflows,
+zero of 8,967 failed requests, and genuine 20/20-VU resource evidence. Native
+JSON/CSV and distinct CSV-derived report are present; backend/original integrity
+postflight passed. No capacity or final threshold was claimed.

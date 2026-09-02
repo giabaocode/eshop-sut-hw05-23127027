@@ -1,0 +1,18 @@
+OFFICIAL STRESS SETUP COMMAND RECORD — SECRETS OMITTED
+
+Source clone:
+git clone --local --no-hardlinks --no-checkout /Users/phamngocgiabao/eshop-sut-hw05-23127027 /private/tmp/eshop-hw05-stress.X7FeN0/runtime
+git -C /private/tmp/eshop-hw05-stress.X7FeN0/runtime checkout --detach 0c17457371d7b9bff75aa27ae61854c84b12ba3f
+
+Backend dependencies/start:
+(cd /private/tmp/eshop-hw05-stress.X7FeN0/runtime/backend && npm ci)
+(cd /private/tmp/eshop-hw05-stress.X7FeN0/runtime/backend && /opt/homebrew/bin/node server.js)
+
+Setup-only provisioning:
+WF03_BASE_URL=http://127.0.0.1:3000 \
+WF03_ACCOUNT_COUNT=20 \
+WF03_DISPOSABLE_ROOT=/private/tmp/eshop-hw05-stress.X7FeN0/runtime \
+WF03_PRIVATE_DIR=/private/tmp/eshop-hw05-stress.X7FeN0/private \
+/opt/homebrew/bin/node /Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/tools/provision-accounts.mjs
+
+Provisioning finished before the measured command in `../k6-command.txt`.

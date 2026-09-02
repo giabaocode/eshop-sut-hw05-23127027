@@ -21,9 +21,9 @@ CLARIFICATION`, `RESOLVED BY HUMAN DECISION`, `DONE BY HUMAN`, `NOT APPLICABLE`.
 | H-011 | Approve each real Load, Stress, Spike, and endurance execution before it runs. | DONE BY HUMAN | Master maximum-safe-automation instruction on 2026-09-02 explicitly authorizes technical execution of all four runs, subject to the real screenshot-readiness gates; HD-016 |
 | H-012 | Capture real performance-tool/resource-monitor screenshots for every run. | DONE BY HUMAN | Human-captured and visually validated combined k6/backend-resource evidence exists for genuine Load, Stress, Spike, and endurance runs; each records the exact disposable backend PID |
 | H-013 | Capture real macOS hardware/hostname screenshot evidence. | TODO | Actual screenshot file and hostname match check |
-| H-014 | Review AI performance analysis against raw results. | TODO | Completed human review |
-| H-015 | Identify/approve actual AI metric misinterpretations and explain them. | TODO | Human explanations in review table |
-| H-016 | Classify optimization recommendations with final human verdicts. | TODO | FEASIBLE / NOT FEASIBLE / HALLUCINATED / INSUFFICIENT EVIDENCE decisions |
+| H-014 | Review AI performance analysis against raw results. | DONE BY HUMAN | Human supplied nine explicit evidence-based verdicts and explanations; `reviews/ai-analysis-review.md`; HD-017 |
+| H-015 | Identify/approve actual AI metric misinterpretations and explain them. | DONE BY HUMAN | Claim 3 marked `MISLEADING`; Claim 8 marked `INSUFFICIENT EVIDENCE`, with direct human explanations; HD-017 |
+| H-016 | Classify optimization recommendations with final human verdicts. | DONE BY HUMAN | Human supplied all seven final verdicts/explanations; `reviews/optimization-review.md`; HD-017 |
 | H-017 | Decide whether genuine observed issues should be published to GitHub. | TODO | Explicit publication approval or NOT APPLICABLE decision |
 | H-018 | Provide Vietnamese narration and record the real demo with tool and monitor in one frame. | TODO | Real recording |
 | H-019 | Upload the real demo as unlisted YouTube content and supply its URL. | TODO | Real URL |
@@ -132,4 +132,6 @@ workflows and 19,012 requests with zero failures. The original AI analysis is
 immutably preserved at commit `5e4b00f`; factual review and source-backed
 optimization tables are ready. Automation is paused at the unavoidable
 combined H-014/H-015/H-016 gate for the student's final interpretation and
-optimization verdicts.
+optimization verdicts. The student subsequently supplied every verdict and
+explanation directly; those three gates are now complete under HD-017 and
+maximum safe automation resumes.

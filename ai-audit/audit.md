@@ -1623,3 +1623,15 @@ metrics and source, including explicitly inapplicable/insufficient-evidence
 possibilities. No SUT change or synthetic post-optimization result was made.
 Detailed record:
 [`interactions/035-ai-optimization-review-packet.md`](interactions/035-ai-optimization-review-packet.md).
+
+## Interaction 036 — Human AI-analysis and optimization verdicts
+
+Phạm Ngọc Gia Bảo directly supplied nine AI-analysis verdicts/explanations and
+seven optimization verdicts/explanations. Claim 3 is human-classified
+`MISLEADING`; Claim 8 is `INSUFFICIENT EVIDENCE`. The human also classified a
+normal index for leading-wildcard search and a generic SQLite connection pool
+as `HALLUCINATED / NOT APPLICABLE`. The exact human text is preserved in the
+review matrices and detailed record. `analysis/ai-analysis-original.md`
+remains unchanged at commit `5e4b00f`. H-014/H-015/H-016 are complete; maximum
+safe automation resumes. Detailed record:
+[`interactions/036-human-ai-optimization-verdicts.md`](interactions/036-human-ai-optimization-verdicts.md).

@@ -466,3 +466,24 @@ preparation are recorded in
 
 The detailed instruction and its application are recorded in
 [`../ai-audit/interactions/022-maximum-safe-automation.md`](../ai-audit/interactions/022-maximum-safe-automation.md).
+
+## HD-017 — Human AI-analysis and optimization verdicts
+
+| Field | Human decision |
+|---|---|
+| Recorded | 2026-09-02 15:25:02 +0700 (Asia/Ho_Chi_Minh) |
+| Decision owner | Phạm Ngọc Gia Bảo — HUMAN |
+| Analysis review | All nine claims received direct human verdicts and explanations in `reviews/ai-analysis-review.md` |
+| Confirmed interpretation issue | Claim 3 is `MISLEADING`: relatively slow checkout/cancellation steps are investigation candidates, not confirmed bottlenecks |
+| Confirmed evidence gap | Claim 8 is `INSUFFICIENT EVIDENCE`: proposed numeric guardrails lack repeat-run/noise validation |
+| Scope limits | Stress 20 VUs is not capacity; one Spike does not prove repeatable recovery; 5 VUs/12m is only a local endurance point; no-bug finding is bounded to tested scope |
+| Optimization review | All seven recommendations received direct human verdicts and explanations in `reviews/optimization-review.md` |
+| Feasible candidate | Atomic owner/state-scoped cancellation is feasible only with semantic regression tests |
+| Hallucinated/not applicable | Normal B-tree index for leading-wildcard search and a generic connection pool for this SQLite architecture |
+| Insufficient evidence | Login-write optimization, WAL/busy timeout, and `users(email)` index benefit are not established by current measurements |
+| H-014/H-015/H-016 | `DONE BY HUMAN` |
+| Original AI record | `analysis/ai-analysis-original.md` remains immutable at commit `5e4b00f` |
+
+The student's exact verdict text is preserved in the two review matrices and
+the detailed interaction record:
+[`../ai-audit/interactions/036-human-ai-optimization-verdicts.md`](../ai-audit/interactions/036-human-ai-optimization-verdicts.md).

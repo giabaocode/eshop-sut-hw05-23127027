@@ -1436,3 +1436,25 @@ public/private/k6/disk/wrapper/original-integrity gates passed. Actual Load run
 ID `20260902T092131+0700` was reserved, but its result root, measured traffic,
 and screenshot do not yet exist. Work stopped only at Human Gate 1 for real
 macOS screenshot readiness.
+
+## Interaction 023 — Official Load execution
+
+| Field | Actual record |
+|---|---|
+| Human gate input | `READY` |
+| Resume input | `continue` after an interrupted wait |
+| Actual run | Official Load `20260902T092131+0700` |
+| Detailed record | [`interactions/023-official-load-execution.md`](interactions/023-official-load-execution.md) |
+| Result | Exit 0, watchdog no, 345/345 WF-03 successes |
+
+The genuine seven-minute Load produced native JSON/summary/stdout/stderr,
+command/metadata, redacted setup/backend/postflight evidence, a real human
+screenshot and real PNG conversion, and a generated aggregate report. Raw-data
+analysis found 2,415 HTTP requests with zero failures, 13,110/13,110 checks,
+345/345 created/canceled orders, 5.731666 requests/s, overall HTTP p95 4.1019 ms
+and raw p99 4.69974 ms. No threshold or capacity claim was inferred.
+
+After k6 flush, Codex stopped exact backend PID 42059, verified port 3000 free,
+and verified the protected original DB SHA-256/integrity unchanged. The audit
+preserves the interrupted wait and corrected post-run process diagnosis rather
+than rewriting them away.

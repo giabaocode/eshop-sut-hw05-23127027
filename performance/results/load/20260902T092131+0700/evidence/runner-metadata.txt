@@ -1,0 +1,21 @@
+label=OFFICIAL Load — REAL EXECUTION REQUIRED
+scenario=load
+start_time=2026-09-02 10:03:20 +0700
+start_epoch=1788318200
+hard_cap_seconds=480
+k6_binary=/opt/homebrew/bin/k6
+official_plan=/private/tmp/eshop-hw05-load.24cMIo/runtime/performance/scenarios/official/23127027_Load_20260901.js
+k6_pid=43262
+canonical_raw=native granular k6 JSON
+process_exit_time=2026-09-02 10:10:22 +0700
+process_exit_epoch=1788318622
+artifact_flush_completion_time=2026-09-02 10:10:22 +0700
+artifact_flush_completion_epoch=1788318622
+wall_clock_seconds=422
+k6_exit_code=0
+watchdog_fired=no
+runner_interrupted=0
+artifact_bytes=13420316 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/load/20260902T092131+0700/raw/load-raw.json
+artifact_bytes=21598 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/load/20260902T092131+0700/raw/load-summary.json
+artifact_bytes=66374 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/load/20260902T092131+0700/logs/k6.stdout.log
+artifact_bytes=0 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/load/20260902T092131+0700/logs/k6.stderr.log

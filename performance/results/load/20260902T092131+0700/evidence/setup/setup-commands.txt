@@ -1,0 +1,20 @@
+OFFICIAL LOAD SETUP COMMAND RECORD — SECRETS OMITTED
+
+Source clone:
+git clone --local --no-hardlinks --no-checkout /Users/phamngocgiabao/eshop-sut-hw05-23127027 /private/tmp/eshop-hw05-load.24cMIo/runtime
+git -C /private/tmp/eshop-hw05-load.24cMIo/runtime checkout --detach e28da7b813d69c1eadfd799d309fb396170a71e0
+
+Backend dependencies/start:
+(cd /private/tmp/eshop-hw05-load.24cMIo/runtime/backend && npm ci)
+(cd /private/tmp/eshop-hw05-load.24cMIo/runtime/backend && /opt/homebrew/bin/node server.js)
+
+Successful setup-only provisioning invocation:
+WF03_BASE_URL=http://127.0.0.1:3000 \
+WF03_ACCOUNT_COUNT=20 \
+WF03_DISPOSABLE_ROOT=/private/tmp/eshop-hw05-load.24cMIo/runtime \
+WF03_PRIVATE_DIR=/private/tmp/eshop-hw05-load.24cMIo/private-official \
+/opt/homebrew/bin/node /Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/tools/provision-accounts.mjs
+
+The private directory and credential contents are intentionally excluded from
+committed evidence beyond the path/schema/count/mode checks. Provisioning ended
+before the measured k6 command recorded separately in `../k6-command.txt`.

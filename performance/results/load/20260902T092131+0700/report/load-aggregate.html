@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WF-03 load aggregate report</title>
+<style>body{font:15px system-ui,sans-serif;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#172033}h1,h2{color:#0b4f6c}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ccd6dd;padding:.5rem;text-align:right}th:first-child,td:first-child{text-align:left}.notice{padding:1rem;background:#fff6d8;border-left:4px solid #d99b00}.ok{color:#176b35;font-weight:700}code{overflow-wrap:anywhere}</style></head>
+<body><h1>WF-03 load aggregate report</h1>
+<p class="notice">Generated reproducibly from genuine native k6 JSON. This report does not define final thresholds or measured capacity.</p>
+<h2>Outcome</h2><table><tbody>
+<tr><th>Workflow success</th><td class="ok">345/345 (100%)</td></tr>
+<tr><th>HTTP requests / failures</th><td>2415 / 0</td></tr>
+<tr><th>Checks passed / total</th><td>13110 / 13110</td></tr>
+<tr><th>Orders created / canceled</th><td>345 / 345</td></tr>
+<tr><th>Throughput</th><td>5.732 requests/s</td></tr>
+<tr><th>k6 exit / watchdog</th><td>0 / no</td></tr>
+</tbody></table>
+<h2>Endpoint latency (milliseconds)</h2><table><thead><tr><th>Step</th><th>Count</th><th>Mean</th><th>Median</th><th>p90</th><th>p95</th><th>p99</th><th>Max</th></tr></thead><tbody><tr><td>cancellation</td><td>345</td><td>3.604</td><td>3.679</td><td>4.387</td><td>4.647</td><td>5.463</td><td>17.008</td></tr>
+<tr><td>checkout</td><td>345</td><td>3.468</td><td>3.579</td><td>4.227</td><td>4.413</td><td>5.606</td><td>8.138</td></tr>
+<tr><td>detail</td><td>345</td><td>1.554</td><td>1.588</td><td>1.932</td><td>2.071</td><td>2.565</td><td>3.029</td></tr>
+<tr><td>final_probe</td><td>345</td><td>0.732</td><td>0.673</td><td>1.003</td><td>1.126</td><td>1.597</td><td>1.971</td></tr>
+<tr><td>login</td><td>345</td><td>1.05</td><td>0.908</td><td>1.482</td><td>1.613</td><td>2.357</td><td>5.253</td></tr>
+<tr><td>pending_probe</td><td>345</td><td>0.776</td><td>0.715</td><td>1.071</td><td>1.245</td><td>1.693</td><td>2.303</td></tr>
+<tr><td>search</td><td>345</td><td>1.566</td><td>1.6</td><td>1.929</td><td>2.121</td><td>2.538</td><td>3.048</td></tr></tbody></table>
+<h2>Traceability</h2><p>Raw: <code>/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/load/20260902T092131+0700/raw/load-raw.json</code><br>Summary: <code>/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/load/20260902T092131+0700/raw/load-summary.json</code><br>Source artifact flush: 2026-09-02 10:10:22 +0700</p>
+</body></html>

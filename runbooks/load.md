@@ -1,6 +1,6 @@
 # Official Load Runbook
 
-Status: **STATICALLY READY — HUMAN LOAD EXECUTION APPROVAL REQUIRED; NOT EXECUTED**
+Status: **OFFICIAL LOAD COMPLETED — RUN `20260902T092131+0700`**
 
 | Item | Approved value |
 |---|---|
@@ -159,3 +159,13 @@ one-start backend PID is `42059`; the complete 20-account pool is valid and the
 starting order count is zero. The runner/result root has not been started or
 created. Execution is paused only for the genuine macOS screenshot-readiness
 gate, not for another technical-design approval.
+
+## 8. Execution outcome
+
+The human replied `READY` and captured real Load/backend-resource evidence.
+Official Load completed with k6 exit 0, watchdog `no`, 345/345 workflow success,
+zero of 2,415 failed HTTP requests, and 345/345 created orders canceled. Exact
+artifacts and postflight are under
+`performance/results/load/20260902T092131+0700/`; measured analysis is in
+[`../analysis/load-analysis.md`](../analysis/load-analysis.md). This result does
+not establish final thresholds or capacity.

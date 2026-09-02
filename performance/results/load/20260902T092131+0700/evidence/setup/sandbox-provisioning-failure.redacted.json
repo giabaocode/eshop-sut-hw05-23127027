@@ -1,0 +1,10 @@
+{
+  "status": "FAIL",
+  "helper_status": "RUNTIME_VALIDATED_2_ACCOUNT_PILOT_OFFICIAL_NOT_EXECUTED",
+  "failure_code": "sut_request_failed",
+  "attempted_account_keys": [
+    "wf03-customer-01"
+  ],
+  "secrets_in_evidence": false,
+  "failed_at": "2026-09-02T02:20:21.102Z"
+}

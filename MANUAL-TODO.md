@@ -19,7 +19,7 @@ CLARIFICATION`, `RESOLVED BY HUMAN DECISION`, `DONE BY HUMAN`, `NOT APPLICABLE`.
 | H-009 | Review account-lockout handling and any reset procedure. | DONE BY HUMAN | Master automation instruction on 2026-09-02 explicitly approved valid credentials only, no intentional lockout, preservation of genuine behavior, no credential substitution, and fresh disposable reset/reprovisioning between official runs; HD-016 |
 | H-010 | Approve exact Load/Stress/Spike plan filenames after PDF validation. | DONE BY HUMAN | Human created the three exact `23127027_{Load|Stress|Spike}_20260901.js` basenames; filename validation passed on 2026-09-01. The later human-approved path-depth correction passed pinned-k6 and semantic revalidation and is committed as `90fb1ae`; HD-014 and HD-015 |
 | H-011 | Approve each real Load, Stress, Spike, and endurance execution before it runs. | DONE BY HUMAN | Master maximum-safe-automation instruction on 2026-09-02 explicitly authorizes technical execution of all four runs, subject to the real screenshot-readiness gates; HD-016 |
-| H-012 | Capture real performance-tool/resource-monitor screenshots for every run. | TODO | Actual screenshot files |
+| H-012 | Capture real performance-tool/resource-monitor screenshots for every run. | WAITING FOR HUMAN | Load run `20260902T092131+0700` is paused immediately before traffic; prepare Activity Monitor for backend PID `42059`, reply `READY`, then capture/save the genuine screenshot during the five-VU hold |
 | H-013 | Capture real macOS hardware/hostname screenshot evidence. | TODO | Actual screenshot file and hostname match check |
 | H-014 | Review AI performance analysis against raw results. | TODO | Completed human review |
 | H-015 | Identify/approve actual AI metric misinterpretations and explain them. | TODO | Human explanations in review table |
@@ -70,3 +70,9 @@ real Load k6/backend-resource screenshot readiness immediately before measured
 traffic. H-013/H-022 hardware visual/hostname work remains human-only. No
 official result, screenshot, threshold, or capacity claim existed when this
 authorization was recorded.
+
+Official Load preflight `20260902T092131+0700` now passes on the one-start
+disposable backend PID `42059` with exactly 20 validated accounts and zero
+orders. The result root and measured traffic do not exist yet. Automation is
+paused only at H-012 for real macOS screenshot readiness; reply `READY` after
+Activity Monitor is filtered to PID `42059` and arranged beside the terminal.

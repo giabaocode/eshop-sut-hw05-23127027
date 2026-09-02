@@ -1423,3 +1423,16 @@ At receipt, `HEAD` was `70c5429fe82e56e3f48f1c1682f04396e4bc39e1`,
 the authorized official Load preflight and retained the requirement to stop
 immediately before measured traffic if genuine combined k6/backend-resource
 visual evidence required human readiness.
+
+The authorization was committed as `e28da7b`. Load preflight then used a fresh
+clone pinned to that commit. A first sandboxed backend did not persist and sent
+no account/k6 traffic. Fresh runtime
+`/private/tmp/eshop-hw05-load.24cMIo/runtime` retained exact backend PID `42059`.
+One sandbox-networked helper call failed with `sut_request_failed` and created
+no account/order/credential state; its redacted evidence was preserved. The
+unchanged helper then succeeded outside the network restriction for exactly 20
+validated, unlocked `user` accounts with zero orders. Runtime/database/product/
+public/private/k6/disk/wrapper/original-integrity gates passed. Actual Load run
+ID `20260902T092131+0700` was reserved, but its result root, measured traffic,
+and screenshot do not yet exist. Work stopped only at Human Gate 1 for real
+macOS screenshot readiness.

@@ -49,3 +49,27 @@ the student repository, `upstream` is the official SUT, and
 lockout, manual-task, audit, and cumulative-review records before beginning the
 fresh official Load runtime. No measurement or visual evidence was claimed at
 this point.
+
+## Official Load preflight outcome before the visual gate
+
+Codex committed the authorization as `e28da7b`, then created fresh no-hardlink
+disposable runtimes. The first sandboxed backend printed normal startup/reset
+output but did not remain alive; no registration or k6 traffic occurred and it
+was not reused. The second fresh runtime at
+`/private/tmp/eshop-hw05-load.24cMIo/runtime` is pinned to `e28da7b`. Its exact
+backend PID `42059` owns port 3000 from the clone backend cwd and remains the
+single process used from reset through setup.
+
+The first provisioning call inside the restricted networking sandbox failed
+safely with `sut_request_failed`. Direct DB/private-file checks proved zero
+WF-03 accounts, zero orders, and no credential file. That redacted failure was
+preserved. The unchanged original-worktree helper then ran outside the network
+restriction with a new private output root and created/validated exactly 20
+accounts. All 20 are role `user`, unlocked, authenticate, and have zero starting
+orders; five products/public rows/private 0600 schema/runtime integrity/k6
+version/disk/wrapper/original hash all passed.
+
+Run ID `20260902T092131+0700` and its still-absent Load result root were recorded.
+No measured k6 traffic or screenshot occurred. Because the headless runner
+cannot guarantee a genuine combined macOS Activity Monitor plus k6 GUI capture,
+Codex stopped at Human Gate 1 immediately before measured traffic.

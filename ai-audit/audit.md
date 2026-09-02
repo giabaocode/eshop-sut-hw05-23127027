@@ -1655,3 +1655,12 @@ hardware/hostname, video decision/URL, critique approval, no-issue disposition,
 grade, ZIP approval, and Moodle upload. They were consolidated without invented
 values in `reviews/FINAL-HUMAN-REVIEW.md`. Detailed record:
 [`interactions/038-submission-validation-human-gate.md`](interactions/038-submission-validation-human-gate.md).
+
+## Interaction 039 — Safe origin push
+
+After a clean-worktree, remote, secret, and file-size review, Codex pushed
+`main` through `0fe6dfc` to the student `origin` only. Push output was
+`85af3ba..0fe6dfc main -> main`; `upstream` was not modified. Human-only
+requirements remain pending and no final package/submission was claimed.
+Detailed record:
+[`interactions/039-safe-origin-push.md`](interactions/039-safe-origin-push.md).

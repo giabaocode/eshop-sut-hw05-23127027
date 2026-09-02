@@ -1496,3 +1496,13 @@ found and visually verified genuine 20/20-VU Stress/PID `45430` content, moved
 the unchanged JPEG to the correct run, and generated a real PNG conversion.
 After flush Codex stopped only PID 45430 and verified port/original integrity.
 No capacity or threshold was inferred.
+
+## Interaction 026 — Official Spike preflight
+
+Fresh Spike runtime `/private/tmp/eshop-hw05-spike.21Nvt8/runtime` is pinned to
+`eeb02fb`; exact one-start backend PID `48405` owns the clone listener. Twenty
+fresh accounts, role/unlocked/authentication/zero orders, five products,
+public/private contracts, official wrapper, k6, disk, DB boundary/integrity, and
+original hash passed. Actual run ID is `20260902T104549+0700`; result root and
+traffic remain absent. Detailed record:
+[`interactions/026-official-spike-preflight.md`](interactions/026-official-spike-preflight.md).

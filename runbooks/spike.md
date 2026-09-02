@@ -1,6 +1,6 @@
 # Official Spike Runbook
 
-Status: **PREPARED — NOT EXECUTED; HUMAN OFFICIAL FILENAME REQUIRED**
+Status: **REAL PREFLIGHT PASS — RUN `20260902T104549+0700`; WAITING FOR SCREENSHOT READINESS**
 
 | Stage | Duration | Target VUs |
 |---:|---:|---:|
@@ -41,3 +41,13 @@ The runner uses pinned k6 dashboard export plus native JSON and records exact
 PID/exit/watchdog evidence. The human should arrange Activity Monitor before
 the rapid rise and capture the 20-VU hold with k6/dashboard context and exact
 backend resource usage in the same frame.
+
+## Current authorized run
+
+Fresh runtime `/private/tmp/eshop-hw05-spike.21Nvt8/runtime` is pinned to
+`eeb02fb83216dfdb6db2c028295f7f5804ee0722`; exact backend PID is `48405`.
+Exactly 20 accounts passed setup with zero orders. Planned result root is
+`performance/results/spike/20260902T104549+0700/` and remains absent. Activity
+Monitor and capture framing must be ready before the runner starts because the
+20-VU hold lasts only 45 seconds. This preflight makes no performance/capacity
+claim.

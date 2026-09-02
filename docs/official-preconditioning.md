@@ -59,3 +59,13 @@ node /Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/tools/provision-a
 The two placeholder paths must resolve outside the protected original
 repository. The command is prepared only; it has not provisioned an official
 20-account pool.
+
+## Load-only prepared snapshot
+
+The human-named Load entry is
+`performance/scenarios/official/23127027_Load_20260901.js`. Its executable
+wrapper commit is `90fb1ae`. A Load runtime must pin to that commit or a later
+human-reviewed commit with identical executable files. The static official
+wrapper inspection passed; no official 20-account setup or Load traffic has
+occurred. Stress and Spike execution preparation is not authorized by this
+Load-only checkpoint.

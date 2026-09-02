@@ -57,14 +57,16 @@ full WF-03 lifecycles, and H-040 is `DONE BY HUMAN` under HD-013. This promotes
 the shared code to 2-VU Pilot runtime-validated status only; it creates no
 official result, threshold, or capacity claim.
 
-Phase I prepared the final review and execution materials. The human then
-created all three official basenames with date `20260901`; H-010 is `DONE BY
-HUMAN`. However, placing byte-identical wrappers one directory deeper made
-their `../config`, `../lib`, and `../data` paths invalid. Pinned k6 inspection
-stopped before HTTP on the missing module. The human-created files remain
-untouched and uncommitted pending a human path correction and revalidation.
+Phase I prepared the final review and execution materials. The human-created
+official basenames pass and H-010 is `DONE BY HUMAN`. The initial deeper-path
+failure remains preserved in HD-014. The human then approved only the exact
+`../`→`../../` module/data correction. All three wrappers passed pinned-k6 init
+and normalized semantic comparison, then were committed as `90fb1ae`.
 
-No Load preparation beyond this content gate, backend start, account
-provisioning, official traffic, result/report, screenshot, or push occurred.
-H-009, H-012, H-013, H-022, H-011, renderer review, and every execution remain
-open.
+Official Load is now statically prepared but not executed. Current human gates
+are H-009 confirmation of the lockout procedure, H-011 explicit approval of the
+real Load execution, H-012 real Load tool/resource screenshot readiness, and
+H-013/H-022 hardware screenshot/hostname work. The human must also be ready to
+capture the exact disposable backend PID during the five-VU hold. No backend,
+20-account pool, Load traffic/result/report, screenshot, threshold, Stress/
+Spike preparation, or push exists.

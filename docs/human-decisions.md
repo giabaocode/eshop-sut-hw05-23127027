@@ -430,3 +430,21 @@ in [`../ai-audit/interactions/019-successful-pilot-review-phase-i.md`](../ai-aud
 
 The exact validation interaction is recorded in
 [`../ai-audit/interactions/020-human-official-filenames-validation.md`](../ai-audit/interactions/020-human-official-filenames-validation.md).
+
+## HD-015 — Official-wrapper path correction and Load-only preparation
+
+| Field | Human decision / result |
+|---|---|
+| Human approval received | 2026-09-01 (Asia/Ho_Chi_Minh); continued record completed 2026-09-02 09:05 +07 |
+| Approved correction | In all three human-named wrappers, change only four module prefixes and one public-data prefix from `../` to `../../` |
+| Immutable fields | Filenames, scenario names/workloads, workflow, think time, checks, correlation, metrics, tags, safety, and data schema unchanged |
+| Validation | Pinned k6 initialized Load/Stress/Spike; normalized wrapper diffs empty; exact workloads and `traffic=measured`; `thresholds=null` |
+| Wrapper commit | `90fb1ae` — `test: add human-named official k6 wrappers` |
+| Load plan | Preserve 0→5/1m, 5/5m, 5→0/1m, 30s graceful settings, 7m scheduled, 8m cap |
+| Accounts | Provision/validate exactly 20 before Load; only customers 01..05 active; no sharing/wrapping |
+| Execution boundary | Prepare Load only; no backend, provisioning, Load/Stress/Spike/endurance traffic, threshold, screenshot fabrication, or push |
+| Next human gates | H-009 lockout-procedure confirmation, H-011 Load execution approval, screenshot/resource readiness, and hardware evidence tasks |
+
+The human instruction, correction, revalidation, commit, and Load-only
+preparation are recorded in
+[`../ai-audit/interactions/021-wrapper-correction-load-preparation.md`](../ai-audit/interactions/021-wrapper-correction-load-preparation.md).

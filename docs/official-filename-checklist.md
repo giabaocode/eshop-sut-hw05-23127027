@@ -28,7 +28,7 @@ The files were created under `performance/scenarios/official/`. Their basenames
 match the PDF naming rule, expected student ID, scenario spelling/case, date,
 and `.js` tool extension exactly.
 
-## Separate executable-content gate — BLOCKED
+## Separate executable-content gate — RESOLVED AFTER HUMAN REVIEW
 
 The three files are byte-for-byte identical to the reviewed internal wrappers,
 but their deeper directory changes the meaning of every relative path. For
@@ -49,6 +49,17 @@ each wrapper is:
 + loadPublicCsv: () => open('../../data/workflow.csv'),
 ```
 
-This is a proposed human correction only. Codex did not modify, rename, stage,
-or commit the three official wrappers. Official Load preparation/execution is
-blocked until the human corrects the paths and requests revalidation.
+The human reviewed and approved exactly that relative-depth correction. Codex
+changed only those five paths in each wrapper; filenames and all scenario/
+workflow/data/check/metric/safety semantics remained unchanged.
+
+Pinned k6 v2.2.0 then initialized all three wrappers successfully with an
+ephemeral mode-0600 synthetic 20-row credential file outside Git. Normalizing
+`../../` back to the internal entries' `../` produced empty diffs. Inspection
+confirmed the exact scenario workloads, `traffic=measured`, 30-second graceful
+settings, and `thresholds=null`. The temporary file was removed and no HTTP was
+sent.
+
+The three validated human-named wrappers were committed locally as `90fb1ae`
+(`test: add human-named official k6 wrappers`). No secret or filename change was
+included, and nothing was pushed.

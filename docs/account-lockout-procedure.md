@@ -1,6 +1,6 @@
 # Official Account-Lockout Procedure
 
-Status: **PREPARED — NO OFFICIAL LOCKOUT EVENT OBSERVED**
+Status: **PREPARED — AWAITING H-009 HUMAN CONFIRMATION; NO OFFICIAL LOCKOUT EVENT OBSERVED**
 
 The official scenarios use only preflight-validated credentials. They must not
 deliberately submit bad passwords to manufacture a three-failure lockout.
@@ -37,3 +37,12 @@ and original-repository integrity checks.
 If Stress or Spike genuinely triggers lockout, document what was observed and
 the fresh-runtime reset/reseed steps. If no lockout occurs, say so; never
 fabricate a lockout event.
+
+## Load execution checkpoint
+
+Before official Load, the human must confirm this procedure under H-009. Load
+uses only valid preflight-verified credentials. No intentional bad-password
+probe belongs to setup or measured traffic. A real isolated unexpected 401/403
+fails its current iteration and remains evidence; confirmed lockout that makes
+the intended run invalid invokes the approved operational safety stop. No
+numeric repeated-auth cutoff has been approved.

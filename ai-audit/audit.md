@@ -1367,3 +1367,40 @@ change config/lib/data prefixes from `../` to `../../`. Load workload/output/
 account/runtime preparation was deliberately not continued. No official
 traffic, result, report, screenshot, threshold, account, backend process, or
 push was created.
+
+## Interaction 021 — Human path approval, wrapper validation, and Load preparation
+
+| Field | Actual record |
+|---|---|
+| AI tool | Codex CLI |
+| Human approval | Exact relative-depth correction approved on 2026-09-01 |
+| Continued/application record | 2026-09-02 09:05:14 +0700 |
+| Detailed interaction | [`interactions/021-wrapper-correction-load-preparation.md`](interactions/021-wrapper-correction-load-preparation.md) |
+| Wrapper commit | `90fb1ae` (`test: add human-named official k6 wrappers`) |
+| Scope after validation | Official Load preparation only; no execution |
+
+Codex applied exactly five string-path changes per official wrapper:
+`../config/workloads.js`, `../config/runtime.js`, `../lib/data.js`,
+`../lib/workflow.js`, and `../data/workflow.csv` became their `../../`
+equivalents. No filename or other line changed.
+
+An ephemeral synthetic 20-row credential file was created mode 0600 under
+`/private/tmp` only for no-HTTP initialization. Pinned k6 v2.2.0 successfully
+inspected all three human-named entries. Load showed 0→5/1m, 5/5m, 5→0/1m;
+Stress and Spike retained their exact approved schedules. Every entry used
+`traffic=measured`, 30-second graceful settings, the same `runWf03Scenario`, and
+`thresholds=null`. Normalizing `../../` to `../` produced empty diffs against
+all internal wrappers. The temporary file was removed and port 3000 remained
+free.
+
+Only the three official wrappers were staged for the dedicated commit. Staged
+file and secret scans passed. Commit `90fb1ae` truthfully preserves the human
+filenames and approved path correction; no push occurred.
+
+Afterward, Load-only preparation pinned the human-named Load entry, exact
+approved workload/account requirements, one-start fresh-runtime sequence,
+setup/measured boundary, exact runner invocation, actual-run-ID path contract,
+native JSON/summary/log/metadata/report/checksum plan, and human Activity
+Monitor capture instructions. No actual run ID, result artifact, screenshot,
+backend, account, or traffic was generated. Stress/Spike execution preparation
+did not proceed.

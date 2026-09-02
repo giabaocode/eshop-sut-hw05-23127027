@@ -122,3 +122,15 @@ This commit followed successful no-HTTP pinned-k6 inspection and staged
 secret/disposable/raw/official-filename checks. It contains no credential,
 official plan filename, official result/report/screenshot, disposable runtime,
 database mutation, threshold, or push.
+
+## 10. Human official wrappers and approved path correction
+
+| Phase activity | Actual content | Commit hash | Commit message |
+|---|---|---|---|
+| Human-created official wrappers | Exact human filenames plus only the human-approved `../`→`../../` module/data depth correction required by the `official/` directory | `90fb1ae` | `test: add human-named official k6 wrappers` |
+
+Before this commit, all three wrappers passed pinned-k6 init inspection with
+`traffic=measured`, exact approved stages, and `thresholds=null`; normalized
+diffs against internal entries were empty. Only the three wrapper files were
+staged. Secret scans passed, the synthetic credential file remained outside Git
+and was removed, no HTTP occurred, and nothing was pushed.

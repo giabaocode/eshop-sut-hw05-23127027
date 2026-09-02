@@ -19,7 +19,7 @@ CLARIFICATION`, `RESOLVED BY HUMAN DECISION`, `DONE BY HUMAN`, `NOT APPLICABLE`.
 | H-009 | Review account-lockout handling and any reset procedure. | DONE BY HUMAN | Master automation instruction on 2026-09-02 explicitly approved valid credentials only, no intentional lockout, preservation of genuine behavior, no credential substitution, and fresh disposable reset/reprovisioning between official runs; HD-016 |
 | H-010 | Approve exact Load/Stress/Spike plan filenames after PDF validation. | DONE BY HUMAN | Human created the three exact `23127027_{Load|Stress|Spike}_20260901.js` basenames; filename validation passed on 2026-09-01. The later human-approved path-depth correction passed pinned-k6 and semantic revalidation and is committed as `90fb1ae`; HD-014 and HD-015 |
 | H-011 | Approve each real Load, Stress, Spike, and endurance execution before it runs. | DONE BY HUMAN | Master maximum-safe-automation instruction on 2026-09-02 explicitly authorizes technical execution of all four runs, subject to the real screenshot-readiness gates; HD-016 |
-| H-012 | Capture real performance-tool/resource-monitor screenshots for every run. | WAITING FOR HUMAN | Genuine Load, Stress, and Spike screenshots exist and were visually validated; only the later endurance screenshot remains |
+| H-012 | Capture real performance-tool/resource-monitor screenshots for every run. | DONE BY HUMAN | Human-captured and visually validated combined k6/backend-resource evidence exists for genuine Load, Stress, Spike, and endurance runs; each records the exact disposable backend PID |
 | H-013 | Capture real macOS hardware/hostname screenshot evidence. | TODO | Actual screenshot file and hostname match check |
 | H-014 | Review AI performance analysis against raw results. | TODO | Completed human review |
 | H-015 | Identify/approve actual AI metric misinterpretations and explain them. | TODO | Human explanations in review table |
@@ -120,3 +120,9 @@ Fresh endurance preflight `20260902T143823+0700` now passes with exact
 foreground backend PID `53376`, 20 validated disposable accounts, zero orders,
 and unchanged original integrity. Automation is paused only for the final H-012
 real endurance k6/backend-resource screenshot readiness gate.
+
+Endurance completed with genuine evidence: 713/713 workflows, zero of 4,991
+failed HTTP requests, p95 4.377 ms, and 5 VUs sustained for 12 minutes. The
+midpoint PID/resource screenshot exists and postflight integrity passed. H-012
+has visual evidence for Load, Stress, Spike, and endurance; final packet review
+remains human-owned.

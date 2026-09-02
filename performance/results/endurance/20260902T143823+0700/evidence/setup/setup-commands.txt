@@ -1,0 +1,19 @@
+ENDURANCE SETUP COMMAND RECORD — SECRETS OMITTED
+
+Source clone:
+git clone --local --no-hardlinks --no-checkout /Users/phamngocgiabao/eshop-sut-hw05-23127027 /private/tmp/eshop-hw05-endurance.fFN6ej/runtime
+git -C /private/tmp/eshop-hw05-endurance.fFN6ej/runtime checkout --detach 4bc3b682cf11830d41e78e83366fc09bc9645d88
+
+Backend dependencies/start:
+(cd /private/tmp/eshop-hw05-endurance.fFN6ej/runtime/backend && npm ci)
+(foreground Codex session: cd runtime/backend && /opt/homebrew/bin/node server.js)
+
+Atomic listener guard and setup-only provisioning:
+/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/tools/verify-owned-listener.sh /private/tmp/eshop-hw05-endurance.fFN6ej/runtime 53376 && \
+WF03_BASE_URL=http://127.0.0.1:3000 \
+WF03_ACCOUNT_COUNT=20 \
+WF03_DISPOSABLE_ROOT=/private/tmp/eshop-hw05-endurance.fFN6ej/runtime \
+WF03_PRIVATE_DIR=/private/tmp/eshop-hw05-endurance.fFN6ej/private \
+/opt/homebrew/bin/node /Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/tools/provision-accounts.mjs
+
+Provisioning finished before the measured command in `../k6-command.txt`.

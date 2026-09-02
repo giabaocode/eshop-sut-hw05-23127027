@@ -1586,3 +1586,19 @@ zero-order, DB, k6, workload, disk, source, and original-integrity checks pass.
 Run ID `20260902T143823+0700` is reserved, but its result root and k6 traffic do
 not exist. Detailed record:
 [`interactions/032-endurance-fresh-preflight.md`](interactions/032-endurance-fresh-preflight.md).
+
+## Interaction 033 — Endurance execution
+
+The human replied `READY`. Genuine endurance run `20260902T143823+0700`
+completed 713/713 workflows with zero of 4,991 failed HTTP requests,
+27,094/27,094 checks, and 713/713 created orders canceled. k6 exit was 0,
+watchdog `no`, and wall clock 784 seconds. Raw p95 was 4.377 ms, p99 4.8056
+ms, and throughput 6.372423 requests/s. Native-CSV one-minute analysis found no
+failure or second-half degradation.
+
+The genuine midpoint visual shows 5/5 VUs and exact backend PID `53376` at a
+point-in-time 1.3% CPU, 56.1 MB, and 11 threads. Codex stopped only that PID
+after flush and verified port/original integrity. The empirical local endurance
+point is 5 VUs sustained for 12 minutes; it is not maximum capacity or a final
+universal threshold. Detailed record:
+[`interactions/033-endurance-execution.md`](interactions/033-endurance-execution.md).

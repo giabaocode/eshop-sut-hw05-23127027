@@ -1,0 +1,22 @@
+label=OFFICIAL Endurance — REAL EXECUTION REQUIRED
+scenario=endurance
+start_time=2026-09-02 14:41:01 +0700
+start_epoch=1788334861
+hard_cap_seconds=840
+k6_binary=/opt/homebrew/bin/k6
+official_plan=/private/tmp/eshop-hw05-endurance.fFN6ej/runtime/performance/scenarios/endurance.js
+k6_pid=53587
+canonical_raw=native granular k6 JSON
+process_exit_time=2026-09-02 14:54:05 +0700
+process_exit_epoch=1788335645
+artifact_flush_completion_time=2026-09-02 14:54:05 +0700
+artifact_flush_completion_epoch=1788335645
+wall_clock_seconds=784
+k6_exit_code=0
+watchdog_fired=no
+runner_interrupted=0
+artifact_bytes=28130827 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/endurance/20260902T143823+0700/raw/endurance-raw.json
+artifact_bytes=21582 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/endurance/20260902T143823+0700/raw/endurance-summary.json
+artifact_bytes=15388155 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/endurance/20260902T143823+0700/raw/endurance-timeseries.csv
+artifact_bytes=115095 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/endurance/20260902T143823+0700/logs/k6.stdout.log
+artifact_bytes=0 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/endurance/20260902T143823+0700/logs/k6.stderr.log

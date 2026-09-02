@@ -1646,3 +1646,12 @@ passed after PyYAML was installed only in a temporary `/tmp` virtualenv. No SUT
 traffic/change, speculative issue, visual, video, URL, grade, final approval,
 or submission was fabricated. Detailed record:
 [`interactions/037-technical-deliverable-automation.md`](interactions/037-technical-deliverable-automation.md).
+
+## Interaction 038 — Submission validation and combined human gate
+
+The real Git log was exported and the validator reported 26 PASS, 0 FAIL, and
+9 MANUAL VERIFICATION REQUIRED. Every remaining item is human-attributable:
+hardware/hostname, video decision/URL, critique approval, no-issue disposition,
+grade, ZIP approval, and Moodle upload. They were consolidated without invented
+values in `reviews/FINAL-HUMAN-REVIEW.md`. Detailed record:
+[`interactions/038-submission-validation-human-gate.md`](interactions/038-submission-validation-human-gate.md).

@@ -142,3 +142,9 @@ validated repository Agent Skill, demo runbook, 278-word critique candidate,
 main report/README drafts, PDF views, and a submission validator. These do not
 complete H-003/H-013/H-017/H-018–H-025; the next combined human packet will
 request only those attributable decisions/evidence.
+
+The submission validator now reports 26 technical PASS, 0 FAIL, and 9 manual
+checks. `reviews/FINAL-HUMAN-REVIEW.md` is the authoritative combined next
+action packet. No final ZIP can be truthfully named until the student supplies
+the hardware/hostname evidence, real video URL/decision, critique and issue
+disposition, grade, and final approval.

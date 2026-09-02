@@ -1,0 +1,187 @@
+{
+  "generated_at": "2026-09-02T13:17:56.498Z",
+  "technical_only": false,
+  "counts": {
+    "PASS": 26,
+    "FAIL": 0,
+    "MANUAL VERIFICATION REQUIRED": 9,
+    "NOT APPLICABLE": 0
+  },
+  "checks": [
+    {
+      "id": "official_plans",
+      "status": "PASS",
+      "evidence": "performance/scenarios/official/23127027_Load_20260901.js, performance/scenarios/official/23127027_Stress_20260901.js, performance/scenarios/official/23127027_Spike_20260901.js"
+    },
+    {
+      "id": "official_naming",
+      "status": "PASS",
+      "evidence": "All human-created names match the approved PDF pattern"
+    },
+    {
+      "id": "load_raw",
+      "status": "PASS",
+      "evidence": "performance/results/load/20260902T092131+0700/raw/load-raw.json"
+    },
+    {
+      "id": "load_report_directory",
+      "status": "PASS",
+      "evidence": "performance/results/load/20260902T092131+0700/report/"
+    },
+    {
+      "id": "load_screenshot",
+      "status": "PASS",
+      "evidence": "Genuine run screenshot is present"
+    },
+    {
+      "id": "stress_raw",
+      "status": "PASS",
+      "evidence": "performance/results/stress/20260902T101857+0700/raw/stress-raw.json"
+    },
+    {
+      "id": "stress_report_directory",
+      "status": "PASS",
+      "evidence": "performance/results/stress/20260902T101857+0700/report/"
+    },
+    {
+      "id": "stress_screenshot",
+      "status": "PASS",
+      "evidence": "Genuine run screenshot is present"
+    },
+    {
+      "id": "spike_raw",
+      "status": "PASS",
+      "evidence": "performance/results/spike/20260902T104549+0700/raw/spike-raw.json"
+    },
+    {
+      "id": "spike_report_directory",
+      "status": "PASS",
+      "evidence": "performance/results/spike/20260902T104549+0700/report/"
+    },
+    {
+      "id": "spike_screenshot",
+      "status": "PASS",
+      "evidence": "Genuine run screenshot is present"
+    },
+    {
+      "id": "distinct_k6_views",
+      "status": "PASS",
+      "evidence": "Load aggregate, Stress CSV-derived time series, and Spike k6 dashboard are distinct"
+    },
+    {
+      "id": "endurance",
+      "status": "PASS",
+      "evidence": "Genuine 5-VU/12-minute endurance evidence and analysis"
+    },
+    {
+      "id": "ai_analysis",
+      "status": "PASS",
+      "evidence": "Immutable original AI analysis exists"
+    },
+    {
+      "id": "human_ai_review",
+      "status": "PASS",
+      "evidence": "All nine human verdicts are recorded"
+    },
+    {
+      "id": "optimization_review",
+      "status": "PASS",
+      "evidence": "All seven human verdicts are recorded"
+    },
+    {
+      "id": "continuous_testing_proposal",
+      "status": "PASS",
+      "evidence": "Proposal and Mermaid flowchart exist"
+    },
+    {
+      "id": "agent_skill",
+      "status": "PASS",
+      "evidence": "Reusable Skill and deterministic checker exist"
+    },
+    {
+      "id": "ai_audit",
+      "status": "PASS",
+      "evidence": "Main audit and detailed interaction records through the human verdict gate exist"
+    },
+    {
+      "id": "readme",
+      "status": "PASS",
+      "evidence": "README contains summary and self-assessment table"
+    },
+    {
+      "id": "main_report_markdown",
+      "status": "PASS",
+      "evidence": "Main report Markdown exists"
+    },
+    {
+      "id": "main_report_pdf",
+      "status": "PASS",
+      "evidence": "Main report PDF exists"
+    },
+    {
+      "id": "audit_pdf",
+      "status": "PASS",
+      "evidence": "AI Audit PDF exists"
+    },
+    {
+      "id": "critique_markdown",
+      "status": "PASS",
+      "evidence": "278-word candidate exists"
+    },
+    {
+      "id": "critique_pdf_draft",
+      "status": "PASS",
+      "evidence": "Candidate critique PDF exists and remains labeled DRAFT"
+    },
+    {
+      "id": "git_log",
+      "status": "PASS",
+      "evidence": "Real Git log export exists"
+    },
+    {
+      "id": "hardware_screenshot",
+      "status": "MANUAL VERIFICATION REQUIRED",
+      "evidence": "No human hardware screenshot is present"
+    },
+    {
+      "id": "hostname_compatibility",
+      "status": "MANUAL VERIFICATION REQUIRED",
+      "evidence": "Student must confirm compatibility with previous homework evidence"
+    },
+    {
+      "id": "video_url",
+      "status": "MANUAL VERIFICATION REQUIRED",
+      "evidence": "No real YouTube URL supplied"
+    },
+    {
+      "id": "combined_video_decision",
+      "status": "MANUAL VERIFICATION REQUIRED",
+      "evidence": "H-003 is pending"
+    },
+    {
+      "id": "ai_critique_approval",
+      "status": "MANUAL VERIFICATION REQUIRED",
+      "evidence": "Candidate exists; H-021 approval pending"
+    },
+    {
+      "id": "issue_publication",
+      "status": "MANUAL VERIFICATION REQUIRED",
+      "evidence": "No SUT issue confirmed; H-017 final NOT APPLICABLE decision pending"
+    },
+    {
+      "id": "self_assessed_grade",
+      "status": "MANUAL VERIFICATION REQUIRED",
+      "evidence": "No human grade supplied"
+    },
+    {
+      "id": "final_zip",
+      "status": "MANUAL VERIFICATION REQUIRED",
+      "evidence": "Requires grade and final human approval"
+    },
+    {
+      "id": "moodle_submission",
+      "status": "MANUAL VERIFICATION REQUIRED",
+      "evidence": "Must be performed by the student"
+    }
+  ]
+}

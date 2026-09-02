@@ -1,0 +1,831 @@
+commit a08a158d25345b175874169db6e7d40d84be411b
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T20:13:34+07:00
+
+    docs: build final technical HW05 deliverables
+
+ MANUAL-TODO.md                                     |    7 +
+ README.md                                          |   47 +
+ ai-audit/audit.md                                  |   11 +
+ .../037-technical-deliverable-automation.md        |   30 +
+ analysis/genuine-issue-determination.md            |   33 +
+ docs/pdf-generation.md                             |   20 +
+ proposal/ci/performance-prototype.yml              |   45 +
+ proposal/continuous-performance-testing.md         |   94 ++
+ report/23127027_AI_Audit.html                      | 1163 ++++++++++++++++++++
+ report/23127027_AI_Audit.pdf                       |  Bin 0 -> 1374995 bytes
+ report/23127027_AI_Critique_DRAFT.html             |   23 +
+ report/23127027_AI_Critique_DRAFT.pdf              |  Bin 0 -> 86330 bytes
+ report/23127027_HW05_Performance_Report.html       |  117 ++
+ report/23127027_HW05_Performance_Report.md         |  256 +++++
+ report/23127027_HW05_Performance_Report.pdf        |  Bin 0 -> 313903 bytes
+ reviews/HUMAN-REVIEW-PACKET.md                     |    5 +-
+ reviews/ai-critique-draft.md                       |   39 +
+ reviews/ai-critique-evidence.md                    |   25 +
+ skills/hw05-k6-performance/SKILL.md                |   56 +
+ skills/hw05-k6-performance/agents/openai.yaml      |    4 +
+ .../references/evidence-contract.md                |   32 +
+ .../references/submission-contract.md              |   24 +
+ .../scripts/check-result-tree.sh                   |   33 +
+ tools/render_markdown_html.mjs                     |   95 ++
+ tools/validate_submission.mjs                      |   90 ++
+ video/demo-plan.md                                 |   40 +
+ video/recording-checklist.md                       |   18 +
+ video/vietnamese-narration-outline.md              |   26 +
+ 28 files changed, 2332 insertions(+), 1 deletion(-)
+
+commit 63c57aab07da993a1458374e912a06e212c4d405
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T15:28:24+07:00
+
+    review: record human analysis and optimization verdicts
+
+ MANUAL-TODO.md                                     | 10 +--
+ ai-audit/audit.md                                  | 12 ++++
+ .../036-human-ai-optimization-verdicts.md          | 82 ++++++++++++++++++++++
+ docs/human-decisions.md                            | 21 ++++++
+ reviews/HUMAN-REVIEW-PACKET.md                     |  4 +-
+ reviews/ai-analysis-review.md                      | 31 ++++----
+ reviews/optimization-review.md                     | 21 +++---
+ 7 files changed, 148 insertions(+), 33 deletions(-)
+
+commit 9c5fc353890db25d32ac859227cbe407982fb062
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T15:15:50+07:00
+
+    review: prepare human analysis verdict packet
+
+ MANUAL-TODO.md                                     | 13 ++++--
+ ai-audit/audit.md                                  | 10 +++++
+ .../035-ai-optimization-review-packet.md           | 22 ++++++++++
+ reviews/HUMAN-REVIEW-PACKET.md                     |  6 +--
+ reviews/ai-analysis-review.md                      | 25 +++++++++++
+ reviews/optimization-review.md                     | 17 ++++++++
+ reviews/test-plan-review.md                        | 48 +++++++++++-----------
+ 7 files changed, 112 insertions(+), 29 deletions(-)
+
+commit 5e4b00fd7f3fd790f8584114293ad7c261afa56e
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T15:05:49+07:00
+
+    analysis: preserve original AI performance assessment
+
+ ai-audit/audit.md                                 |  11 +++
+ ai-audit/interactions/034-original-ai-analysis.md |  21 +++++
+ analysis/ai-analysis-original.md                  |  91 +++++++++++++++++++
+ analysis/scenario-comparison.json                 | 102 ++++++++++++++++++++++
+ analysis/scenario-comparison.md                   |  25 ++++++
+ performance/tools/analysis/compare-scenarios.mjs  |  63 +++++++++++++
+ 6 files changed, 313 insertions(+)
+
+commit 592f4bdc1da13ee48cedad1db50d7965f391baf3
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T15:01:21+07:00
+
+    test: record genuine endurance results
+
+ MANUAL-TODO.md                                     |     8 +-
+ ai-audit/audit.md                                  |    16 +
+ ai-audit/interactions/033-endurance-execution.md   |    29 +
+ analysis/endurance-analysis.md                     |    62 +
+ docs/endurance-results.md                          |    16 +
+ .../20260902T143823+0700/evidence/SHA256SUMS       |    21 +
+ .../20260902T143823+0700/evidence/k6-command.txt   |     1 +
+ .../20260902T143823+0700/evidence/postflight.md    |    21 +
+ .../evidence/runner-metadata.txt                   |    22 +
+ .../evidence/screenshots/README.md                 |    14 +
+ .../screenshots/endurance-k6-backend-resource.jpg  |   Bin 0 -> 348622 bytes
+ .../screenshots/endurance-k6-backend-resource.png  |   Bin 0 -> 963654 bytes
+ .../evidence/setup/endurance-preflight.md          |    26 +
+ .../setup/provisioning-evidence.redacted.json      |    33 +
+ .../evidence/setup/setup-commands.txt              |    19 +
+ .../20260902T143823+0700/logs/backend.log          |     3 +
+ .../20260902T143823+0700/logs/k6.stderr.log        |     0
+ .../20260902T143823+0700/logs/k6.stdout.log        |  2698 +
+ .../20260902T143823+0700/raw/endurance-raw.json    | 85009 +++++++++++++++++++
+ .../raw/endurance-summary.json                     |   475 +
+ .../raw/endurance-timeseries.csv                   | 84988 ++++++++++++++++++
+ .../report/endurance-aggregate.html                |    23 +
+ .../report/endurance-analysis.json                 |   152 +
+ .../report/endurance-analysis.md                   |    47 +
+ .../report/endurance-timeseries.html               |    14 +
+ .../report/endurance-timeseries.json               |   277 +
+ .../report/endurance-timeseries.md                 |    43 +
+ .../tools/analysis/analyze-endurance-csv.mjs       |   163 +
+ reviews/HUMAN-REVIEW-PACKET.md                     |     2 +-
+ 29 files changed, 174180 insertions(+), 2 deletions(-)
+
+commit da73cbce884cbba3669167d3fa3563403b872d02
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T14:39:45+07:00
+
+    test: record fresh endurance preflight gate
+
+ MANUAL-TODO.md                                     |  5 ++++
+ ai-audit/audit.md                                  | 12 +++++++++
+ .../interactions/032-endurance-fresh-preflight.md  | 29 ++++++++++++++++++++++
+ docs/endurance-preflight.md                        | 26 +++++++++++++++++++
+ reviews/HUMAN-REVIEW-PACKET.md                     |  2 +-
+ 5 files changed, 73 insertions(+), 1 deletion(-)
+
+commit 4bc3b682cf11830d41e78e83366fc09bc9645d88
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T14:34:57+07:00
+
+    fix: fail closed on disposable listener ownership
+
+ ai-audit/audit.md                                  |  9 +++
+ .../interactions/031-fail-closed-listener-guard.md | 20 ++++++
+ performance/tools/start-disposable-backend.sh      | 77 ++++++++++++++++++++++
+ performance/tools/verify-owned-listener.sh         | 32 +++++++++
+ 4 files changed, 138 insertions(+)
+
+commit ebb90bd5e4fa1f68bb26ad93ca2efc3cc4ebddf3
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T14:32:54+07:00
+
+    docs: record endurance blocker resolution
+
+ MANUAL-TODO.md                                      |  7 ++++++-
+ ai-audit/audit.md                                   | 11 +++++++++++
+ .../030-endurance-blocker-resolution.md             | 21 +++++++++++++++++++++
+ reviews/HUMAN-REVIEW-PACKET.md                      |  2 +-
+ 4 files changed, 39 insertions(+), 2 deletions(-)
+
+commit 519e6d8fb30d279e5827b839898043719c1e2317
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T14:25:16+07:00
+
+    docs: preserve blocked endurance preflight
+
+ MANUAL-TODO.md                                     |  7 +++++
+ ai-audit/audit.md                                  | 13 ++++++++
+ .../029-endurance-preflight-wrong-listener.md      | 30 ++++++++++++++++++
+ docs/endurance-preflight-failure.md                | 36 ++++++++++++++++++++++
+ reviews/HUMAN-REVIEW-PACKET.md                     |  1 +
+ 5 files changed, 87 insertions(+)
+
+commit 54848d2b110d2d3a59b4eaf0dd6014a5e6e518df
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T14:18:51+07:00
+
+    test: prepare evidence-informed endurance run
+
+ MANUAL-TODO.md                                |  5 ++++
+ ai-audit/audit.md                             | 14 ++++++++++
+ ai-audit/interactions/028-endurance-design.md | 28 ++++++++++++++++++++
+ docs/endurance-plan.md                        | 31 ++++++++++++++++++++++
+ performance/config/workloads.js               | 21 +++++++++++++--
+ performance/scenarios/endurance.js            | 22 ++++++++++++++++
+ performance/tools/run-official.sh             | 37 +++++++++++++++++++++------
+ runbooks/endurance.md                         | 31 ++++++++++++++++++++++
+ 8 files changed, 179 insertions(+), 10 deletions(-)
+
+commit bd2f687b801f1d480a3439c4b038a5ce9137a9a7
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T14:14:37+07:00
+
+    test: record genuine official Spike results
+
+ MANUAL-TODO.md                                     |     9 +-
+ ai-audit/audit.md                                  |    21 +
+ .../interactions/027-official-spike-execution.md   |    32 +
+ analysis/spike-analysis.md                         |    62 +
+ docs/official-spike-results.md                     |    18 +
+ .../spike/20260902T104549+0700/evidence/SHA256SUMS |    19 +
+ .../20260902T104549+0700/evidence/k6-command.txt   |     1 +
+ .../20260902T104549+0700/evidence/postflight.md    |    21 +
+ .../evidence/runner-metadata.txt                   |    22 +
+ .../evidence/screenshots/README.md                 |    14 +
+ .../screenshots/spike-k6-backend-resource.jpg      |   Bin 0 -> 370074 bytes
+ .../screenshots/spike-k6-backend-resource.png      |   Bin 0 -> 1027614 bytes
+ .../evidence/setup/official-spike-preflight.md     |    25 +
+ .../setup/provisioning-evidence.redacted.json      |    33 +
+ .../evidence/setup/setup-commands.txt              |    18 +
+ .../spike/20260902T104549+0700/logs/backend.log    |     3 +
+ .../spike/20260902T104549+0700/logs/k6.stderr.log  |     0
+ .../spike/20260902T104549+0700/logs/k6.stdout.log  |  1445 +
+ .../spike/20260902T104549+0700/raw/spike-raw.json  | 44861 +++++++++++++++++++
+ .../20260902T104549+0700/raw/spike-summary.json    |   475 +
+ .../report/spike-aggregate.html                    |    23 +
+ .../report/spike-analysis.json                     |   152 +
+ .../20260902T104549+0700/report/spike-analysis.md  |    47 +
+ .../report/spike-dashboard.html                    |    23 +
+ .../20260902T104549+0700/report/spike-phases.json  |   127 +
+ .../tools/analysis/analyze-spike-phases.mjs        |    95 +
+ reviews/HUMAN-REVIEW-PACKET.md                     |     2 +-
+ 27 files changed, 47543 insertions(+), 5 deletions(-)
+
+commit eea3277db83bf835b70bea727838c3e46dfec6c9
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T10:47:08+07:00
+
+    test: record official Spike preflight gate
+
+ MANUAL-TODO.md                                        |  6 +++++-
+ ai-audit/audit.md                                     | 10 ++++++++++
+ ai-audit/interactions/026-official-spike-preflight.md | 16 ++++++++++++++++
+ docs/official-spike-preflight.md                      | 14 ++++++++++++++
+ reviews/HUMAN-REVIEW-PACKET.md                        |  3 ++-
+ runbooks/spike.md                                     | 12 +++++++++++-
+ 6 files changed, 58 insertions(+), 3 deletions(-)
+
+commit eeb02fb83216dfdb6db2c028295f7f5804ee0722
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T10:44:13+07:00
+
+    test: record genuine official Stress results
+
+ MANUAL-TODO.md                                     |      7 +-
+ ai-audit/audit.md                                  |     21 +
+ .../interactions/025-official-stress-execution.md  |     29 +
+ analysis/stress-analysis.md                        |     63 +
+ docs/official-stress-results.md                    |     18 +
+ .../20260902T101857+0700/evidence/SHA256SUMS       |     21 +
+ .../20260902T101857+0700/evidence/k6-command.txt   |      1 +
+ .../20260902T101857+0700/evidence/postflight.md    |     23 +
+ .../evidence/runner-metadata.txt                   |     22 +
+ .../evidence/screenshots/README.md                 |     14 +
+ .../screenshots/stress-k6-backend-resource.jpg     |    Bin 0 -> 374269 bytes
+ .../screenshots/stress-k6-backend-resource.png     |    Bin 0 -> 1045222 bytes
+ .../evidence/setup/official-stress-preflight.md    |     29 +
+ .../setup/provisioning-evidence.redacted.json      |     33 +
+ .../evidence/setup/setup-commands.txt              |     18 +
+ .../stress/20260902T101857+0700/logs/backend.log   |      3 +
+ .../stress/20260902T101857+0700/logs/k6.stderr.log |      0
+ .../stress/20260902T101857+0700/logs/k6.stdout.log |   2611 +
+ .../20260902T101857+0700/raw/stress-raw.json       | 151407 ++++++++++++++++++
+ .../20260902T101857+0700/raw/stress-summary.json   |    475 +
+ .../20260902T101857+0700/raw/stress-timeseries.csv | 151386 +++++++++++++++++
+ .../report/stress-aggregate.html                   |     23 +
+ .../report/stress-analysis.json                    |    152 +
+ .../20260902T101857+0700/report/stress-analysis.md |     47 +
+ .../report/stress-timeseries.html                  |     26 +
+ .../report/stress-timeseries.json                  |    372 +
+ .../report/stress-timeseries.md                    |     34 +
+ performance/tools/analysis/README.md               |      5 +
+ performance/tools/analysis/analyze-stress-csv.mjs  |    136 +
+ reviews/HUMAN-REVIEW-PACKET.md                     |      2 +-
+ runbooks/stress.md                                 |     12 +-
+ 31 files changed, 306987 insertions(+), 3 deletions(-)
+
+commit 0688b3aedc1a0d06d76ae01a31e2a11fb65a81b3
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T10:21:07+07:00
+
+    test: record official Stress preflight gate
+
+ MANUAL-TODO.md                                     |  7 ++++++-
+ ai-audit/audit.md                                  | 17 +++++++++++++++
+ .../interactions/024-official-stress-preflight.md  | 23 +++++++++++++++++++++
+ docs/official-stress-preflight.md                  | 24 ++++++++++++++++++++++
+ reviews/HUMAN-REVIEW-PACKET.md                     |  3 ++-
+ runbooks/stress.md                                 | 11 +++++++++-
+ 6 files changed, 82 insertions(+), 3 deletions(-)
+
+commit 0c17457371d7b9bff75aa27ae61854c84b12ba3f
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T10:17:20+07:00
+
+    test: record genuine official Load results
+
+ MANUAL-TODO.md                                     |     9 +-
+ ai-audit/audit.md                                  |    22 +
+ .../interactions/023-official-load-execution.md    |    53 +
+ analysis/load-analysis.md                          |    64 +
+ docs/official-load-results.md                      |    24 +
+ .../load/20260902T092131+0700/evidence/SHA256SUMS  |    19 +
+ .../20260902T092131+0700/evidence/k6-command.txt   |     1 +
+ .../20260902T092131+0700/evidence/postflight.md    |    24 +
+ .../evidence/runner-metadata.txt                   |    21 +
+ .../evidence/screenshots/README.md                 |    15 +
+ .../screenshots/load-k6-backend-resource.jpg       |   Bin 0 -> 411501 bytes
+ .../screenshots/load-k6-backend-resource.png       |   Bin 0 -> 1148075 bytes
+ .../evidence/setup/first-sandbox-backend.log       |     3 +
+ .../evidence/setup/official-load-preflight.md      |    49 +
+ .../setup/provisioning-evidence.redacted.json      |    33 +
+ .../sandbox-provisioning-failure.redacted.json     |    10 +
+ .../evidence/setup/setup-commands.txt              |    20 +
+ .../load/20260902T092131+0700/logs/backend.log     |     3 +
+ .../load/20260902T092131+0700/logs/k6.stderr.log   |     0
+ .../load/20260902T092131+0700/logs/k6.stdout.log   |  1612 +
+ .../load/20260902T092131+0700/raw/load-raw.json    | 41229 +++++++++++++++++++
+ .../20260902T092131+0700/raw/load-summary.json     |   475 +
+ .../report/load-aggregate.html                     |    23 +
+ .../20260902T092131+0700/report/load-analysis.json |   152 +
+ .../20260902T092131+0700/report/load-analysis.md   |    47 +
+ performance/tools/analysis/README.md               |    17 +
+ performance/tools/analysis/analyze-k6.mjs          |   270 +
+ reviews/HUMAN-REVIEW-PACKET.md                     |     2 +-
+ runbooks/load.md                                   |    12 +-
+ 29 files changed, 44206 insertions(+), 3 deletions(-)
+
+commit ec7d56c5d3ba983d6ab40fb0831cf4f64e9db06f
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T09:23:33+07:00
+
+    test: record official Load preflight gate
+
+ MANUAL-TODO.md                                     |  8 +++-
+ ai-audit/audit.md                                  | 13 ++++++
+ .../interactions/022-maximum-safe-automation.md    | 24 +++++++++++
+ docs/official-load-preflight.md                    | 46 ++++++++++++++++++++++
+ reviews/HUMAN-REVIEW-PACKET.md                     |  3 +-
+ runbooks/load.md                                   |  9 +++++
+ 6 files changed, 101 insertions(+), 2 deletions(-)
+
+commit e28da7b813d69c1eadfd799d309fb396170a71e0
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T09:17:13+07:00
+
+    docs: authorize maximum safe HW05 automation
+
+ MANUAL-TODO.md                                     | 18 ++++----
+ ai-audit/audit.md                                  | 19 ++++++++
+ .../interactions/022-maximum-safe-automation.md    | 51 ++++++++++++++++++++++
+ docs/account-lockout-procedure.md                  | 17 ++++----
+ docs/human-decisions.md                            | 18 ++++++++
+ reviews/HUMAN-REVIEW-PACKET.md                     | 21 +++++++++
+ 6 files changed, 127 insertions(+), 17 deletions(-)
+
+commit 70c5429fe82e56e3f48f1c1682f04396e4bc39e1
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T09:10:54+07:00
+
+    docs: resolve official wrapper validation status
+
+ MANUAL-TODO.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit b235996e9d8158cc4e4955f90a98113225a60755
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T09:09:51+07:00
+
+    docs: prepare official Load execution checkpoint
+
+ MANUAL-TODO.md                                     |  22 ++--
+ ai-audit/audit.md                                  |  37 ++++++
+ .../021-wrapper-correction-load-preparation.md     |  52 ++++++++
+ docs/account-lockout-procedure.md                  |  11 +-
+ docs/git-recovery-plan.md                          |  12 ++
+ docs/human-decisions.md                            |  18 +++
+ docs/official-filename-checklist.md                |  19 ++-
+ docs/official-preconditioning.md                   |  10 ++
+ runbooks/load.md                                   | 144 ++++++++++++++++++---
+ runbooks/official-evidence-capture.md              |  17 ++-
+ 10 files changed, 311 insertions(+), 31 deletions(-)
+
+commit 90fb1ae591a01c82b107438ec1dc5259b9380c0c
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-01T23:37:46+07:00
+
+    test: add human-named official k6 wrappers
+
+ .../scenarios/official/23127027_Load_20260901.js   | 22 ++++++++++++++++++++++
+ .../scenarios/official/23127027_Spike_20260901.js  | 22 ++++++++++++++++++++++
+ .../scenarios/official/23127027_Stress_20260901.js | 22 ++++++++++++++++++++++
+ 3 files changed, 66 insertions(+)
+
+commit 8d7f170efcc07a048303c21cf895e92d3a3c5077
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-01T23:32:53+07:00
+
+    docs: record blocked official wrapper validation
+
+ MANUAL-TODO.md                                     | 20 ++++----
+ ai-audit/audit.md                                  | 34 +++++++++++++
+ .../020-human-official-filenames-validation.md     | 55 ++++++++++++++++++++++
+ docs/human-decisions.md                            | 19 ++++++++
+ docs/official-filename-checklist.md                | 45 +++++++++++++++---
+ 5 files changed, 158 insertions(+), 15 deletions(-)
+
+commit 79f84c866e26fbb3c996ebd1cf5acf3666298cf5
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-01T23:14:33+07:00
+
+    docs: record Phase I preparation commit
+
+ ai-audit/audit.md                                            |  7 +++++--
+ ai-audit/interactions/019-successful-pilot-review-phase-i.md |  4 ++++
+ docs/CODEX-RESUME-CHECKPOINT.md                              |  3 ++-
+ docs/git-recovery-plan.md                                    | 11 +++++++++++
+ 4 files changed, 22 insertions(+), 3 deletions(-)
+
+commit b914c3c77421fa672fa0d95bc6489dda8070e9e4
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-01T23:13:44+07:00
+
+    test: prepare reviewed official performance plans
+
+ MANUAL-TODO.md                                     |  32 ++-
+ ai-audit/audit.md                                  |  49 +++++
+ .../019-successful-pilot-review-phase-i.md         |  77 +++++++
+ docs/CODEX-RESUME-CHECKPOINT.md                    |  28 +--
+ docs/account-lockout-procedure.md                  |  39 ++++
+ docs/human-decisions.md                            |  23 ++-
+ docs/k6-architecture.md                            |  69 ++++---
+ docs/k6-pilot-results.md                           |   6 +-
+ docs/k6-toolchain.md                               |  25 ++-
+ docs/official-filename-checklist.md                |  23 +++
+ docs/official-preconditioning.md                   |  61 ++++++
+ docs/report-output-mapping.md                      |  16 +-
+ evidence/hardware/SCREENSHOT-TODO.md               |  15 ++
+ evidence/hardware/specs.md                         |  25 +++
+ performance/config/runtime.js                      |   2 +-
+ performance/config/workloads.js                    |   4 +-
+ performance/data/README.md                         |   8 +-
+ performance/lib/auth.js                            |   2 +-
+ performance/lib/checks.js                          |   2 +-
+ performance/lib/csv.js                             |   2 +-
+ performance/lib/data.js                            |   2 +-
+ performance/lib/metrics.js                         |   2 +-
+ performance/lib/workflow.js                        |   2 +-
+ performance/results/load/README.md                 |   5 +
+ performance/results/spike/README.md                |   5 +
+ performance/results/stress/README.md               |   5 +
+ performance/scenarios/load.js                      |   2 +-
+ performance/scenarios/pilot.js                     |   2 +-
+ performance/scenarios/spike.js                     |   2 +-
+ performance/scenarios/stress.js                    |   2 +-
+ performance/tools/README.md                        |  30 +--
+ performance/tools/provision-accounts.mjs           |   7 +-
+ performance/tools/run-official.sh                  | 230 +++++++++++++++++++++
+ reviews/test-plan-review.md                        |  64 ++++++
+ runbooks/k6-pilot.md                               |   4 +-
+ runbooks/load.md                                   |  38 ++++
+ runbooks/official-evidence-capture.md              |  32 +++
+ runbooks/spike.md                                  |  43 ++++
+ runbooks/stress.md                                 |  45 ++++
+ 39 files changed, 914 insertions(+), 116 deletions(-)
+
+commit eb7fe6906a68fc6d9f3e7fc2184d34652a62dd74
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-01T22:52:49+07:00
+
+    docs: record fresh corrected Pilot commit
+
+ ai-audit/audit.md                                                 | 5 +++++
+ .../018-invocation-boundary-review-fresh-corrected-pilot.md       | 5 +++++
+ docs/CODEX-RESUME-CHECKPOINT.md                                   | 1 +
+ docs/git-recovery-plan.md                                         | 8 ++++++++
+ docs/k6-pilot-results.md                                          | 4 ++++
+ 5 files changed, 23 insertions(+)
+
+commit e23caf4770e0d94ff228bdbc1c12adc0f3c86603
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-01T22:52:07+07:00
+
+    test: record successful corrected 2-VU pilot
+
+ MANUAL-TODO.md                                     |    6 +-
+ ai-audit/audit.md                                  |   32 +
+ ...cation-boundary-review-fresh-corrected-pilot.md |   15 +
+ docs/CODEX-RESUME-CHECKPOINT.md                    |    8 +-
+ docs/git-recovery-plan.md                          |   10 +
+ docs/human-decisions.md                            |   10 +
+ docs/k6-pilot-results.md                           |   34 +
+ .../results/pilot/20260901T223944+0700/README.md   |   20 +
+ .../pilot/20260901T223944+0700/evidence/SHA256SUMS |   13 +
+ .../20260901T223944+0700/evidence/k6-command.txt   |    3 +
+ .../20260901T223944+0700/evidence/postflight.md    |   23 +
+ .../20260901T223944+0700/evidence/preflight.md     |   46 +
+ .../evidence/provisioning-command.txt              |   11 +
+ .../evidence/provisioning-evidence.redacted.json   |   15 +
+ .../evidence/runner-metadata.txt                   |   22 +
+ .../evidence/runtime-validation.md                 |   78 +
+ .../pilot/20260901T223944+0700/logs/backend.log    |    3 +
+ .../pilot/20260901T223944+0700/logs/k6.stderr.log  |    0
+ .../pilot/20260901T223944+0700/logs/k6.stdout.log  | 1081 +++
+ .../pilot/20260901T223944+0700/raw/pilot-raw.json  | 9987 ++++++++++++++++++++
+ .../20260901T223944+0700/raw/pilot-summary.json    |  475 +
+ runbooks/k6-pilot.md                               |    8 +-
+ 22 files changed, 11893 insertions(+), 7 deletions(-)
+
+commit 34bb80e6dd2e1fcf940bae7a440fd14854565b54
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-01T22:39:34+07:00
+
+    docs: approve original-worktree Pilot provisioning
+
+ MANUAL-TODO.md                                     | 10 +--
+ ai-audit/audit.md                                  | 19 +++++
+ ...cation-boundary-review-fresh-corrected-pilot.md | 81 ++++++++++++++++++++++
+ docs/CODEX-RESUME-CHECKPOINT.md                    |  3 +-
+ docs/human-decisions.md                            | 18 +++++
+ docs/k6-pilot-results.md                           | 11 +++
+ runbooks/k6-pilot.md                               |  8 ++-
+ 7 files changed, 142 insertions(+), 8 deletions(-)
+
+commit 698c0a317ab44a9e66a28c62389142f5e21bc61e
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-01T22:24:08+07:00
+
+    docs: record corrected Pilot preflight commit
+
+ ai-audit/audit.md                                                | 5 +++++
+ ai-audit/interactions/017-failed-pilot-review-corrected-pilot.md | 4 ++++
+ docs/CODEX-RESUME-CHECKPOINT.md                                  | 1 +
+ docs/git-recovery-plan.md                                        | 8 ++++++++
+ docs/k6-pilot-results.md                                         | 5 +++++
+ 5 files changed, 23 insertions(+)
+
+commit aebd717dab0932dcccc31e057c4e74c77ac29998
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-01T22:22:50+07:00
+
+    test: record corrected Pilot preflight failure
+
+ MANUAL-TODO.md                                     |  8 ++--
+ ai-audit/audit.md                                  | 32 ++++++++++++++
+ .../017-failed-pilot-review-corrected-pilot.md     | 20 +++++++++
+ docs/CODEX-RESUME-CHECKPOINT.md                    | 33 +++++++-------
+ docs/git-recovery-plan.md                          | 10 +++++
+ docs/human-decisions.md                            |  9 ++++
+ docs/k6-pilot-results.md                           | 50 +++++++++++++++++++---
+ .../results/pilot/20260901T212619+0700/README.md   |  6 ++-
+ .../evidence/artifact-inventory.md                 | 19 ++++----
+ .../results/pilot/20260901T221331+0700/README.md   | 18 ++++++++
+ .../pilot/20260901T221331+0700/evidence/SHA256SUMS |  5 +++
+ .../20260901T221331+0700/evidence/postflight.md    | 17 ++++++++
+ .../20260901T221331+0700/evidence/preflight.md     | 26 +++++++++++
+ .../evidence/provisioning-failure.redacted.txt     | 24 +++++++++++
+ .../pilot/20260901T221331+0700/logs/backend.log    |  3 ++
+ runbooks/k6-pilot.md                               | 14 +++++-
+ 16 files changed, 259 insertions(+), 35 deletions(-)
+
+commit c75b514dd75b7378d55117acbd1f9d095d759275
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-01T22:12:44+07:00
+
+    fix: harden corrected 2-VU pilot harness
+
+ MANUAL-TODO.md                                     |   7 +-
+ ai-audit/audit.md                                  |  31 ++
+ .../017-failed-pilot-review-corrected-pilot.md     | 379 +++++++++++++++++++++
+ docs/human-decisions.md                            |  20 ++
+ docs/k6-pilot-results.md                           |  35 +-
+ performance/lib/metrics.js                         |   2 +-
+ performance/lib/workflow.js                        |  23 +-
+ .../results/pilot/20260901T212619+0700/README.md   |   8 +-
+ .../evidence/artifact-inventory.md                 |  33 +-
+ performance/tools/run-pilot.sh                     | 145 ++++++++
+ runbooks/k6-pilot.md                               |  22 +-
+ 11 files changed, 670 insertions(+), 35 deletions(-)
+
+commit a1eb2c252cf05b3f99fb6a67c063e4fa5a7e04e0
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-01T21:56:17+07:00
+
+    docs: record Pilot commit and review gate
+
+ ai-audit/audit.md                                          |  5 ++++-
+ .../interactions/016-phase-g-review-2vu-pilot-execution.md |  4 ++++
+ docs/CODEX-RESUME-CHECKPOINT.md                            |  7 +++++--
+ docs/git-recovery-plan.md                                  | 14 +++++++++++++-
+ 4 files changed, 26 insertions(+), 4 deletions(-)
+
+commit 11c0a7f9df0ff832a4d8e5abb5c0e5dd0106a4d0
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-01T21:54:09+07:00
+
+    test: record failed 2-VU pilot evidence
+
+ MANUAL-TODO.md                                     |  13 +-
+ ai-audit/audit.md                                  |  82 ++
+ .../016-phase-g-review-2vu-pilot-execution.md      | 431 ++++++++++
+ docs/CODEX-RESUME-CHECKPOINT.md                    |  44 +-
+ docs/human-decisions.md                            |  29 +
+ docs/k6-architecture.md                            |  15 +-
+ docs/k6-pilot-results.md                           | 242 ++++++
+ docs/k6-toolchain.md                               |  13 +-
+ .../results/pilot/20260901T212619+0700/README.md   |  12 +
+ .../pilot/20260901T212619+0700/evidence/SHA256SUMS |   8 +
+ .../evidence/artifact-inventory.md                 |  24 +
+ .../evidence/attempt-01-preflight-failure.md       |  19 +
+ .../evidence/group-name-diagnostic.txt             |  12 +
+ .../20260901T212619+0700/evidence/k6-command.txt   |   4 +
+ .../evidence/k6-error-excerpt.txt                  |  11 +
+ .../20260901T212619+0700/evidence/postflight.md    |  20 +
+ .../20260901T212619+0700/evidence/preflight.md     |  38 +
+ .../evidence/provisioning-evidence.redacted.json   |  15 +
+ .../pilot/20260901T212619+0700/logs/backend.log    |   5 +
+ .../pilot/20260901T212619+0700/logs/k6.stdout.log  | 920 +++++++++++++++++++++
+ .../20260901T212619+0700/raw/pilot-dashboard.html  |  23 +
+ .../20260901T212619+0700/raw/pilot-summary.json    |  54 ++
+ runbooks/k6-pilot.md                               |   7 +-
+ 23 files changed, 2010 insertions(+), 31 deletions(-)
+
+commit 41c6fecf826148e73a4ce3c651791d90650e595c
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-01T17:32:30+07:00
+
+    docs: record Phase G toolchain validation
+
+ MANUAL-TODO.md                                     |  10 +-
+ ai-audit/audit.md                                  |  95 +++
+ .../015-phase-f-review-phase-g-toolchain.md        | 665 +++++++++++++++++++++
+ docs/CODEX-RESUME-CHECKPOINT.md                    |  58 +-
+ docs/git-recovery-plan.md                          |  16 +-
+ docs/human-decisions.md                            |  14 +
+ 6 files changed, 828 insertions(+), 30 deletions(-)
+
+commit d9291f7c7e04bd4777476e203cad346803613958
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-01T17:31:37+07:00
+
+    test: pin k6 and prepare 2-VU pilot
+
+ docs/k6-architecture.md                  |  49 ++++--
+ docs/k6-toolchain.md                     | 132 +++++++++++++++
+ docs/report-output-mapping.md            |  47 +++---
+ performance/config/output.js             |   2 +-
+ performance/config/runtime.js            |   3 +-
+ performance/config/workloads.js          |  21 ++-
+ performance/lib/auth.js                  |   2 +-
+ performance/lib/checks.js                |   2 +-
+ performance/lib/csv.js                   |   2 +-
+ performance/lib/data.js                  |   2 +-
+ performance/lib/metrics.js               |   2 +-
+ performance/lib/workflow.js              |   9 +-
+ performance/scenarios/load.js            |   2 +-
+ performance/scenarios/pilot.js           |  22 +++
+ performance/scenarios/spike.js           |   2 +-
+ performance/scenarios/stress.js          |   2 +-
+ performance/tools/README.md              |   9 +-
+ performance/tools/provision-accounts.mjs | 280 +++++++++++++++++++++++++++++++
+ runbooks/k6-pilot.md                     | 170 +++++++++++++++++++
+ 19 files changed, 709 insertions(+), 51 deletions(-)
+
+commit 7ac12298c30602f88553119021d776597bf02509
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-01T17:13:35+07:00
+
+    docs: add AI audit and human review records
+
+ MANUAL-TODO.md                                     |  60 ++
+ ai-audit/README.md                                 |  35 +
+ ai-audit/audit.md                                  | 979 +++++++++++++++++++++
+ .../002-phase-1-repository-sut-discovery.md        | 183 ++++
+ .../003-phase-2-safe-startup-strategy.md           | 137 +++
+ .../004-phase-2b-runtime-startup-verification.md   | 189 ++++
+ .../005-phase-3-runtime-api-workflow-discovery.md  | 397 +++++++++
+ .../006-selected-workflow-functional-smoke.md      | 175 ++++
+ .../007-phase-a-selected-workflow-specification.md | 418 +++++++++
+ .../008-phase-b-workload-model-proposal.md         | 413 +++++++++
+ .../009-session-end-resume-checkpoint.md           | 117 +++
+ .../010-resume-context-recovery-discrepancy.md     | 363 ++++++++
+ ...ase-b-corrections-phase-c-test-data-strategy.md | 258 ++++++
+ ...-phase-c-review-phase-d-correlation-strategy.md | 459 ++++++++++
+ ...hase-d-review-phase-e-checks-metrics-reports.md | 546 ++++++++++++
+ .../014-phase-e-review-phase-f-static-k6.md        | 578 ++++++++++++
+ docs/CODEX-RESUME-CHECKPOINT.md                    | 297 +++++++
+ docs/git-recovery-plan.md                          |  51 ++
+ docs/human-decisions.md                            | 292 ++++++
+ 19 files changed, 5947 insertions(+)
+
+commit 16749051e43270c6f2c1b7fc7fca20b892228b15
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-01T17:04:42+07:00
+
+    test: add shared draft k6 WF-03 implementation
+
+ docs/k6-architecture.md         | 313 ++++++++++++++++++++++++++++++++++++++
+ performance/config/output.js    |  20 +++
+ performance/config/runtime.js   |  33 ++++
+ performance/config/workloads.js |  98 ++++++++++++
+ performance/lib/auth.js         |  20 +++
+ performance/lib/checks.js       | 234 +++++++++++++++++++++++++++++
+ performance/lib/csv.js          |  96 ++++++++++++
+ performance/lib/data.js         | 148 ++++++++++++++++++
+ performance/lib/metrics.js      |  79 ++++++++++
+ performance/lib/workflow.js     | 325 ++++++++++++++++++++++++++++++++++++++++
+ performance/scenarios/load.js   |  22 +++
+ performance/scenarios/spike.js  |  22 +++
+ performance/scenarios/stress.js |  22 +++
+ performance/tools/README.md     |  33 ++++
+ 14 files changed, 1465 insertions(+)
+
+commit 3f1e8692f4f843d40aaa675a1371e4b1e7e8ac1e
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-01T17:03:45+07:00
+
+    docs: specify WF-03 correlation checks and reporting
+
+ docs/checks-metrics-safety.md | 260 ++++++++++++++++++++++++++++
+ docs/correlation-strategy.md  | 392 ++++++++++++++++++++++++++++++++++++++++++
+ docs/report-output-mapping.md | 155 +++++++++++++++++
+ docs/ta-clarifications.md     |  33 ++++
+ 4 files changed, 840 insertions(+)
+
+commit e0d2df55936edad00ea53c1c22de096ddabd02bc
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-01T17:02:51+07:00
+
+    docs: define WF-03 workload and test data strategy
+
+ .gitignore                                |   8 +
+ docs/selected-workflow-specification.md   | 513 ++++++++++++++++++++++++++++++
+ docs/selected-workflow.md                 | 137 ++++++++
+ docs/test-data-strategy.md                | 398 +++++++++++++++++++++++
+ docs/workload-model-proposal.md           | 438 +++++++++++++++++++++++++
+ performance/data/README.md                |  53 +++
+ performance/data/credentials.template.csv |   2 +
+ performance/data/workflow.csv             |  21 ++
+ 8 files changed, 1570 insertions(+)
+
+commit e488cf47cf1c183ff3a86b70de3923c921ab4e3a
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-01T17:02:17+07:00
+
+    docs: record assignment and SUT discovery evidence
+
+ docs/assignment-requirements.md      | 129 ++++++++
+ docs/runtime-api-verification.md     | 549 +++++++++++++++++++++++++++++++++++
+ docs/runtime-startup-verification.md | 364 +++++++++++++++++++++++
+ docs/sut-discovery.md                | 461 +++++++++++++++++++++++++++++
+ docs/workflow-candidates.md          | 547 ++++++++++++++++++++++++++++++++++
+ runbooks/sut-startup-macos.md        | 383 ++++++++++++++++++++++++
+ 6 files changed, 2433 insertions(+)
+
+commit 85af3ba875c88283615e22cb108f13e2fccaf0e9
+Author: ttbhanh-hcmus <ttbhanh@hcmus.edu.vn>
+Date:   2026-05-15T08:30:35+07:00
+
+    first upload
+
+ README.md                                 |  290 +-
+ api_specification.md                      |  214 +
+ backend/database.js                       |  119 +
+ backend/database.sqlite                   |  Bin 0 -> 36864 bytes
+ backend/package-lock.json                 | 1663 ++++++
+ backend/package.json                      |   20 +
+ backend/server.js                         |  572 ++
+ backend/test_profile.js                   |    8 +
+ frontend-admin/.gitignore                 |   24 +
+ frontend-admin/README.md                  |   16 +
+ frontend-admin/eslint.config.js           |   21 +
+ frontend-admin/index.html                 |   13 +
+ frontend-admin/package-lock.json          | 3681 ++++++++++++
+ frontend-admin/package.json               |   32 +
+ frontend-admin/postcss.config.js          |    6 +
+ frontend-admin/public/favicon.svg         |    1 +
+ frontend-admin/public/icons.svg           |   24 +
+ frontend-admin/src/App.css                |  184 +
+ frontend-admin/src/App.jsx                |  922 +++
+ frontend-admin/src/assets/hero.png        |  Bin 0 -> 13057 bytes
+ frontend-admin/src/assets/react.svg       |    1 +
+ frontend-admin/src/assets/vite.svg        |    1 +
+ frontend-admin/src/index.css              |    8 +
+ frontend-admin/src/main.jsx               |   10 +
+ frontend-admin/tailwind.config.js         |   11 +
+ frontend-admin/vite.config.js             |   11 +
+ frontend-mobile/.gitignore                |   41 +
+ frontend-mobile/App.js                    | 1300 +++++
+ frontend-mobile/app.json                  |   29 +
+ frontend-mobile/assets/adaptive-icon.png  |  Bin 0 -> 17547 bytes
+ frontend-mobile/assets/favicon.png        |  Bin 0 -> 1466 bytes
+ frontend-mobile/assets/icon.png           |  Bin 0 -> 22380 bytes
+ frontend-mobile/assets/splash-icon.png    |  Bin 0 -> 17547 bytes
+ frontend-mobile/index.js                  |    8 +
+ frontend-mobile/package-lock.json         | 8773 +++++++++++++++++++++++++++++
+ frontend-mobile/package.json              |   18 +
+ frontend-web/.gitignore                   |   24 +
+ frontend-web/README.md                    |   16 +
+ frontend-web/eslint.config.js             |   21 +
+ frontend-web/index.html                   |   13 +
+ frontend-web/package-lock.json            | 3681 ++++++++++++
+ frontend-web/package.json                 |   32 +
+ frontend-web/postcss.config.js            |    6 +
+ frontend-web/public/favicon.svg           |    1 +
+ frontend-web/public/icons.svg             |   24 +
+ frontend-web/src/App.css                  |  184 +
+ frontend-web/src/App.jsx                  |   71 +
+ frontend-web/src/assets/hero.png          |  Bin 0 -> 13057 bytes
+ frontend-web/src/assets/react.svg         |    1 +
+ frontend-web/src/assets/vite.svg          |    1 +
+ frontend-web/src/context/AuthContext.jsx  |   50 +
+ frontend-web/src/context/CartContext.jsx  |   36 +
+ frontend-web/src/index.css                |   14 +
+ frontend-web/src/main.jsx                 |   10 +
+ frontend-web/src/pages/Cart.jsx           |   79 +
+ frontend-web/src/pages/Checkout.jsx       |  151 +
+ frontend-web/src/pages/ForgotPassword.jsx |  100 +
+ frontend-web/src/pages/Home.jsx           |  116 +
+ frontend-web/src/pages/Login.jsx          |   69 +
+ frontend-web/src/pages/ProductDetail.jsx  |   73 +
+ frontend-web/src/pages/Profile.jsx        |  217 +
+ frontend-web/src/pages/Register.jsx       |   83 +
+ frontend-web/tailwind.config.js           |   11 +
+ frontend-web/vite.config.js               |    7 +
+ run_servers.sh                            |    5 +
+ setup_guide.md                            |  117 +
+ 66 files changed, 23232 insertions(+), 2 deletions(-)
+
+commit 2f9bf2bab45855abf211377a5d5eba10031649e3
+Author: Hanh Tran <ttbhanh@fit.hcmus.edu.vn>
+Date:   2026-05-15T08:27:44+07:00
+
+    Initial commit
+
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)

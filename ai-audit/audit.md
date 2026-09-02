@@ -1613,3 +1613,13 @@ hypotheses. It explicitly avoids capacity, universal-threshold, continuous-
 resource, or confirmed-bottleneck claims. Human verdicts remain pending and
 must be recorded separately. Detailed record:
 [`interactions/034-original-ai-analysis.md`](interactions/034-original-ai-analysis.md).
+
+## Interaction 035 — AI analysis and optimization review packet
+
+Codex created factual/raw evidence columns and candidate interpretation
+concerns for the immutable AI analysis, leaving every final verdict/explanation
+cell human-owned. It also mapped seven optimization suggestions to actual
+metrics and source, including explicitly inapplicable/insufficient-evidence
+possibilities. No SUT change or synthetic post-optimization result was made.
+Detailed record:
+[`interactions/035-ai-optimization-review-packet.md`](interactions/035-ai-optimization-review-packet.md).

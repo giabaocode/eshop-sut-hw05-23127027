@@ -13,9 +13,9 @@ CLARIFICATION`, `RESOLVED BY HUMAN DECISION`, `DONE BY HUMAN`, `NOT APPLICABLE`.
 | H-003 | Decide whether the performance demo and Agent Skill demo may be one combined video. | TODO | Explicit decision or instructor clarification |
 | H-004 | Select the final E2E workflow from source-backed candidates. | DONE BY HUMAN | WF-03 explicitly selected in chat on 2026-09-01 |
 | H-005 | Check workflow candidates with group members and confirm the chosen workflow is not duplicated. | DONE BY HUMAN | Four-person-group coordination and WF-03 uniqueness explicitly confirmed in chat on 2026-09-01 |
-| H-006 | Review AI-generated performance-test design. | TODO | Review matrix decision |
-| H-007 | Review/correct load parameters, ramp-up, durations, VUs, and think time. | TODO | Explicit corrections/approval |
-| H-008 | Review/correct checks and business assertions. | TODO | Explicit corrections/approval |
+| H-006 | Review AI-generated performance-test design. | DONE BY HUMAN | Human reviewed Phases B–F through explicit correction/approval prompts; HD-005 through HD-009 |
+| H-007 | Review/correct load parameters, ramp-up, durations, VUs, and think time. | DONE BY HUMAN | Human approved the final workloads and corrected pending→cancel think time to 0.5–1.0 s; HD-005 |
+| H-008 | Review/correct checks and business assertions. | DONE BY HUMAN | Human explicitly approved the exact Phase E checks and retained same-order canceled-state success semantics; HD-008 |
 | H-009 | Review account-lockout handling and any reset procedure. | DONE BY HUMAN | Master automation instruction on 2026-09-02 explicitly approved valid credentials only, no intentional lockout, preservation of genuine behavior, no credential substitution, and fresh disposable reset/reprovisioning between official runs; HD-016 |
 | H-010 | Approve exact Load/Stress/Spike plan filenames after PDF validation. | DONE BY HUMAN | Human created the three exact `23127027_{Load|Stress|Spike}_20260901.js` basenames; filename validation passed on 2026-09-01. The later human-approved path-depth correction passed pinned-k6 and semantic revalidation and is committed as `90fb1ae`; HD-014 and HD-015 |
 | H-011 | Approve each real Load, Stress, Spike, and endurance execution before it runs. | DONE BY HUMAN | Master maximum-safe-automation instruction on 2026-09-02 explicitly authorizes technical execution of all four runs, subject to the real screenshot-readiness gates; HD-016 |
@@ -126,3 +126,10 @@ failed HTTP requests, p95 4.377 ms, and 5 VUs sustained for 12 minutes. The
 midpoint PID/resource screenshot exists and postflight integrity passed. H-012
 has visual evidence for Load, Stress, Spike, and endurance; final packet review
 remains human-owned.
+
+Reproducible cross-scenario analysis now covers 2,716/2,716 successful
+workflows and 19,012 requests with zero failures. The original AI analysis is
+immutably preserved at commit `5e4b00f`; factual review and source-backed
+optimization tables are ready. Automation is paused at the unavoidable
+combined H-014/H-015/H-016 gate for the student's final interpretation and
+optimization verdicts.

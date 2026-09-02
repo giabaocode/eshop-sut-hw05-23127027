@@ -31,9 +31,11 @@ original database SHA-256 remained
 Text hardware evidence is in [`../evidence/hardware/specs.md`](../evidence/hardware/specs.md).
 The student confirmed that `Phams-MacBook-Pro.local` is the same
 MacBook/hostname used for previous homework deployment. The first screenshot
-candidate was genuine but exposed a device serial and is intentionally not
-included; a safely framed/redacted replacement remains **[HUMAN EVIDENCE
-REQUIRED]**.
+candidate was genuine but exposed a device serial and was replaced before
+commit. The genuine safe replacement
+[`../evidence/hardware/hardware-specs-hostname.jpg`](../evidence/hardware/hardware-specs-hostname.jpg)
+shows the hostname, MacBook Pro 14-inch, Apple M5, and 16 GB without a visible
+serial number or hardware UUID.
 
 ## 3. Selected workflow: WF-03
 
@@ -153,7 +155,8 @@ Genuine combined k6/Activity Monitor images exist for Load, Stress, Spike, and
 endurance under each timestamped `evidence/screenshots/` directory. They prove
 point-in-time process observations only; no continuous CPU/memory telemetry was
 collected. Hardware text evidence is genuine. A replacement screenshot without
-the visible device serial remains **[HUMAN EVIDENCE REQUIRED]**.
+the visible device serial is preserved at
+[`../evidence/hardware/hardware-specs-hostname.jpg`](../evidence/hardware/hardware-specs-hostname.jpg).
 
 ## 11. Endurance result
 
@@ -252,7 +255,6 @@ execution evidence, corrections, commits, and unresolved human-only items.
 
 ## Remaining attributable fields
 
-- Replacement hardware screenshot without visible serial: **[HUMAN REQUIRED]**
-- Combined/separate video decision and real YouTube URL: **[HUMAN REQUIRED]**
+- Real unlisted YouTube URL for the approved combined video: **[HUMAN REQUIRED]**
 - Self-assessed grade: **[HUMAN REQUIRED]**
 - Final package/Moodle approval and upload: **[HUMAN REQUIRED]**

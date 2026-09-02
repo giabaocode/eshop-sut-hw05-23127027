@@ -20,7 +20,7 @@ CLARIFICATION`, `RESOLVED BY HUMAN DECISION`, `DONE BY HUMAN`, `NOT APPLICABLE`.
 | H-010 | Approve exact Load/Stress/Spike plan filenames after PDF validation. | DONE BY HUMAN | Human created the three exact `23127027_{Load|Stress|Spike}_20260901.js` basenames; filename validation passed on 2026-09-01. The later human-approved path-depth correction passed pinned-k6 and semantic revalidation and is committed as `90fb1ae`; HD-014 and HD-015 |
 | H-011 | Approve each real Load, Stress, Spike, and endurance execution before it runs. | DONE BY HUMAN | Master maximum-safe-automation instruction on 2026-09-02 explicitly authorizes technical execution of all four runs, subject to the real screenshot-readiness gates; HD-016 |
 | H-012 | Capture real performance-tool/resource-monitor screenshots for every run. | DONE BY HUMAN | Human-captured and visually validated combined k6/backend-resource evidence exists for genuine Load, Stress, Spike, and endurance runs; each records the exact disposable backend PID |
-| H-013 | Capture real macOS hardware/hostname screenshot evidence. | WAITING FOR HUMAN | First genuine JPEG showed correct hardware/hostname but exposed a device serial; replace/redact manually before commit; HD-018 |
+| H-013 | Capture real macOS hardware/hostname screenshot evidence. | DONE BY HUMAN | Replacement JPEG visually validated: hostname, MacBook Pro/M5/16 GB visible, no serial/UUID; SHA-256 recorded; Interaction 041 |
 | H-014 | Review AI performance analysis against raw results. | DONE BY HUMAN | Human supplied nine explicit evidence-based verdicts and explanations; `reviews/ai-analysis-review.md`; HD-017 |
 | H-015 | Identify/approve actual AI metric misinterpretations and explain them. | DONE BY HUMAN | Claim 3 marked `MISLEADING`; Claim 8 marked `INSUFFICIENT EVIDENCE`, with direct human explanations; HD-017 |
 | H-016 | Classify optimization recommendations with final human verdicts. | DONE BY HUMAN | Human supplied all seven final verdicts/explanations; `reviews/optimization-review.md`; HD-017 |
@@ -155,3 +155,8 @@ PASS, 0 FAIL, 1 NOT APPLICABLE, and 5 manual checks. The first genuine hardware
 JPEG is not acceptable for Git because it exposes a serial number. After a safe
 replacement, only real YouTube URL and grade metadata remain before ZIP; Moodle
 upload always remains human-only.
+
+The human replaced the hardware JPEG. Visual validation confirms the required
+hostname and hardware without visible serial/UUID; H-013 is now complete. Only
+the genuine unlisted YouTube URL and SelfAssessedGrade remain before automated
+final packaging, with Moodle upload still human-only.

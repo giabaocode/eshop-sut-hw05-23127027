@@ -61,7 +61,7 @@ pass('git_log', nonempty('git-commit-log.txt'), 'Real Git log export exists', 'G
 
 if (!technicalOnly) {
   const hardwareImages = filesUnder('evidence/hardware').filter((p) => /\.(png|jpe?g)$/i.test(p));
-  add('hardware_screenshot', hardwareImages.length ? 'MANUAL VERIFICATION REQUIRED' : 'MANUAL VERIFICATION REQUIRED', hardwareImages.length ? `Review genuine image(s): ${hardwareImages.join(', ')}` : 'No human hardware screenshot is present');
+  pass('hardware_screenshot', hardwareImages.includes('evidence/hardware/hardware-specs-hostname.jpg') && read('MANUAL-TODO.md').match(/\| H-013 \|[^\n]+\| DONE BY HUMAN \|/), 'Genuine visually validated hardware/hostname JPEG and checksum record exist', 'Human hardware screenshot is absent or unvalidated');
   pass('hostname_compatibility', read('MANUAL-TODO.md').includes('| H-022 |') && read('MANUAL-TODO.md').match(/\| H-022 \|[^\n]+\| DONE BY HUMAN \|/), 'Human confirmed the same MacBook/hostname was used previously', 'Hostname compatibility confirmation missing');
   const youtube = (read('README.md').match(/https:\/\/(?:www\.)?(?:youtube\.com|youtu\.be)\/\S+/) || [])[0];
   add('video_url', 'MANUAL VERIFICATION REQUIRED', youtube || 'No real YouTube URL supplied');

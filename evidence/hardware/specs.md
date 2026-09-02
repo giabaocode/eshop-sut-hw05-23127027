@@ -25,4 +25,8 @@ from this trackable text file. This table does not replace the PDF-required
 human screenshot. On 2026-09-02 the student confirmed this is the same
 MacBook/hostname used for the previous homework deployment. A first genuine
 screenshot candidate confirmed these values but exposed a serial number and is
-therefore withheld pending a human-created safe replacement.
+therefore withheld. The human replaced it with
+`hardware-specs-hostname.jpg`; visual inspection confirmed the hostname,
+MacBook Pro 14-inch, Apple M5, and 16 GB with no serial/UUID visible. Its
+SHA-256 is
+`957b15382a36fe3a1627996d2bdc374ac9a7bfd0c2a1ea9d4f940ea4dc6f6877`.

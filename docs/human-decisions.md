@@ -506,3 +506,15 @@ the detailed interaction record:
 
 The detailed application and screenshot privacy finding are recorded in
 [`../ai-audit/interactions/040-final-content-approvals-hardware-review.md`](../ai-audit/interactions/040-final-content-approvals-hardware-review.md).
+
+### HD-018 application outcome — safe hardware replacement
+
+At 2026-09-02 21:12:51 +0700, Codex visually validated the human-replaced
+`evidence/hardware/hardware-specs-hostname.jpg`. The genuine 1778×690 JPEG
+shows `Phams-MacBook-Pro.local`, MacBook Pro 14-inch, Apple M5, and 16 GB, with
+no visible serial number or hardware UUID. Its SHA-256 is
+`957b15382a36fe3a1627996d2bdc374ac9a7bfd0c2a1ea9d4f940ea4dc6f6877`.
+No AI image generation or editing was used. H-013 is `DONE BY HUMAN`.
+
+Detailed record:
+[`../ai-audit/interactions/041-hardware-replacement-validation.md`](../ai-audit/interactions/041-hardware-replacement-validation.md).

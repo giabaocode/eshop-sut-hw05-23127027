@@ -25,7 +25,7 @@ a { color:#145ea8; }
 <p>This report documents a source-backed, data-driven, AI-first performance test of the official EShop SUT. AI generated proposals and automation incrementally; the student reviewed workflow, workload, data, correlation, safety, metrics, reporting, and interpretation. The audit preserves both mistakes and later human corrections rather than rewriting history.</p>
 <h2>2. SUT and environment</h2>
 <p>The backend is Node.js/Express with a local SQLite database on <code>http://127.0.0.1:3000</code>. k6 was installed through Homebrew and pinned at v2.2.0. Each measured run used a fresh commit-pinned disposable clone. The protected original database SHA-256 remained <code>c63f00544180ba1fbb1427a9b9dd3f1784842698809972f33ce90482e7420ba6</code>.</p>
-<p>Text hardware evidence is in <a href="../evidence/hardware/specs.md"><code>../evidence/hardware/specs.md</code></a>. The student confirmed that <code>Phams-MacBook-Pro.local</code> is the same MacBook/hostname used for previous homework deployment. The first screenshot candidate was genuine but exposed a device serial and is intentionally not included; a safely framed/redacted replacement remains <strong>[HUMAN EVIDENCE REQUIRED]</strong>.</p>
+<p>Text hardware evidence is in <a href="../evidence/hardware/specs.md"><code>../evidence/hardware/specs.md</code></a>. The student confirmed that <code>Phams-MacBook-Pro.local</code> is the same MacBook/hostname used for previous homework deployment. The first screenshot candidate was genuine but exposed a device serial and was replaced before commit. The genuine safe replacement <a href="../evidence/hardware/hardware-specs-hostname.jpg"><code>../evidence/hardware/hardware-specs-hostname.jpg</code></a> shows the hostname, MacBook Pro 14-inch, Apple M5, and 16 GB without a visible serial number or hardware UUID.</p>
 <h2>3. Selected workflow: WF-03</h2>
 <p>The human-selected and group-unique workflow is “Purchase followed by customer cancellation”:</p>
 <pre><code>Login → think 0.5–1.0s → Search → think 1.0–2.0s → Detail
@@ -76,7 +76,7 @@ a { color:#145ea8; }
 <h2>9. Human review and corrections</h2>
 <p>The final test-plan history is in <a href="../reviews/test-plan-review.md"><code>../reviews/test-plan-review.md</code></a>. Major human corrections included realistic cancellation think time, 20 dedicated accounts, iteration-level handling of isolated auth failures, deferral of arbitrary numeric aborts, k6-safe names, harness-exception test abort, bounded outputs, and exact provisioning/process boundaries.</p>
 <h2>10. Resource and hardware evidence</h2>
-<p>Genuine combined k6/Activity Monitor images exist for Load, Stress, Spike, and endurance under each timestamped <code>evidence/screenshots/</code> directory. They prove point-in-time process observations only; no continuous CPU/memory telemetry was collected. Hardware text evidence is genuine. A replacement screenshot without the visible device serial remains <strong>[HUMAN EVIDENCE REQUIRED]</strong>.</p>
+<p>Genuine combined k6/Activity Monitor images exist for Load, Stress, Spike, and endurance under each timestamped <code>evidence/screenshots/</code> directory. They prove point-in-time process observations only; no continuous CPU/memory telemetry was collected. Hardware text evidence is genuine. A replacement screenshot without the visible device serial is preserved at <a href="../evidence/hardware/hardware-specs-hostname.jpg"><code>../evidence/hardware/hardware-specs-hostname.jpg</code></a>.</p>
 <h2>11. Endurance result</h2>
 <p>Evidence from clean official runs justified a conservative five-VU sustained input. The endurance workload ramped to 5 VUs over 30 seconds, held for 12 minutes, then ramped down over 30 seconds.</p>
 <p>It completed 713/713 workflows, 4,991/4,991 successful HTTP requests, 27,094/27,094 checks, and 713/713 cancellations. Aggregate p95 was 4.377 ms, p99 4.8056 ms, and throughput 6.372423 requests/s. First/second-half mean RPS was 6.6/6.636111 with zero failures. The demonstrated local endurance point is <strong>5 VUs sustained for 12 minutes</strong> for this exact machine/commit/data—not maximum capacity or a longer-duration guarantee.</p>
@@ -109,8 +109,7 @@ a { color:#145ea8; }
 <p>The full mandatory Markdown audit is <a href="../ai-audit/audit.md"><code>../ai-audit/audit.md</code></a>, with detailed records under <code>ai-audit/interactions/</code>. It identifies Codex CLI, real prompts/actions, execution evidence, corrections, commits, and unresolved human-only items.</p>
 <h2>Remaining attributable fields</h2>
 <ul>
-<li>Replacement hardware screenshot without visible serial: <strong>[HUMAN REQUIRED]</strong></li>
-<li>Combined/separate video decision and real YouTube URL: <strong>[HUMAN REQUIRED]</strong></li>
+<li>Real unlisted YouTube URL for the approved combined video: <strong>[HUMAN REQUIRED]</strong></li>
 <li>Self-assessed grade: <strong>[HUMAN REQUIRED]</strong></li>
 <li>Final package/Moodle approval and upload: <strong>[HUMAN REQUIRED]</strong></li>
 </ul></body></html>

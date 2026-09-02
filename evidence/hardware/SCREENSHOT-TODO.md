@@ -1,21 +1,25 @@
-# Hardware Screenshot — HUMAN TODO
+# Hardware Screenshot Evidence
 
-Status: **REPLACEMENT REQUIRED — FIRST GENUINE IMAGE WITHHELD FOR PRIVACY**
+Status: **DONE BY HUMAN — VISUALLY VALIDATED**
 
-The human captured a genuine 2554×1336 JPEG on 2026-09-02. Visual inspection
+The human first captured a genuine 2554×1336 JPEG on 2026-09-02. Visual inspection
 confirmed the hostname, MacBook Pro, Apple M5, 16 GB, and macOS 26.5.2, but the
-image also exposed a device serial number. It remains untracked and must not be
-committed or pushed.
+image also exposed a device serial number. It was withheld and replaced before
+tracking; the unsafe version was never committed or pushed.
 
-The human student must replace it with a real macOS hardware/system screenshot that
-shows the required specification evidence and preserves the hostname exactly:
+The human then replaced it with a genuine safely cropped 1778×690 JPEG at:
 
 ```text
-Phams-MacBook-Pro.local
+evidence/hardware/hardware-specs-hostname.jpg
 ```
 
-Hostname compatibility with previous homework deployment was human-confirmed on
-2026-09-02 (H-022). Before submission, hide the serial/UUID at capture time or
-redact it manually without generating replacement content, overwrite the current
-untracked JPEG, then request visual revalidation. AI must not generate or mark
-the replacement complete before inspection.
+Visual inspection confirms `Phams-MacBook-Pro.local`, MacBook Pro 14-inch,
+Apple M5, and 16 GB. No serial/UUID is visible. SHA-256:
+
+```text
+957b15382a36fe3a1627996d2bdc374ac9a7bfd0c2a1ea9d4f940ea4dc6f6877
+```
+
+Hostname compatibility with previous homework deployment was human-confirmed
+on 2026-09-02 (H-022). The screenshot supplements the complete genuine text
+table in `specs.md`.

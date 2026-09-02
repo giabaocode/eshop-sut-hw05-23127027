@@ -39,7 +39,7 @@ work is never marked complete without the student's explicit confirmation.
 | T1-09 | Preserve human review of AI mistakes or omissions, including possible ramp-up, think time, VUs, assertions, and lockout handling, and explain why AI missed them. | §6 Task 1, pp.4–5 | Review matrix and main report | Partial | Yes | DONE |
 | T1-10 | Execute all three scenarios as completely as possible and preserve real evidence. | §6 Task 1, p.5 | Actual Load/Stress/Spike results | Partial | Yes | DONE |
 | T1-11 | For each run, capture the testing tool and backend resource usage monitor together in a screenshot. | §6 Task 1, p.5 | Three real resource-monitor screenshots | No | Yes | DONE |
-| T1-12 | Supply a hardware report containing a screenshot and a specification table. | §6 Task 1, p.5 | Hardware screenshot and specs | Partial | Yes | TODO |
+| T1-12 | Supply a hardware report containing a screenshot and a specification table. | §6 Task 1, p.5 | Hardware screenshot and specs | Partial | Yes | DONE |
 | T1-13 | Reset a three-failure login lockout between Stress/Spike runs when triggered and document the steps. | §6 Task 1, p.5 | Lockout procedure and run evidence | Partial | Yes | TODO |
 | T1-14 | Produce full raw `.jtl` logs and HTML report folders. | §6 Task 1, p.5; §11, p.7; §14, p.8 | Raw results and three HTML report folders, subject to k6 ambiguity A-01 | Partial | Yes | DONE |
 | T1-15 | Run an approximately 10–15 minute sustained endurance/soak test to empirically determine the local hardware threshold with concrete numbers. | §6 Task 1, p.5 | Endurance run and threshold analysis | Partial | Yes | DONE |
@@ -63,7 +63,7 @@ work is never marked complete without the student's explicit confirmation.
 | CRIT-02 | Address what AI got wrong/biased/incomplete, why it missed the issue, and the collaboration principle learned. | §10, p.7 | Evidence-based critique | Partial | Yes | DONE |
 | AC-01 | Do not fabricate or AI-generate test-plan filenames, raw execution logs, demo video/voice, or hardware evidence. | §11, p.7 | Authentic evidence chain | Partial | Yes | IN PROGRESS |
 | AC-02 | Attach full raw logs, not summaries alone. | §11, p.7 | Raw result artifacts | Yes | Yes | DONE |
-| AC-03 | Hardware evidence hostname must match the student's previous homework deployments. | §11, p.7 | Hostname evidence and human verification | Partial | Yes | TODO |
+| AC-03 | Hardware evidence hostname must match the student's previous homework deployments. | §11, p.7 | Hostname evidence and human verification | Partial | Yes | DONE |
 | GIT-01 | Create a new meaningful Git commit for each procedural step. | §12, p.7 | Git history | Partial | Yes | DONE |
 | GIT-02 | Export the Git commit log in a text file. | §12, p.7 | `git-commit-log.txt` | Yes | Yes | TODO |
 | DEF-01 | Be prepared for a possible 5–7 minute oral defense; 30% of students may be selected. | §13, p.7 | Oral-defense preparation based on actual work | Partial | Yes | TODO |

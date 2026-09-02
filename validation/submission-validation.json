@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-02T14:04:14.242Z",
+  "generated_at": "2026-09-02T14:18:05.788Z",
   "technical_only": false,
   "counts": {
-    "PASS": 29,
+    "PASS": 30,
     "FAIL": 0,
-    "MANUAL VERIFICATION REQUIRED": 5,
+    "MANUAL VERIFICATION REQUIRED": 4,
     "NOT APPLICABLE": 1
   },
   "checks": [
@@ -140,8 +140,8 @@
     },
     {
       "id": "hardware_screenshot",
-      "status": "MANUAL VERIFICATION REQUIRED",
-      "evidence": "Review genuine image(s): evidence/hardware/hardware-specs-hostname.jpg"
+      "status": "PASS",
+      "evidence": "Genuine visually validated hardware/hostname JPEG and checksum record exist"
     },
     {
       "id": "hostname_compatibility",

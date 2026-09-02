@@ -1676,3 +1676,18 @@ generatively editing evidence. Human-approved content was promoted and the
 validator then reported 29 PASS, 0 FAIL, 1 NOT APPLICABLE, and 5 manual checks.
 Detailed record:
 [`interactions/040-final-content-approvals-hardware-review.md`](interactions/040-final-content-approvals-hardware-review.md).
+
+## Interaction 041 — Hardware replacement validation
+
+The student stated that the hardware image had been replaced. Codex inspected
+the new genuine JPEG at `evidence/hardware/hardware-specs-hostname.jpg`: it is
+1778×690 pixels, 100,497 bytes, and has SHA-256
+`957b15382a36fe3a1627996d2bdc374ac9a7bfd0c2a1ea9d4f940ea4dc6f6877`.
+It visibly shows `Phams-MacBook-Pro.local`, MacBook Pro 14-inch, Apple M5, and
+16 GB without exposing a serial number or hardware UUID. No AI image editing
+was performed. H-013 is now `DONE BY HUMAN`; the earlier unsafe candidate and
+its rejection remain preserved in the historical audit. The validator then
+reported 30 PASS, 0 FAIL, 4 manual checks, and 1 NOT APPLICABLE; updated report
+and audit HTML/PDF views were regenerated without changing measurements.
+Detailed record:
+[`interactions/041-hardware-replacement-validation.md`](interactions/041-hardware-replacement-validation.md).

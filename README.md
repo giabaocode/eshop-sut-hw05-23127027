@@ -21,6 +21,7 @@ Spike use one runtime-validated shared implementation and separate workloads.
 | Endpoint groups | Authentication, read-heavy product search/detail, transactional order lifecycle |
 | Genuine SUT issues | 0 confirmed within tested scope; no speculative Issue created |
 | AI Critique | Human-approved 278-word final text |
+| Hardware evidence | Genuine hostname/MacBook Pro M5/16 GB screenshot and text table |
 | Demo video | **[HUMAN REQUIRED — real unlisted YouTube URL]** |
 | SelfAssessedGrade | **[HUMAN REQUIRED — 000..100]** |
 

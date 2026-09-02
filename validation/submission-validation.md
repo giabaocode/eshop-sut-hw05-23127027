@@ -1,12 +1,12 @@
 # HW05 Submission Validation
 
-Generated: 2026-09-02T14:04:14.242Z
+Generated: 2026-09-02T14:18:05.788Z
 
 | Status | Count |
 |---|---:|
-| PASS | 29 |
+| PASS | 30 |
 | FAIL | 0 |
-| MANUAL VERIFICATION REQUIRED | 5 |
+| MANUAL VERIFICATION REQUIRED | 4 |
 | NOT APPLICABLE | 1 |
 
 | Check | Status | Evidence |
@@ -37,7 +37,7 @@ Generated: 2026-09-02T14:04:14.242Z
 | critique_markdown | PASS | 278-word candidate exists |
 | critique_final | PASS | Human-approved 278-word critique and final PDF exist |
 | git_log | PASS | Real Git log export exists |
-| hardware_screenshot | MANUAL VERIFICATION REQUIRED | Review genuine image(s): evidence/hardware/hardware-specs-hostname.jpg |
+| hardware_screenshot | PASS | Genuine visually validated hardware/hostname JPEG and checksum record exist |
 | hostname_compatibility | PASS | Human confirmed the same MacBook/hostname was used previously |
 | video_url | MANUAL VERIFICATION REQUIRED | No real YouTube URL supplied |
 | combined_video_decision | PASS | Human selected one combined performance/Skill video |

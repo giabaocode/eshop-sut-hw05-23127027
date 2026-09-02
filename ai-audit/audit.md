@@ -1541,3 +1541,16 @@ implementation and adds native JSON/CSV output support. Detailed record:
 The initial ephemeral no-HTTP fixture used a wrong email pattern and was
 rejected by the existing guard (k6 inspect exit 107); the audit preserves this
 AI fixture error rather than presenting the first check as successful.
+
+## Interaction 029 — Endurance preflight wrong-listener failure
+
+The fresh endurance attempt produced no k6 traffic. After a sqlite3 native-
+binding timing failure and a disposable backend launch that did not remain
+attached, Codex combined listener inspection and provisioning in one shell
+command without a fail-closed guard. Although the output showed PID `52187`
+belonged to `/Users/phamngocgiabao/eshop-sut/backend`, provisioning continued
+and created 20 WF-03 accounts in that unexpected local SUT. Read-only evidence
+proved the disposable DB still had zero WF-03 accounts and the protected HW05
+DB hash was unchanged. Codex did not kill the unowned PID or clean/reset the
+other DB. Detailed record:
+[`interactions/029-endurance-preflight-wrong-listener.md`](interactions/029-endurance-preflight-wrong-listener.md).

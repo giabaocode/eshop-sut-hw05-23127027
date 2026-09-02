@@ -48,6 +48,7 @@ CLARIFICATION`, `RESOLVED BY HUMAN DECISION`, `DONE BY HUMAN`, `NOT APPLICABLE`.
 | H-038 | Review the failed Pilot evidence and approve/correct the proposed group-name, custom traffic-tag, runtime-exception abort, exit/wall-clock runner, rerun-output, and 21.6 GiB artifact-handling decisions. | DONE BY HUMAN | HD-011: test-harness classification and minimum corrections, exact bulk cleanup, and one fresh corrected Pilot explicitly approved on 2026-09-01 |
 | H-039 | Review the corrected-Pilot preflight failure and approve/reject invoking the unchanged helper from the actual original worktree against a new disposable clone. | DONE BY HUMAN | HD-012 explicitly approved the original-worktree invocation boundary and one new fresh corrected Pilot on 2026-09-01 |
 | H-040 | Review the fresh corrected 2-VU Pilot evidence and decide whether official test-plan finalization may begin. | DONE BY HUMAN | Human explicitly approved the 81/81 corrected Pilot as shared-workflow runtime validation only and authorized Phase I planning on 2026-09-01; HD-013 |
+| H-041 | Resolve the unowned port-3000 process and decide handling of 20 synthetic accounts accidentally provisioned into `/Users/phamngocgiabao/eshop-sut/backend/database.sqlite`. | WAITING FOR HUMAN | Stop/retain PID `52187` through its owning application and explicitly authorize cleanup/reset or direct that the accounts remain; no k6 traffic occurred |
 
 ## Current checkpoint
 
@@ -103,3 +104,9 @@ Endurance is now evidence-informed and prepared at five sustained VUs: 30s
 ramp-up, 12m hold, 30s ramp-down, 13m scheduled and 14m safety cap. This choice
 uses genuine Load/Stress observations without treating the Stress maximum as
 capacity. Fresh runtime preflight and the final endurance visual remain next.
+
+The first endurance preflight is BLOCKED with no k6 traffic: an unowned local
+PID `52187` from `/Users/phamngocgiabao/eshop-sut/backend` held port 3000, and a
+non-fail-closed AI command provisioned 20 synthetic accounts there. The
+disposable DB has none and protected HW05 integrity is unchanged. Human must
+stop/retain the unowned process and choose cleanup/retention of those accounts.

@@ -1527,3 +1527,17 @@ The human-captured screenshot was found in the correct Spike result folder and
 visually verified as genuine 20/20-VU/PID `48405` evidence. Codex generated a
 real PNG conversion. After flush it stopped only PID `48405` and verified port
 and protected-original integrity. No capacity or final threshold was inferred.
+
+## Interaction 028 — Evidence-informed endurance design
+
+After all three genuine official scenarios were preserved, Codex selected a
+conservative five-VU sustained endurance input from actual evidence: official
+Load had zero failures at five VUs and Stress had zero failures through its
+bounded 20-VU input. The planned 30s ramp, 12m hold, and 30s ramp-down totals 13
+minutes with a 14-minute exact-PID cap. This is an evidence-informed test input,
+not a final threshold or capacity claim. The entry calls the same shared WF-03
+implementation and adds native JSON/CSV output support. Detailed record:
+[`interactions/028-endurance-design.md`](interactions/028-endurance-design.md).
+The initial ephemeral no-HTTP fixture used a wrong email pattern and was
+rejected by the existing guard (k6 inspect exit 107); the audit preserves this
+AI fixture error rather than presenting the first check as successful.

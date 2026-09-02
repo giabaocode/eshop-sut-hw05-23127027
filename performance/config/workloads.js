@@ -1,5 +1,6 @@
-// Pilot workload runtime-validated by 2-VU Pilot; official workloads not executed.
-// Static representation of human-approved planning workloads, not measurements.
+// Shared workload definitions. Load/Stress/Spike were executed from earlier
+// commit-pinned snapshots; the endurance input below is evidence-informed but
+// is not a performance threshold or capacity claim.
 
 function scenarioOptions(name, stages) {
   return {
@@ -73,6 +74,15 @@ const spikeStages = [
   { duration: '30s', target: 0 },
 ];
 
+// Conservative endurance input chosen after genuine official Load/Stress:
+// five VUs had zero failures in Load and is far below the tested Stress peak.
+// Twelve steady minutes plus bounded ramps gives a 13-minute total schedule.
+const enduranceStages = [
+  { duration: '30s', target: 5 },
+  { duration: '12m', target: 5 },
+  { duration: '30s', target: 0 },
+];
+
 export const WORKLOADS = Object.freeze({
   pilot: Object.freeze({
     name: 'pilot',
@@ -101,6 +111,13 @@ export const WORKLOADS = Object.freeze({
     plannedDuration: '6m5s',
     wallClockSafetyCap: '7m',
     options: scenarioOptions('spike', spikeStages),
+  }),
+  endurance: Object.freeze({
+    name: 'endurance',
+    requiredActiveAccounts: 5,
+    plannedDuration: '13m',
+    wallClockSafetyCap: '14m',
+    options: scenarioOptions('endurance', enduranceStages),
   }),
 });
 

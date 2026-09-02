@@ -98,3 +98,8 @@ Official Spike subsequently completed with k6 exit 0, 377/377 workflows, zero
 of 2,639 failed requests, and genuine 20/20-VU resource evidence. Native JSON,
 summary, and the distinct real k6 dashboard are present; backend/original
 integrity postflight passed. H-012 now remains open only for endurance.
+
+Endurance is now evidence-informed and prepared at five sustained VUs: 30s
+ramp-up, 12m hold, 30s ramp-down, 13m scheduled and 14m safety cap. This choice
+uses genuine Load/Stress observations without treating the Stress maximum as
+capacity. Fresh runtime preflight and the final endurance visual remain next.

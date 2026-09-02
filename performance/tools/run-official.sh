@@ -5,7 +5,7 @@
 set -u
 
 if [ "$#" -ne 5 ]; then
-  echo "usage: run-official.sh load|stress|spike RUNTIME_ROOT PRIVATE_CREDENTIAL_FILE OFFICIAL_PLAN_FILE OUTPUT_ROOT" >&2
+  echo "usage: run-official.sh load|stress|spike|endurance RUNTIME_ROOT PRIVATE_CREDENTIAL_FILE PLAN_FILE OUTPUT_ROOT" >&2
   exit 64
 fi
 
@@ -30,8 +30,12 @@ case "$scenario" in
     scenario_label=Spike
     hard_cap_seconds=420
     ;;
+  endurance)
+    scenario_label=Endurance
+    hard_cap_seconds=840
+    ;;
   *)
-    echo "official runner safety error: scenario must be load, stress, or spike" >&2
+    echo "runner safety error: scenario must be load, stress, spike, or endurance" >&2
     exit 65
     ;;
 esac
@@ -40,13 +44,20 @@ script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 original_root=$(CDPATH= cd -- "$script_dir/../.." && pwd)
 plan_basename=$(basename -- "$scenario_file")
 
-case "$plan_basename" in
-  "23127027_${scenario_label}_"[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9].js) ;;
-  *)
-    echo "official runner safety error: human-created plan filename is invalid" >&2
+if [ "$scenario" = endurance ]; then
+  if [ "$plan_basename" != endurance.js ]; then
+    echo "runner safety error: endurance must use the reviewed internal endurance.js entry" >&2
     exit 66
-    ;;
-esac
+  fi
+else
+  case "$plan_basename" in
+    "23127027_${scenario_label}_"[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9].js) ;;
+    *)
+      echo "official runner safety error: human-created plan filename is invalid" >&2
+      exit 66
+      ;;
+  esac
+fi
 
 case "$scenario_file" in
   "$runtime_root"/*) ;;
@@ -155,6 +166,16 @@ case "$scenario" in
     K6_WEB_DASHBOARD_EXPORT="$dashboard_html" \
       "$k6_bin" run --no-usage-report --summary-mode=full \
       --summary-export="$summary_json" --out "json=$raw_json" \
+      -e WF03_BASE_URL=http://127.0.0.1:3000 \
+      -e "WF03_CREDENTIALS_FILE=$credential_file" \
+      "$scenario_file" > "$stdout_log" 2> "$stderr_log" &
+    ;;
+  endurance)
+    printf '%s run --no-usage-report --summary-mode=full --summary-export=%s --out json=%s --out csv=%s -e WF03_BASE_URL=http://127.0.0.1:3000 -e WF03_CREDENTIALS_FILE=%s %s > %s 2> %s\n' \
+      "$k6_bin" "$summary_json" "$raw_json" "$timeseries_csv" "$credential_file" "$scenario_file" "$stdout_log" "$stderr_log" > "$command_file"
+    "$k6_bin" run --no-usage-report --summary-mode=full \
+      --summary-export="$summary_json" --out "json=$raw_json" \
+      --out "csv=$timeseries_csv" \
       -e WF03_BASE_URL=http://127.0.0.1:3000 \
       -e "WF03_CREDENTIALS_FILE=$credential_file" \
       "$scenario_file" > "$stdout_log" 2> "$stderr_log" &

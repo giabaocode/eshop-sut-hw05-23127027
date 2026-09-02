@@ -1506,3 +1506,24 @@ public/private contracts, official wrapper, k6, disk, DB boundary/integrity, and
 original hash passed. Actual run ID is `20260902T104549+0700`; result root and
 traffic remain absent. Detailed record:
 [`interactions/026-official-spike-preflight.md`](interactions/026-official-spike-preflight.md).
+
+## Interaction 027 — Official Spike execution
+
+| Field | Actual record |
+|---|---|
+| Human inputs | `READY`; later `continue where you stopped` |
+| Run | Official Spike `20260902T104549+0700` |
+| Detailed record | [`interactions/027-official-spike-execution.md`](interactions/027-official-spike-execution.md) |
+| Result | Exit 0, watchdog no, 377/377 workflows |
+
+The genuine run produced native JSON/summary, stdout/stderr, exact process
+metadata, and the real k6 web-dashboard HTML. Analysis measured 2,639 HTTP
+requests with zero failures, 14,326/14,326 checks, 377/377 orders created and
+canceled, p95 3.9654 ms, p99 4.91164 ms, and 7.226561 requests/s. Reproducible
+phase analysis found zero failures during baseline, rise, 20-VU peak, fall, and
+recovery.
+
+The human-captured screenshot was found in the correct Spike result folder and
+visually verified as genuine 20/20-VU/PID `48405` evidence. Codex generated a
+real PNG conversion. After flush it stopped only PID `48405` and verified port
+and protected-original integrity. No capacity or final threshold was inferred.

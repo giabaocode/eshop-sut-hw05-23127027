@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "helper_status": "RUNTIME_VALIDATED_2_ACCOUNT_PILOT_OFFICIAL_NOT_EXECUTED",
+  "account_count": 20,
+  "account_keys": [
+    "wf03-customer-01",
+    "wf03-customer-02",
+    "wf03-customer-03",
+    "wf03-customer-04",
+    "wf03-customer-05",
+    "wf03-customer-06",
+    "wf03-customer-07",
+    "wf03-customer-08",
+    "wf03-customer-09",
+    "wf03-customer-10",
+    "wf03-customer-11",
+    "wf03-customer-12",
+    "wf03-customer-13",
+    "wf03-customer-14",
+    "wf03-customer-15",
+    "wf03-customer-16",
+    "wf03-customer-17",
+    "wf03-customer-18",
+    "wf03-customer-19",
+    "wf03-customer-20"
+  ],
+  "registration_api": "POST /api/register",
+  "credential_validation": "PASS",
+  "role_and_lock_validation": "PASS",
+  "zero_starting_orders": "PASS",
+  "secrets_in_evidence": false,
+  "completed_at": "2026-09-02T03:45:32.107Z"
+}

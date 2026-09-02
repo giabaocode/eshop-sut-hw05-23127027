@@ -1,0 +1,18 @@
+OFFICIAL SPIKE SETUP COMMAND RECORD — SECRETS OMITTED
+
+Source clone:
+git clone --local --no-hardlinks --no-checkout /Users/phamngocgiabao/eshop-sut-hw05-23127027 /private/tmp/eshop-hw05-spike.21Nvt8/runtime
+git -C /private/tmp/eshop-hw05-spike.21Nvt8/runtime checkout --detach eeb02fb83216dfdb6db2c028295f7f5804ee0722
+
+Backend dependencies/start:
+(cd /private/tmp/eshop-hw05-spike.21Nvt8/runtime/backend && npm ci)
+(cd /private/tmp/eshop-hw05-spike.21Nvt8/runtime/backend && /opt/homebrew/bin/node server.js)
+
+Setup-only provisioning:
+WF03_BASE_URL=http://127.0.0.1:3000 \
+WF03_ACCOUNT_COUNT=20 \
+WF03_DISPOSABLE_ROOT=/private/tmp/eshop-hw05-spike.21Nvt8/runtime \
+WF03_PRIVATE_DIR=/private/tmp/eshop-hw05-spike.21Nvt8/private \
+/opt/homebrew/bin/node /Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/tools/provision-accounts.mjs
+
+Provisioning finished before the measured command in `../k6-command.txt`.

@@ -1,0 +1,475 @@
+{
+    "metrics": {
+        "checks": {
+            "fails": 0,
+            "passes": 14326,
+            "value": 1
+        },
+        "http_req_duration{expected_response:true}": {
+            "min": 0.245,
+            "med": 1.256,
+            "max": 16.712,
+            "p(90)": 3.4740000000000006,
+            "p(95)": 3.9653999999999994,
+            "avg": 1.6939109511178494
+        },
+        "http_req_waiting": {
+            "p(95)": 3.8321999999999985,
+            "avg": 1.6112955665024622,
+            "min": 0.232,
+            "med": 1.167,
+            "max": 16.597,
+            "p(90)": 3.364
+        },
+        "wf03_orders_canceled": {
+            "rate": 1.0323658043915718,
+            "count": 377
+        },
+        "wf03_workflow_attempted": {
+            "count": 377,
+            "rate": 1.0323658043915718
+        },
+        "data_received": {
+            "count": 1163665,
+            "rate": 3186.5462964650355
+        },
+        "iteration_duration": {
+            "min": 3890.33525,
+            "med": 5312.453083,
+            "max": 6708.758792,
+            "p(90)": 6040.632475,
+            "p(95)": 6261.1659414,
+            "avg": 5284.04404523873
+        },
+        "http_req_receiving": {
+            "p(90)": 0.087,
+            "p(95)": 0.099,
+            "avg": 0.05676468359227008,
+            "min": 0.008,
+            "med": 0.052,
+            "max": 1.532
+        },
+        "data_sent": {
+            "count": 543897,
+            "rate": 1489.3916814619702
+        },
+        "http_req_blocked": {
+            "p(90)": 0.011,
+            "p(95)": 0.013,
+            "avg": 0.009945812807881881,
+            "min": 0,
+            "med": 0.006,
+            "max": 1.366
+        },
+        "group_duration": {
+            "p(90)": 3.8496502,
+            "p(95)": 4.374524999999998,
+            "avg": 1.9785410553239862,
+            "min": 0.28925,
+            "med": 1.553916,
+            "max": 17.112792
+        },
+        "iterations": {
+            "count": 377,
+            "rate": 1.0323658043915718
+        },
+        "http_req_sending": {
+            "max": 0.639,
+            "p(90)": 0.041,
+            "p(95)": 0.048,
+            "avg": 0.02585070102311501,
+            "min": 0.003,
+            "med": 0.023
+        },
+        "vus": {
+            "value": 1,
+            "min": 0,
+            "max": 20
+        },
+        "http_reqs": {
+            "count": 2639,
+            "rate": 7.2265606307410035
+        },
+        "wf03_orders_created": {
+            "count": 377,
+            "rate": 1.0323658043915718
+        },
+        "http_req_tls_handshaking": {
+            "avg": 0,
+            "min": 0,
+            "med": 0,
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "wf03_workflow_success": {
+            "passes": 377,
+            "fails": 0,
+            "value": 1
+        },
+        "http_req_connecting": {
+            "avg": 0.0023311860553239866,
+            "min": 0,
+            "med": 0,
+            "max": 0.714,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "wf03_lifecycle_duration": {
+            "p(90)": 967.8000000000001,
+            "p(95)": 986.9999999999999,
+            "avg": 765.8302387267904,
+            "min": 510,
+            "med": 764,
+            "max": 1011
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 2639,
+            "value": 0
+        },
+        "http_req_duration": {
+            "max": 16.712,
+            "p(90)": 3.4740000000000006,
+            "p(95)": 3.9653999999999994,
+            "avg": 1.6939109511178494,
+            "min": 0.245,
+            "med": 1.256
+        },
+        "vus_max": {
+            "min": 20,
+            "max": 20,
+            "value": 20
+        }
+    },
+    "root_group": {
+        "checks": {},
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {
+                "wf03_01_login": {
+                    "groups": {},
+                    "checks": {
+                            "login: status is 200": {
+                                "path": "::wf03_01_login::login: status is 200",
+                                "id": "dce6532db5184480a10285c6d7d69d73",
+                                "passes": 377,
+                                "fails": 0,
+                                "name": "login: status is 200"
+                            },
+                            "login: body is valid JSON object": {
+                                "name": "login: body is valid JSON object",
+                                "path": "::wf03_01_login::login: body is valid JSON object",
+                                "id": "9073837e80855ef05059e51790fe68d6",
+                                "passes": 377,
+                                "fails": 0
+                            },
+                            "login: response indicates success": {
+                                "name": "login: response indicates success",
+                                "path": "::wf03_01_login::login: response indicates success",
+                                "id": "a0e561c1a9b84c80d91b78be7b94ad7b",
+                                "passes": 377,
+                                "fails": 0
+                            },
+                            "login: token is non-empty": {
+                                "passes": 377,
+                                "fails": 0,
+                                "name": "login: token is non-empty",
+                                "path": "::wf03_01_login::login: token is non-empty",
+                                "id": "16231a0d12f04e80af7a4733bda351ea"
+                            },
+                            "login: identity matches dedicated credential": {
+                                "passes": 377,
+                                "fails": 0,
+                                "name": "login: identity matches dedicated credential",
+                                "path": "::wf03_01_login::login: identity matches dedicated credential",
+                                "id": "55f217b74ec347e4059167e56ddfd534"
+                            },
+                            "login: role is user": {
+                                "fails": 0,
+                                "name": "login: role is user",
+                                "path": "::wf03_01_login::login: role is user",
+                                "id": "ca353827189d41b11f120fe3ba3be828",
+                                "passes": 377
+                            },
+                            "login: account is unlocked": {
+                                "name": "login: account is unlocked",
+                                "path": "::wf03_01_login::login: account is unlocked",
+                                "id": "0310b252bd41ef1cdc693d7b4adcb14e",
+                                "passes": 377,
+                                "fails": 0
+                            }
+                        },
+                    "name": "wf03_01_login",
+                    "path": "::wf03_01_login",
+                    "id": "05b57fb4794baeada786758a246d0246"
+                },
+                "wf03_02_search": {
+                    "name": "wf03_02_search",
+                    "path": "::wf03_02_search",
+                    "id": "06c679fe5caa8d64b24880dc77425a23",
+                    "groups": {},
+                    "checks": {
+                            "search: status is 200": {
+                                "passes": 377,
+                                "fails": 0,
+                                "name": "search: status is 200",
+                                "path": "::wf03_02_search::search: status is 200",
+                                "id": "77bb0b43093017d8167ae43861ac988c"
+                            },
+                            "search: body is valid product array": {
+                                "fails": 0,
+                                "name": "search: body is valid product array",
+                                "path": "::wf03_02_search::search: body is valid product array",
+                                "id": "57388904c0023ab1df341ac7a6fd554e",
+                                "passes": 377
+                            },
+                            "search: exactly one expected product matches": {
+                                "name": "search: exactly one expected product matches",
+                                "path": "::wf03_02_search::search: exactly one expected product matches",
+                                "id": "517e187fcb04ead7c120f88eb7c0697a",
+                                "passes": 377,
+                                "fails": 0
+                            },
+                            "search: selected product id is valid": {
+                                "name": "search: selected product id is valid",
+                                "path": "::wf03_02_search::search: selected product id is valid",
+                                "id": "cca85f581fc7f2071892924c3c1a7718",
+                                "passes": 377,
+                                "fails": 0
+                            }
+                        }
+                },
+                "wf03_03_detail": {
+                    "name": "wf03_03_detail",
+                    "path": "::wf03_03_detail",
+                    "id": "fcadc4b9d944a42d0bc373ad71e016ff",
+                    "groups": {},
+                    "checks": {
+                            "detail: status is 200": {
+                                "name": "detail: status is 200",
+                                "path": "::wf03_03_detail::detail: status is 200",
+                                "id": "7efb560956c30241ecbc7765c713b28e",
+                                "passes": 377,
+                                "fails": 0
+                            },
+                            "detail: body is valid product object": {
+                                "path": "::wf03_03_detail::detail: body is valid product object",
+                                "id": "1d6a15eeb7b7b650cb49b3c02e823b43",
+                                "passes": 377,
+                                "fails": 0,
+                                "name": "detail: body is valid product object"
+                            },
+                            "detail: id matches correlated product id": {
+                                "name": "detail: id matches correlated product id",
+                                "path": "::wf03_03_detail::detail: id matches correlated product id",
+                                "id": "3c3f84ea31a7b61e2dda9a91ea577959",
+                                "passes": 377,
+                                "fails": 0
+                            },
+                            "detail: name matches expected product": {
+                                "name": "detail: name matches expected product",
+                                "path": "::wf03_03_detail::detail: name matches expected product",
+                                "id": "d99aaae3fabadd2be7edd36aeb43806d",
+                                "passes": 377,
+                                "fails": 0
+                            },
+                            "detail: price is positive and finite": {
+                                "name": "detail: price is positive and finite",
+                                "path": "::wf03_03_detail::detail: price is positive and finite",
+                                "id": "3b821849e65c8c8dd2c3d01468eac193",
+                                "passes": 377,
+                                "fails": 0
+                            }
+                        }
+                },
+                "wf03_04_checkout": {
+                    "checks": {
+                        "checkout: status is 200": {
+                            "name": "checkout: status is 200",
+                            "path": "::wf03_04_checkout::checkout: status is 200",
+                            "id": "17c413ddab060d271bb79c8b1a902c96",
+                            "passes": 377,
+                            "fails": 0
+                        },
+                        "checkout: body is valid JSON object": {
+                            "fails": 0,
+                            "name": "checkout: body is valid JSON object",
+                            "path": "::wf03_04_checkout::checkout: body is valid JSON object",
+                            "id": "42facca34342e70cefe29e4f7769f56d",
+                            "passes": 377
+                        },
+                        "checkout: response indicates success": {
+                            "name": "checkout: response indicates success",
+                            "path": "::wf03_04_checkout::checkout: response indicates success",
+                            "id": "66e93e52543d6c295cfd9902a752be0a",
+                            "passes": 377,
+                            "fails": 0
+                        },
+                        "checkout: new order id is valid": {
+                            "name": "checkout: new order id is valid",
+                            "path": "::wf03_04_checkout::checkout: new order id is valid",
+                            "id": "a473af848ae4d9c24d1cebc9fbb999b8",
+                            "passes": 377,
+                            "fails": 0
+                        }
+                    },
+                    "name": "wf03_04_checkout",
+                    "path": "::wf03_04_checkout",
+                    "id": "e335368a75297e5290da606e5768d4d6",
+                    "groups": {}
+                },
+                "wf03_05_pending_probe": {
+                    "name": "wf03_05_pending_probe",
+                    "path": "::wf03_05_pending_probe",
+                    "id": "f3b87abf3ebc4c7a3a829efdda7c2888",
+                    "groups": {},
+                    "checks": {
+                            "pending_probe: status is 200": {
+                                "id": "1c99d49dc4c1fcc6a346b32060961218",
+                                "passes": 377,
+                                "fails": 0,
+                                "name": "pending_probe: status is 200",
+                                "path": "::wf03_05_pending_probe::pending_probe: status is 200"
+                            },
+                            "pending_probe: body is valid order object": {
+                                "name": "pending_probe: body is valid order object",
+                                "path": "::wf03_05_pending_probe::pending_probe: body is valid order object",
+                                "id": "16c6b008fad974ea1122b326ef70d084",
+                                "passes": 377,
+                                "fails": 0
+                            },
+                            "pending_probe: id matches correlated order id": {
+                                "id": "a53b28a3fb0f4abc0063d95c639966b0",
+                                "passes": 377,
+                                "fails": 0,
+                                "name": "pending_probe: id matches correlated order id",
+                                "path": "::wf03_05_pending_probe::pending_probe: id matches correlated order id"
+                            },
+                            "pending_probe: owner matches authenticated user": {
+                                "name": "pending_probe: owner matches authenticated user",
+                                "path": "::wf03_05_pending_probe::pending_probe: owner matches authenticated user",
+                                "id": "8b029500e97c73290ea468f976c47433",
+                                "passes": 377,
+                                "fails": 0
+                            },
+                            "pending_probe: amount matches checkout total": {
+                                "name": "pending_probe: amount matches checkout total",
+                                "path": "::wf03_05_pending_probe::pending_probe: amount matches checkout total",
+                                "id": "ea0667ab14905b2174792dcf1ab8b6ce",
+                                "passes": 377,
+                                "fails": 0
+                            },
+                            "pending_probe: address matches checkout address": {
+                                "passes": 377,
+                                "fails": 0,
+                                "name": "pending_probe: address matches checkout address",
+                                "path": "::wf03_05_pending_probe::pending_probe: address matches checkout address",
+                                "id": "41717279157fb87d8bef48377e9cfae4"
+                            },
+                            "pending_probe: state is pending": {
+                                "name": "pending_probe: state is pending",
+                                "path": "::wf03_05_pending_probe::pending_probe: state is pending",
+                                "id": "4bd5890f910dd27de9de8d0ae1aa5c2b",
+                                "passes": 377,
+                                "fails": 0
+                            }
+                        }
+                },
+                "wf03_06_cancellation": {
+                    "name": "wf03_06_cancellation",
+                    "path": "::wf03_06_cancellation",
+                    "id": "d7b24214e38e36338f3cbd23534ce413",
+                    "groups": {},
+                    "checks": {
+                            "cancellation: request uses correlated order id": {
+                                "name": "cancellation: request uses correlated order id",
+                                "path": "::wf03_06_cancellation::cancellation: request uses correlated order id",
+                                "id": "748b73dfa5ad6fa28f26ac04c969ed20",
+                                "passes": 377,
+                                "fails": 0
+                            },
+                            "cancellation: status is 200": {
+                                "id": "d08406edd408fa8182a86217a22df3fb",
+                                "passes": 377,
+                                "fails": 0,
+                                "name": "cancellation: status is 200",
+                                "path": "::wf03_06_cancellation::cancellation: status is 200"
+                            },
+                            "cancellation: body is valid JSON object": {
+                                "name": "cancellation: body is valid JSON object",
+                                "path": "::wf03_06_cancellation::cancellation: body is valid JSON object",
+                                "id": "900d527d0dd7543aba8807e31c31c164",
+                                "passes": 377,
+                                "fails": 0
+                            },
+                            "cancellation: response indicates success": {
+                                "path": "::wf03_06_cancellation::cancellation: response indicates success",
+                                "id": "c766cf53a88696f60bf363116d2624d6",
+                                "passes": 377,
+                                "fails": 0,
+                                "name": "cancellation: response indicates success"
+                            }
+                        }
+                },
+                "wf03_07_final_probe": {
+                    "name": "wf03_07_final_probe",
+                    "path": "::wf03_07_final_probe",
+                    "id": "3eaa4b65c5341882234145f08750332f",
+                    "groups": {},
+                    "checks": {
+                            "final_probe: status is 200": {
+                                "fails": 0,
+                                "name": "final_probe: status is 200",
+                                "path": "::wf03_07_final_probe::final_probe: status is 200",
+                                "id": "0843e3089b702f2365708f79d3bfd54f",
+                                "passes": 377
+                            },
+                            "final_probe: body is valid order object": {
+                                "path": "::wf03_07_final_probe::final_probe: body is valid order object",
+                                "id": "9caa8d9aa724703796b709f6d8afc8b9",
+                                "passes": 377,
+                                "fails": 0,
+                                "name": "final_probe: body is valid order object"
+                            },
+                            "final_probe: id matches correlated order id": {
+                                "name": "final_probe: id matches correlated order id",
+                                "path": "::wf03_07_final_probe::final_probe: id matches correlated order id",
+                                "id": "2489b94d591f80e7c15384ab9a7f5abe",
+                                "passes": 377,
+                                "fails": 0
+                            },
+                            "final_probe: owner matches authenticated user": {
+                                "fails": 0,
+                                "name": "final_probe: owner matches authenticated user",
+                                "path": "::wf03_07_final_probe::final_probe: owner matches authenticated user",
+                                "id": "b28b1a96c37cc6e04aa58242d488029d",
+                                "passes": 377
+                            },
+                            "final_probe: amount remains checkout total": {
+                                "name": "final_probe: amount remains checkout total",
+                                "path": "::wf03_07_final_probe::final_probe: amount remains checkout total",
+                                "id": "edc40324158f2226b724886be196901b",
+                                "passes": 377,
+                                "fails": 0
+                            },
+                            "final_probe: address remains checkout address": {
+                                "name": "final_probe: address remains checkout address",
+                                "path": "::wf03_07_final_probe::final_probe: address remains checkout address",
+                                "id": "e0c903277419bc25b1a0e25cfd464a2a",
+                                "passes": 377,
+                                "fails": 0
+                            },
+                            "final_probe: state is canceled": {
+                                "path": "::wf03_07_final_probe::final_probe: state is canceled",
+                                "id": "23cfbe92f01aa010e93b1f1e0c9d9923",
+                                "passes": 377,
+                                "fails": 0,
+                                "name": "final_probe: state is canceled"
+                            }
+                        }
+                }
+            }
+    }
+}

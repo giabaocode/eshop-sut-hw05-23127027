@@ -1,0 +1,22 @@
+label=OFFICIAL Spike — REAL EXECUTION REQUIRED
+scenario=spike
+start_time=2026-09-02 10:49:21 +0700
+start_epoch=1788320961
+hard_cap_seconds=420
+k6_binary=/opt/homebrew/bin/k6
+official_plan=/private/tmp/eshop-hw05-spike.21Nvt8/runtime/performance/scenarios/official/23127027_Spike_20260901.js
+k6_pid=48766
+canonical_raw=native granular k6 JSON
+process_exit_time=2026-09-02 10:55:28 +0700
+process_exit_epoch=1788321328
+artifact_flush_completion_time=2026-09-02 10:55:28 +0700
+artifact_flush_completion_epoch=1788321328
+wall_clock_seconds=367
+k6_exit_code=0
+watchdog_fired=no
+runner_interrupted=0
+artifact_bytes=14689200 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/spike/20260902T104549+0700/raw/spike-raw.json
+artifact_bytes=22855 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/spike/20260902T104549+0700/raw/spike-summary.json
+artifact_bytes=338488 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/spike/20260902T104549+0700/report/spike-dashboard.html
+artifact_bytes=61664 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/spike/20260902T104549+0700/logs/k6.stdout.log
+artifact_bytes=0 artifact=/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/spike/20260902T104549+0700/logs/k6.stderr.log

@@ -22,7 +22,7 @@ work is never marked complete without the student's explicit confirmation.
 | GEN-03 | Human-review every AI result, correct/refine it, and accept responsibility for correctness. | §2, pp.1–2 | Review records; human decisions; corrected artifacts | No | Yes | TODO |
 | GEN-04 | Keep a complete log of AI use; explicitly declare if AI was not used. | §2, p.2; §9, pp.6–7 | AI Audit Report appendix | Partial | Yes | IN PROGRESS |
 | GEN-05 | Document the whole working process in a text-based format such as Markdown. | §2, p.2 | Markdown documentation and report | Partial | Yes | DONE |
-| GEN-06 | Prioritize the quantity and quality of plans, data, raw logs, report views, resource/hardware evidence, video, critique, and links. | §2, p.2 | Submission package | Partial | Yes | TODO |
+| GEN-06 | Prioritize the quantity and quality of plans, data, raw logs, report views, resource/hardware evidence, video, critique, and links. | §2, p.2 | Submission package | Partial | Yes | DONE |
 | SCOPE-01 | Test the EShop REST backend from the official repository and discover exact endpoints and ports from the repository. | §4, pp.2–3 | SUT discovery and startup runbook | Yes | Yes | DONE |
 | SCOPE-02 | Target an auth-heavy endpoint group, including login and account-lockout behavior. | §5, pp.3–4 | Selected E2E workflow and three plans | Partial | Yes | DONE |
 | SCOPE-03 | Target a read-heavy endpoint group, such as product listing/search and detail. | §5, p.3 | Selected E2E workflow and three plans | Partial | Yes | DONE |
@@ -58,29 +58,29 @@ work is never marked complete without the student's explicit confirmation.
 | TOOL-01 | Use JMeter by default or k6 for bonus; declare all tools in the AI Audit Report. | §8, p.6 | Tool declaration | Yes | Yes | DONE |
 | TOOL-02 | Use an appropriate resource monitor, such as Activity Monitor on macOS. | §8, p.6 | Monitoring runbook and screenshots | Partial | Yes | DONE |
 | AUDIT-01 | Attach the AI Audit Report as a mandatory appendix. | §9, p.6 | AI Audit in report appendix | Partial | Yes | DONE — Markdown and generated PDF are present and linked from the main report |
-| AUDIT-02 | For every AI interaction, record AI tool name, date/time, human prompt, and AI output. | §9, pp.6–7 | AI Audit interaction entries | Partial | Yes | IN PROGRESS |
+| AUDIT-02 | For every AI interaction, record AI tool name, date/time, human prompt, and AI output. | §9, pp.6–7 | AI Audit interaction entries | Partial | Yes | DONE |
 | CRIT-01 | Write a mandatory 200–300 word critique of AI. | §10, p.7 | AI critique | Partial | Yes | DONE |
 | CRIT-02 | Address what AI got wrong/biased/incomplete, why it missed the issue, and the collaboration principle learned. | §10, p.7 | Evidence-based critique | Partial | Yes | DONE |
-| AC-01 | Do not fabricate or AI-generate test-plan filenames, raw execution logs, demo video/voice, or hardware evidence. | §11, p.7 | Authentic evidence chain | Partial | Yes | IN PROGRESS |
+| AC-01 | Do not fabricate or AI-generate test-plan filenames, raw execution logs, demo video/voice, or hardware evidence. | §11, p.7 | Authentic evidence chain | Partial | Yes | DONE |
 | AC-02 | Attach full raw logs, not summaries alone. | §11, p.7 | Raw result artifacts | Yes | Yes | DONE |
 | AC-03 | Hardware evidence hostname must match the student's previous homework deployments. | §11, p.7 | Hostname evidence and human verification | Partial | Yes | DONE |
 | GIT-01 | Create a new meaningful Git commit for each procedural step. | §12, p.7 | Git history | Partial | Yes | DONE |
-| GIT-02 | Export the Git commit log in a text file. | §12, p.7 | `git-commit-log.txt` | Yes | Yes | TODO |
+| GIT-02 | Export the Git commit log in a text file. | §12, p.7 | `git-commit-log.txt` | Yes | Yes | DONE |
 | DEF-01 | Be prepared for a possible 5–7 minute oral defense; 30% of students may be selected. | §13, p.7 | Oral-defense preparation based on actual work | Partial | Yes | TODO |
-| ZIP-01 | Name the package `<StudentID>_HW05_AI_Performance_<SelfAssessedGrade>.zip`. | §14, p.8 | Final ZIP | Yes | Yes | TODO |
-| ZIP-02 | Use a three-digit self-assessed grade in `[000,100]`. | §14, p.8 | README and ZIP filename | Partial | Yes | TODO |
-| ZIP-03 | Include the main report in Markdown and PDF, including performance testing and AI-analysis critique. | §14, p.8 | Main report `.md` and `.pdf` | Partial | Yes | TODO |
-| ZIP-04 | Include the public GitHub repository link, test plans, and data files. | §14, p.8 | README/report links and repository artifacts | Partial | Yes | TODO |
-| ZIP-05 | Include all three plans following the naming convention. | §14, p.8 | Load/Stress/Spike plans | Yes | Yes | TODO |
-| ZIP-06 | Include all three full raw logs and three HTML report folders. | §14, p.8 | Execution artifacts, subject to ambiguity A-01 | Partial | Yes | TODO |
-| ZIP-07 | Include resource-monitor and hardware-spec screenshots. | §14, p.8 | Real screenshots | No | Yes | TODO |
-| ZIP-08 | Include the unlisted YouTube demo link. | §14, p.8 | Real URL | No | Yes | TODO |
-| ZIP-09 | Include AI Critique and AI Audit Report in Markdown and PDF. | §14, p.8 | Audit/critique `.md` and `.pdf` | Partial | Yes | TODO |
-| ZIP-10 | Include the text Git commit log. | §14, p.8 | `git-commit-log.txt` | Yes | Yes | TODO |
-| ZIP-11 | Include a bug report with GitHub Issue screenshots if genuine issues exist. | §14, p.8 | Issue report or `NOT APPLICABLE` rationale | Partial | Yes | TODO |
-| README-01 | README must contain the self-assessment table. | §14, p.8 | `README.md` | Partial | Yes | TODO |
-| README-02 | README test summary must state scenarios run, endpoint groups, numeric endurance threshold, issue count, and demo link. | §14, p.8 | `README.md` | Partial | Yes | TODO |
-| GRADE-01 | Rubric weights: Load 30, Stress 20, Spike 20, AI analysis/misinterpretation 10, continuous proposal 10, Agent Skill 10. | §15, pp.8–9 | Self-assessment table | Partial | Yes | TODO |
+| ZIP-01 | Name the package `<StudentID>_HW05_AI_Performance_<SelfAssessedGrade>.zip`. | §14, p.8 | Final ZIP | Yes | Yes | DONE |
+| ZIP-02 | Use a three-digit self-assessed grade in `[000,100]`. | §14, p.8 | README and ZIP filename | Partial | Yes | DONE BY HUMAN — `096` |
+| ZIP-03 | Include the main report in Markdown and PDF, including performance testing and AI-analysis critique. | §14, p.8 | Main report `.md` and `.pdf` | Partial | Yes | DONE |
+| ZIP-04 | Include the public GitHub repository link, test plans, and data files. | §14, p.8 | README/report links and repository artifacts | Partial | Yes | DONE |
+| ZIP-05 | Include all three plans following the naming convention. | §14, p.8 | Load/Stress/Spike plans | Yes | Yes | DONE |
+| ZIP-06 | Include all three full raw logs and three HTML report folders. | §14, p.8 | Execution artifacts, subject to ambiguity A-01 | Partial | Yes | DONE — genuine native k6 equivalents |
+| ZIP-07 | Include resource-monitor and hardware-spec screenshots. | §14, p.8 | Real screenshots | No | Yes | DONE |
+| ZIP-08 | Include the unlisted YouTube demo link. | §14, p.8 | Real URL | No | Yes | DONE BY HUMAN |
+| ZIP-09 | Include AI Critique and AI Audit Report in Markdown and PDF. | §14, p.8 | Audit/critique `.md` and `.pdf` | Partial | Yes | DONE |
+| ZIP-10 | Include the text Git commit log. | §14, p.8 | `git-commit-log.txt` | Yes | Yes | DONE |
+| ZIP-11 | Include a bug report with GitHub Issue screenshots if genuine issues exist. | §14, p.8 | Issue report or `NOT APPLICABLE` rationale | Partial | Yes | NOT APPLICABLE — no genuine SUT issue confirmed |
+| README-01 | README must contain the self-assessment table. | §14, p.8 | `README.md` | Partial | Yes | DONE |
+| README-02 | README test summary must state scenarios run, endpoint groups, numeric endurance threshold, issue count, and demo link. | §14, p.8 | `README.md` | Partial | Yes | DONE |
+| GRADE-01 | Rubric weights: Load 30, Stress 20, Spike 20, AI analysis/misinterpretation 10, continuous proposal 10, Agent Skill 10. | §15, pp.8–9 | Self-assessment table | Partial | Yes | DONE BY HUMAN — total `096/100` |
 | REG-01 | Late submission is not permitted. | §17, p.9 | Timely submission | No | Yes | TODO |
 | REG-02 | Missing any required document results in zero points. | §17, p.9 | Final validation checklist | Partial | Yes | TODO |
 | REG-03 | Copying between students, including prompts, results in a grade of zero for both parties. | §17, p.9 | Original work and audit trail | No | Yes | IN PROGRESS |

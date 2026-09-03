@@ -1,3 +1,157 @@
+commit 04e59eea9092bf7e75d1317d4d33cd85b98f9fba
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-03T16:12:27+07:00
+
+    docs: record human self-assessed grade
+
+ MANUAL-TODO.md                                     |   6 +-
+ README.md                                          |  26 ++++----
+ ai-audit/audit.md                                  |  19 ++++++
+ .../044-human-grade-and-split-package.md           |  72 +++++++++++++++++++++
+ docs/human-decisions.md                            |  16 +++++
+ report/23127027_AI_Audit.html                      |   7 +-
+ report/23127027_AI_Audit.pdf                       | Bin 1411951 -> 1419485 bytes
+ report/23127027_AI_Critique.html                   |   2 +-
+ report/23127027_AI_Critique.pdf                    | Bin 88941 -> 89037 bytes
+ report/23127027_HW05_Performance_Report.html       |  11 ++--
+ report/23127027_HW05_Performance_Report.md         |  10 +--
+ report/23127027_HW05_Performance_Report.pdf        | Bin 316754 -> 317275 bytes
+ reviews/FINAL-HUMAN-REVIEW.md                      |  21 +++---
+ reviews/HUMAN-REVIEW-PACKET.md                     |   2 +-
+ reviews/self-assessment-recommendation.md          |   8 +--
+ submission/README-SPLIT-ARCHIVE.md                 |  28 ++++++++
+ tools/validate_submission.mjs                      |  18 +++++-
+ 17 files changed, 201 insertions(+), 45 deletions(-)
+
+commit c709f8256997d9f389da0a84d4400bbfc1cb7e4a
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-03T16:07:01+07:00
+
+    chore: refresh submission validation
+
+ validation/submission-validation.json | 2 +-
+ validation/submission-validation.md   | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 685769a1176c8832341f8ffe01a02b56eee15c9e
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-03T16:06:30+07:00
+
+    docs: record demo video and grade recommendation
+
+ MANUAL-TODO.md                                     |   6 +-
+ README.md                                          |   8 +-
+ ai-audit/audit.md                                  |  19 ++
+ ...youtube-chatgpt-summary-grade-recommendation.md | 315 +++++++++++++++++++++
+ docs/assignment-requirements.md                    |  10 +-
+ docs/human-decisions.md                            |  18 ++
+ report/23127027_AI_Audit.html                      |   5 +-
+ report/23127027_AI_Audit.pdf                       | Bin 1404241 -> 1411951 bytes
+ report/23127027_HW05_Performance_Report.html       |   5 +-
+ report/23127027_HW05_Performance_Report.md         |   8 +-
+ report/23127027_HW05_Performance_Report.pdf        | Bin 316988 -> 316754 bytes
+ reviews/FINAL-HUMAN-REVIEW.md                      |  33 +--
+ reviews/HUMAN-REVIEW-PACKET.md                     |   6 +-
+ reviews/self-assessment-recommendation.md          |  39 +++
+ tools/validate_submission.mjs                      |   4 +-
+ validation/submission-validation.json              |  10 +-
+ validation/submission-validation.md                |   8 +-
+ video/FINAL-VIDEO-CHEATSHEET.md                    |   2 +
+ video/FINAL-VIDEO-RUNBOOK.md                       |   6 +-
+ video/demo-plan.md                                 |   7 +-
+ video/recording-checklist.md                       |  10 +-
+ 21 files changed, 464 insertions(+), 55 deletions(-)
+
+commit 59bc3ec983e279177e6209dac7aaf0683e1a36f0
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-03T10:53:10+07:00
+
+    docs: add final video recording runbook
+
+ MANUAL-TODO.md                                   |   6 +-
+ ai-audit/audit.md                                |  14 +
+ ai-audit/interactions/042-final-video-runbook.md | 196 +++++++++
+ report/23127027_AI_Audit.html                    |   4 +-
+ report/23127027_AI_Audit.pdf                     | Bin 1399401 -> 1404241 bytes
+ video/FINAL-VIDEO-CHEATSHEET.md                  |  57 +++
+ video/FINAL-VIDEO-RUNBOOK.md                     | 508 +++++++++++++++++++++++
+ video/recording-checklist.md                     |   4 +
+ 8 files changed, 785 insertions(+), 4 deletions(-)
+
+commit b1c33e524d99f8ff5cbf4adde183ad074e8197e1
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T21:20:35+07:00
+
+    docs: audit hardware evidence publication
+
+ ai-audit/audit.md                                  |   6 ++++--
+ .../041-hardware-replacement-validation.md         |   8 ++++++++
+ report/23127027_AI_Audit.html                      |   2 +-
+ report/23127027_AI_Audit.pdf                       | Bin 1396974 -> 1399401 bytes
+ 4 files changed, 13 insertions(+), 3 deletions(-)
+
+commit 7d8b5db50a63c82acff1708f3d7843655c6c0bd0
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T21:18:35+07:00
+
+    docs: add validated hardware evidence
+
+ MANUAL-TODO.md                                     |   7 ++-
+ README.md                                          |   1 +
+ ai-audit/audit.md                                  |  15 +++++
+ .../041-hardware-replacement-validation.md         |  66 +++++++++++++++++++++
+ docs/assignment-requirements.md                    |   4 +-
+ docs/human-decisions.md                            |  12 ++++
+ evidence/hardware/SCREENSHOT-TODO.md               |  30 ++++++----
+ evidence/hardware/hardware-specs-hostname.jpg      | Bin 0 -> 100497 bytes
+ evidence/hardware/specs.md                         |   6 +-
+ report/23127027_AI_Audit.html                      |   4 +-
+ report/23127027_AI_Audit.pdf                       | Bin 1388460 -> 1396974 bytes
+ report/23127027_HW05_Performance_Report.html       |   7 +--
+ report/23127027_HW05_Performance_Report.md         |  14 +++--
+ report/23127027_HW05_Performance_Report.pdf        | Bin 315586 -> 316988 bytes
+ reviews/FINAL-HUMAN-REVIEW.md                      |  30 +++-------
+ reviews/HUMAN-REVIEW-PACKET.md                     |   2 +-
+ tools/validate_submission.mjs                      |   2 +-
+ validation/submission-validation.json              |  10 ++--
+ validation/submission-validation.md                |   8 +--
+ 19 files changed, 156 insertions(+), 62 deletions(-)
+
+commit 36abc6be437bae0484d546e4b9a44fe6c1c8be2a
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-02T21:05:20+07:00
+
+    review: apply final content approvals
+
+ .gitignore                                         |   4 ++
+ MANUAL-TODO.md                                     |  17 ++++--
+ README.md                                          |   1 +
+ ai-audit/audit.md                                  |  12 ++++
+ .../040-final-content-approvals-hardware-review.md |  28 +++++++++
+ analysis/genuine-issue-determination.md            |   4 +-
+ docs/assignment-requirements.md                    |   6 +-
+ docs/human-decisions.md                            |  19 ++++++
+ docs/pdf-generation.md                             |   8 ++-
+ evidence/hardware/SCREENSHOT-TODO.md               |  18 ++++--
+ evidence/hardware/specs.md                         |   5 +-
+ git-commit-log.txt                                 |  15 +++++
+ report/23127027_AI_Audit.html                      |   4 +-
+ report/23127027_AI_Audit.pdf                       | Bin 1384780 -> 1388460 bytes
+ report/23127027_AI_Critique.html                   |  22 +++++++
+ report/23127027_AI_Critique.pdf                    | Bin 0 -> 88941 bytes
+ report/23127027_HW05_Performance_Report.html       |  15 +++--
+ report/23127027_HW05_Performance_Report.md         |  26 +++++----
+ report/23127027_HW05_Performance_Report.pdf        | Bin 313903 -> 315586 bytes
+ reviews/FINAL-HUMAN-REVIEW.md                      |  64 +++++++--------------
+ reviews/HUMAN-REVIEW-PACKET.md                     |  12 ++--
+ reviews/ai-critique.md                             |  36 ++++++++++++
+ tools/validate_submission.mjs                      |  10 ++--
+ validation/submission-validation.json              |  30 +++++-----
+ validation/submission-validation.md                |  20 +++----
+ video/demo-plan.md                                 |   7 +--
+ video/recording-checklist.md                       |   2 +-
+ 27 files changed, 259 insertions(+), 126 deletions(-)
+
 commit 666d8e2e8eef6dcd61aa2e80822566ef5abe0f45
 Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
 Date:   2026-09-02T20:20:46+07:00

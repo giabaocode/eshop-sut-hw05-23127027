@@ -32,11 +32,10 @@ nộp nhiều file
 - The 20 MB limit is treated as a human-supplied Moodle upload constraint.
 - The required PDF basename remains
   `23127027_HW05_AI_Performance_096.zip`.
-- If the archive is larger than the limit, standard split-ZIP companions use
-  `.z01`, `.z02`, and so on. An 18 MiB split size keeps each file below
-  20,000,000 bytes.
-- Every split part must be uploaded together. The final `.zip` segment cannot
-  be extracted alone.
+- The actual compressed package is below 20,000,000 bytes, so the conditional
+  split is not required for this build. If a future regeneration exceeds the
+  limit, standard `.zNN` companions will use 18 MiB segments and every part
+  must be uploaded together.
 - Codex may create, validate, checksum, commit, and push the artifacts to the
   student `origin`; it must not upload to Moodle or claim that submission
   occurred.
@@ -66,7 +65,8 @@ submission event is fabricated.
 - `ai-audit/audit.md`
 - this detailed interaction record
 
-Generated HTML/PDF views and the final split archive/checksum manifest are also
-updated or created from the genuine tracked evidence. Exact part names, sizes,
-hashes, validation counts, commits, and push result are reported after the
-operations complete; Moodle remains pending.
+Generated HTML/PDF views and the final archive/checksum manifest are also
+updated or created from the genuine tracked evidence. Validation completed
+with 33 PASS, 0 FAIL, 1 manual Moodle action, and 1 NOT APPLICABLE. Exact file
+size, SHA-256, commits, and push result are reported in the final Codex output;
+Moodle remains pending.

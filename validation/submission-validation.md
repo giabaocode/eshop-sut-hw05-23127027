@@ -1,12 +1,12 @@
 # HW05 Submission Validation
 
-Generated: 2026-09-03T09:06:45.234Z
+Generated: 2026-09-03T09:13:49.752Z
 
 | Status | Count |
 |---|---:|
-| PASS | 31 |
+| PASS | 33 |
 | FAIL | 0 |
-| MANUAL VERIFICATION REQUIRED | 3 |
+| MANUAL VERIFICATION REQUIRED | 1 |
 | NOT APPLICABLE | 1 |
 
 | Check | Status | Evidence |
@@ -43,8 +43,8 @@ Generated: 2026-09-03T09:06:45.234Z
 | combined_video_decision | PASS | Human selected one combined performance/Skill video |
 | ai_critique_approval | PASS | Human approved the 278-word critique |
 | issue_publication | NOT APPLICABLE | Human confirmed no genuine SUT issue; no speculative Issue published |
-| self_assessed_grade | MANUAL VERIFICATION REQUIRED | No human grade supplied |
-| final_zip | MANUAL VERIFICATION REQUIRED | Requires grade and final human approval |
+| self_assessed_grade | PASS | Human supplied 096 and README/decision register agree |
+| final_zip | PASS | 1 archive file(s), each <= 20,000,000 bytes, with SHA-256 manifest |
 | moodle_submission | MANUAL VERIFICATION REQUIRED | Must be performed by the student |
 
 A PASS means repository evidence was checked. Human-attributable items remain MANUAL VERIFICATION REQUIRED until the student supplies/approves them.

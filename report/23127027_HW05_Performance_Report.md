@@ -262,5 +262,6 @@ execution evidence, corrections, commits, and unresolved human-only items.
 
 ## Remaining attributable action
 
-- Inspect all split archive parts and upload them together to Moodle:
+- Inspect the generated archive (and all companion parts only if a future
+  regeneration triggers splitting), then upload it to Moodle:
   **[HUMAN REQUIRED]**

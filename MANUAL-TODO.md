@@ -160,3 +160,10 @@ The human replaced the hardware JPEG. Visual validation confirms the required
 hostname and hardware without visible serial/UUID; H-013 is now complete. Only
 the genuine unlisted YouTube URL and SelfAssessedGrade remain before automated
 final packaging, with Moodle upload still human-only.
+
+The student subsequently supplied the genuine video URL and explicitly chose
+`SELF_ASSESSED_GRADE=096`. H-023 is complete. Final automated validation now
+reports 33 PASS, 0 FAIL, 1 NOT APPLICABLE, and only Moodle submission as manual.
+The actual compressed package is below the human-reported 20 MB upload limit,
+so no split is required for the current artifact; conditional split-upload
+instructions remain documented for any later regeneration.

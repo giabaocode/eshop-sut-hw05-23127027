@@ -79,10 +79,10 @@ if (!technicalOnly) {
     'Human supplied 096 and README/decision register agree',
     'Human-selected grade is absent or inconsistent');
   pass('final_zip',
-    nonempty(archiveBase) && splitParts.length >= 2 &&
+    nonempty(archiveBase) && splitParts.length >= 1 &&
       splitParts.every((p) => fs.statSync(path.join(root, p)).size <= maxUploadBytes) &&
       nonempty('submission/23127027_HW05_AI_Performance_096.sha256'),
-    `${archiveBase} plus ${splitParts.length - 1} split part(s), each <= 20,000,000 bytes, with SHA-256 manifest`,
+    `${splitParts.length} archive file(s), each <= 20,000,000 bytes, with SHA-256 manifest`,
     'Final split archive/checksum is absent, incomplete, or has a part over the 20 MB upload limit');
   add('moodle_submission', 'MANUAL VERIFICATION REQUIRED', 'Must be performed by the student');
 }

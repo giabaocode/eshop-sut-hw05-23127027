@@ -1736,12 +1736,13 @@ clarified that Moodle accepts files only up to 20 MB and instructed Codex to
 split an oversized package and submit it as multiple files. This is preserved
 as a human decision; no grade was inferred.
 
-Codex recorded the grade and split-upload instruction, then began updating the
-metadata, audit, validator, and derived report views. The authorized packaging
-plan is a standard split ZIP set with 18 MiB segments under `submission/`, with
-each part required to remain below 20,000,000 bytes and receive a SHA-256
-manifest. The archive must exclude `.git`, the ignored assignment PDF,
-credentials/private runtime data, disposable clones, and the package files
-themselves. Moodle upload remains exclusively the student's action. Final
-operation evidence is appended only after completion. Detailed record:
+Codex recorded the grade and upload-limit instruction, updated metadata,
+audit, validator, and derived report views, and generated the final archive
+under `submission/`. The actual compressed ZIP is below 20,000,000 bytes, so
+the human-specified conditional split was not required; a SHA-256 manifest and
+future split instructions are present. The archive excludes `.git`, the ignored
+assignment PDF, credentials/private runtime data, disposable clones, and the
+package files themselves. The validator reports 33 PASS, 0 FAIL, 1 manual
+Moodle action, and 1 NOT APPLICABLE. Moodle upload remains exclusively the
+student's action. Detailed record:
 [`interactions/044-human-grade-and-split-package.md`](interactions/044-human-grade-and-split-package.md).

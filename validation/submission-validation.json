@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-03T09:06:45.234Z",
+  "generated_at": "2026-09-03T09:13:49.752Z",
   "technical_only": false,
   "counts": {
-    "PASS": 31,
+    "PASS": 33,
     "FAIL": 0,
-    "MANUAL VERIFICATION REQUIRED": 3,
+    "MANUAL VERIFICATION REQUIRED": 1,
     "NOT APPLICABLE": 1
   },
   "checks": [
@@ -170,13 +170,13 @@
     },
     {
       "id": "self_assessed_grade",
-      "status": "MANUAL VERIFICATION REQUIRED",
-      "evidence": "No human grade supplied"
+      "status": "PASS",
+      "evidence": "Human supplied 096 and README/decision register agree"
     },
     {
       "id": "final_zip",
-      "status": "MANUAL VERIFICATION REQUIRED",
-      "evidence": "Requires grade and final human approval"
+      "status": "PASS",
+      "evidence": "1 archive file(s), each <= 20,000,000 bytes, with SHA-256 manifest"
     },
     {
       "id": "moodle_submission",

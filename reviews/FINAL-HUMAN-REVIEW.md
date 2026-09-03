@@ -25,6 +25,8 @@ SELF_ASSESSED_GRADE=096
 This value was supplied directly by the human student on 2026-09-03 after the
 AI evidence-based recommendation was presented.
 
-Codex may finish metadata, PDFs, validation, split archive/checksums, commit,
-and safe `origin` push. The student must inspect and upload every split archive
-part to Moodle.
+Codex may finish metadata, PDFs, validation, archive/checksum, commit, and safe
+`origin` push. The measured compressed archive is below 20 MB, so no split is
+currently required. The student must inspect and upload the generated file to
+Moodle; if a future regeneration creates `.zNN` parts, every part must be
+uploaded together.

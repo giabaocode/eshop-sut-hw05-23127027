@@ -1693,3 +1693,17 @@ safe staging checks, commit `7d8b5db` was created and the actual push
 `36abc6b..7d8b5db main -> main` went only to the student `origin`; `upstream`
 was untouched. Detailed record:
 [`interactions/041-hardware-replacement-validation.md`](interactions/041-hardware-replacement-validation.md).
+
+## Interaction 042 — Final video recording runbook
+
+The student requested a final line-by-line 8–10 minute combined Performance
+Testing/Agent Skill video runbook. Codex re-read all nine official PDF pages,
+verified every official result root, report, raw artifact, screenshot, shared
+workflow path, public-data command, main PDF, and packaged Skill checker. The
+checker returned `CHECKED` for Load, Stress, and Spike. Codex created a detailed
+9:30 runbook and compact cheatsheet using only safe, tested, read-only commands.
+The runbook presents existing evidence and does not rerun k6. It deliberately
+uses the repository Skill checker instead of inventing an unverified
+repository-local `$skill` invocation. H-018/H-019/H-020 remain human-only; no
+video, narration, URL, or completion was fabricated. Detailed record:
+[`interactions/042-final-video-runbook.md`](interactions/042-final-video-runbook.md).

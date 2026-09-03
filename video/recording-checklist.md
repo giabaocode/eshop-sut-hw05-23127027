@@ -2,6 +2,10 @@
 
 Status: **PENDING HUMAN**
 
+Authoritative recording instructions:
+[`FINAL-VIDEO-RUNBOOK.md`](FINAL-VIDEO-RUNBOOK.md). Quick reference:
+[`FINAL-VIDEO-CHEATSHEET.md`](FINAL-VIDEO-CHEATSHEET.md).
+
 - [x] H-003: human selected one combined performance/Skill video.
 - [ ] Record at least six minutes with the student's own Vietnamese narration.
 - [ ] Show repository URL, student ID, hostname, macOS, and pinned k6 version.

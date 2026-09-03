@@ -1,3 +1,65 @@
+commit 157655d715c2ee5ee216300aa5848ad9f0522b68
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-03T18:55:55+07:00
+
+    docs: audit stale statuses and record interaction 045
+
+ .gitignore                                         |   4 +-
+ MANUAL-TODO.md                                     |   4 +-
+ ai-audit/audit.md                                  |  22 +++++++
+ .../interactions/045-final-stale-status-audit.md   |  68 +++++++++++++++++++++
+ docs/CODEX-RESUME-CHECKPOINT.md                    |  31 ++++++----
+ docs/assignment-requirements.md                    |   4 +-
+ docs/endurance-preflight.md                        |  11 +++-
+ docs/human-decisions.md                            |  16 +++++
+ docs/k6-architecture.md                            |  26 +++++---
+ docs/official-load-preflight.md                    |   6 +-
+ docs/official-preconditioning.md                   |   6 +-
+ docs/official-spike-preflight.md                   |  11 +++-
+ docs/official-stress-preflight.md                  |  10 ++-
+ docs/report-output-mapping.md                      |  38 +++++-------
+ performance/config/output.js                       |   4 +-
+ .../scenarios/official/23127027_Load_20260901.js   |   2 +-
+ .../scenarios/official/23127027_Spike_20260901.js  |   2 +-
+ .../scenarios/official/23127027_Stress_20260901.js |   2 +-
+ report/23127027_AI_Audit.html                      |   5 +-
+ report/23127027_AI_Audit.pdf                       | Bin 1419736 -> 1426331 bytes
+ reviews/HUMAN-REVIEW-PACKET.md                     |  24 ++++----
+ reviews/test-plan-review.md                        |   7 ++-
+ runbooks/load.md                                   |  10 +--
+ runbooks/spike.md                                  |  13 ++--
+ runbooks/stress.md                                 |  16 ++---
+ tools/validate_submission.mjs                      |   7 +++
+ validation/submission-validation.json              |   9 ++-
+ validation/submission-validation.md                |   5 +-
+ 28 files changed, 260 insertions(+), 103 deletions(-)
+
+commit aec825fedc2e1ab2afff4f916c11033288f0314b
+Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
+Date:   2026-09-03T16:17:30+07:00
+
+    chore: package validated HW05 submission
+
+ MANUAL-TODO.md                                     |   7 +
+ ai-audit/audit.md                                  |  17 +--
+ .../044-human-grade-and-split-package.md           |  18 +--
+ docs/assignment-requirements.md                    |  36 ++---
+ git-commit-log.txt                                 | 154 +++++++++++++++++++++
+ report/23127027_AI_Audit.html                      |   2 +-
+ report/23127027_AI_Audit.pdf                       | Bin 1419485 -> 1419736 bytes
+ report/23127027_HW05_Performance_Report.html       |   4 +-
+ report/23127027_HW05_Performance_Report.md         |   3 +-
+ report/23127027_HW05_Performance_Report.pdf        | Bin 317275 -> 317535 bytes
+ reviews/FINAL-HUMAN-REVIEW.md                      |   8 +-
+ reviews/HUMAN-REVIEW-PACKET.md                     |   2 +-
+ submission/23127027_HW05_AI_Performance_096.sha256 |   1 +
+ submission/23127027_HW05_AI_Performance_096.zip    | Bin 0 -> 13507896 bytes
+ submission/README-SPLIT-ARCHIVE.md                 |  24 ++--
+ tools/validate_submission.mjs                      |   4 +-
+ validation/submission-validation.json              |  14 +-
+ validation/submission-validation.md                |  10 +-
+ 18 files changed, 237 insertions(+), 67 deletions(-)
+
 commit 04e59eea9092bf7e75d1317d4d33cd85b98f9fba
 Author: Phạm Ngọc Gia Bảo <pn.giabao9705@gmail.com>
 Date:   2026-09-03T16:12:27+07:00

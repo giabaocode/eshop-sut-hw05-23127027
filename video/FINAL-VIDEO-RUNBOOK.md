@@ -1,6 +1,10 @@
 # Final Combined HW05 Video Recording Runbook
 
-Status: **READY FOR HUMAN RECORDING — REAL YOUTUBE URL PENDING**
+Status: **COMPLETED BY HUMAN — UNLISTED URL SUPPLIED**
+
+Human-supplied video: <https://youtu.be/jPngjTuvT1Q> (playable/unlisted
+metadata verified 2026-09-03; approximately 16:15). The runbook below remains
+the preserved recording procedure.
 
 Student: **23127027 — Phạm Ngọc Gia Bảo**
 

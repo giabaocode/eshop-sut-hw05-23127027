@@ -22,7 +22,7 @@ Spike use one runtime-validated shared implementation and separate workloads.
 | Genuine SUT issues | 0 confirmed within tested scope; no speculative Issue created |
 | AI Critique | Human-approved 278-word final text |
 | Hardware evidence | Genuine hostname/MacBook Pro M5/16 GB screenshot and text table |
-| Demo video | **[HUMAN REQUIRED — real unlisted YouTube URL]** |
+| Demo video | [Unlisted YouTube — Báo cáo Homework 5 K6 Performance Testing](https://youtu.be/jPngjTuvT1Q) |
 | SelfAssessedGrade | **[HUMAN REQUIRED — 000..100]** |
 
 ## Self-assessment table
@@ -36,8 +36,12 @@ The student must supply the final grade; Codex does not invent it.
 | Spike testing | 20 | Official raw JSON/dashboard, screenshot, recovery analysis | **[HUMAN]** |
 | AI analysis and human misinterpretation review | 10 | Immutable AI analysis plus completed human matrix | **[HUMAN]** |
 | Continuous Performance Testing proposal | 10 | Proposal, Mermaid flowchart, CI prototype | **[HUMAN]** |
-| Reusable Agent Skill | 10 | Skill, safety contracts, result-tree validator; video pending | **[HUMAN]** |
+| Reusable Agent Skill | 10 | Skill, safety contracts, result-tree validator, combined demo video | **[HUMAN]** |
 | **Total** | **100** | See main report and validator | **[HUMAN: 000..100]** |
+
+AI scoring recommendation: **096/100**, pending the student's explicit final
+decision. See
+[`reviews/self-assessment-recommendation.md`](reviews/self-assessment-recommendation.md).
 
 Main report: [`report/23127027_HW05_Performance_Report.md`](report/23127027_HW05_Performance_Report.md)
 

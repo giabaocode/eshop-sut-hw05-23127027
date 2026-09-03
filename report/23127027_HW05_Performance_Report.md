@@ -1,6 +1,6 @@
 # HW05 — AI-First Performance Testing Report
 
-Status: **TECHNICALLY COMPLETE DRAFT — HUMAN-ONLY EVIDENCE/APPROVAL PENDING**
+Status: **CONTENT/EVIDENCE COMPLETE — SELF-ASSESSMENT AND PACKAGING PENDING**
 
 Student: **23127027 — Phạm Ngọc Gia Bảo**
 
@@ -222,6 +222,11 @@ It covers requirement/source discovery, workflow/data design, disposable
 execution, authentic evidence, analysis, audit, and submission validation. It
 explicitly refuses to fabricate screenshots, narration, reviews, grades, or
 results. Skill validation evidence is recorded in the final validator output.
+The student supplied the combined unlisted demonstration video:
+<https://youtu.be/jPngjTuvT1Q>. YouTube metadata was verified accessible,
+unlisted, approximately 16 minutes 15 seconds long, and carrying a Vietnamese
+automatic-caption track. The student's narration/content responsibility remains
+a human attestation rather than an AI-generated claim.
 
 ## 18. AI critique
 
@@ -255,6 +260,5 @@ execution evidence, corrections, commits, and unresolved human-only items.
 
 ## Remaining attributable fields
 
-- Real unlisted YouTube URL for the approved combined video: **[HUMAN REQUIRED]**
 - Self-assessed grade: **[HUMAN REQUIRED]**
 - Final package/Moodle approval and upload: **[HUMAN REQUIRED]**

@@ -1,6 +1,11 @@
 # Combined Performance and Agent-Skill Demo Plan
 
-Status: **ONE COMBINED VIDEO APPROVED — HUMAN RECORDING/URL PENDING**
+Status: **ONE COMBINED VIDEO COMPLETED BY HUMAN — URL SUPPLIED**
+
+Video: <https://youtu.be/jPngjTuvT1Q>. YouTube metadata verification on
+2026-09-03 found it playable, unlisted, approximately 16:15, and carrying a
+Vietnamese automatic-caption track. The detailed content/narration remains the
+student's responsibility.
 
 Human-approved duration/format: one combined 8–10 minute video, satisfying the
 at-least-six-minute performance demo while also demonstrating the Agent Skill.

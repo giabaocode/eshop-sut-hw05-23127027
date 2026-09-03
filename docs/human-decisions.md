@@ -518,3 +518,21 @@ No AI image generation or editing was used. H-013 is `DONE BY HUMAN`.
 
 Detailed record:
 [`../ai-audit/interactions/041-hardware-replacement-validation.md`](../ai-audit/interactions/041-hardware-replacement-validation.md).
+
+## HD-019 — Human-supplied combined video and pending grade
+
+| Field | Human/evidence record |
+|---|---|
+| Recorded | 2026-09-03 15:58:41 +0700 (Asia/Ho_Chi_Minh) |
+| Decision/evidence owner | Phạm Ngọc Gia Bảo — HUMAN |
+| YouTube URL | `https://youtu.be/jPngjTuvT1Q` supplied directly by the student |
+| Read-only verification | YouTube oEmbed returned title “Báo cáo Homework 5 K6 Performance Testing”; watch metadata returned playable status, `isUnlisted=true`, duration approximately 975–976 seconds, and Vietnamese automatic captions |
+| Video gates | H-018/H-019/H-020 `DONE BY HUMAN`; Codex did not create video, voice, or URL |
+| ChatGPT App summary | Human supplied a retrospective session summary; underlying ChatGPT prompts, timestamps, model, and exact outputs were not provided, so the summary is preserved as supplemental evidence rather than reconstructed interaction logs |
+| AI scoring recommendation | `096/100` based on the official 30/20/20/10/10/10 rubric |
+| SelfAssessedGrade | Still `PENDING`; the student has not yet accepted or replaced the AI recommendation |
+
+The human-supplied summary says `26 PASS / 0 FAIL`, which was an earlier
+checkpoint and is preserved historically. It does not override the current
+repository validator. Detailed record:
+[`../ai-audit/interactions/043-youtube-chatgpt-summary-grade-recommendation.md`](../ai-audit/interactions/043-youtube-chatgpt-summary-grade-recommendation.md).

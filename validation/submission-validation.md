@@ -1,12 +1,12 @@
 # HW05 Submission Validation
 
-Generated: 2026-09-02T14:18:05.788Z
+Generated: 2026-09-03T09:05:41.611Z
 
 | Status | Count |
 |---|---:|
-| PASS | 30 |
+| PASS | 31 |
 | FAIL | 0 |
-| MANUAL VERIFICATION REQUIRED | 4 |
+| MANUAL VERIFICATION REQUIRED | 3 |
 | NOT APPLICABLE | 1 |
 
 | Check | Status | Evidence |
@@ -39,7 +39,7 @@ Generated: 2026-09-02T14:18:05.788Z
 | git_log | PASS | Real Git log export exists |
 | hardware_screenshot | PASS | Genuine visually validated hardware/hostname JPEG and checksum record exist |
 | hostname_compatibility | PASS | Human confirmed the same MacBook/hostname was used previously |
-| video_url | MANUAL VERIFICATION REQUIRED | No real YouTube URL supplied |
+| video_url | PASS | https://youtu.be/jPngjTuvT1Q — human supplied; accessibility/unlisted metadata externally checked 2026-09-03 |
 | combined_video_decision | PASS | Human selected one combined performance/Skill video |
 | ai_critique_approval | PASS | Human approved the 278-word critique |
 | issue_publication | NOT APPLICABLE | Human confirmed no genuine SUT issue; no speculative Issue published |

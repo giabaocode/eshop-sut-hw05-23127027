@@ -1,5 +1,7 @@
 # HW05 Final Video Cheatsheet
 
+Status: **HUMAN VIDEO SUPPLIED — <https://youtu.be/jPngjTuvT1Q>**
+
 Target **9:30** · Minimum **6:00** · Vietnamese human narration · No live rerun
 
 ## Before Record

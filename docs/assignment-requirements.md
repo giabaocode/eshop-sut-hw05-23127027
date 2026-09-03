@@ -40,11 +40,11 @@ work is never marked complete without the student's explicit confirmation.
 | T1-10 | Execute all three scenarios as completely as possible and preserve real evidence. | §6 Task 1, p.5 | Actual Load/Stress/Spike results | Partial | Yes | DONE |
 | T1-11 | For each run, capture the testing tool and backend resource usage monitor together in a screenshot. | §6 Task 1, p.5 | Three real resource-monitor screenshots | No | Yes | DONE |
 | T1-12 | Supply a hardware report containing a screenshot and a specification table. | §6 Task 1, p.5 | Hardware screenshot and specs | Partial | Yes | DONE |
-| T1-13 | Reset a three-failure login lockout between Stress/Spike runs when triggered and document the steps. | §6 Task 1, p.5 | Lockout procedure and run evidence | Partial | Yes | TODO |
+| T1-13 | Reset a three-failure login lockout between Stress/Spike runs when triggered and document the steps. | §6 Task 1, p.5 | Lockout procedure and run evidence | Partial | Yes | NOT APPLICABLE — no lockout occurred; fresh runtime reset/reprovisioning procedure documented |
 | T1-14 | Produce full raw `.jtl` logs and HTML report folders. | §6 Task 1, p.5; §11, p.7; §14, p.8 | Raw results and three HTML report folders, subject to k6 ambiguity A-01 | Partial | Yes | DONE |
 | T1-15 | Run an approximately 10–15 minute sustained endurance/soak test to empirically determine the local hardware threshold with concrete numbers. | §6 Task 1, p.5 | Endurance run and threshold analysis | Partial | Yes | DONE |
-| T1-16 | Record an unlisted YouTube demo of at least six total minutes; separate scenario clips are allowed. | §6 Task 1, p.5 | Real video and URL | No | Yes | TODO |
-| T1-17 | Show the testing tool and resource monitor in the same frame and use the student's own Vietnamese narration. | §6 Task 1, p.5 | Real video evidence | No | Yes | TODO |
+| T1-16 | Record an unlisted YouTube demo of at least six total minutes; separate scenario clips are allowed. | §6 Task 1, p.5 | Real video and URL | No | Yes | DONE — human supplied playable unlisted ~16:15 URL |
+| T1-17 | Show the testing tool and resource monitor in the same frame and use the student's own Vietnamese narration. | §6 Task 1, p.5 | Real video evidence | No | Yes | DONE BY HUMAN — combined video supplied; Vietnamese auto-caption metadata observed |
 | T1-18 | Report genuine bugs or performance issues on the GitHub Issues page with screenshots; performance issues are encouraged but absence is not penalized. | §6 Task 1, p.5 | Genuine issue links or documented absence | Partial | Yes | NOT APPLICABLE |
 | T2-01 | After collecting real raw results, prompt AI to analyse the logs and suggest performance thresholds. | §6 Task 2, p.5 | Original AI analysis | Partial | Yes | DONE |
 | T2-02 | Human-review the AI analysis and identify actual metric misreads/misinterpretations. | §6 Task 2, p.5 | AI-analysis review | Partial | Yes | DONE |
@@ -54,10 +54,10 @@ work is never marked complete without the student's explicit confirmation.
 | T3-02 | The proposal must flag p95 regressions. | §6 Task 3, p.6 | Proposal rules and thresholds | Partial | Yes | DONE |
 | T3-03 | Include a flowchart and discuss cost and false-alarm trade-offs. | §6 Task 3, p.6 | Mermaid flowchart and discussion | Partial | Yes | DONE |
 | SKILL-01 | Build a reusable Agent Skill for performance testing and log analysis (encouraged and worth 10 rubric points). | §7, p.6; §15, p.9 | Reusable Agent Skill | Yes | Yes | DONE |
-| SKILL-02 | Submit the skill with a demonstration video showing end-to-end use on a complete endpoint group. | §7, p.6 | Skill and real demo link, subject to ambiguity A-02 | Partial | Yes | TODO |
+| SKILL-02 | Submit the skill with a demonstration video showing end-to-end use on a complete endpoint group. | §7, p.6 | Skill and real demo link, subject to ambiguity A-02 | Partial | Yes | DONE BY HUMAN — combined video URL supplied |
 | TOOL-01 | Use JMeter by default or k6 for bonus; declare all tools in the AI Audit Report. | §8, p.6 | Tool declaration | Yes | Yes | DONE |
 | TOOL-02 | Use an appropriate resource monitor, such as Activity Monitor on macOS. | §8, p.6 | Monitoring runbook and screenshots | Partial | Yes | DONE |
-| AUDIT-01 | Attach the AI Audit Report as a mandatory appendix. | §9, p.6 | AI Audit in report appendix | Partial | Yes | TODO |
+| AUDIT-01 | Attach the AI Audit Report as a mandatory appendix. | §9, p.6 | AI Audit in report appendix | Partial | Yes | DONE — Markdown and generated PDF are present and linked from the main report |
 | AUDIT-02 | For every AI interaction, record AI tool name, date/time, human prompt, and AI output. | §9, pp.6–7 | AI Audit interaction entries | Partial | Yes | IN PROGRESS |
 | CRIT-01 | Write a mandatory 200–300 word critique of AI. | §10, p.7 | AI critique | Partial | Yes | DONE |
 | CRIT-02 | Address what AI got wrong/biased/incomplete, why it missed the issue, and the collaboration principle learned. | §10, p.7 | Evidence-based critique | Partial | Yes | DONE |

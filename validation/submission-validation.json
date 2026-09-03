@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-02T14:18:05.788Z",
+  "generated_at": "2026-09-03T09:05:41.611Z",
   "technical_only": false,
   "counts": {
-    "PASS": 30,
+    "PASS": 31,
     "FAIL": 0,
-    "MANUAL VERIFICATION REQUIRED": 4,
+    "MANUAL VERIFICATION REQUIRED": 3,
     "NOT APPLICABLE": 1
   },
   "checks": [
@@ -150,8 +150,8 @@
     },
     {
       "id": "video_url",
-      "status": "MANUAL VERIFICATION REQUIRED",
-      "evidence": "No real YouTube URL supplied"
+      "status": "PASS",
+      "evidence": "https://youtu.be/jPngjTuvT1Q — human supplied; accessibility/unlisted metadata externally checked 2026-09-03"
     },
     {
       "id": "combined_video_decision",

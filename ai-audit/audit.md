@@ -1707,3 +1707,22 @@ uses the repository Skill checker instead of inventing an unverified
 repository-local `$skill` invocation. H-018/H-019/H-020 remain human-only; no
 video, narration, URL, or completion was fabricated. Detailed record:
 [`interactions/042-final-video-runbook.md`](interactions/042-final-video-runbook.md).
+
+## Interaction 043 — YouTube evidence, ChatGPT summary, and grade recommendation
+
+The student supplied the real combined-video URL
+`https://youtu.be/jPngjTuvT1Q` and a retrospective ChatGPT App session summary.
+Read-only YouTube oEmbed/watch metadata verified a playable unlisted video
+titled “Báo cáo Homework 5 K6 Performance Testing”, approximately 16:15 long,
+with a Vietnamese automatic-caption track. Codex did not create or alter the
+video or voice. The ChatGPT summary is retained as human-supplied supplemental
+AI Audit evidence; it is not treated as reconstructed exact prompts/outputs,
+and its historical `26 PASS` figure does not replace current repository state.
+
+Against the official 30/20/20/10/10/10 rubric, Codex proposed a conservative
+`096/100`: Load 29, Stress 19, Spike 19, AI analysis 10, CPT 10, Agent Skill 9.
+This remains an AI recommendation, not the student's SelfAssessedGrade. H-018,
+H-019, and H-020 are human-complete; H-023 remains pending. After inserting the
+real URL, the validator reported 31 PASS, 0 FAIL, 3 manual checks, and 1 NOT
+APPLICABLE. Detailed record:
+[`interactions/043-youtube-chatgpt-summary-grade-recommendation.md`](interactions/043-youtube-chatgpt-summary-grade-recommendation.md).

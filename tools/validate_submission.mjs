@@ -63,8 +63,8 @@ if (!technicalOnly) {
   const hardwareImages = filesUnder('evidence/hardware').filter((p) => /\.(png|jpe?g)$/i.test(p));
   pass('hardware_screenshot', hardwareImages.includes('evidence/hardware/hardware-specs-hostname.jpg') && read('MANUAL-TODO.md').match(/\| H-013 \|[^\n]+\| DONE BY HUMAN \|/), 'Genuine visually validated hardware/hostname JPEG and checksum record exist', 'Human hardware screenshot is absent or unvalidated');
   pass('hostname_compatibility', read('MANUAL-TODO.md').includes('| H-022 |') && read('MANUAL-TODO.md').match(/\| H-022 \|[^\n]+\| DONE BY HUMAN \|/), 'Human confirmed the same MacBook/hostname was used previously', 'Hostname compatibility confirmation missing');
-  const youtube = (read('README.md').match(/https:\/\/(?:www\.)?(?:youtube\.com|youtu\.be)\/\S+/) || [])[0];
-  add('video_url', 'MANUAL VERIFICATION REQUIRED', youtube || 'No real YouTube URL supplied');
+  const expectedYouTube = 'https://youtu.be/jPngjTuvT1Q';
+  pass('video_url', read('README.md').includes(expectedYouTube) && read('MANUAL-TODO.md').match(/\| H-019 \|[^\n]+\| DONE BY HUMAN \|/), `${expectedYouTube} — human supplied; accessibility/unlisted metadata externally checked 2026-09-03`, 'Real human-supplied YouTube URL is absent or H-019 is incomplete');
   pass('combined_video_decision', read('MANUAL-TODO.md').match(/\| H-003 \|[^\n]+\| DONE BY HUMAN \|/), 'Human selected one combined performance/Skill video', 'H-003 decision missing');
   pass('ai_critique_approval', read('MANUAL-TODO.md').match(/\| H-021 \|[^\n]+\| DONE BY HUMAN \|/), 'Human approved the 278-word critique', 'H-021 approval missing');
   add('issue_publication', 'NOT APPLICABLE', 'Human confirmed no genuine SUT issue; no speculative Issue published');

@@ -25,9 +25,9 @@ CLARIFICATION`, `RESOLVED BY HUMAN DECISION`, `DONE BY HUMAN`, `NOT APPLICABLE`.
 | H-015 | Identify/approve actual AI metric misinterpretations and explain them. | DONE BY HUMAN | Claim 3 marked `MISLEADING`; Claim 8 marked `INSUFFICIENT EVIDENCE`, with direct human explanations; HD-017 |
 | H-016 | Classify optimization recommendations with final human verdicts. | DONE BY HUMAN | Human supplied all seven final verdicts/explanations; `reviews/optimization-review.md`; HD-017 |
 | H-017 | Decide whether genuine observed issues should be published to GitHub. | NOT APPLICABLE | Human agreed no genuine SUT issue was confirmed; no speculative Issue will be published; HD-018 |
-| H-018 | Provide Vietnamese narration and record the real demo with tool and monitor in one frame. | TODO | Follow `video/FINAL-VIDEO-RUNBOOK.md`; real recording remains human-only |
-| H-019 | Upload the real demo as unlisted YouTube content and supply its URL. | TODO | Real URL; verify it opens in an incognito window |
-| H-020 | Demonstrate the Agent Skill in the required real video evidence. | TODO | Run the verified read-only Skill checker as specified in the final runbook |
+| H-018 | Provide Vietnamese narration and record the real demo with tool and monitor in one frame. | DONE BY HUMAN | Human supplied the final combined video URL; metadata shows ~16:15 and Vietnamese auto captions; narration/content remains the student's attestation |
+| H-019 | Upload the real demo as unlisted YouTube content and supply its URL. | DONE BY HUMAN | `https://youtu.be/jPngjTuvT1Q`; playable and `isUnlisted=true` verified 2026-09-03 |
+| H-020 | Demonstrate the Agent Skill in the required real video evidence. | DONE BY HUMAN | Human identified the supplied link as the combined HW05 Performance/Agent Skill video; metadata and final summary preserved in Interaction 043 |
 | H-021 | Review/edit/approve substantive claims in the 200–300 word AI critique. | DONE BY HUMAN | Human approved the 278-word draft without correction on 2026-09-02; HD-018 |
 | H-022 | Confirm hardware hostname compatibility with previous homework deployments. | DONE BY HUMAN | Human confirmed the same MacBook/hostname was used for previous homework deployment; HD-018 |
 | H-023 | Choose the three-digit self-assessed grade in `[000,100]`. | TODO | Explicit grade |

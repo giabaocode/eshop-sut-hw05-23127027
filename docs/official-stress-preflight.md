@@ -1,6 +1,10 @@
 # Official Stress Preflight — Run `20260902T101857+0700`
 
-Status: **PASS — WAITING AT REAL SCREENSHOT-READINESS GATE; NO MEASURED TRAFFIC**
+Status: **PRESERVED PREFLIGHT PASS — OFFICIAL STRESS LATER COMPLETED**
+
+This file preserves the state before measured traffic. The later genuine
+Stress outcome is recorded in the timestamped result tree and analysis; the
+preflight facts below are not current process state.
 
 Maximum safe automation created a fresh no-hardlink clone pinned to official
 Load evidence commit `0c17457371d7b9bff75aa27ae61854c84b12ba3f`, installed
@@ -16,8 +20,8 @@ disk, SQLite integrity, distinct DB inode, and protected original hash passed.
 The approved 12m30s Stress plan retains targets
 `2,2,5,5,10,10,15,15,20,20,5,5,0`, maximum planned input 20 VUs, 30-second
 graceful settings, and a 14-minute safety cap. Twenty VUs remain an input—not
-measured capacity. The planned result root
-`performance/results/stress/20260902T101857+0700/` remains absent.
+measured capacity. At this preflight checkpoint, the planned result root
+`performance/results/stress/20260902T101857+0700/` was still absent.
 
 No trustworthy combined macOS GUI screenshot can be guaranteed from the
 headless runner. The human must arrange Activity Monitor for PID `45430` beside

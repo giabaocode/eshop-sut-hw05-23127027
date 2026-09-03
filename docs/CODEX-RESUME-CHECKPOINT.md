@@ -3,9 +3,10 @@
 ## Checkpoint identity
 
 - Created: 2026-09-01 13:37:42 +07 (Asia/Ho_Chi_Minh)
+- Final-status refresh: 2026-09-03 (Asia/Ho_Chi_Minh)
 - Repository: `/Users/phamngocgiabao/eshop-sut-hw05-23127027`
 - Source commit: `85af3ba875c88283615e22cb108f13e2fccaf0e9`
-- Current completed activity: **Phase I official execution preparation complete; human filenames pending**
+- Current completed activity: **OFFICIAL EXECUTION, ANALYSIS, HUMAN DECISIONS, REPORTS, AND PACKAGING COMPLETE**
 - Phase B correction review: **RESOLVED BY HUMAN** on 2026-09-01 15:58:08 +07
 - Phase C status: **COMPLETE AND HUMAN-REVIEWED**; H-033 `DONE BY HUMAN`
 - Phase D status: **COMPLETE AND HUMAN-REVIEWED WITH AUTHENTICATION CORRECTION**; H-034 `DONE BY HUMAN`
@@ -26,7 +27,7 @@
 - Fresh Pilot evidence commit: `e23caf4` (`test: record successful corrected 2-VU pilot`)
 - H-040: **DONE BY HUMAN**; 81/81 Pilot accepted as runtime validation only
 - Phase I preparation commit: `b914c3c` (`test: prepare reviewed official performance plans`)
-- Current gate: **H-010 — HUMAN OFFICIAL TEST-PLAN FILENAMES**
+- Current gate: **H-024/H-025 — HUMAN FINAL ARCHIVE INSPECTION AND MOODLE SUBMISSION**
 
 ## Selected workflow
 
@@ -163,7 +164,9 @@ checkpoint, the workload proposal, or the AI Audit.
   it; checkout total is the normalized correlated product-detail price.
 - Narrow root `.gitignore` rules protect only private performance credentials,
   local secret configuration, and `performance/secrets/`.
-- No real credential or account has been created.
+- No real credential is committed. Later official runs provisioned only
+  disposable runtime accounts; their private credential files were not added
+  to Git or the submission archive.
 
 ## Approved Phase D correlation decisions
 
@@ -206,7 +209,12 @@ checkpoint, the workload proposal, or the AI Audit.
   distinct k6-equivalent outputs. H-002 is resolved without external contact;
   genuine native JSON remains canonical and fake/mislabeled JTL is prohibited.
 
-## Important unresolved items
+## Historical unresolved items at the Phase I checkpoint
+
+The following bullets preserve what was unresolved when this checkpoint was
+first written. They are historical audit context, not the current submission
+state; official execution, reports, video, grade, and packaging were completed
+later as recorded in `MANUAL-TODO.md` and the AI Audit.
 
 - Phase F architecture/source is human-approved and the shared WF-03 is
   runtime-validated by the corrected 2-VU Pilot; official workloads remain
@@ -253,7 +261,7 @@ Read these before continuing beyond the Phase F review checkpoint:
 6. [`test-data-strategy.md`](test-data-strategy.md) — human-approved Phase C decisions and preserved proposal history.
 7. [`correlation-strategy.md`](correlation-strategy.md) — human-approved Phase D design and auth correction.
 8. [`checks-metrics-safety.md`](checks-metrics-safety.md) — human-approved Phase E decisions and preserved deferred proposals.
-9. [`report-output-mapping.md`](report-output-mapping.md) — human-resolved distinct k6 output strategy; pinned capability pending.
+9. [`report-output-mapping.md`](report-output-mapping.md) — human-resolved distinct k6 output strategy and completed genuine output mapping.
 10. [`ta-clarifications.md`](ta-clarifications.md) — preserved unsent question and human resolution.
 11. [`k6-architecture.md`](k6-architecture.md) — human-approved Phase F draft/static review record.
 12. [`k6-toolchain.md`](k6-toolchain.md) — pinned install and genuine no-HTTP capability findings.
@@ -320,10 +328,9 @@ See `MANUAL-TODO.md` for exact IDs and remaining responsibilities.
 
 ## Resume instruction
 
-Do not redo completed discovery or Phases C–G. The corrected Pilot and H-040
-review are complete. Phase I prepares but does not execute official scenarios.
-Await the human's H-010 manual creation/approval of all three attributable plan
-filenames. Do not create those filenames, start/provision an official runtime,
-run Load/Stress/Spike/endurance, implement deferred numeric aborts/final
-performance thresholds, generate screenshots/reports, or push without the next
-explicit approval.
+Do not redo discovery, Pilot, official Load/Stress/Spike, or endurance. All
+genuine execution evidence, analysis, human verdicts, reports, video URL, grade,
+and the validated submission archive now exist. Do not create replacement
+measurements or alter the human-created official filenames. The only remaining
+human actions are final archive inspection and Moodle upload; never claim that
+Moodle submission occurred without the student performing it.

@@ -73,11 +73,13 @@ The candidate below prioritizes three genuinely different primary views while pr
 
 | Scenario | Primary distinct view/output | Raw artifact | HTML/equivalent artifact | Tool/dependency | Compliance status |
 |----------|------------------------------|--------------|--------------------------|-----------------|-------------------|
-| Load | Native end-of-test aggregate/custom summary | Native granular `load-raw.json` | Aggregate HTML/summary generated transparently from real Load summary/raw data | Pinned k6 2.2.0 plus reviewed aggregate renderer | **HUMAN-APPROVED K6 EQUIVALENT**; real-data renderer pending |
-| Stress | Native CSV time-series analysis | Native granular `stress-raw.json` plus `stress-timeseries.csv` | Time-series HTML analysis generated transparently from real Stress CSV/raw data | Pinned k6 2.2.0 plus reviewed time-series renderer | **HUMAN-APPROVED K6 EQUIVALENT**; real-data renderer pending |
-| Spike | Native k6 web-dashboard time-series view | Native granular `spike-raw.json` | Real k6 web-dashboard HTML export | Pinned k6 2.2.0 web dashboard | **HUMAN-APPROVED K6 EQUIVALENT**; export capability verified, real run pending |
+| Load | Native end-of-test aggregate/custom summary | `performance/results/load/20260902T092131+0700/raw/load-raw.json` | `report/load-aggregate.html`, generated transparently from genuine Load summary/raw data | Pinned k6 2.2.0 plus reviewed aggregate renderer | **COMPLETE — HUMAN-APPROVED K6 EQUIVALENT** |
+| Stress | Native CSV time-series analysis | `performance/results/stress/20260902T101857+0700/raw/stress-raw.json` plus `stress-timeseries.csv` | `report/stress-timeseries.html`, generated transparently from genuine Stress CSV/raw data | Pinned k6 2.2.0 plus reviewed time-series renderer | **COMPLETE — HUMAN-APPROVED K6 EQUIVALENT** |
+| Spike | Native k6 web-dashboard time-series view | `performance/results/spike/20260902T104549+0700/raw/spike-raw.json` | `report/spike-dashboard.html`, the real k6 web-dashboard export | Pinned k6 2.2.0 web dashboard | **COMPLETE — HUMAN-APPROVED K6 EQUIVALENT** |
 
-The filenames above are schematic, not generated artifacts. Final names must use the reviewed submission convention and preserve scenario, student ID, and execution timestamp without secrets.
+The paths above are genuine generated artifacts. The official human-created
+test-plan filenames retain the reviewed student/scenario/date convention; the
+timestamped result directories contain no secrets.
 
 ## 4. Historical alternatives and final decision
 
@@ -105,8 +107,8 @@ A later approved custom renderer could give Load and Stress genuinely different 
 
 ## 5. Real report-directory and raw-data strategy
 
-No report directory is created before real execution. Each official run will
-use a unique actual run ID below this conceptual layout:
+No report directory was created before real execution. Each official run later
+used a unique actual run ID under this realized layout:
 
 ```text
 performance/results/
@@ -147,20 +149,12 @@ No view may contain credentials, JWTs, user IDs, product IDs, order IDs, shippin
 This question was prepared but never sent. `ta-clarifications.md` preserves the
 human resolution.
 
-## 8. Remaining implementation gate
+## 8. Completed implementation outcome
 
-Before official execution, record:
-
-- reviewed real-data aggregate and time-series HTML renderers;
-- exact raw file format and compression policy;
-- exact HTML/equivalent generator and pinned version;
-- report-folder/naming convention;
-- whether report generation is performed live or after the run;
-- evidence-retention and checksum procedure.
-
-H-002 itself is resolved and pinned-tool/Pilot output evidence now exists.
-`performance/tools/run-official.sh` prepares native JSON for all scenarios,
-Stress CSV, and Spike dashboard export without touching business logic. The
-Load aggregate and Stress time-series HTML/equivalent renderers remain pending
-review and real official data. No file with a `.jtl` extension may be created
-merely to appear compliant.
+H-002 is resolved and pinned-tool/Pilot evidence exists.
+`performance/tools/run-official.sh` produced native JSON for all scenarios,
+Stress CSV, and the genuine Spike dashboard without touching business logic.
+Reviewed post-run tools generated the distinct Load aggregate and Stress
+time-series HTML views from real data. Each timestamped result tree preserves
+raw format, commands, output/report paths, evidence, and checksums. No file with
+a `.jtl` extension was fabricated or mislabeled.

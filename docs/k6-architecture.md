@@ -1,6 +1,6 @@
 # Shared k6 Architecture and Static Implementation Review
 
-Status: **SHARED WF-03 RUNTIME-VALIDATED BY 2-VU PILOT; OFFICIAL EXECUTION PENDING**
+Status: **SHARED WF-03 RUNTIME-VALIDATED AND USED UNCHANGED BY ALL OFFICIAL SCENARIOS**
 
 Prepared: 2026-09-01 (Asia/Ho_Chi_Minh)
 Workflow: WF-03 — Purchase followed by customer cancellation
@@ -11,6 +11,12 @@ The corrected 2-VU Pilot later executed the full shared workflow successfully:
 81/81 lifecycles and all checks passed. That evidence promotes the shared
 implementation to runtime-validated status but is not an official performance
 scenario or threshold/capacity result.
+
+The same shared implementation was subsequently executed unchanged by official
+Load `20260902T092131+0700`, Stress `20260902T101857+0700`, and Spike
+`20260902T104549+0700`, plus the separate endurance run. This later evidence
+does not retroactively turn Pilot values into official results or establish
+capacity.
 
 ### Phase F human-review result
 
@@ -302,7 +308,7 @@ without touching `executeWf03()`.
 | `open()` path/API assumptions | Init callback and environment path are designed from current docs | **Runtime verification required** |
 | `SharedArray`, `exec.test.abort`, JS feature support | Current documented APIs/design assumptions | **Pinned-version verification required** |
 | External safety runner | Not implemented, preventing false claims about PID/port/disk/wall-clock enforcement | Required after static approval |
-| Native/report outputs | Metadata only; no fake JTL; distinct real-data k6 equivalents selected | k6 2.2.0 JSON/CSV/summary/dashboard capability verified; real-data renderers pending |
+| Native/report outputs | Metadata only at Phase F; no fake JTL; distinct real-data k6 equivalents selected | Later official runs produced native JSON, Load aggregate HTML, Stress CSV-derived HTML, and the real Spike dashboard |
 
 ### Phase G pinned-version addendum
 
@@ -341,12 +347,12 @@ one outcome per attempt, custom tags/metrics, and raw JSON writing. It completed
 validation for Phase I. This history remains evidence of harness corrections;
 it does not validate official Load/Stress/Spike workload behavior.
 
-## 11. Phase I execution-preparation boundary
+## 11. Phase I boundary and later execution outcome
 
-H-036 and H-040 are `DONE BY HUMAN`. The shared code carries the precise status
-“runtime-validated by 2-VU Pilot; official performance execution not yet
-performed.” Thin official entries still contain only config/data initialization
-and the same `executeWf03()` call. `tools/run-official.sh` is a prepared,
-unexecuted scenario-neutral exact-PID runner; it requires a human-created
-official filename and new output root. No official scenario, final performance
-threshold, or report has been generated.
+H-036 and H-040 are `DONE BY HUMAN`. At the Phase I checkpoint the shared code
+was only Pilot-validated and the scenario-neutral exact-PID runner was still
+unexecuted. Later, the human-created official entries ran through that runner
+and continued to contain only config/data initialization plus the same
+`executeWf03()` call. Genuine official raw/report artifacts now exist for Load,
+Stress, and Spike. No final capacity claim or validated universal performance
+threshold was introduced.

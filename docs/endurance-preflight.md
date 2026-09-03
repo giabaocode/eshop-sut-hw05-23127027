@@ -1,6 +1,11 @@
 # Endurance Preflight — Run `20260902T143823+0700`
 
-Status: **PASS — WAITING AT REAL SCREENSHOT-READINESS GATE; NO K6 TRAFFIC**
+Status: **PRESERVED PREFLIGHT PASS — ENDURANCE RUN LATER COMPLETED**
+
+This file preserves the state before measured traffic. The later genuine
+endurance outcome is recorded in `analysis/endurance-analysis.md` and the
+timestamped result tree; the preflight facts below are not current process
+state.
 
 Fresh no-hardlink runtime `/private/tmp/eshop-hw05-endurance.fFN6ej/runtime`
 is pinned to `4bc3b682cf11830d41e78e83366fc09bc9645d88`. Exact foreground
@@ -11,8 +16,8 @@ hash passed.
 
 The scheduled test is 0→5/30s, 5 VUs/12m, 5→0/30s (13 minutes) with a
 14-minute exact-PID safety cap. Five VUs is an evidence-informed conservative
-input, not a threshold or capacity claim. Actual result root
-`performance/results/endurance/20260902T143823+0700/` remains absent.
+input, not a threshold or capacity claim. At this preflight checkpoint, result
+root `performance/results/endurance/20260902T143823+0700/` was still absent.
 
 ## Preserved preflight attempts
 

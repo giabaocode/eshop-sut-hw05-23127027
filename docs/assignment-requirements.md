@@ -19,7 +19,7 @@ work is never marked complete without the student's explicit confirmation.
 |----|-------------|------------------|-------------|------------|--------|--------|
 | GEN-01 | Complete the work individually and submit through the Moodle submission link by its stated deadline. | §1, p.1 | Final Moodle submission | No | Yes | TODO |
 | GEN-02 | Use an AI-first strategy step-by-step; do not delegate the whole technique to one generic prompt. | §2, p.1 | Main report process narrative; AI Audit | Partial | Yes | DONE |
-| GEN-03 | Human-review every AI result, correct/refine it, and accept responsibility for correctness. | §2, pp.1–2 | Review records; human decisions; corrected artifacts | No | Yes | TODO |
+| GEN-03 | Human-review every AI result, correct/refine it, and accept responsibility for correctness. | §2, pp.1–2 | Review records; human decisions; corrected artifacts | No | Yes | IN PROGRESS — substantive phased reviews complete; H-024 final archive inspection remains |
 | GEN-04 | Keep a complete log of AI use; explicitly declare if AI was not used. | §2, p.2; §9, pp.6–7 | AI Audit Report appendix | Partial | Yes | IN PROGRESS |
 | GEN-05 | Document the whole working process in a text-based format such as Markdown. | §2, p.2 | Markdown documentation and report | Partial | Yes | DONE |
 | GEN-06 | Prioritize the quantity and quality of plans, data, raw logs, report views, resource/hardware evidence, video, critique, and links. | §2, p.2 | Submission package | Partial | Yes | DONE |
@@ -82,7 +82,7 @@ work is never marked complete without the student's explicit confirmation.
 | README-02 | README test summary must state scenarios run, endpoint groups, numeric endurance threshold, issue count, and demo link. | §14, p.8 | `README.md` | Partial | Yes | DONE |
 | GRADE-01 | Rubric weights: Load 30, Stress 20, Spike 20, AI analysis/misinterpretation 10, continuous proposal 10, Agent Skill 10. | §15, pp.8–9 | Self-assessment table | Partial | Yes | DONE BY HUMAN — total `096/100` |
 | REG-01 | Late submission is not permitted. | §17, p.9 | Timely submission | No | Yes | TODO |
-| REG-02 | Missing any required document results in zero points. | §17, p.9 | Final validation checklist | Partial | Yes | TODO |
+| REG-02 | Missing any required document results in zero points. | §17, p.9 | Final validation checklist | Partial | Yes | DONE — validator has no mandatory FAIL; Moodle upload remains separate |
 | REG-03 | Copying between students, including prompts, results in a grade of zero for both parties. | §17, p.9 | Original work and audit trail | No | Yes | IN PROGRESS |
 
 ## Automated versus human responsibility

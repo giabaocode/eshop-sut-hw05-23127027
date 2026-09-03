@@ -1,4 +1,4 @@
-// OFFICIAL STRESS NOT EXECUTED; shared WF-03 was runtime-validated by 2-VU Pilot.
+// OFFICIAL STRESS EXECUTED as run 20260902T101857+0700 after 2-VU Pilot validation.
 // Stress changes only workload configuration; business logic is shared.
 
 import { getWorkload } from '../../config/workloads.js';

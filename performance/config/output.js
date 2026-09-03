@@ -1,5 +1,5 @@
-// DRAFT — PINNED k6 INIT-VERIFIED; NO REAL REPORT GENERATED.
-// This metadata deliberately does not implement or claim JTL conversion.
+// REVIEWED OUTPUT METADATA — official real-data reports now exist.
+// This unimported metadata does not implement or claim JTL conversion.
 
 export const OUTPUT_PROPOSALS = Object.freeze({
   load: Object.freeze({

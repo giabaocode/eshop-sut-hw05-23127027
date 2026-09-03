@@ -151,14 +151,14 @@ This is a static readiness finding only. It is not evidence that the future
 20-account setup, backend, measured workflow, output flush, or report generation
 will pass at runtime.
 
-## 7. Current authorized run checkpoint
+## 7. Preserved authorized-run checkpoint
 
 Official run ID `20260902T092131+0700` passed the real preflight recorded in
 [`official-load-preflight.md`](../docs/official-load-preflight.md). The exact
-one-start backend PID is `42059`; the complete 20-account pool is valid and the
-starting order count is zero. The runner/result root has not been started or
-created. Execution is paused only for the genuine macOS screenshot-readiness
-gate, not for another technical-design approval.
+one-start backend PID is `42059`; the complete 20-account pool was valid and the
+starting order count was zero. At this checkpoint the runner/result root had
+not yet started and execution was paused only for genuine macOS screenshot
+readiness. The later completed outcome is recorded immediately below.
 
 ## 8. Execution outcome
 

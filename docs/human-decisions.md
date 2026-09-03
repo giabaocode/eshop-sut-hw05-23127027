@@ -552,3 +552,19 @@ repository validator. Detailed record:
 
 Detailed record:
 [`../ai-audit/interactions/044-human-grade-and-split-package.md`](../ai-audit/interactions/044-human-grade-and-split-package.md).
+
+## HD-021 — Final stale-status cleanup authorization
+
+| Field | Human decision / boundary |
+|---|---|
+| Recorded | 2026-09-03 18:32:33 +0700 (Asia/Ho_Chi_Minh) |
+| Request owner | Phạm Ngọc Gia Bảo — HUMAN |
+| Human request | Recheck missing deliverables and identify any content presented as human-reviewed without the student's awareness |
+| AI finding presented | Required artifacts were present; several current-facing comments/doc statuses incorrectly still said official execution/report/reviews were pending |
+| Human authorization | `bạn giúp mình tiến hành đi` — authorize the corrective finalization work |
+| Allowed correction | Factual status/comment cleanup, derived report regeneration, validator/archive/checksum refresh, truthful commit and safe `origin` push |
+| Preserved boundary | No result/workload/workflow/assertion/correlation change; historical preflight, proposal, failed-Pilot, superseded-value, and draft evidence remains explicitly historical |
+| Not inferred | H-024 final regenerated-ZIP inspection and H-025 Moodle submission remain human actions |
+
+Detailed record:
+[`../ai-audit/interactions/045-final-stale-status-audit.md`](../ai-audit/interactions/045-final-stale-status-audit.md).

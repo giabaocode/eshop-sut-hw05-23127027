@@ -1,6 +1,10 @@
 # Official Scenario Preconditioning
 
-Status: **PREPARED — NOT EXECUTED**
+Status: **REVIEWED PROCEDURE — EXECUTED IN FRESH RUNTIMES FOR ALL OFFICIAL SCENARIOS**
+
+The procedure below was written before execution and later applied separately
+to genuine Load, Stress, and Spike runs. Its imperative wording is retained as
+a reproducible runbook, not as a claim that execution is still pending.
 
 This procedure applies independently to Load, Stress, and Spike. Provisioning
 and validation are setup traffic and must finish before measured k6 starts.

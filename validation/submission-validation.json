@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-03T09:13:49.752Z",
+  "generated_at": "2026-09-03T11:54:37.187Z",
   "technical_only": false,
   "counts": {
-    "PASS": 33,
+    "PASS": 34,
     "FAIL": 0,
     "MANUAL VERIFICATION REQUIRED": 1,
     "NOT APPLICABLE": 1
@@ -17,6 +17,11 @@
       "id": "official_naming",
       "status": "PASS",
       "evidence": "All human-created names match the approved PDF pattern"
+    },
+    {
+      "id": "current_status_consistency",
+      "status": "PASS",
+      "evidence": "Official wrappers and current-facing architecture/report/review statuses reflect completed real execution"
     },
     {
       "id": "load_raw",

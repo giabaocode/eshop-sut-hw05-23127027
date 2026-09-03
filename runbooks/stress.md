@@ -39,19 +39,21 @@ After fresh preconditioning, human filename creation, and per-run approval:
   "/Users/phamngocgiabao/eshop-sut-hw05-23127027/performance/results/stress/<ACTUAL_RUN_ID>"
 ```
 
-The runner additionally writes native CSV; it does not fabricate JTL or create
-the pending reviewed CSV-to-analysis renderer. The human should capture the
+The runner additionally writes native CSV and does not fabricate JTL. The
+reviewed post-run renderer later created the genuine Stress time-series HTML.
+The human should capture the
 tool and exact backend resource view during the highest valid stage, preferably
 the 20-VU hold, without hiding an earlier stop or exposing secrets.
 
-## Current authorized run
+## Preserved preflight checkpoint
 
 Fresh runtime `/private/tmp/eshop-hw05-stress.X7FeN0/runtime` is pinned to
 `0c17457371d7b9bff75aa27ae61854c84b12ba3f`; exact backend PID is `45430`.
-Exactly 20 accounts passed setup with zero orders. Planned result root is
-`performance/results/stress/20260902T101857+0700/` and remains absent. Start the
-official runner only after the human replies `READY` at the real screenshot
-gate. This preflight makes no performance/capacity claim.
+Exactly 20 accounts passed setup with zero orders. At this preflight checkpoint,
+the planned result root `performance/results/stress/20260902T101857+0700/` was
+still absent and execution waited for the human `READY` screenshot gate. The
+later execution outcome is recorded below; this preserved preflight makes no
+performance/capacity claim.
 
 ## Execution outcome
 

@@ -1,4 +1,4 @@
-// OFFICIAL SPIKE NOT EXECUTED; shared WF-03 was runtime-validated by 2-VU Pilot.
+// OFFICIAL SPIKE EXECUTED as run 20260902T104549+0700 after 2-VU Pilot validation.
 // Spike changes only workload configuration; business logic is shared.
 
 import { getWorkload } from '../../config/workloads.js';

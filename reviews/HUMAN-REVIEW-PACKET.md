@@ -1,17 +1,19 @@
 # HW05 Cumulative Human Review Packet
 
-Status: **ACTIVE — PENDING HUMAN REVIEW ITEMS ACCUMULATE HERE**
+Status: **SUBSTANTIVE HUMAN REVIEWS COMPLETE — FINAL ZIP INSPECTION/MOODLE PENDING**
 
-This packet contains only AI-generated items whose final judgment or evidence
-must remain human-owned. Technical automation continues unless a listed item is
-needed to determine the next safe action.
+This packet preserves AI-generated items whose final judgment or evidence had
+to remain human-owned. The student completed the substantive review gates and
+then requested and authorized correction of a final stale-status/unreviewed-
+content audit. Only inspection of the regenerated ZIP and Moodle submission
+remain human actions.
 
 | Artifact / gate | AI proposal | Actual evidence | Detected concern | Recommended human judgment/action | Status |
 |---|---|---|---|---|---|
-| Official Load visual evidence (H-012) | Capture real k6 execution and exact disposable backend resource usage together | COMPLETED: genuine JPEG plus genuine PNG conversion shows Activity Monitor PID `42059` and adjacent live 5/5-VU Load context for run `20260902T092131+0700` | It is a point-in-time visual, not continuous resource telemetry | Retain as real Load evidence; no further Load screenshot action needed | EVIDENCE PRESENT — FINAL PACKET REVIEW PENDING |
-| Official Stress visual evidence (H-012) | Capture real Stress execution and exact disposable backend resource usage together | COMPLETED: genuine JPEG/PNG shows 20/20 VUs at 8m50s and Activity Monitor PID `45430` | Human initially saved it under Load; relocation/conversion trail is documented | Retain as genuine Stress evidence; no further Stress screenshot action needed | EVIDENCE PRESENT — FINAL PACKET REVIEW PENDING |
-| Official Spike visual evidence (H-012) | Capture real Spike peak and exact disposable backend resource usage together | COMPLETED: genuine JPEG/PNG shows 20/20 VUs at 2m59s and Activity Monitor PID `48405` | It is a point-in-time visual, not continuous resource telemetry | Retain as real Spike evidence; no further Spike screenshot action needed | EVIDENCE PRESENT — FINAL PACKET REVIEW PENDING |
-| Endurance visual evidence (H-012) | Capture genuine k6 execution and exact backend PID together | COMPLETED: genuine JPEG/PNG shows 5/5 VUs at 6m29.9s and Activity Monitor PID `53376` | It is a point-in-time visual, not continuous telemetry | Retain as real endurance evidence; no further execution screenshot action needed | EVIDENCE PRESENT — FINAL PACKET REVIEW PENDING |
+| Official Load visual evidence (H-012) | Capture real k6 execution and exact disposable backend resource usage together | COMPLETED: genuine JPEG plus genuine PNG conversion shows Activity Monitor PID `42059` and adjacent live 5/5-VU Load context for run `20260902T092131+0700` | It is a point-in-time visual, not continuous resource telemetry | Retain as real Load evidence; no further Load screenshot action needed | DONE BY HUMAN |
+| Official Stress visual evidence (H-012) | Capture real Stress execution and exact disposable backend resource usage together | COMPLETED: genuine JPEG/PNG shows 20/20 VUs at 8m50s and Activity Monitor PID `45430` | Human initially saved it under Load; relocation/conversion trail is documented | Retain as genuine Stress evidence; no further Stress screenshot action needed | DONE BY HUMAN |
+| Official Spike visual evidence (H-012) | Capture real Spike peak and exact disposable backend resource usage together | COMPLETED: genuine JPEG/PNG shows 20/20 VUs at 2m59s and Activity Monitor PID `48405` | It is a point-in-time visual, not continuous resource telemetry | Retain as real Spike evidence; no further Spike screenshot action needed | DONE BY HUMAN |
+| Endurance visual evidence (H-012) | Capture genuine k6 execution and exact backend PID together | COMPLETED: genuine JPEG/PNG shows 5/5 VUs at 6m29.9s and Activity Monitor PID `53376` | It is a point-in-time visual, not continuous telemetry | Retain as real endurance evidence; no further execution screenshot action needed | DONE BY HUMAN |
 | Endurance wrong-listener preflight | Use a fresh owned backend and provision only its disposable database | Human requested PID `52187` stop; subsequent read-only checks found PID absent, port free, zero remaining WF-03 accounts, and both databases integrity `ok` | The first preflight remains an AI orchestration defect and cannot be reused | Retain the failure history; use a new atomic fail-closed listener check in a completely fresh runtime | RESOLVED BY HUMAN ACTION / EVIDENCE |
 | Hardware visual/hostname (H-013/H-022) | Preserve real textual specs and capture the required genuine macOS hardware screenshot | Human replacement JPEG shows `Phams-MacBook-Pro.local`, MacBook Pro/M5/16 GB and no serial/UUID; compatibility confirmed | Screenshot is point-in-time identity/hardware evidence, supplemented by the text table | Retain genuine image and checksum | DONE BY HUMAN |
 | AI analysis/misinterpretation (H-014/H-015) | Compare immutable AI claims with reproducible official raw metrics | Human supplied all nine verdicts/explanations; Claim 3 is `MISLEADING` and Claim 8 is `INSUFFICIENT EVIDENCE`; immutable source remains commit `5e4b00f` | Preserve the contrast instead of rewriting the original AI analysis | Use the human-reviewed matrix in the report | DONE BY HUMAN |
@@ -23,6 +25,6 @@ needed to determine the next safe action.
 | AI critique (H-021) | Produce an evidence-grounded 200–300 word candidate | Human approved the 278-word substantive text | Preserve approved final text and original candidate history | Use `reviews/ai-critique.md` as final critique | DONE BY HUMAN |
 | Grade/submission (H-023/H-024/H-025) | Validate technical completeness and package only after inputs exist | Human supplied `SELF_ASSESSED_GRADE=096`; generated ZIP measures below the 20 MB limit, so splitting is not triggered | Moodle submission cannot be automated; all parts would need upload together if a future package exceeds the limit | Inspect the generated ZIP and personally upload it | GRADE DONE BY HUMAN; MOODLE PENDING |
 
-Additional rows must be appended as genuine official evidence and AI-generated
-review artifacts are created. Historical approvals already recorded in
-`docs/human-decisions.md` are not reopened here.
+Historical approvals recorded in `docs/human-decisions.md` are not reopened.
+H-024/H-025 remain open only for the regenerated archive inspection and actual
+Moodle action.

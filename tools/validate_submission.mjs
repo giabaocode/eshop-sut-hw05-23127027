@@ -25,6 +25,13 @@ const official = [
 ];
 pass('official_plans', official.every(nonempty), official.join(', '), 'One or more official plans are absent/empty');
 pass('official_naming', official.every((p) => /^performance\/scenarios\/official\/23127027_(Load|Stress|Spike)_20260901\.js$/.test(p)), 'All human-created names match the approved PDF pattern', 'Official name mismatch');
+pass('current_status_consistency',
+  official.every((p) => read(p).split(/\r?\n/, 1)[0].includes('EXECUTED')) &&
+    !read('docs/k6-architecture.md').includes('OFFICIAL EXECUTION PENDING') &&
+    !/real-data renderer pending|real run pending/.test(read('docs/report-output-mapping.md')) &&
+    !read('reviews/test-plan-review.md').includes('human critique remain pending'),
+  'Official wrappers and current-facing architecture/report/review statuses reflect completed real execution',
+  'One or more current-facing files still claim completed execution/reports/reviews are pending');
 
 const runs = {
   load: 'performance/results/load/20260902T092131+0700',

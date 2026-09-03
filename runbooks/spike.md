@@ -1,6 +1,6 @@
 # Official Spike Runbook
 
-Status: **REAL PREFLIGHT PASS — RUN `20260902T104549+0700`; WAITING FOR SCREENSHOT READINESS**
+Status: **OFFICIAL SPIKE COMPLETED — RUN `20260902T104549+0700`**
 
 | Stage | Duration | Target VUs |
 |---:|---:|---:|
@@ -42,12 +42,13 @@ PID/exit/watchdog evidence. The human should arrange Activity Monitor before
 the rapid rise and capture the 20-VU hold with k6/dashboard context and exact
 backend resource usage in the same frame.
 
-## Current authorized run
+## Preserved preflight checkpoint
 
 Fresh runtime `/private/tmp/eshop-hw05-spike.21Nvt8/runtime` is pinned to
 `eeb02fb83216dfdb6db2c028295f7f5804ee0722`; exact backend PID is `48405`.
-Exactly 20 accounts passed setup with zero orders. Planned result root is
-`performance/results/spike/20260902T104549+0700/` and remains absent. Activity
-Monitor and capture framing must be ready before the runner starts because the
-20-VU hold lasts only 45 seconds. This preflight makes no performance/capacity
+Exactly 20 accounts passed setup with zero orders. At this checkpoint the
+planned result root `performance/results/spike/20260902T104549+0700/` was still
+absent, and Activity Monitor/capture framing had to be ready before the
+45-second peak. The run later completed and its genuine result is documented in
+`docs/official-spike-results.md`; this preserved preflight makes no capacity
 claim.

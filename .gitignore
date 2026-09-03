@@ -8,5 +8,5 @@
 /2026.HW05.Performance Testing_En.pdf
 
 # Narrow macOS metadata exclusions; required evidence remains trackable.
-/.DS_Store
-/evidence/.DS_Store
+.DS_Store
+**/.DS_Store

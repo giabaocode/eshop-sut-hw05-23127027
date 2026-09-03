@@ -1,6 +1,10 @@
 # Official Load Preflight — Run `20260902T092131+0700`
 
-Status: **PASS — WAITING AT REAL SCREENSHOT-READINESS GATE; NO MEASURED TRAFFIC**
+Status: **PRESERVED PREFLIGHT PASS — OFFICIAL LOAD LATER COMPLETED**
+
+This file preserves the state before measured traffic. The later genuine Load
+outcome is recorded in `docs/official-load-results.md` and the timestamped
+result tree; the preflight facts below are not current process state.
 
 The maximum-safe-automation instruction authorized technical execution. Codex
 created a no-hardlink disposable clone pinned to

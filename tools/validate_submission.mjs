@@ -68,8 +68,22 @@ if (!technicalOnly) {
   pass('combined_video_decision', read('MANUAL-TODO.md').match(/\| H-003 \|[^\n]+\| DONE BY HUMAN \|/), 'Human selected one combined performance/Skill video', 'H-003 decision missing');
   pass('ai_critique_approval', read('MANUAL-TODO.md').match(/\| H-021 \|[^\n]+\| DONE BY HUMAN \|/), 'Human approved the 278-word critique', 'H-021 approval missing');
   add('issue_publication', 'NOT APPLICABLE', 'Human confirmed no genuine SUT issue; no speculative Issue published');
-  add('self_assessed_grade', 'MANUAL VERIFICATION REQUIRED', 'No human grade supplied');
-  add('final_zip', 'MANUAL VERIFICATION REQUIRED', 'Requires grade and final human approval');
+  const grade = '096';
+  const archiveBase = `submission/23127027_HW05_AI_Performance_${grade}.zip`;
+  const splitParts = filesUnder('submission').filter((p) =>
+    /^submission\/23127027_HW05_AI_Performance_096\.(?:z\d{2}|zip)$/.test(p));
+  const maxUploadBytes = 20_000_000;
+  pass('self_assessed_grade',
+    read('README.md').includes('SelfAssessedGrade | **096/100') &&
+      read('MANUAL-TODO.md').match(/\| H-023 \|[^\n]+\| DONE BY HUMAN \|/),
+    'Human supplied 096 and README/decision register agree',
+    'Human-selected grade is absent or inconsistent');
+  pass('final_zip',
+    nonempty(archiveBase) && splitParts.length >= 2 &&
+      splitParts.every((p) => fs.statSync(path.join(root, p)).size <= maxUploadBytes) &&
+      nonempty('submission/23127027_HW05_AI_Performance_096.sha256'),
+    `${archiveBase} plus ${splitParts.length - 1} split part(s), each <= 20,000,000 bytes, with SHA-256 manifest`,
+    'Final split archive/checksum is absent, incomplete, or has a part over the 20 MB upload limit');
   add('moodle_submission', 'MANUAL VERIFICATION REQUIRED', 'Must be performed by the student');
 }
 

@@ -23,24 +23,26 @@ Spike use one runtime-validated shared implementation and separate workloads.
 | AI Critique | Human-approved 278-word final text |
 | Hardware evidence | Genuine hostname/MacBook Pro M5/16 GB screenshot and text table |
 | Demo video | [Unlisted YouTube — Báo cáo Homework 5 K6 Performance Testing](https://youtu.be/jPngjTuvT1Q) |
-| SelfAssessedGrade | **[HUMAN REQUIRED — 000..100]** |
+| SelfAssessedGrade | **096/100 — selected by the human student** |
 
 ## Self-assessment table
 
-The student must supply the final grade; Codex does not invent it.
+The student explicitly selected `SELF_ASSESSED_GRADE=096`. The component
+allocation below is the previously presented AI recommendation that the
+student accepted as the basis for that total.
 
 | Rubric area | Weight | Evidence | Student assessment |
 |---|---:|---|---:|
-| Load testing | 30 | Official raw JSON, aggregate report, screenshot, analysis | **[HUMAN]** |
-| Stress testing | 20 | Official raw JSON/CSV, time-series report, screenshot, analysis | **[HUMAN]** |
-| Spike testing | 20 | Official raw JSON/dashboard, screenshot, recovery analysis | **[HUMAN]** |
-| AI analysis and human misinterpretation review | 10 | Immutable AI analysis plus completed human matrix | **[HUMAN]** |
-| Continuous Performance Testing proposal | 10 | Proposal, Mermaid flowchart, CI prototype | **[HUMAN]** |
-| Reusable Agent Skill | 10 | Skill, safety contracts, result-tree validator, combined demo video | **[HUMAN]** |
-| **Total** | **100** | See main report and validator | **[HUMAN: 000..100]** |
+| Load testing | 30 | Official raw JSON, aggregate report, screenshot, analysis | **29** |
+| Stress testing | 20 | Official raw JSON/CSV, time-series report, screenshot, analysis | **19** |
+| Spike testing | 20 | Official raw JSON/dashboard, screenshot, recovery analysis | **19** |
+| AI analysis and human misinterpretation review | 10 | Immutable AI analysis plus completed human matrix | **10** |
+| Continuous Performance Testing proposal | 10 | Proposal, Mermaid flowchart, CI prototype | **10** |
+| Reusable Agent Skill | 10 | Skill, safety contracts, result-tree validator, combined demo video | **9** |
+| **Total** | **100** | See main report and validator | **096/100** |
 
-AI scoring recommendation: **096/100**, pending the student's explicit final
-decision. See
+The human student accepted the AI scoring recommendation of **096/100** on
+2026-09-03. The recommendation history remains in
 [`reviews/self-assessment-recommendation.md`](reviews/self-assessment-recommendation.md).
 
 Main report: [`report/23127027_HW05_Performance_Report.md`](report/23127027_HW05_Performance_Report.md)

@@ -30,9 +30,9 @@ CLARIFICATION`, `RESOLVED BY HUMAN DECISION`, `DONE BY HUMAN`, `NOT APPLICABLE`.
 | H-020 | Demonstrate the Agent Skill in the required real video evidence. | DONE BY HUMAN | Human identified the supplied link as the combined HW05 Performance/Agent Skill video; metadata and final summary preserved in Interaction 043 |
 | H-021 | Review/edit/approve substantive claims in the 200–300 word AI critique. | DONE BY HUMAN | Human approved the 278-word draft without correction on 2026-09-02; HD-018 |
 | H-022 | Confirm hardware hostname compatibility with previous homework deployments. | DONE BY HUMAN | Human confirmed the same MacBook/hostname was used for previous homework deployment; HD-018 |
-| H-023 | Choose the three-digit self-assessed grade in `[000,100]`. | TODO | Explicit grade |
-| H-024 | Perform final completeness and submission review. | TODO | Explicit submission approval |
-| H-025 | Approve final ZIP creation and Moodle submission. | TODO | Explicit packaging/submission approval |
+| H-023 | Choose the three-digit self-assessed grade in `[000,100]`. | DONE BY HUMAN | Student explicitly supplied `SELF_ASSESSED_GRADE=096` on 2026-09-03; HD-020 |
+| H-024 | Perform final completeness and submission review. | WAITING FOR HUMAN | Inspect the generated split archive parts immediately before Moodle upload |
+| H-025 | Approve final ZIP creation and Moodle submission. | WAITING FOR HUMAN | ZIP creation is authorized; student must upload every split part to Moodle and confirm submission |
 | H-026 | Review Phase 1 source-backed SUT discovery and endpoint contracts. | DONE BY HUMAN | Approved in chat on 2026-09-01 |
 | H-027 | Review and choose the safe macOS SUT startup strategy and proposed commands. | DONE BY HUMAN | Strategy B explicitly approved in chat on 2026-09-01 |
 | H-028 | Review Phase 2B disposable-clone startup verification, actual failures, and original-repository integrity evidence. | DONE BY HUMAN | Runtime verification evidence accepted in chat on 2026-09-01 |

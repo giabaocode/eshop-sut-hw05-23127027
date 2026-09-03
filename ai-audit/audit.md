@@ -1726,3 +1726,22 @@ H-019, and H-020 are human-complete; H-023 remains pending. After inserting the
 real URL, the validator reported 31 PASS, 0 FAIL, 3 manual checks, and 1 NOT
 APPLICABLE. Detailed record:
 [`interactions/043-youtube-chatgpt-summary-grade-recommendation.md`](interactions/043-youtube-chatgpt-summary-grade-recommendation.md).
+
+## Interaction 044 — Human grade and split-package finalization
+
+The student supplied the exact attributable input
+`SELF_ASSESSED_GRADE=096`, adopting the previously presented 96/100 rubric
+recommendation as the student's own self-assessed grade. The student then
+clarified that Moodle accepts files only up to 20 MB and instructed Codex to
+split an oversized package and submit it as multiple files. This is preserved
+as a human decision; no grade was inferred.
+
+Codex recorded the grade and split-upload instruction, then began updating the
+metadata, audit, validator, and derived report views. The authorized packaging
+plan is a standard split ZIP set with 18 MiB segments under `submission/`, with
+each part required to remain below 20,000,000 bytes and receive a SHA-256
+manifest. The archive must exclude `.git`, the ignored assignment PDF,
+credentials/private runtime data, disposable clones, and the package files
+themselves. Moodle upload remains exclusively the student's action. Final
+operation evidence is appended only after completion. Detailed record:
+[`interactions/044-human-grade-and-split-package.md`](interactions/044-human-grade-and-split-package.md).

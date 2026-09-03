@@ -1,6 +1,6 @@
 # AI Self-Assessment Recommendation
 
-Status: **AI RECOMMENDATION — HUMAN DECISION REQUIRED**
+Status: **AI RECOMMENDATION ACCEPTED BY HUMAN**
 
 The PDF assigns 30/20/20/10/10/10 points. This is a conservative evidence-based
 recommendation, not the student's final `SelfAssessedGrade` and not a prediction
@@ -29,11 +29,11 @@ of the lecturer's mark.
   ambiguity, bounded/single-run inference, and Skill-demo depth. k6's stated
   bonus is not added because the PDF gives no numeric bonus formula.
 
-To adopt the recommendation, the student must explicitly provide:
+The student explicitly accepted the recommendation on 2026-09-03 by providing:
 
 ```text
 SELF_ASSESSED_GRADE=096
 ```
 
-The student may choose a different three-digit value in `[000,100]` after
-reviewing the evidence.
+This records the student's own SelfAssessedGrade; it remains distinct from any
+eventual lecturer-assigned mark.

@@ -536,3 +536,19 @@ The human-supplied summary says `26 PASS / 0 FAIL`, which was an earlier
 checkpoint and is preserved historically. It does not override the current
 repository validator. Detailed record:
 [`../ai-audit/interactions/043-youtube-chatgpt-summary-grade-recommendation.md`](../ai-audit/interactions/043-youtube-chatgpt-summary-grade-recommendation.md).
+
+## HD-020 — Human-selected grade and split-upload requirement
+
+| Field | Human decision |
+|---|---|
+| Recorded | 2026-09-03 16:08:46 +0700 (Asia/Ho_Chi_Minh) |
+| Decision owner | Phạm Ngọc Gia Bảo — HUMAN |
+| Exact grade input | `SELF_ASSESSED_GRADE=096` |
+| SelfAssessedGrade | `096/100` |
+| Relationship to AI proposal | The student selected the previously disclosed AI recommendation; the value is now the student's decision, not an invented grade |
+| Upload constraint | Each Moodle upload file must be at most 20 MB; split the final ZIP and submit multiple files when necessary |
+| Packaging decision | Preserve the required `23127027_HW05_AI_Performance_096.zip` basename as the final split-ZIP segment and use `.zNN` companion segments below 20 MB |
+| Remaining human action | Inspect all split parts and upload every part to Moodle; Codex must not claim submission |
+
+Detailed record:
+[`../ai-audit/interactions/044-human-grade-and-split-package.md`](../ai-audit/interactions/044-human-grade-and-split-package.md).

@@ -1,6 +1,6 @@
 # HW05 — AI-First Performance Testing Report
 
-Status: **CONTENT/EVIDENCE COMPLETE — SELF-ASSESSMENT AND PACKAGING PENDING**
+Status: **SUBMISSION CONTENT COMPLETE — MOODLE UPLOAD PENDING**
 
 Student: **23127027 — Phạm Ngọc Gia Bảo**
 
@@ -11,6 +11,8 @@ Tool: **k6 v2.2.0 (darwin/arm64)**
 OS: **macOS 26.5.2, Apple M5, 16 GB RAM**
 
 Repository: <https://github.com/giabaocode/eshop-sut-hw05-23127027>
+
+Human-selected SelfAssessedGrade: **096/100**
 
 ## 1. General information
 
@@ -258,7 +260,7 @@ The full mandatory Markdown audit is
 `ai-audit/interactions/`. It identifies Codex CLI, real prompts/actions,
 execution evidence, corrections, commits, and unresolved human-only items.
 
-## Remaining attributable fields
+## Remaining attributable action
 
-- Self-assessed grade: **[HUMAN REQUIRED]**
-- Final package/Moodle approval and upload: **[HUMAN REQUIRED]**
+- Inspect all split archive parts and upload them together to Moodle:
+  **[HUMAN REQUIRED]**
